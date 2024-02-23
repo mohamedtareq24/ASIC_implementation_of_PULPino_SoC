@@ -1,0 +1,285 @@
+CRTE_SNAPSHOT_START
+
+SECTION_CRTE_VERSION
+3.0
+
+SECTION_PID
+18628
+
+SECTION_POLLING_INTERVAL
+5
+
+SECTION_DATE_TIME
+Wed Feb 14 16:05:01 EET 2024 (1707919501)
+
+SECTION_OS_VERSION
+osname: Linux
+hostname: IC_EDA
+arch: x86_64
+release_version: 3.10.0-1160.6.1.el7.x86_64
+
+SECTION_IPC_INFO
+
+------ Message Queues --------
+key        msqid      owner      perms      used-bytes   messages    
+
+------ Shared Memory Segments --------
+key        shmid      owner      perms      bytes      nattch     status      
+0x00000000 32769      ICer       600        16777216   2          dest         
+0x00000000 32770      ICer       777        1769472    2          dest         
+0x00000000 9          ICer       777        16384      1          dest         
+0x00000000 10         ICer       777        2129920    1          dest         
+0x00000000 13         ICer       777        8355840    2          dest         
+0x00000000 20         ICer       600        393216     2          dest         
+0x00000000 22         ICer       777        16384      2          dest         
+0x00000000 23         ICer       600        524288     2          dest         
+0x00000000 24         ICer       777        8355840    2          dest         
+0x00000000 27         ICer       600        524288     2        SECTION_ULIMIT
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 21621
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 4096
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) 8192
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 4096
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+
+SECTION_SYSCONF
+_SC_THREAD_SAFE_FUNCTIONS= 200809
+_SC_CLK_TCK= 100
+_SC_OPEN_MAX= 4096
+_SC_PAGE_SIZE= 4096
+_SC_ARG_MAX= 2097152
+_SC_CHILD_MAX= 4096
+_SC_LINE_MAX= 2048
+
+SECTION_FULL_COMMAND
+/home/synopsys/icc2/O-2018.06-SP1/linux64/nwtn/bin/icc2_exec -root_path /home/synopsys/icc2/O-2018.06-SP1
+
+SECTION_CPUINFO
+total_core: 8
+
+model_name:  AMD Ryzen 5 5600H with Radeon Graphics
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc art rep_good nopl tsc_reliable nonstop_tsc extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext retpoline_amd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 clzero arat npt svm_lock nrip_save vmcb_clean flushbyasid decodeassists umip pku ospke vaes vpclmulqdq overflow_recov succor
+cpu_family: 25
+core_frequency_mhz: 3293
+core_per_socket: 0
+stepping: 0
+cache_size_kb: 512
+ht: 0
+
+model_name:  AMD Ryzen 5 5600H with Radeon Graphics
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc art rep_good nopl tsc_reliable nonstop_tsc extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext retpoline_amd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 clzero arat npt svm_lock nrip_save vmcb_clean flushbyasid decodeassists umip pku ospke vaes vpclmulqdq overflow_recov succor
+cpu_family: 25
+core_frequency_mhz: 3293
+core_per_socket: 0
+stepping: 0
+cache_size_kb: 512
+ht: 0
+
+model_name:  AMD Ryzen 5 5600H with Radeon Graphics
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc art rep_good nopl tsc_reliable nonstop_tsc extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext retpoline_amd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 clzero arat npt svm_lock nrip_save vmcb_clean flushbyasid decodeassists umip pku ospke vaes vpclmulqdq overflow_recov succor
+cpu_family: 25
+core_frequency_mhz: 3293
+core_per_socket: 0
+stepping: 0
+cache_size_kb: 512
+ht: 0
+
+model_name:  AMD Ryzen 5 5600H with Radeon Graphics
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc art rep_good nopl tsc_reliable nonstop_tsc extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext retpoline_amd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 clzero arat npt svm_lock nrip_save vmcb_clean flushbyasid decodeassists umip pku ospke vaes vpclmulqdq overflow_recov succor
+cpu_family: 25
+core_frequency_mhz: 3293
+core_per_socket: 0
+stepping: 0
+cache_size_kb: 512
+ht: 0
+
+model_name:  AMD Ryzen 5 5600H with Radeon Graphics
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc art rep_good nopl tsc_reliable nonstop_tsc extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext retpoline_amd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 clzero arat npt svm_lock nrip_save vmcb_clean flushbyasid decodeassists umip pku ospke vaes vpclmulqdq overflow_recov succor
+cpu_family: 25
+core_frequency_mhz: 3293
+core_per_socket: 0
+stepping: 0
+cache_size_kb: 512
+ht: 0
+
+model_name:  AMD Ryzen 5 5600H with Radeon Graphics
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc art rep_good nopl tsc_reliable nonstop_tsc extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext retpoline_amd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 clzero arat npt svm_lock nrip_save vmcb_clean flushbyasid decodeassists umip pku ospke vaes vpclmulqdq overflow_recov succor
+cpu_family: 25
+core_frequency_mhz: 3293
+core_per_socket: 0
+stepping: 0
+cache_size_kb: 512
+ht: 0
+
+model_name:  AMD Ryzen 5 5600H with Radeon Graphics
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc art rep_good nopl tsc_reliable nonstop_tsc extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext retpoline_amd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 clzero arat npt svm_lock nrip_save vmcb_clean flushbyasid decodeassists umip pku ospke vaes vpclmulqdq overflow_recov succor
+cpu_family: 25
+core_frequency_mhz: 3293
+core_per_socket: 0
+stepping: 0
+cache_size_kb: 512
+ht: 0
+
+model_name:  AMD Ryzen 5 5600H with Radeon Graphics
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc art rep_good nopl tsc_reliable nonstop_tsc extd_apicid eagerfpu pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm svm extapic cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext retpoline_amd ibpb vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 clzero arat npt svm_lock nrip_save vmcb_clean flushbyasid decodeassists umip pku ospke vaes vpclmulqdq overflow_recov succor
+cpu_family: 25
+core_frequency_mhz: 3293
+core_per_socket: 0
+stepping: 0
+cache_size_kb: 512
+ht: 0
+
+SECTION_OS_RELEASE_VERSION
+CentOS Linux release 7.9.2009 (Core)
+
+
+SECTION_SYS/VM
+/proc/sys/vm/admin_reserve_kbytes:8192
+/proc/sys/vm/block_dump:0
+/proc/sys/vm/dirty_background_bytes:0
+/proc/sys/vm/dirty_background_ratio:10
+/proc/sys/vm/dirty_bytes:0
+/proc/sys/vm/dirty_expire_centisecs:3000
+/proc/sys/vm/dirty_ratio:30
+/proc/sys/vm/dirty_writeback_centisecs:500
+/proc/sys/vm/drop_caches:0
+/proc/sys/vm/extfrag_threshold:500
+/proc/sys/vm/hugepages_treat_as_movable:0
+/proc/sys/vm/hugetlb_shm_group:0
+/proc/sys/vm/laptop_mode:0
+/proc/sys/vm/legacy_va_layout:0
+/proc/sys/vm/lowmem_reserve_ratio:256	256	32
+/proc/sys/vm/max_map_count:65530
+/proc/sys/vm/memory_failure_early_kill:0
+/proc/sys/vm/memory_failure_recovery:1
+/proc/sys/vm/min_free_kbytes:67584
+/proc/sys/vm/min_slab_ratio:5
+/proc/sys/vm/min_unmapped_ratio:1
+/proc/sys/vm/mmap_min_addr:4096
+/proc/sys/vm/nr_hugepages:0
+/proc/sys/vm/nr_hugepages_mempolicy:0
+/proc/sys/vm/nr_overcommit_hugepages:0
+/proc/sys/vm/nr_pdflush_threads:0
+/proc/sys/vm/numa_zonelist_order:default
+/proc/sys/vm/oom_dump_tasks:1
+/proc/sys/vm/oom_kill_allocating_task:0
+/proc/sys/vm/overcommit_kbytes:0
+/proc/sys/vm/overcommit_memory:0
+/proc/sys/vm/overcommit_ratio:50
+/proc/sys/vm/page-cluster:3
+/proc/sys/vm/panic_on_oom:0
+/proc/sys/vm/percpu_pagelist_fraction:0
+/proc/sys/vm/stat_interval:1
+/proc/sys/vm/swappiness:30
+/proc/sys/vm/user_reserve_kbytes:131072
+/proc/sys/vm/vfs_cache_pressure:100
+/proc/sys/vm/zone_reclaim_mode:0
+
+
+SECTION_SWAP
+swap_partition: /dev/dm-1
+size_gb: 9
+
+CRTE_SNAPSHOT_END
+
+CRTE_PERIODIC_START 1 1707919501614
+
+SECTION_MPSTAT
+total_core: 8
+
+CPU     %user   %kernel %wait   %idle   
+all   0.270480 0.514147 0.947295 98.268074
+0     0.250952 0.404188 0.867893 98.476967
+1     0.327866 0.696098 0.709554 98.266479
+2     0.298243 0.643883 0.816480 98.241394
+3     0.277995 0.429871 1.071568 98.220566
+4     0.231309 0.460836 0.992535 98.315323
+5     0.229942 0.402399 0.997308 98.370354
+6     0.299554 0.563234 1.219742 97.917473
+7     0.246087 0.513051 0.902169 98.338692
+
+SECTION_PID_STATUS
+name: icc2_exec
+state: 1
+vmsize: 1220736
+vmrss: 267624
+vmdata: 223892
+vmstk: 136
+vmexe: 477876
+vmlib: 292004
+threads: 2
+
+SECTION_PROCESS_CPU_UTIL
+pid: 18628
+cpu_total_time: 1793846
+cpu_used_time: 14510
+cpu_p: 
+
+SECTION_SYSTEM_CPU_UTIL
+sys_cpu_p: 
+
+SECTION_MEMINFO
+memtotal: 5569316
+memfree: 2141568
+cached: 1904796
+swapcached: 0
+active: 1306828
+swaptotal: 10481660
+swapfree: 10481660
+
+SECTION_SMAPS
+shared_kb: 3604
+private_kb: 264040
+
+SECTION_DF
+Filesystem  Size  Used Avail Use%
+filesystem        19G  6G  13G    35
+
+Filesystem    Inodes   IUsed   IFree   IUse%
+filesystem          10485760  192506 10293254   4294962050
+
+SECTION_CWD
+Filesystem  Size  Used Avail Use%
+filesystem        168G  122G  46G    73
+
+Filesystem    Inodes   IUsed   IFree   IUse%
+filesystem          88604672  985874 87618798   4294967222
+
+SECTION_SWAP_RATE
+blk_read: 4408
+blk_wrtn: 0
+swap_in_rate: 
+swap_out_rate: 
+swap_in_rate: 
+swap_out_rate: 
+
+SECTION_FD_SIZE
+files: 9
+total_size: 90653
+
+SECTION_NET_INTERFACE
+total_eth_avbl: 3
+
+name net_rx_err net_rx_drp net_tx_err net_tx_drp 
+    lo:         0        0        0        0
+virbr0-nic:               0        0        0        0
+virbr0:               0        0        0        0
+
+SECTION_NFSSTAT
+Error: Could not collect the data.
+
+SECTION_THREAD_CPU_UTIL
+18628 : 18628 (icc2_exec) R 1 18615 18566 0 -1 4202496 51986 87073 215 6 117 618 1187 5728 20 0 2 0 59654 1250033664 66906 18446744073709551615 4194304 493535827 140721107575952 140721107554880 140547396552541 0 1024 2101248 1216931583 0 0 0 17 4 0 0 1098 0 0 495636592 511452768 630562816 140721107580985 140721107581091 140721107581091 140721107587003 0
+18639 : 18639 (icc2_exec) S 1 18615 18566 0 -1 1077944384 2 87073 0 6 0 0 1187 5728 20 0 2 0 60907 1250033664 66906 18446744073709551615 4194304 493535827 140721107575952 140546910938784 140547191769651 0 2147221247 2101248 1216931583 18446744072334229365 0 0 -1 4 0 0 0 0 0 495636592 511452768 630562816 140721107580985 140721107581091 140721107581091 140721107587003 0
+
+CRTE_PERIODIC_END 1 1707919501614

@@ -1,0 +1,1411 @@
+
+Loading user preference file /home/ICer/.synopsys_icc2_gui/preferences.tcl
+icc2_shell> man report_qor
+2.  Synopsys Commands                                        Command Reference
+                                  report_qor
+
+NAME
+       report_qor
+              Displays  QoR information and statistics for the current design.
+
+SYNTAX
+       status report_qor
+              [-include content_list]
+              [-summary]
+              [-modes mode_list]
+              [-corners corner_list]
+              [-scenarios scenario_list]
+              [-significant_digits digits]
+              [-pba_mode none | path | exhaustive]
+              [-nosplit]
+
+   Data Types
+       mode_list        collection
+       corner_list      collection
+       scenario_list    collection
+       digits              integer
+
+ARGUMENTS
+       -include content_list
+              Specifies the types of information to be  reported.  Valid  list
+              entries are: design_stats, electrical_drc, hold, and setup.
+
+       -summary
+              Gives a summary of the design costs.
+
+       -modes mode_list
+              Each active scenario of the modes given by the -modes option and
+              the corners specified by the -corners option will  be  reported.
+              If  the  -corners option is not given with this option, all cor-
+              ners will be used.  If neither a mode, corner, nor scenario list
+              is  given,  the  current scenario (if any) will be reported.  If
+              the -scenarios option is given, this option is not allowed.
+
+       -corners corner_list
+              Each active scenario of the modes given by the -modes option and
+              the  corners  specified by the -corners option will be reported.
+              If the -modes option is not given with this  option,  all  modes
+              will  be  used.  If neither a mode, corner, nor scenario list is
+              given, the current scenario (if any) will be reported.   If  the
+              -scenarios option is given, this option is not allowed.
+
+       -scenarios scenario_list
+              Each  active  scenario  given  by  the -scenarios option will be
+              reported.  If this  option  is  given,  the  -mode  and  -corner
+              options are not allowed.
+
+       -significant_digits digits
+              Specifies the number of digits to the right of the decimal point
+              that are reported. Allowed values are from  0  through  13.  The
+              default  value  is  2  for all sections except the Area section,
+              which has a default value of 6.  Using this option overrides the
+              value set by the report_default_significant_digits variable.
+
+       -pba_mode none | path | exhaustive
+              Controls path-based analysis with the following modes:
+
+              o none (the default) - Path-based analysis is not applied.
+              o path - Path-based analysis is applied over the paths that gave
+                the worst graph-based analysis violation. There is no  guaran-
+                tee  that  the  reported  path-based analysis slack over every
+                endpoint is the worst one.
+              o exhaustive - An exhaustive  path-based  analysis  path  search
+                algorithm  is applied to determine the worst path-based analy-
+                sis slack violations.
+
+       -nosplit
+              Prevents line splitting  and  facilitates  writing  software  to
+              extract  information from the report output.  Most of the design
+              information is listed in fixed-width columns.  If  the  informa-
+              tion  for  a  given  field  exceeds its column's width, the next
+              field begins on a new line, starting in the correct column.
+
+DESCRIPTION
+       This command reports Quality of Results information about  the  design.
+       This  includes  timing  information, cell count details, and statistics
+       such as combinational, noncombinational, and total area.
+
+       Timing-related information is reported  separately  for  each  scenario
+       specified by the -mode, -corner, and -scenario options.
+
+       Under  the  Cell Count section, the Leaf Cell Count report includes all
+       leaf cells that are not constant cells. Constant cells are  omitted  in
+       this count. The Combinational Cell Count and Sequential Cell Count only
+       include leaf cells.
+
+       Under Area section, Cell Area (netlist) ignores physical-only cells but
+       Cell  Area  (netlist and physical only) includes them for area calcula-
+       tion.  Later one is identical to Total physical cell area  reported  by
+       "report_design -physical" command.
+
+       If  you specify the -pba_mode exhaustive option, path-based analysis is
+       used to calculate the slack values. This option requires  that  a  path
+       search  be performed to ensure that the returned slack values are truly
+       the worst. The additional runtime required for this option  depends  on
+       the amount of timing improvement resulting from path-based analysis. As
+       the timing improvement from path-based analysis increases, the  runtime
+       for the path search increases.
+
+   Multicorner-Multimode Support
+       By  default,  this  command  works on all active scenarios.  To specify
+       different scenarios, use the -scenarios  option  or  the  -corners  and
+       -modes options.
+
+EXAMPLES
+       The following is an example of a QoR report:
+
+         prompt> report_qor
+
+         ****************************************
+         Report : qor
+         Design : top
+         ****************************************
+
+         Scenario           'func::090V_125C'
+         Timing Path Group  'CLK1'
+         ----------------------------------------
+         Levels of Logic:                     17
+         Critical Path Length:              2.66
+         Critical Path Slack:              -0.69
+         Critical Path Clk Period:          2.20
+         Total Negative Slack:           -597.07
+         No. of Violating Paths:            2640
+         ----------------------------------------
+
+         Scenario           'func::090V_125C'
+         Timing Path Group  'CLK2'
+         ----------------------------------------
+         Levels of Logic:                     12
+         Critical Path Length:              2.88
+         Critical Path Slack:              -2.68
+         Critical Path Clk Period:          2.20
+         Total Negative Slack:           -483.99
+         No. of Violating Paths:             497
+         ----------------------------------------
+
+         Cell Count
+         ----------------------------------------
+         Hierarchical Cell Count:             25
+         Leaf Cell Count:                  30852
+         Buf/Inv Cell Count:                6255
+         CT Buf/Inv Cell Count:                0
+         ----------------------------------------
+
+         Area
+         ----------------------------------------
+         Combinational Area:           175600.52
+         Noncombinational Area:        186276.49
+         Net Area:                             0
+         Net XLength:                          0
+         Net YLength:                          0
+         ----------------------------------------
+         Cell Area (netlist):                   361877.02
+         Cell Area (netlist and physical only): 523152.83
+         Net Length:                           0
+
+         Design Rules
+         ----------------------------------------
+         Total Number of Nets:             31577
+         Nets with Violations:              7624
+         Max Trans Violations:               196
+         ----------------------------------------
+
+         1
+
+SEE ALSO
+       report_default_significant_digits(3)
+
+                          Version O-2018.06-SP1
+            Copyright (c) 2018 Synopsys, Inc. All rights reserved.
+icc2_shell> man report_clock_qor
+2.  Synopsys Commands                                        Command Reference
+                               report_clock_qor
+
+NAME
+       report_clock_qor
+              Reports  quality-of-results  (QoR)  information related to clock
+              tree synthesis, including latency, skew, DRCs, area, power, mul-
+              ticorner robustness, and various histograms.
+
+SYNTAX
+       string report_clock_qor
+              [-clocks clock_names]
+              [-skew_group skew_group_names]
+              [-from pin_names]
+              [-to pin_names]
+              [-through pin_names]
+              [-modes mode_names]
+              [-corners corner_names]
+              [-scenarios scenario_names]
+              [-type rpt_type]
+              [-csv summary  | details]
+              [-output ilename]
+              [-histogram_type hist_type]
+              [-histogram_bins number]
+              [-histogram_min number]
+              [-histogram_max number]
+              [-show_paths]
+              [-show_verbose_paths]
+              [-trace_beyond_exception true | false | only]
+              [-largest number]
+              [-smallest number]
+              [-all]
+              [-robustness_corner rcorner_name]
+              [-per_clock_root]
+              [-nosplit]
+              [-significant_digits digits]
+
+   Data Types
+       clock_names             list
+       skew_group_names        collection
+       pin_names               list
+       mode_names              list
+       corner_names            list
+       scenario_names          list
+       rpt_type                string
+       filename                string
+       hist_type               string
+       number                  integer
+       rcorner_name            integer
+       digits                  integer
+
+ARGUMENTS
+       -clocks clock_names
+              Limits  the reporting scope to the specified clock or collection
+              of clocks.  Clocks can be specified as a Tcl list or as  a  col-
+              lection  of  clocks created by the get_clocks command. If speci-
+              fied as a Tcl list, all clock names refer only to clocks in  the
+              current mode. get_clocks also returns clocks only in the current
+              mode by default. Use get_clocks mode to  specify  clocks  for  a
+              particular mode other than the current mode.
+
+              If  a master clock is specified, then reporting is restricted to
+              that clock and skew groups in that clock,  no  generated  clocks
+              are  reported. If a generated clock is specified, then only that
+              clock will be reported. No information about skew groups will be
+              reported  for  the generated clocks, since skew groups belong to
+              the master clock object. -clocks is mutually exclusive with  the
+              -mode and -scenario options.
+
+       -skew_group skew_group_names
+              Limits  the  reporting scope to the specified skew_group or col-
+              lection of skew_groups. skew_groups can be specified  as  a  Tcl
+              list   or   as  a  collection  of  skew_groups  created  by  the
+              get_clock_skew_groups command. If specified as a Tcl  list,  all
+              skew_group  names refer only to skew_groups in the current mode.
+              get_clock_skew_groups also returns skew_groups only in the  cur-
+              rent mode by default.
+
+              -skew_group  option can be used in so many ways to get different
+              results.   For  example,  -per_clock_root,  -clocks,   -corners,
+              options can be used with skew_group to again restrict the amount
+              of result we get from report_clock_qor. -skew_group is  mutually
+              exclusive with the -mode and -scenario options.
+
+       -from pin_names
+              Limits the reporting scope to the fanout of the specified set of
+              clock pins.  This option can be used together with the  -to  and
+              -through  options.   For  -type latency, the latency of the sink
+              will be reported as the latency  calculated  starting  from  the
+              from-pin  to  the  sink. If -from option is specified, all ideal
+              clocks will ignored and will not  be  reported.  It  can  accept
+              hierarchical  pins  as  valid  inputs  when -type latency/struc-
+              ture/summary or -histogram_type latency option is specified.
+
+       -to pin_names
+              Limits the reporting scope to the fanin to the specified set  of
+              clock pins.  This option can be used together with the -from and
+              -through options. It  can  accept  hierarchical  pins  as  valid
+              inputs  when  -type latency/structure/summary or -histogram_type
+              latency  option   is   specified.   In   the   case   of   -type
+              latency/robustness  and  -histogram_type latency/robustness, the
+              pins specified with this option should be endpoints and the non-
+              endpoint pins specified will be ignored.
+
+       -through pin_names
+              Limits  the  reporting scope to only clock paths passing through
+              the specified pin. This option can be  used  together  with  the
+              -from  and  -to options. This option is not supported with -type
+              robustness/local_skew/balance_groups and -histogram_type robust-
+              ness/local_skew. It can accept hierarchical pins as valid inputs
+              when -type structure/latency/summary and -histogram_type latency
+              option is specified.
+
+       -modes mode_names
+              Specifies  the modes to be used for reporting. If this option is
+              not given, the command reports all active modes for  all  active
+              scenario.  This  is  mutually exclusive to the -scenario option.
+              This option cannot be used together with the -clocks  option  to
+              specify  a clock name for a specific mode.  Instead, the -clocks
+              option filters the output of this command to only the  specified
+              clocks,  and the -mode option filters the output of this command
+              to only the specified modes. To specify a clock name for a  par-
+              ticular   mode   other   than  the  current  mode,  use  -clocks
+              [get_clocks <clock_name> -mode <mode_name>].
+
+       -corners corner_names
+              Specifies the corner to report. By default, reports all  corners
+              for active scenarios. If more than one corner is specified using
+              corner option, then multiple tables are printed  (one  each  for
+              every  specified  corners).  This  is  mutually exclusive to the
+              -scenarios option.
+
+       -scenarios scenario_names
+              Specifies the scenario to report. If  the  -scenario  option  is
+              used,  then -mode and -corner cannot be used. If none of -modes,
+              -corners, or -scenarios options are specified, then  the  report
+              is generated for all active scenarios.
+
+       -type rpt_type
+              Specifies the type of report to generate. Valid values are
+              o summary
+                This  is the default output if no type option is specified. It
+                prints a summary table organized by clocks  and  skew  groups,
+                and  includes  basic  summary  information  like  area, buffer
+                count, global skew, maximum latency,  and  logical  DRCs.  Use
+                other reporting types to get more details about these metrics.
+                For example, -type summary will show global  skew,  but  -type
+                latency must be used to get other skew information like bound-
+                ary skew or local skew.
+
+              o balance_groups
+                Reports a summary  table  of  balance_groups  in  the  design.
+                There is no detailed table for this report. This reporting can
+                be restricted to specific  modes/corners/scenarios  by  giving
+                options  -corner/-mode/-scenarios.   balance_groups  can  have
+                master clocks or skew_groups as  it's  elements.   -type  bal-
+                ance_groups  reports  shows  all  information  regarding  bal-
+                ance_groups and it's elements- like target/scaled target  off-
+                set, actual offset, max_latency, global skew etc.
+
+              o latency
+                Reports a summary table of latency and skew information on all
+                clocks and skew groups, including global /  local  /  boundary
+                skew, minimum / maximum / median latency, and latency and skew
+                targets. The detailed section of the  report  shows  sinks  or
+                balance points with their corresponding latencies. In order to
+                see the latency to a hierarchical balance pin, user may  spec-
+                ify  hierarchical  pins  as  input  to -fB-to option with this
+                reporting./
+
+              o drc_violators
+                Reports a summary table of transition  and  capacitance  limit
+                violations  on  the  clock network, including total DRC count,
+                cumulative DRC slack, and the DRC limits. The detailed section
+                of  the  report  shows clock pins with their corresponding DRC
+                slacks.
+
+              o robustness
+                Reports information about multicorner robustness  of  the  CTS
+                implementation.  Robustness is a measure of how the latency to
+                each clock sink scales between a measured corner and a  refer-
+                ence  corner. Every corner pair has a scaling factor, which is
+                simply the ratio of the average latency in the measured corner
+                over  the average latency in the reference corner. The robust-
+                ness value for an individual sink is the ratio of its  latency
+                in the measured corner over the latency in a reference corner,
+                normalized against the scaling factor for those corners.
+
+                If a clock sink has a robustness value of  1,  that  means  it
+                exhibits  typical  scaling  between the measured and reference
+                corner. A robustness value greater than one indicates  a  sink
+                has  higher  than  average latency in the measured corner com-
+                pared to the reference corner. Likewise,  a  robustness  value
+                less  than one indicates a sink with less than average latency
+                in the measured corner compared to the reference  corner.  The
+                largest  and  smallest  robustness  value sinks have the worst
+                multicorner robustness, and could cause timing problems in the
+                measured  corner. If all clock sinks for a clock or skew group
+                have a similar robustness value, then the clock tree  is  said
+                to  be  multicorner  robust,  and  the  skew can be maintained
+                across those corners.
+
+                You must specify a robustness corner with the -robustness_cor-
+                ner option for this reporting type. The robustness corner rep-
+                resents the reference corner for measuring robustness  values.
+                Typically,  the  reference corner would be the corner that was
+                used to synthesize the clock tree, or some dominant corner  if
+                multicorner  CTS was used. The measured corners are determined
+                based on the values specified by the corner or scenario  argu-
+                ments.  When  the measured corner and the reference corner are
+                the same, the robustness value is meaningless and no  informa-
+                tion  will  be  printed for that measured corner. If more than
+                one corner is specified for the measured corner, then a  sepa-
+                rate  table  is  printed  for each measured corner. The output
+                consists of a summary table for each  clock  and  skew  group,
+                with information about the average latency, the scaling factor
+                between the measured and reference corners, and  then  robust-
+                ness  values  representing the extremes for that clock or skew
+                group (minimum robustness value, maximum robustness value, and
+                range).  After that, a detailed table is printed showing indi-
+                vidual sinks with their corresponding robustness values.
+
+              o area
+                Reports information about area and cell counts  in  the  clock
+                trees.   The  command  first prints a summary table with a row
+                for each clock and skew group. This table might include dupli-
+                cate counting of area, for example, when multiple clocks share
+                some of the same clock tree fanout. This section also includes
+                a total area row at the end which provides overall area infor-
+                mation for the reported scenario, and  does  not  double-count
+                any cells in the calculation.
+
+                The  command reports per-lib_cell area reporting in a separate
+                section. This  section  analyzes  exactly  how  many  of  each
+                lib_cell  are  instantiated  in the clock tree, and also orga-
+                nizes the cells by type (buffers, ICGs/muxes, macros vs  stan-
+                dard  cells).  The  -smallest, -largest, -all, and -show_paths
+                options are incompatible with the area report.
+
+              o power
+                Reports information about power in  the  clock  trees.  It  is
+                largely  modeled on the area report, with some slight changes.
+                There would be three sections to the power report: a  per-sce-
+                nario power table, per-lib_cell power tables for each reported
+                scenario, and a per-hierarchy power table  for  each  reported
+                scenario.  A  report  will  be printed for each scenario whose
+                setup/hold and leakage/dynamic power is enabled.
+
+              o structure
+                The structure report is a very detailed representation of  the
+                clock  tree  structure. The entire fanout of the clock tree is
+                represented in this report,  with  indentation  and  numbering
+                indicating  different  levels of the clock tree. Clock balance
+                points and ignore points and also represented in this  report.
+                It  can  accept  hierachical  pin  as  input  to  -to/-through
+                options.
+
+                report_clock_qor -type structure will show the  balance  point
+                values on the pins.  On a balance point pin, there can be mul-
+                tiple balance point values.  For  each  corner  exist  in  the
+                design,   we  can  set  different  values  using  the  command
+                set_clock_balance_points. For  particular  corner,  there  can
+                exist  different  balance point values corresponding to early-
+                rise, early-fall, late-rise and late-fall. Out of  these  four
+                values  minimum and maximum are printed. sample: [BALANCE PIN]
+                [Offset values C1: max min C2: max min ] where, C1 and C2  are
+                corner names.
+
+                The  output  of this report can be very large. As a result, it
+                can be useful for  parsing  or  searching  for  very  specific
+                information,  but  is generally not useful to get a high-level
+                overview of the clock structure. For that purpose, you  should
+                use  the  Abstract Clock Graph feature of the GUI, which gives
+                similar information to this report, but  visually  instead  of
+                textually.  The  -smallest,  -largest,  -all, -show_paths, and
+                -show_verbose_paths options are incompatible with  the  struc-
+                ture report.
+
+              o local_skew
+                This  option  prints  the setup local skew and hold local skew
+                information. Setup local skew is calculated  as  "launch  flop
+                latency  - capture flop latency" and Hold local skew is calcu-
+                lated as "capture flop latency - launch flop latency". Report-
+                ing  is  done  based  on  the  scenario  configuration.   When
+                setup=true, hold=false, only setup  local  skew  is  reported,
+                when  setup=false, hold=true, only hold local skew is reported
+                and when setup=true, hold=true,  both  setup  and  hold  local
+                skews are reported.
+
+              This  option  is  mutually  exclusive  with  the -histogram_type
+              option.  The -clocks, -from, -to, -modes, -corners, and -scenar-
+              ios  options can be used to limit the scope of what is reported.
+              The -nosplit and -significant_digits options affect all  of  the
+              report output types.
+
+              Summary, latency, drc_violators and robustness reporting follows
+              a similar format for the output. First, a summary table is shown
+              with  one row of output for each clock or skew group, with rele-
+              vant QoR data printed. After the summary table, a detailed  out-
+              put section shows information about the worst clock pins, sinks,
+              or balance points related to that metric. The  number  of  items
+              printed  in  this  detailed  section can be controlled using the
+              -largest, -smallest, or -all options. The -show_paths option can
+              be  used  to  show  a third category of output, which is a clock
+              path report for each object reported in the detailed section.
+
+       -csv summary | detail
+              This option can be used to save the reports in CSV format. -out-
+              put option should be specified with -csv to save the report as a
+              file. This file will be saved in the current working  directory.
+              -histogram_type is not supported with -csv option.
+
+              Possible options for -csv are:
+                summary  -  to  print the summary section of the report in CSV
+                format.  details - to print the details section of the  report
+                in CSV format.
+
+       -output ilename
+              Using this option, user can specify the output filename to which
+              the csv report will be dumped. This option can only be used with
+              -csv  switch.   In case, tool can't create the file specified by
+              the user, an error message will be displayed. It is  recommended
+.csv.
+              to save the output file with extension
+
+       -histogram_type hist_type
+              Specifies  the type of histogram report to generate. This option
+              is mutually exclusive with the -type option. The -clocks, -from,
+              -to,  -through,  -modes, -corners, and -scenarios options can be
+              used to limit the scope  of  what  is  reported.  The  -signifi-
+              cant_digits option affects all of the report output types.
+
+              There  are  three  additional options that can only be used with
+              the -histogram_type option, but not  the  -type  option.   -his-
+              togram_bins,  -histogram_min,  and  -histogram_max  control  the
+              appearance of the output histograms. Generally, one histogram is
+              printed  for each clock or skew group. The output format for the
+              histogram reports shows the  histogram  itself.  The  -smallest,
+              -largest,  and  all options can be used to control the number of
+              rows of detailed output  per  histogram.   Detailed  tables  are
+              printed only for the -histogram_type latency and robustness.
+
+              The possible options for hist_type are:
+
+              latency  - Reports a histogram of clock latencies. The histogram
+              includes one entry for every active clock edge  at  every  clock
+              sink  or balance point.  Latency can differ depending on whether
+              a clock path to a sink is treated as the launch clock or capture
+              clock.  So,  generating  a  latency  histogram  report  actually
+              reports two histograms per clock or skew group, one  for  launch
+              clock latencies and the other for capture clock latencies.
+
+              transition  -  Reports  a  histogram of transition values in the
+              clock network. The histogram includes one entry  for  every  net
+              load  in  the  clock network, which could either be a cell input
+              pin or an output port. Transition times  for  drivers  of  clock
+              nets are not included in this histogram. Transition times at net
+              sinks will always be greater than or  equal  to  the  transition
+              time at the driver.
+
+              capacitance  - Reports a histogram of total net capacitance val-
+              ues in the clock network. The histogram includes one  entry  for
+              every clock net.
+
+              robustness  - Reports a histogram of multicorner skew robustness
+              values.  The histogram includes one entry for every active clock
+              edge  at  every clock sink or balance point. See the description
+              of the -type robustness reporting type for  more  details  about
+              how  robustness  values  are  calculated. The -robustness_corner
+              option must be used with this histogram type to specify a refer-
+              ence corner for calculating multicorner robustness values.
+
+              wire_delay_fraction  -  Reports  a  histogram  of the wire delay
+              fractions in the clock tree. The histogram  includes  one  entry
+              for  every  active  clock  edge  at  every clock sink or balance
+              point. Wire delay fraction is defined as the ratio of the  total
+              wire delay over the total overall delay for a given path through
+              the clock tree. Wire delay  fraction  is  a  useful  metric  for
+              understanding the multicorner skew robustness of the clock tree.
+              Typically, clock paths with similar wire  delay  fractions  will
+              have similar latency scaling between corners.
+
+              wire_delay - Reports a histogram of the wire delays in the clock
+              tree.
+
+              cell_delay - Reports a histogram of the cell delays in the clock
+              tree.
+
+              level  -  Reports  a  histogram of levels in the clock tree. The
+              histogram includes one entry for  every  active  clock  edge  at
+              every  clock  sink or balance point. In a standard CTS flow, the
+              clocks are not level-balanced. So, the level reporting is not  a
+              meaningful  metric  to  analyze  after  CTS,  except to look for
+              extreme outliers in level count that could indicate an implemen-
+              tation problem.  It might be more meaningful in custom CTS flows
+              like a mesh or multisource. The level count can also  be  useful
+              to  analyze  the  clock  tree before CTS, to understand how many
+              gating or muxing levels are in each clock branch.
+
+              fanout - Reports a histogram of fanouts in the clock  tree.  The
+              histogram  includes one entry for every clock net. Fanout infor-
+              mation  is  corner  independent.  Unlike  most  report_clock_qor
+              reports,  separate  sets  of  histograms for each corner are not
+              printed. If you specify both the  -corners  and  -histogram_type
+              fanout  options,  the command restricts which scenarios are con-
+              sidered for reporting.
+
+              wirelength - Reports a histogram of  wirelengths  in  the  clock
+              tree.  The histogram includes one entry for every clock net. The
+              wirelength reported is the total wirelength of  the  net.  Wire-
+              length  is  calculated based on the current routing state of net
+              (virtual, global, or detail routed).
+
+              Wirelength  information  is  corner  independent.  Unlike   most
+              report_clock_qor  reports,  separate tables for each corner will
+              not be printed. If you  specify  both  the  -corners  and  -his-
+              togram_type wirelength options, the command restricts which sce-
+              narios are considered for reporting.
+
+              wire_arc_length - Reports a histogram of wire arc lengths in the
+              clock tree. The histogram includes one entry for every fanout of
+              every clock net. The wire arc length is the wirelength just from
+              the net driver to a particular net sink. Wire arc length is cal-
+              culated based on the current  routing  state  of  net  (virtual,
+              global, or detail routed).
+
+              Wire  arc  length information is corner independent. Unlike most
+              report_clock_qor reports, separate tables for  each  corner  are
+              not  printed.  If  you  specify  both  the  -corners  and  -his-
+              togram_type wire_arc_length options, the command restricts which
+              scenarios are considered for reporting.
+
+              local_skew  -  This report prints out a histogram of setup local
+              skew and hold local skew distribution. Each entry  in  the  his-
+              togram represent one launch and capture flop pair.
+
+       -histogram_bins number
+              Divides  the dataset into bins for reporting. This option speci-
+              fies the number of bins in the histogram to  report.  The  -his-
+              togram_bins,  -histogram_min  and  -histogram_max  options  com-
+              pletely specify the number of bins and the range  of  values  in
+              each  bin.  The  default value for -histogram_bins is 10, or the
+              number  of  datapoints  being  reported,  whichever   is   less.
+              Although,  if  -histogram_min and/or -histogram_max is specified
+              with -histogram_bins, we cannot always  make  bins  accordingly.
+              For  example-  -histogram_bins  is  10,  -histogram_min is 4 and
+              -histogram_max is 6. This happens in the case of histograms  are
+              made  with  integer  data  points  (for example, -histogram_type
+              level).
+
+       -histogram_min number
+              Specifies the smallest value to be reported  in  the  histogram.
+              Any  data  below  this  value is not added to a histogram bin. A
+              total count of datapoints  below  the  -histogram_min  value  is
+              reported.  By  default, the -histogram_min value is equal to the
+              smallest datapoint being reported.
+
+       -histogram_max number
+              Specifies the largest value to be reported in the histogram. Any
+              data  above  this value is not added to a histogram bin. A total
+              count of datapoints above the -histogram_max value is  reported.
+              By  default,  the  -histogram_max  value is equal to the largest
+              datapoint being reported.
+
+       -show_paths
+              Adds an additional section to the report that  lists  the  clock
+              path  through  the  objects listed in the detailed section. This
+              option can be used with the summary, latency, drc_violators, and
+              robustness  report  types. Each of these reports shows a summary
+              section, followed by a detailed section that reports  the  value
+              of the metric on individual objects. An optional third reporting
+              section is added by specifying this option. In this section, for
+              every  object  reported in the detailed section, a clock path is
+              reported through that object.
+
+              The path report  is  shown  with  the  following  commonly  used
+              columns  for  debugging  clock  paths: cell name, lib_cell name,
+              fanout, capacitance, transition, increment, and arrival time.
+
+              The -largest, -smallest, and -all  options  apply  to  both  the
+              detailed section of these reports as well as the path section if
+              the  -show_paths  option  is   specified.   For   example,   the
+              report_clock_qor  -type  latency  -largest 2 -show_paths command
+              shows the two largest latency sinks for each clock or skew group
+              in  the  detailed  section.  Then, the paths associated with all
+              those reported sinks will also be shown.
+
+              Unlike  the   report_timing   report,   the   paths   shown   in
+              report_clock_qor  do  not  include  the  logical hierarchy pins,
+              since they are seldom relevant to understanding the  CTS  imple-
+              mentation.
+
+              The  path  reports in report_clock_qor also have a 'Tags' column
+              which annotates pins with useful information  relevant  to  CTS.
+              The following annotations can be found in the 'Tags' column:
+              Scope Options
+              from: Marks from_pins
+              to  : Marks to_pins
+              thru: Marks through_pins
+
+              Significant Clock Pins
+              clk : Marks master clock source pins
+              gclk: Marks generated clock source pins
+              sink: Marks default sink pins
+              icg : Marks ICG clock input pins
+              hier: Marks pins at the boundary or inside of physical hierarchy
+
+              Clock Exceptions
+              bal  : Marks balance points
+              e_ign: Marks explicit ignore points
+              i_ign: Marks implicit ignore points
+
+              Clock Convergence
+              conv  : Marks a pin where two or more clocks converge, such as a mux output
+              reconv: Marks a pin where a clock reconverges with itself
+
+              DRC Violations/Metrics
+              trans : Marks all pins with transition violations in the -type
+              drc_violators report. Marks the reported pin from the
+              -histogram_type transition report.
+
+              cap : Marks the driver pins of all nets with capacitance
+              violations in the -type drc_violators report. Marks the
+              driver pin of the reported net from the -histogram_type
+              capacitance report.
+
+              fanout: Marks the driver pins of all nets with fanout violations in
+              the -type drc_violators report. Marks the driver pin of the
+              reported net from the -histogram_type fanout report.
+
+              length: Marks the driver pins of all nets with net length violations
+              in the -type drc_violators report. Marks the driver pin of
+              the reported net from the -histogram_type wirelength
+              report. Marks the load pin of the reported wire arc from the
+              -histogram_type wire_arc_length report.
+
+              Dont_touch Constraints
+              dt_lib : set_dont_touch applied on lib_cell of the instance
+              dt_cell : set_dont_touch applied on the cell instance
+              dt_net : set_dont_touch applied on the net
+              dt_mv_cell: MV derived dont_touch on cell
+              dt_mv_net : MV derived dont_touch on net
+              dt_subtree: dont_touch_subtree derived dont_touch on cells and/or nets
+
+              If  both  -show_paths  and  -show_verbose_paths  are  specified,
+              -show_verbose_paths takes precedence and more verbose paths  are
+              reported.
+
+       -show_verbose_paths
+              This  option  is  similar  to  the -show_paths option, except it
+              enables additional columns of output in the path report to  help
+              with  detailed  debugging.  If  both  -show_paths and -show_ver-
+              bose_paths are specified, -show_verbose_paths  takes  precedence
+              and more verbose paths are reported.
+
+              -show_verbose_paths  generates  path  reports with the following
+              columns in addition to the  columns  generated  by  -show_paths:
+              location,  non-default  routing  rules,  and clock routing layer
+              information.
+
+              The clock routing layer information is similar to  the  informa-
+              tion  provided  by  get_attribute  $net route_length, in that it
+              gives a per-layer breakdown of routing length for the net.
+
+       -trace_beyond_exception true | false | only
+              Using this option, how reporting is done  beyond  the  exception
+              pins  can  be  manipulated for -type structure and drc_violators
+              reports. Possible values for  -trace_beyond_exception  are  fol-
+              lows:  true  :  consider the clock tree beyond an exception pin.
+              false: do not consider the clock tree beyond an  exception  pin.
+              only  :  consider  only  the  clock  tree  beyond  the exception
+              pin(including the exception pin).
+
+       -largest number
+              The latency, drc_violators, and robustness reports,  along  with
+              robustness  and  latency histogram reports, show a detailed sec-
+              tion where individual objects are reported. Each report type has
+              a  default  behavior  for  the objects shown in this section. By
+              using -largest, you can explicitly specify the number of objects
+              to  report in the detailed section, from the higher side of dis-
+              tribution of the metric.  For  example,  report_clock_qor  -type
+              latency  -largest  5  reports the five largest latency sinks for
+              each clock or skew group in the detailed section.  -largest  can
+              be  used  together  with  -smallest  to report objects from both
+              sides of the distribution. If -largest and  -all  are  specified
+              together, -all takes precedence.
+
+       -smallest number
+              The  latency,  drc_violators,  and  robustness  reports  show  a
+              detailed section where individual  objects  are  reported.  Each
+              report type has a default behavior for the objects shown in this
+              section. By using smallest, you can explicitly specify the  num-
+              ber of objects to report in the detailed section, from the lower
+              side  of  the  distribution  of   the   metric.   For   example,
+              report_clock_qor  -type  latency  -smallest  5  reports the five
+              smallest latency sinks for each  clock  or  skew  group  in  the
+              detailed  section.  -smallest can be used together with -largest
+              to report objects  from  both  sides  of  the  distribution.  If
+              -smallest  and  -all  are  specified together, -all takes prece-
+              dence.
+
+       -all   The latency,  drc_violators,  and  robustness  reports,  show  a
+              detailed  section  where  individual  objects are reported. Each
+              report type has a default behavior for the objects shown in this
+              section.  By  using  -all,  every  object  will  be shown in the
+              detailed report section.  For  example,  report_clock_qor  -type
+              latency  -all reports all sinks or balance points for each clock
+              or skew group in the detailed report section.
+
+       -robustness_corner rcorner_name
+              This option specifies a reference corner to measure against  for
+              the  -type  robustness  and  -histogram_type robustness reports.
+              This is a mandatory option for both of those reports, as robust-
+              ness  reporting cannot occur without knowing what reference cor-
+              ner to measure against. See the description of the -type robust-
+              ness  report for more information about what the robustness num-
+              ber means and how it is calculated.
+
+       -per_clock_root
+              This option splits the reporting of a clock to per  clock  root,
+              so  that the clock trees associated with different root pins are
+              reported separately. This option can be  only  used  with  -type
+              latency  option.  The  global  skew/latency reported will be per
+              clock root and hence will be calculated  between  sinks  in  the
+              clock tree of a particular clock root. The longest/shortest path
+              delay from root will be computed to get the global  skew/latency
+              for each root.
+
+       -nosplit
+              By  default,  tabular  reports  are  formatted  to not exceed 80
+              columns in width. If certain fields exceed  their  fixed  column
+              width,  then printing can automatically jump to the next line to
+              maintain the formatting. This is done to improve readability  of
+              the  report. If -nosplit is specified, then one row of data in a
+              tabular report will always be printed on one  row.  The  columns
+              will  no  longer align, which affects readability of the report.
+              The -nosplit option is useful to simplify parsing  or  post-pro-
+              cessing  of  a report output file. If the report is not intended
+              to be post-processed, then do not use  the  nosplit  option,  in
+              order to get better report readability.
+
+       -significant_digits digits
+              Specifies the number of significant digits to show for reporting
+              of any floating point number field. By default, each field has a
+              particular number of significant digits, intended to communicate
+              the right level of information to the user.  This  option  over-
+              rides those default settings.
+
+DESCRIPTION
+       === Overview ===
+
+       The report_clock_qor command handles reporting of CTS-related QoR. This
+       report has many subtypes, and can be used to get  detailed  information
+       about  area, DRCs, latency, skew, and multicorner robustness. Many his-
+       togram reports are also available to get  details  about  metrics  like
+       latency,   transitions,   capacitance,   and   multicorner  robustness.
+       report_clock_qor reports the clock metrics for user analysis. No analy-
+       sis  is  done  by the command itself. See the check_clock_trees command
+       which supports analysis regarding  possible  causes  of  bad  CTS  QoR.
+       report_clock_qor  does  not  report all clock settings, only a few that
+       are relevant to the metric being reported, such as  capacitance  limits
+       when  reported  capacitance  DRC  violations.  For a complete report of
+       clock settings that influence CTS behavior, see  report_clock_settings.
+
+       === CTS Timer View ===
+
+       report_clock_qor  uses the CTS timer view, which is the same timer view
+       that synthesize_clock_trees uses. In this view, only late  mode  timing
+       constraints  and derates are used for a given corner. This differs from
+       the standard timing view, where for setup timing  paths,  late  derates
+       are  applied  to the launch clock path and early derates are applied to
+       the capture clock path.  The clock timing view applies the late derates
+       only.  This  is  particularly  important for skew reporting. If skew is
+       reported with early and late OCV derates applied, skew can appear  very
+       high  due to the derates alone. For example, very high skew can be seen
+       even at the same sink, due to different late and early derates  applied
+       to  the  path  leading to the sink. This same-sink skew is unfixable by
+       any CTS engine, and so it is preferable to run CTS and report  CTS  QoR
+       with only late derates applied.
+
+       In  the CTS timer view, timing path slack is not meaningful. It is only
+       useful for analyzing clock paths themselves, rather  than  full  timing
+       paths.  For clock related reporting that uses the standard timing view,
+       see the command report_clock_timing.
+
+       === Launch vs Capture Clocks ===
+
+       Even when the reporting is limited to just  late  mode  constraints  as
+       described,  it  is  still  possible  for the path to a sink for a given
+       clock in a given corner to have differing  launch  vs  capture  latency
+       values.  This  can  happen  for  a  variety of reasons, including clock
+       reconvergence,   float   constraint   exceptions   applied   with   the
+       set_clock_balance_points command, crosstalk, pin capacitance variation,
+       and conditional delay arcs. These differing launch  and  capture  clock
+       path  latencies  contribute  to  the skew that must be minimized during
+       clock optimization, and so need to be reported by  report_clock_qor  as
+       well.
+
+       All latency and skew reporting fully considers the differing launch and
+       capture latencies to each clock sink. In the detailed  output  for  any
+       report type that includes latency information, both the launch and cap-
+       ture latency to the sinks  are  given.  Other  metrics  can  also  vary
+       depending  on  whether  analysis  focuses  on  launch clocks or capture
+       clocks. These  metrics  include  transition  values,  pin  capacitance,
+       robustness, and wire delay fraction. These metrics are all reported for
+       the launch clock only.
+
+       === Clocks and Skew Groups ===
+
+       With the exception of the structure report, every  reporting  type  and
+       histogram  type  is  organized by clocks and skew groups. Clocks can be
+       master clocks created  with  the  create_clock  command,  or  generated
+       clocks created with the create_generated_clock command. Every generated
+       clock has a master, which creates a sort of hierarchy of clocks in  the
+       design.
+
+       Clocks  define the topological structure of the clock trees synthesized
+       by the CTS engine, but skew groups define the skew  balancing  behavior
+       for  those  clocks,  or  for subsets of those clocks. Every time a cre-
+       ate_clock statement is issued, a corresponding default skew  group  for
+       that  clock is created with the naming convention default_<clock_name>.
+       By default, every sink of a master  clock  and  all  of  its  generated
+       clocks  belong  to  that default skew group, meaning they will be skew-
+       balanced together during CTS. The default skew group is  owned  by  the
+       master  clock, but might contain sinks from other clocks generated from
+       that master. Optionally, individual clock pins can  be  pulled  into  a
+       separate  user-defined  skew  group  for  balancing,  by using the cre-
+       ate_clock_skew_group command.
+
+       The clock and skew group information  is  reported  by  specifying  the
+       appropriate  report_clock_qor output types. For example, the -type sum-
+       mary | latency | drc_violators | area | robustness  reports  all  begin
+       with a summary table of the same format, shown below:
+
+       Attributes
+       ===========
+       M Master Clock
+       G Generated Clock
+       D Default Skew Group
+       U User Skew Group
+       * Generated Clock Balanced Separately
+
+       Clock / Skew Group   Attrs    Sinks <other_metrics>
+       -----------------------------------------------------
+       CLK1                   M             5000
+         default_CLK1         D             4000
+           GCLK1              G             500
+           GCLK2              G             2500
+             GCLK2_1          G             300
+             GCLK2_2          G             200
+           GCLK3              G             1000
+         group1               U             600
+         group2               U             400
+       CLK2                   M             6010
+         GCLK4                G             5000
+         GCLK5                G             1000
+           GCLK5_1            G             400
+
+       The  summary  table  shows the clock or skew group names, followed by a
+       sink count, and then the relevant metrics, depending on the report type
+       generated.   histogram_type  reports are similar, except a histogram is
+       shown for each clock or skew group instead of a summary table.
+
+       In the above example, CLK2 is a simple case of a master clock  with  no
+       user-defined  skew  groups.  For brevity, the CLK2 line represents both
+       the CLK2 clock defined by the  create_clock  command  as  well  as  the
+       default  skew group for that clock, called default_CLK2. Listed hierar-
+       chically under CLK2 is the generated clock structure  for  that  master
+       clock  CLK2. CLK2 directly generates GCLK4 and GCLK5. GCLK5 then gener-
+       ates another generated clock GCLK5_1. The indentation  indicates  these
+       relationships.
+
+       The  more  complex example is CLK1, which has user-defined skew groups.
+       In this case, the sinks of CLK1 are divided among  three  skew  groups:
+       the  default  skew  group  default_CLK1,  and the two user-defined skew
+       groups group1 and group2.  The  CLK1  row  represents  the  topological
+       fanout  of the master clock CLK1, and each indented skew group row rep-
+       resents the set of sinks balanced for that skew group. As expected, the
+       sink count for CLK1 equals the sum of the sink counts for default_CLK1,
+       group1, and group2 skew groups.
+
+       The generated clock structure for CLK1 is shown under the  default_CLK1
+       skew  group.  This  represents  the  generated clock topology and sinks
+       belonging to the default skew group. Any generated clock sinks that are
+       part  of  a user defined skew group are reported under that skew group,
+       the same as skew grouped sinks of the master  clock.  So  for  example,
+       there   are  500  sinks  in  the  fanout  of  GCLK1  belonging  to  the
+       default_CLK1 skew group.
+
+       === Cumulative Reporting ===
+
+       All metrics are reported cumulatively,  meaning  that  the  any  metric
+       reported  for a given clock or skew group includes all of the generated
+       clocks sourced from that clock. See the example below:
+
+       Clock/Skew Group  Attrs  Sinks  Latency  DRCs
+       ----------------------------------------------
+       CLK2                M     6010   2.012    104
+         GCLK2_1           G     5000   1.293     54
+         GCLK2_2           G     1000   0.884     41
+           GGCLK2_2        G      400   0.431      9
+
+       CLK2 shows 6010 sinks. This includes the 5000 sinks of GCLK2_1 and  the
+       1000  sinks  of GCLK2_2. These numbers indicate that CLK2 has 10 direct
+       sinks, but the other 6000 sinks are in the fanout of the two  generated
+       clocks. Likewise, GCLK2_2 has 1000 sinks, 400 in the fanout of its gen-
+       erated clock GGCLK2_2, and 600 in its direct fanout.  All  metrics  are
+       reported  this  way. Note that the latency for CLK2 is higher than that
+       for GCLK2_2, which is larger than the latency  for  GGCLK2_2.  This  is
+       because  each  latency value is calculated just from that clock root to
+       its sinks. These numbers show that  the  source  point  of  GCLK2_2  is
+       (2.012  -  0.884) = 1.128ns deep in the CLK2 tree, and the source point
+       of GGCLK2_2 is (0.884 - 0.431) = 0.453ns deep in the GCLK2_2 tree. Note
+       that  in the above example, the longest path is fanout for both GCLK2_2
+       and GGCLK2_2.
+
+       === Balancing and Topological Metrics ===
+
+       The CTS metrics reported by the report_clock_qor command can be divided
+       into two categories: balancing metrics and topological metrics. Balanc-
+       ing metrics are those directly related to single-corner or  multicorner
+       clock  skew  balancing: latency, skew, robustness, and wire delay frac-
+       tion. Topological metrics are those related to the overall  clock  tree
+       topology  and  structure.   This  includes  drc  violators (transition,
+       capacitance), area and cell counts, transition times in the clock  net-
+       work, and capacitance on clock nets metrics.
+
+       Balancing  metrics  and  topological metrics are handled differently by
+       report_clock_qor. Balancing metrics are only reported for objects  that
+       are  balanced,  like skew groups. It does not make sense to report skew
+       for objects that are not balanced, such as a master clock divided  into
+       several skew groups.
+
+       Topological  metrics are only reported for clocks, not for skew groups.
+       Skew groups are not guaranteed to have a clear and  cohesive  topology.
+       There  is  no restriction on pins that can be added to a skew group, so
+       it might consist of sinks from widely different branches of  the  clock
+       tree.
+
+       See   the   example   below,  which  is  a  truncated  version  of  the
+       report_clock_qor -type summary report.
+
+       Clock /      Attrs   Sinks   Levels     Max   Global   DRC
+       Skew Group                          Latency    Skew   Count
+       -----------------------------------------------------------
+       clk1           M      1450    10       1.548   0.132     3
+       clk2           M      2300    13         --     --       0
+        default_clk2  D      2298    --       1.834   0.138    --
+         genclk2      G      1560     7       0.840   0.110     2
+        skew_group1   U         2    --       0.232    0.008   --
+       -----------------------------------------------------------
+       All Clocks    --      3750    13         --     --       5
+
+       There are both  balancing  and  topological  metrics  in  this  report.
+       Latency  and skew are balancing metrics, levels and DRC count are topo-
+       logical metrics. clk1 is a  master  clock  with  no  user-defined  skew
+       groups, so that row represents both the topology of the clk1 fanout, as
+       well as the default_clk1 skew group. So, both the balancing  and  topo-
+       logical metrics are reported on that row.
+
+       clk2  represents  only  the master clock fanout of clk2. For balancing,
+       that clock has been divided into the default skew  group  default_clk2,
+       and  the  user-defined  skew  group  skew_group1. So, the clk2 row only
+       reports topological metrics, and the default_clk2 and skew_group1  rows
+       only  report balancing metrics. genclk2 represents both the topology of
+       the gen clk2 fanout, as well as the genclk2 sinks in the  default  skew
+       group  default_clk2. So, both the balancing and topological metrics are
+       reported on that row.
+
+       === Clock Tree Exceptions ===
+
+       Clock tree exceptions are constraints that provide  exceptions  to  the
+       default  skew  balancing  behavior.  There  are  two main categories of
+       exceptions: balance points defined  with  the  set_clock_balance_points
+       command,  and ignore points set with the set_clock_balance_points -con-
+       sider_for_balancing command. Balance point exceptions force a pin to be
+       balanced that is not normally a sink. Ignore point exceptions prevent a
+       pin from being balanced that normally would have been.
+
+       By default, balancing metrics honor clock tree exceptions and topologi-
+       cal metrics do not honor clock tree exceptions. Honoring the exceptions
+       means that the reporting will stop at any exceptions that exist in  the
+       middle  of  the  clock  tree.  Not  honoring  exceptions means that the
+       reporting will trace beyond exceptions to the original sink pins of the
+       clock network.
+
+       It  makes  sense for balancing metrics to honor the exceptions, because
+       the exceptions were applied in order to guide  the  balancing  behavior
+       during  CTS.  It  makes  sense for topological metrics to disregard the
+       exceptions, because the parts of the clock tree beyond exceptions, even
+       though  they  are  not balanced, are still considered to be part of the
+       clock network, and will be synthesized during CTS.  Metrics  like  DRCs
+       and  area  (and other topological metrics) should consider that part of
+       the clock network during reporting.
+
+       You  can  override  the  default  exception  handling  by  setting  the
+       report_beyond_exceptions  option to true or false. The default behavior
+       is true, which works as described above.
+
+       === How Clock Metrics Are Calculated ===
+
+       report_clock_qor reports on many different  CTS  related  metrics.  The
+       method  for calculating some of these metrics requires further explana-
+       tion:
+
+       Sinks: Sink count is shown in many report_clock_qor  sub-reports.  This
+       metric is taken to mean 'sink pin' count. In other words, if a cell has
+       multiple clock inputs, it will count as a sink for  each  clock  input.
+       Similarly,  some  abstracts  can have a single physical clock input pin
+       that fans out to multiple check pins inside the abstract. Each of these
+       check pins count as one sink. Also, sink count is calculated while hon-
+       oring clock exceptions like balance points and ignore points. So,  sink
+       count  is  representative  of what is actually balanced during CTS, not
+       the physical leaf sink pins in the clock network.
+
+       For example, if a leaf-level register  on  the  clock  network  has  an
+       ignore  point  constraint  on  it, it is not reported as a sink in most
+       report_clock_qor reports. Likewise, an intermediate pin  in  the  clock
+       network  might  have a balance point constraint on it, in which case it
+       will be considered a sink, and all downstream physical sinks  will  not
+       be considered sinks for balancing or reporting.
+
+       But,  for  the area and power reports, sink count has a different mean-
+       ing. Sink counts in those reports are based on  sink  instances  rather
+       than  sink  pins.  So  a cell with multiple inputs would count only one
+       time as a sink in the area or power report.
+
+       Additionally, the area and power reports consider sinks to be the phys-
+       ical  leaf-level  sinks  in  the  clock tree, regardless of any balance
+       point or ignore point constraints on the design. For example, when  the
+       power report shows leaf-level sinks rather than skew-balancing sinks.
+
+       The  area  report  in  some  cases shows both types. 'Sinks (balanced)'
+       means the sink cells that are balanced by CTS  while  honoring  balance
+       point and ignore point constraints. 'Sinks (physical)' means the physi-
+       cal leaf-level sinks.
+
+       Area: The -type summary report includes  three  area  related  columns:
+       Buffer Count, Buffer Area, and Total Area. Buffer Count and Buffer Area
+       mean the count and area of buffers or inverters inserted by IC Compiler
+       II  clock  tree  synthesis. This could be any part of the CTS solution:
+       synthesis, optimization, balance group balancing,  multisource  synthe-
+       sis,  trunk planning, concurrent clock and data, and so on. If a buffer
+       or inverter is preinstantiated in the netlist, or manually added to the
+       clock  tree,  or  inserted  by datapath optimization, it does not count
+       toward the Buffer Count and Buffer Area columns. The Total Area  column
+       includes every cell in the clock tree except for the sinks.
+
+       The  -type  area  report  includes much more area information. The per-
+       clock and per-hierarchy sections of the report  include  the  following
+       columns:
+
+       o Sinks (balanced): This is the number of sinks and balance points con-
+         sidered for CTS balancing. This is the same as the 'Sinks' column  in
+         all of the other report_clock_qor types.
+
+       o  Sinks  (physical): This is the number of leaf sink pins in the clock
+         network, disregarding balance point  and  ignore  point  constraints.
+         This  sink  count is more relevant to the area calculation since area
+         reporting normally ignores exceptions.
+
+       o Clock Cell Count (non-sink): Total count of all  standard  cells  and
+         macros in the clock network, excluding physical sinks.
+
+       o Clock Stdcell Area: The area of standard cells from 'Clock Cell Count
+         (non-sink)'.
+
+       o Clock Macro Area: The area of macros from  'Clock  Cell  Count  (non-
+         sink)'.
+
+       o  Clock Repeater Count: The total count of buffers or inverters in the
+         clock network that were inserted by IC Compiler II CTS commands. Pre-
+         existing  repeaters,  or those inserted by datapath optimization com-
+         mands, or those imported from another tool are not included  in  this
+         count.
+
+       o  Clock  Repeater  Area:  The  area  corresponding  to 'Clock Repeater
+         Count'.
+
+       o Sink Stdcell Area: The area of standard cells from the 'Sinks (physi-
+         cal)' category.
+
+       o  Sink Macro Area: The area of macro cells from the 'Sinks (physical)'
+         category.
+
+       Levels: Levels are counted from the clock root to the physical sinks of
+       the clock tree, tracing beyond any intermediate balance point or ignore
+       point exceptions. The master clock driver itself does not  count  as  a
+       level  (it  is level 0), so the number of levels is the number of logic
+       stages traversed in the clock tree plus the sink  level.  Physical  and
+       logical hierarchy pins do not count as levels.
+
+       Latency  and  Skew: Latency is calculated based on the total delay from
+       the  clock  root  to  the  clock  sink.  If  the  clock  root   has   a
+       set_clock_latency  source latency constraint applied, this value is not
+       included in the latency reported by report_clock_qor.  Latency  can  be
+       adjusted   for   clock   balance   point   offsets   applied  with  the
+       set_clock_balance_points command. For example, if the actual delay from
+       the clock root to the sink is 2ns, and there is a +0.5ns offset applied
+       on the sink  using  set_clock_balance_points  (meaning  that  the  sink
+       should  be  tapped  0.5ns  early  in the clock tree), then the reported
+       latency in report_clock_qor will be 2.5ns. By making  this  adjustment,
+       these  intentional  balancing  offsets  will  not appear as skew in the
+       report, if CTS has implemented the offsets successfully.
+
+       Latency can be different depending on whether a clock sink is  used  to
+       launch  or  capture  a  path.  For  the -type latency and -type summary
+       reports, both launch and capture latency are considered for calculating
+       the  latency  and skew values. The detailed section of the report shows
+       both the launch and capture latency for  each  reported  sink.  In  the
+       -histogram_type  latency  report,  separate histograms can be shown for
+       each clock indicating launch and capture latency.
+
+       Robustness: The -type robustness and -histogram_type robustness reports
+       use  a robustness metric that is assigned for every sink. Robustness is
+       a way of evaluating the multicorner robustness of the clock tree, which
+       is important for maintaining low skew in all signoff corners.
+
+       Robustness  is  a  measure of how the latency to each clock sink scales
+       between a measured corner and a reference corner. For  this  reason,  a
+       -robustness_corner  must  always be specified when generating a robust-
+       ness report, to act as the reference corner.
+
+       First, an unnormalized robustness value is calculated for  every  clock
+       sink,  which is the ratio of (latency in measured corner) / (latency in
+       reference corner). Additionally, a scaling factor is determined for the
+       corner pair, which is the ratio of (median latency of all sinks in mea-
+       sured corner) / (median latency of all sinks in reference corner). This
+       scaling  factor indicates the typical scaling that occurs between those
+       two corners. For example, the scaling factor of holdCorner compared  to
+       setupCorner  might  be  0.5, indicating that the typical clock sink has
+       half the latency in the holdCorner compared to setupCorner.
+
+       The robustness numbers for each sink are normalized against this  scal-
+       ing factor. As a result, if a clock sink has a robustness value of one,
+       that means it exhibits typical scaling between the measured and  refer-
+       ence  corner.  A robustness value greater than one indicates a sink has
+       higher than average latency in the measured corner compared to the ref-
+       erence  corner.  Likewise, a robustness value less than one indicates a
+       sink with less than average latency in the measured corner compared  to
+       the reference corner.
+
+       When doing multicorner skew analysis, it is useful to look at the sinks
+       that are robustness outliers on either the high or low side. These  are
+       the  sinks  that  exhibit atypical scaling between those corners, which
+       can cause higher than expected skew. If all clock sinks for a clock  or
+       skew group have a similar robustness value, then the clock tree is said
+       to be multicorner robust, and the skew can be maintained  across  those
+       corners.
+
+       "All  Clocks"  Reporting:  The  summary  tables  generally have an 'All
+       Clocks' row at the end. Likewise, histogram reports typically  have  an
+       'All Clocks' histogram reported after all the clock and skew group spe-
+       cific histograms.
+
+       "All Clocks" in most cases is self-explanatory. Consider  the  case  of
+       two  clocks  muxed  together  with  an  overlapping  sub-tree. The 'All
+       Clocks' row or histogram will consider the full  clock  trees  of  both
+       clocks,  and  calculate metrics across all clocks without double-count-
+       ing. For example, the area would be calculated in such a way  that  the
+       common logic of the two clocks is not double-counted. So the total area
+       for "All Clocks" would be less than the  individual  area  of  the  two
+       clocks  summed  together.  So,  "All Clocks" gives a simple overview of
+       your entire clock structure for that particular reported corner.
+
+       "All Clocks" data is shown per-corner. So for example, all modes  of  a
+       given corner would be considered for the "All Clocks" summary table row
+       or histogram.
+
+       In a few cases, the meaning of  "All  Clocks"  isn't  clear.  In  other
+       cases, no "All Clocks" metric is shown, because it is not very meaning-
+       ful. This list describes the "All Clocks" metrics  that  might  not  be
+       intuitive:
+
+       o  DRCs  / Transition / Capacitance: If a given pin or net has multiple
+         transition, capacitance, or DRC values due to multiple  clocks,  then
+         only the largest is selected for "All Clocks".
+
+       o Robustness Max: Takes the maximum robustness value from any one clock
+         or skew group
+
+       o Robustness Min: Takes the minimum robustness value from any one clock
+         or skew group
+
+       o  Robustness  Range:  Shows  the difference between Robustness Max and
+         Robustness Min for the "All Clocks"  row,  rather  than  showing  the
+         largest range for any one skew group.
+
+       o Global/Local/Boundary Skew: The largest global/local/boundary skew of
+         one clock or skew group. This does not calculate  a  new  skew  value
+         based  on  the  dataset  of all sinks in all skew groups. It does not
+         make sense to report a skew value across a  dataset  that  was  never
+         skew balanced.
+
+       o  Target Skew: Shows the global (non-clock-specific) target skew value
+         set with the set_clock_tree_options command.
+
+       o Target Latency: Shows the global (non-clock-specific) target  latency
+         value set with the set_clock_tree_options command.
+
+       === Using report_clock_qor Options ===
+
+       To  use  report_clock_qor, first select the type of report to generate.
+       By default, a summary report is generated, which contains  useful  sum-
+       mary  information  about the area, latency, skew, and DRCs in the clock
+       tree. Other reporting types can be generated with  the  type  and  his-
+       togram_type options.
+
+       After  selecting  the reporting type, consider the scope of the report.
+       By default, all clocks and skew groups in all active CTS scenarios  are
+       reported.  A  CTS  scenario  is  any scenario set true for setup, hold,
+       max_transition, or max_capacitance fixing using the set_scenario_status
+       command. Use -clocks to limit the reporting to only certain clocks. Use
+       -modes and -corners, or -scenarios to limit reporting to  only  certain
+       modes,  corners,  or  scenarios.  Use -from, -to, and -through to limit
+       reporting only to clock paths from, to, or through certain pins.
+
+       If  you  generate  a  histogram  report,  the  -histogram_bins,   -his-
+       togram_min, and -histogram_max options can be used to control the char-
+       acteristics of the histograms generated.
+
+       Many of the reporting types, such as  the  latency,  drc_violators  and
+       robustness,  have a summary section followed by a detailed section. The
+       summary section shows either a summary table or a set of histograms for
+       the  reported  metrics.  These are partitioned by clock and skew group.
+       The detailed section  shows  detailed  information  about  the  outlier
+       objects for that metric. For example, report_clock_qor -type drc_viola-
+       tors would have a detailed section that shows the clock  pins  or  nets
+       that  have  the highest DRC slack. The number of objects printed in the
+       detailed report section can be controlled with the -smallest, -largest,
+       and -all options.
+
+       If  the -smallest, -largest, or -all options are not used, every report
+       type has a default behavior. The drc_violators  report  shows  all  DRC
+       violations  by  default. Every other report that has a detailed section
+       shows the five largest and five smallest datapoints for the metric,  by
+       default.
+
+       For  the reports with a detailed section, the -show_paths option can be
+       used. This option shows an additional section after the  detailed  sec-
+       tion, with a full clock path report through each object in the detailed
+       section.  For  example,  report_clock_qor  -type  latency  -largest   1
+       -show_paths would show the largest latency sink for each clock and skew
+       group in the detailed section.  It would also show the paths to each of
+       those sinks.
+
+       For  -type  robustness  and  -histogram_type  robustness  reports,  the
+       -robustness_corner option must be specified. This option gives the ref-
+       erence corner against which the robustness value is calculated for each
+       sink in the measured corner. See the description of the type robustness
+       report for more information about how the robustness numbers are calcu-
+       lated and what they mean.
+
+   Multicorner-Multimode Support
+EXAMPLES
+       This example generates a summary report only  for  clock  clk  in  mode
+       modeA.
+
+         prompt> report_clock_qor -clocks [get_clocks clk -mode modeA]
+
+       This  example  uses  many  scope  limiting  options to restrict what is
+       returned by the report.
+
+         prompt> report_clock_qor -clocks clk -scenario scenarioA -through myICG/CK \
+            -to sink1/CK
+
+       This example generates a clock robustness report in cornerA  with  cor-
+       nerB used as the reference corner.
+
+         prompt> report_clock_qor -type robustness -corner cornerA -robustness_corner \
+            cornerB
+
+       In  the  following  example, the report_clock_qor command is limited to
+       the scope of only those sinks clocked  by  clk,  and  only  within  the
+       fanout cone of pin c/Z.
+
+         prompt> report_clock_qor -clocks clk -from c/Z -type latency
+
+       In the following example, the report_clock_qor command writes out the 5
+       largest and 5 smallest latency clock sinks.
+
+         prompt> report_clock_qor -clocks clk -type latency -largest 5 -smallest 5
+
+       In the following example, the report_clock_qor command  shows  all  the
+       DRC violators.
+
+         prompt> report_clock_qor -clocks clk -type drc_violators
+
+       In  the following example, the report_clock_qor command reports largest
+       and smallest latency sinks.
+
+         prompt> report_clock_qor -clocks clk -type latency
+
+       In the following example,  the  report_clock_qor  command  reports  all
+       latency sinks.
+
+         prompt> report_clock_qor -clocks clk -type latency -all
+
+       In  the  following  example,  the  report_clock_qor command reports all
+       latency sinks. The -largest and -smallest options are ignored.
+
+         prompt> report_clock_qor -clocks clk -type latency -all -largest 10 \
+            -smallest 10
+
+SEE ALSO
+       check_clock_trees(2)
+       create_clock(2)
+       create_clock_skew_group(2)
+       create_generated_clock(2)
+       report_clock_settings(2)
+       report_clock_timing(2)
+       report_timing(2)
+       set_clock_balance_points(2)
+       set_clock_tree_options(2)
+       set_scenario_status(2)
+       set_timing_derate(2)
+       synthesize_clock_trees(2)
+
+                          Version O-2018.06-SP1
+            Copyright (c) 2018 Synopsys, Inc. All rights reserved.
+icc2_shell> man set_max_fanout
+2.  Synopsys Commands                                        Command Reference
+                                set_max_fanout
+
+NOTE
+       set_max_fanout
+              Command not supported in ICC2
+
+                          Version O-2018.06-SP1
+            Copyright (c) 2018 Synopsys, Inc. All rights reserved.
+icc2_shell> 
