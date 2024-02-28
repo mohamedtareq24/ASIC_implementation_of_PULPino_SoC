@@ -4,7 +4,7 @@ set DB_PATH 		"/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm"
 set ELABORATION 	"/home/ICer/GP/PULP/cv32e40p/1_syn/scripts/elaborate_riscy.tcl"
 
 #set TTLIB 	"$DB_PATH/saed14rvt_tt0p8v125c.db"
-set FFLIB 	"$DB_PATH/saed14rvt_ff0p88v125c.db"
+set FFLIB 	"$DB_PATH/saed14rvt_ff0p88v25c.db"
 set SSLIB 	"$DB_PATH/saed14rvt_ss0p6vm40c.db"                                        
 
 ################## Design Compiler Library Files #setup ######################
@@ -66,7 +66,7 @@ write_sdc  ../sdc/$top.sdc
 #group_path -name input -from [all_inputs]
 #group_path -name outputs -to [all_outputs]
 #group_path -name comb -from [all_inputs] -to [all_outputs]
-set_operating_conditions  -min_library "saed14rvt_ff0p88v125c" -min "ff0p88v125c" -max_library "saed14rvt_ss0p6vm40c" -max "ss0p6vm40c"
+set_operating_conditions  -min_library "saed14rvt_ff0p88v25c" -min "ff0p88v25c" -max_library "saed14rvt_ss0p6vm40c" -max "ss0p6vm40c"
 report_timing
 
 

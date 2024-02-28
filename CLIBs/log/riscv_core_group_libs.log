@@ -1,0 +1,61 @@
+
+set search_path {/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/tfs/ /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm /mnt/hgfs/cv32e40p/1_syn/runs/run_7/netlists .}
+/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/tfs/ /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm /mnt/hgfs/cv32e40p/1_syn/runs/run_7/netlists .
+set NDM_LIBS {}
+set FRAME_LIBS {/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm/saed14rvt_frame_only.ndm}
+/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm/saed14rvt_frame_only.ndm
+set LEF_FILES {}
+set DB_FILES {/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm/saed14rvt_ff0p88v25c.db /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm/saed14rvt_ss0p6vm40c.db}
+/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm/saed14rvt_ff0p88v25c.db /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm/saed14rvt_ss0p6vm40c.db
+set TECH_FILE "/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/techfiles/saed14nm_1p9m_mw.tf"
+/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/techfiles/saed14nm_1p9m_mw.tf
+set LIB_PATH CLIBs
+CLIBs
+setenv GROUP_LIBS_DUMP_FILE /tmp/.tARL96621/_lge8kSXm
+/tmp/.tARL96621/_lge8kSXm
+set_app_options -name lib.workspace.group_libs_combine_physical_only -value false
+lib.workspace.group_libs_combine_physical_only false
+set_app_options -name lib.workspace.use_workspace_tech -value true
+lib.workspace.use_workspace_tech true
+set_app_options -name lib.workspace.fast_exploration -value true
+lib.workspace.fast_exploration true
+set_app_options -name lib.workspace.reuse_lib -value true
+lib.workspace.reuse_lib true
+set_app_options -name lib.workspace.create_cached_lib -value true
+lib.workspace.create_cached_lib true
+#suppress_messages
+create_workspace EXPLORE -flow exploration -scale_factor 10000
+... created workspace EXPLORE in exploration flow
+foreach frame $FRAME_LIBS {
+  read_ndm $frame
+}
+Information: Loading library file '/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm/saed14rvt_frame_only.ndm' (FILE-007)
+read_db $DB_FILES
+Information: Loading db file '/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm/saed14rvt_ff0p88v25c.db' (FILE-007)
+Information: Loading db file '/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm/saed14rvt_ss0p6vm40c.db' (FILE-007)
+{saed14rvt_ff0p88v25c saed14rvt_ss0p6vm40c}
+group_libs
+...Created 2 lib groups
+...Created sub-workspace saed14rvt_c with type normal: 2 logical libs, 1 physical lib, 0 scaling groups.
+...Created sub-workspace saed14rvt_c_physical_only with type physical_only.
+...Created 2 sub-workspaces
+write_workspace -directory $LIB_PATH/.scripts -commit_output $LIB_PATH -check_options {-allow_missing} -commit_options {-force}
+remove_workspace
+... removing lib groups
+... removing library 'saed14rvt_ff0p88v25c'
+... removing library 'saed14rvt_ss0p6vm40c'
+... removing library 'saed14rvt_frame_only'
+... lib workspace removed!
+... removing library 'saed14rvt_ff0p88v25c'
+... removing library 'saed14rvt_frame_only'
+... lib workspace removed!
+... removing library 'saed14rvt_ff0p88v25c'
+... removing library 'saed14rvt_ss0p6vm40c'
+... removing library 'saed14rvt_frame_only'
+... lib workspace removed!
+exit
+Maximum memory usage for this session: 194.46 MB
+CPU usage for this session:      1 seconds (  0.00 hours)
+Elapsed time for this session:      9 seconds (  0.00 hours)
+Thank you for using IC Compiler II Library Manager.
+

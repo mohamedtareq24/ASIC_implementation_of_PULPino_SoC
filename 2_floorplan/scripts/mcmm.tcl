@@ -1,6 +1,5 @@
-
-set fast_corner "/home/ICer/GP/PULP/cv32e40p/2_floorplan/cons/saed14rvt_ff0p88v125c.tcl"
-set slow_corner "/home/ICer/GP/PULP/cv32e40p/2_floorplan/cons/saed14rvt_ss0p6vm40c.tcl"
+set fast_corner "/mnt/hgfs/cv32e40p/2_floorplan/cons/saed14rvt_ff0p88v25c.tcl"
+set slow_corner "/mnt/hgfs/cv32e40p/2_floorplan/cons/saed14rvt_ss0p6vm40c.tcl"
 
 remove_corners -all
 remove_modes -all
@@ -19,19 +18,25 @@ read_parasitic_tech \
 	-layermap $MAP_FILE \
 	-name tlup_min
 
+set_parasitic_parameters -corner slow -early_spec tlup_max -late_spec tlup_max
 
+set_parasitic_parameters -corner fast -early_spec tlup_min -late_spec tlup_min
 create_mode func
-current_mode func
 
-source /home/ICer/GP/PULP/cv32e40p/2_floorplan/cons/func_mode.tcl
-
-create_scenario -mode func -corner fast -name func_fast
-create_scenario -mode func -corner slow -name func_slow
-
-current_scenario func_fast
+### FUNC_FAST
+current_corner fast
 source $fast_corner
+create_scenario -mode func -corner fast -name func_fast
+source /mnt/hgfs/cv32e40p/2_floorplan/cons/func_mode.tcl
 
-current_scenario func_slow
+
+### FUNC_SLOW
+current_corner slow
+puts "current_corner slow"
 source $slow_corner
+
+
+create_scenario -mode func -corner slow -name func_slow
+source /mnt/hgfs/cv32e40p/2_floorplan/cons/func_mode.tcl
 
 

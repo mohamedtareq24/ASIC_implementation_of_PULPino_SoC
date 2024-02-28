@@ -1,0 +1,68 @@
+
+set search_path {/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/tfs/ /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm /mnt/hgfs/cv32e40p/1_syn/runs/run_7/netlists .}
+/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/tfs/ /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm /mnt/hgfs/cv32e40p/1_syn/runs/run_7/netlists .
+setenv RUN_RESULT /tmp/.tARL96621/_rrqmlhN5
+/tmp/.tARL96621/_rrqmlhN5
+set_current_mismatch_config auto_fix
+1
+#suppress_messages
+source -echo -verbose CLIBs/.scripts/saed14rvt_c.tcl
+set_app_options -name lib.workspace.group_libs_combine_physical_only -value false
+lib.workspace.group_libs_combine_physical_only false
+set_app_options -name lib.workspace.use_workspace_tech -value true
+lib.workspace.use_workspace_tech true
+set_app_options -name lib.workspace.fast_exploration -value true
+lib.workspace.fast_exploration true
+set_app_options -name lib.workspace.reuse_lib -value true
+lib.workspace.reuse_lib true
+set_app_options -name lib.workspace.create_cached_lib -value true
+lib.workspace.create_cached_lib true
+# workspace saed14rvt_c:
+create_workspace saed14rvt_c
+... created workspace saed14rvt_c
+read_db /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm/saed14rvt_ff0p88v25c.db
+Information: Loading db file '/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm/saed14rvt_ff0p88v25c.db' (FILE-007)
+{saed14rvt_ff0p88v25c}
+read_db /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm/saed14rvt_ss0p6vm40c.db
+Information: Loading db file '/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm/saed14rvt_ss0p6vm40c.db' (FILE-007)
+{saed14rvt_ss0p6vm40c}
+read_ndm /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm/saed14rvt_frame_only.ndm
+Information: Loading library file '/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm/saed14rvt_frame_only.ndm' (FILE-007)
+{saed14rvt_frame_only}
+process_workspaces -check_options {-allow_missing} -output CLIBs/saed14rvt_c.ndm -force
+
+Checking whether can reuse an existing library for workspace saed14rvt_c ...
+Information: Cannot reuse library CLIBs/saed14rvt_c.ndm for workspace saed14rvt_c: library not exists. (LMUI-053)
+Checking libraries...
+Using saed14rvt_ff0p88v25c as the base library.
+Warning: Mismatched PG pins between the logic library and FRAME for block saed14rvt_c/SAEDRVT14_ISOFSDPQ_PECO_4:  - Extra DB/power  :  VDD. (LM-033)
+Warning: Mismatched PG pins between the logic library and FRAME for block saed14rvt_c/SAEDRVT14_ISOFSDPQ_PECO_8:  - Extra DB/ground :  VSS. (LM-033)
+Warning: More than one power pin or ground pin of the antenna diode for design SAEDRVT14_TIEDIN_PV1ECO_6 (LM-107)
+Warning: Mismatched PG pins between the logic library and FRAME for block saed14rvt_c/SAEDRVT14_DCAP_PV1ECO_12:  - Extra DB/power  :  VDD VDDR - Extra DB/ground :  VSS. (LM-033)
+Warning: Copied PG pin 'saed14rvt_c/SAEDRVT14_AOINV_IW_0P5/VDDR' from physical source (was missing in logical source) (LM-109)
+Warning: Copied PG pin 'saed14rvt_c/SAEDRVT14_AOINV_IW_1/VDDR' from physical source (was missing in logical source) (LM-109)
+Warning: Copied PG pin 'saed14rvt_c/SAEDRVT14_AOINV_IW_2/VDDR' from physical source (was missing in logical source) (LM-109)
+Warning: Copied PG pin 'saed14rvt_c/SAEDRVT14_AOINV_IW_4/VDDR' from physical source (was missing in logical source) (LM-109)
+Warning: Copied PG pin 'saed14rvt_c/SAEDRVT14_AOINV_IW_6/VDDR' from physical source (was missing in logical source) (LM-109)
+Warning: Mismatched PG pins between the logic library and FRAME for block saed14rvt_c/SAEDRVT14_FILL_NNWVDDBRKY2_3:  - Extra DB/power  :  VDD. (LM-033)
+Warning: Copied PG pin 'saed14rvt_c/SAEDRVT14_FILLP2/VDDR' from physical source (was missing in logical source) (LM-109)
+Warning: Copied PG pin 'saed14rvt_c/SAEDRVT14_FILLP3/VDDR' from physical source (was missing in logical source) (LM-109)
+Warning: Copied PG pin 'saed14rvt_c/SAEDRVT14_TAPPP10/VDDR' from physical source (was missing in logical source) (LM-109)
+Warning: Copied PG pin 'saed14rvt_c/SAEDRVT14_CAPTTAPP6/VDDR' from physical source (was missing in logical source) (LM-109)
+Information: Combined 922 physical designs:922 with a frame view (896 had ports reordered); (LM-034)
+Information: Skipped 131 physical designs (LM-052)
+
+Workspace check succeeded!
+... wrote CLIBs/saed14rvt_c.ndm
+... removing library 'saed14rvt_ff0p88v25c'
+... removing library 'saed14rvt_ss0p6vm40c'
+... removing library 'saed14rvt_frame_only'
+... lib workspace removed!
+
+Warning: EMS database "check_workspace.ems" already exists, over-writing it. (EMS-040)
+remove_workspace
+Maximum memory usage for this session: 531.04 MB
+CPU usage for this session:     10 seconds (  0.00 hours)
+Elapsed time for this session:     25 seconds (  0.01 hours)
+Thank you for using IC Compiler II Library Manager.
+
