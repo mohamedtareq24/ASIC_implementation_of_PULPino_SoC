@@ -6,7 +6,7 @@
 ### get the last placment run 
 puts "latest placment run will be used for input data"
 
-set base_path "/home/ICer/GP/PULP/cv32e40p/place/runs/"
+set base_path "/mnt/hgfs/cv32e40p/4_place/runs"
 set latest_run ""
 set latest_run_number 0
 
@@ -62,14 +62,12 @@ report_qor > ../reports/${DESIGN_NAME}.clock_qor.rpt
 
 report_clock_timing  -type skew > ../reports/${DESIGN_NAME}.clock_skew.rpt
 
-set_propagated_clock [get_clocks CLK_GATED]
+set_propagated_clock [get_clocks CLK_I]
 
-########### TAP CELLS INSERTION
-create_tap_cells -lib_cell saed14rvt_frame_timing_ccs/SAEDRVT14_TAPDS -pattern stagger -distance 15
 
 legalize_placement
 
-save_block -as ${DESIGN_NAME}_cts
+save_block -as ${DESIGN_NAME}_ctsed
 report_qor > ../reports/qor.rpt
 report_utilization > ../reports/utilization.rpt
 

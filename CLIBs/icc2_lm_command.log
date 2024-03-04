@@ -1,0 +1,9 @@
+#@ # 
+#@ # Running icc2_lm_shell Version O-2018.06-SP1 for linux64 -- Jul 17, 2018
+#@ # Date:   Thu Feb 29 01:46:12 2024
+#@ # Run by: ICer@IC_EDA
+#@ 
+
+gui_set_pref_value -category {SelectByNamePalette} -key {ObjectType} -value {Logical Cells}
+open_lib /mnt/hgfs/cv32e40p/CLIBs/saed14rvt_c.ndm
+change_selection [get_libs {saed14rvt_ff0p88v25c}]

@@ -1,16 +1,16 @@
 source ../../../scripts/design_init.tcl
 
 ### METAL LAYERS
-set_attribute [get_layers M1] routing_direction vertical
-set_attribute [get_layers M2] routing_direction horizontal
-set_attribute [get_layers M3] routing_direction vertical
-set_attribute [get_layers M4] routing_direction horizontal
-set_attribute [get_layers M5] routing_direction vertical
-set_attribute [get_layers M6] routing_direction horizontal
-set_attribute [get_layers M7] routing_direction vertical
-set_attribute [get_layers M8] routing_direction horizontal
-set_attribute [get_layers M9] routing_direction vertical
-set_attribute [get_layers MRDL] routing_direction horizontal
+set_attribute [get_layers M1] routing_direction horizontal
+set_attribute [get_layers M2] routing_direction vertical
+set_attribute [get_layers M3] routing_direction horizontal
+set_attribute [get_layers M4] routing_direction vertical
+set_attribute [get_layers M5] routing_direction horizontal
+set_attribute [get_layers M6] routing_direction vertical
+set_attribute [get_layers M7] routing_direction horizontal
+set_attribute [get_layers M8] routing_direction vertical
+set_attribute [get_layers M9] routing_direction horizontal
+set_attribute [get_layers MRDL] routing_direction vertical
 
 #./output/ChipTop_pads.v
 initialize_floorplan \
@@ -20,8 +20,13 @@ initialize_floorplan \
    # -boundary {{0 0} {700 700}} \
 #create_tap_cells -lib_cell [get_lib_cells ] -distance 30 -pattern stagger
 #PIN PLACMENT
+set_block_pin_constraints -allowed_layers {M4 M5 M6} -pin_spacing 3
 place_pins -ports [get_ports *]
+
+
 create_tap_cells -lib_cell [get_lib_cell saed14rvt_ss0p6vm40c/SAEDRVT14_CAPTTAPP6] -distance 40 -pattern stagger
+
+
 
 create_net -power $NDM_POWER_NET
 create_net -ground $NDM_GROUND_NET 
@@ -39,5 +44,5 @@ report_timing -delay_type max -max_paths 20 > ../reports/setupdelay.rpt
 report_timing -scenarios func_slow -max_paths 20 > ../reports/setup.rpt
 write_sdc  -output ../sdc/$DESIGN_TOP.sdc
 
-save_block -as ${DESIGN_NAME}_floorplan
+save_block -as ${DESIGN_NAME}_floorplaned
 

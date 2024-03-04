@@ -1,9 +1,0 @@
-#@ # 
-#@ # Running icc2_shell Version O-2018.06-SP1 for linux64 -- Jul 17, 2018
-#@ # Date:   Wed Feb 14 15:37:12 2024
-#@ # Run by: ICer@IC_EDA
-#@ 
-
-man report_qor
-man report_clock_qor
-man set_max_fanout

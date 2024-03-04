@@ -4,7 +4,7 @@
 ### get the last floorplanning run 
 puts "latest floorplanning run will be used for input data"
 
-set base_path "/home/ICer/GP/PULP/cv32e40p/2_floorplan/runs/"
+set base_path "/mnt/hgfs/cv32e40p/2_floorplan/runs"
 
 set latest_run ""
 set latest_run_number 0
@@ -37,72 +37,70 @@ set DLIB_PATH ./${DESIGN_NAME}
 open_lib $DLIB_PATH
 
 #####################OPEN FLOORPLANNED BLOCKED#####################
-open_block -edit $DESIGN_NAME:${DESIGN_NAME}_floorplan
+open_block -edit $DESIGN_NAME:${DESIGN_NAME}_floorplaned
 
 link
 
-############################
-########  PG RINGS  ########
-############################
 
-remove_pg_via_master_rules -all
-remove_pg_patterns -all
-remove_pg_strategies -all
-remove_pg_strategy_via_rules -all
-
-connect_pg_net -net "VDD" [get_pins -hierarchical "*/VDD"]
+## Defining Logical POWER/GROUND Connections
+############################################
+connect_pg_net -net "VDD" [get_pins -hierarchical "*/VDD*"]
 connect_pg_net -net "VSS" [get_pins -hierarchical "*/VSS"]
+
+## Master VIA Rules
+set_pg_via_master_rule PG_VIA4x4 -via_array_dimension {4 4}
+
 
 ## Define Power Ring 
 ####################
-create_pg_ring_pattern ring1 \
-	    -nets VDD \
-            -horizontal_layer {M9} -vertical_layer {MRDL} \
-            -horizontal_width 5 -vertical_width 5 \
-            -horizontal_spacing 0.8 -vertical_spacing 0.8 \
-            -via_rule {{intersection: all}}
-
-create_pg_ring_pattern ring2 \
-	    -nets VSS \
-            -horizontal_layer {M7} -vertical_layer {M8} \
-            -horizontal_width 5 -vertical_width 5 \
-            -horizontal_spacing 0.8 -vertical_spacing 0.8 \
-            -via_rule {{intersection: all}}
-
-set_pg_strategy ring1_s -core -pattern {{name: ring1} {nets: VDD VSS}} -extension {{stop: design_boundary}}
-set_pg_strategy ring2_s -core -pattern {{name: ring2} {nets: VDD VSS}} -extension {{stop: design_boundary}}
-
-compile_pg -strategies ring1_s
-compile_pg -strategies ring2_s
-
-compile_pg -strategies ring
-####Connect P/G Pins and Create Power Rails#################
-create_pg_mesh_pattern P_top_two \
-	-layers { \
-		{ {horizontal_layer: M7} {width: 0.2} {spacing: interleaving} {pitch: 30} {offset: 0.856} {trim : true} } \
-		{ {vertical_layer: M6}   {width: 0.2} {spacing: interleaving} {pitch: 30} {offset: 6.08}  {trim : true} } \
-		} 
-
-set_pg_strategy S_default_vddvss \
-	-core \
-	-pattern   { {name: P_top_two} {nets:{VSS VDD}} } \
-	-extension { {{stop:design_boundary_and_generate_pin}} }
-	
-compile_pg -strategies {S_default_vddvss} 
+#create_pg_ring_pattern ring1 \
+#     -nets {VDD VSS} \
+#            -horizontal_layer {M7} \
+#			-horizontal_width 5 \
+#			-vertical_layer {M6} \
+#            -vertical_width 5 \
+#           -via_rule {{intersection: all}via_master PG_VIA4x4}
 
 
-## Create std rail
-#VDD VSS
-create_pg_std_cell_conn_pattern std_rail_conn1 -rail_width 0.094 -layers M1
 
-set_pg_strategy  std_rail_1 -pattern {{name : std_rail_conn1} {nets: "VDD VSS"}} -core
+#set_pg_strategy ring1_s -core -pattern {{name: ring1} {nets: VDD VSS}} -extension {{stop: design_boundary}}
+#set_pg_strategy ring2_s -core -pattern {{name: ring2} {nets: VDD VSS}} -extension {{stop: design_boundary}}
 
-compile_pg -strategies std_rail_1
+#compile_pg -strategies ring1_s
+#compile_pg -strategies ring2_s
 
-check_pg_drc
 
-save_block -as ${DESIGN_NAME}_powerplan
+## Define Power Mesh 
+####################
+create_pg_mesh_pattern m9_mesh -layers {{{horizontal_layer: M9} {width: 5} {spacing: 20} {pitch: 50} {offset: -8}}}
+set_pg_strategy m9_s -core -extension {{direction: T B L R} {stop: core_boundary}} -pattern {{name: m9_mesh} {nets: VDD VSS}} 
+compile_pg -strategies m9_s
 
-report_qor > ../reports/qor.rpt
+create_pg_mesh_pattern m8_mesh -layers {{{vertical_layer: M8} {width: 5} {spacing: 20} {pitch: 50} {offset: -8}}}
+set_pg_strategy m8_s -core -extension {{direction: T B L R} {stop: core_boundary }} -pattern {{name: m8_mesh} {nets: VDD VSS}} 
+compile_pg -strategies m8_s
+
+create_pg_mesh_pattern m7_mesh -layers {{{horizontal_layer: M7} {width: 1} {spacing: 4} {pitch: 10} {offset: 2}}}
+set_pg_strategy m7_s -core -extension {{direction: T B L R} {stop: core_boundary}} -pattern {{name: m7_mesh} {nets: VDD VSS}} 
+compile_pg -strategies m7_s
+
+create_pg_mesh_pattern m6_mesh -layers {{{vertical_layer: M6} {width: 1 } {spacing: 4} {pitch: 10} {offset: 2}}}
+set_pg_strategy m6_s -core -extension {{direction: T B L R} {stop: core_boundary}} -pattern {{name: m6_mesh} {nets: VDD VSS}} 
+compile_pg -strategies m6_s
+
+######### Create rail strategy #########################
+create_pg_std_cell_conn_pattern rail_pattern -layers {M1} -rail_width {0.094 0.094}
+set_pg_strategy rail_strat -pattern {{pattern: rail_pattern} {nets: VDD VSS}} -core
+compile_pg -strategies rail_strat 
+
+
+connect_pg_net -net "VDD" [get_pins -hierarchical "*/VDD*"]
+connect_pg_net -net "VSS" [get_pins -hierarchical "*/VSS"]
+
+check_pg_connectivity > ../reports/check_pg_connectivity.rpt
+check_pg_missing_vias > ../reports/check_pg_missing_vias.rpt
+check_pg_drc > ../reports/check_pg_drc.rpt
+
+save_block -as ${DESIGN_NAME}_powerplanned
 
 

@@ -6,7 +6,7 @@
 ### get the last powerplan run 
 puts "latest powerplanning run will be used for input data"
 
-set base_path "/home/ICer/GP/PULP/cv32e40p/powerplan/runs/"
+set base_path "/mnt/hgfs/cv32e40p/3_powerplan/runs"
 set latest_run ""
 set latest_run_number 0
 
@@ -38,9 +38,10 @@ set DLIB_PATH ./${DESIGN_NAME}
 open_lib $DLIB_PATH
 
 #####################OPEN POWERPLANNED BLOCKED#####################
-open_block -edit $DESIGN_NAME:${DESIGN_NAME}_powerplan
+open_block -edit $DESIGN_NAME:${DESIGN_NAME}_powerplanned
 
 link
+remove_corners estimated_corner
 ###############################################################################
 ###############################################################################
 ##################################PLACMENT BEGINS##############################

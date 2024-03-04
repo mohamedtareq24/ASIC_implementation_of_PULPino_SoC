@@ -1,0 +1,7 @@
+
+icc2_lm_shell> open_lib /mnt/hgfs/cv32e40p/CLIBs/saed14rvt_c.ndm
+Information: Loading library file '/mnt/hgfs/cv32e40p/CLIBs/saed14rvt_c.ndm' (FILE-007)
+Information: Library is effectively read-only. (LMUI-027)
+{saed14rvt_ff0p88v25c}
+icc2_lm_shell> change_selection [get_libs {saed14rvt_ff0p88v25c}]
+icc2_lm_shell> 
