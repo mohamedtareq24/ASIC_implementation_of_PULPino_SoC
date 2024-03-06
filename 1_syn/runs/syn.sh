@@ -25,6 +25,5 @@ cp -r ../cons ./$new_run_folder/
 # Change working directory to the new run folder
 cd $new_run_folder/WORK
 
-# Run dc_shell with the specified script and log to the new run folder
-dc_shell -f ../../../scripts/syn_script.tcl | tee ../log/syn.log
+echo $new_run_folder
 

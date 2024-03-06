@@ -94,7 +94,7 @@ set_pg_strategy rail_strat -pattern {{pattern: rail_pattern} {nets: VDD VSS}} -c
 compile_pg -strategies rail_strat 
 
 
-connect_pg_net -net "VDD" [get_pins -hierarchical "*/VDD*"]
+connect_pg_net -net "VDD" [get_pins -hierarchical "*/VDD"]
 connect_pg_net -net "VSS" [get_pins -hierarchical "*/VSS"]
 
 check_pg_connectivity > ../reports/check_pg_connectivity.rpt

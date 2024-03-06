@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<errorData typeCount="1" majorVersion="1" minorVersion="8" name="__private_meta_data_:riscv_core_floorplaned_missingVia.err" designName="riscv_core_powerplanned" info="" checker="check_pg_missing_vias" checkerVersion="" created="1709680868" createdDate="03:06:2024:01:21:08:EET" modified="1709685481" modifiedDate="03:06:2024:02:38:01:EET" interactive="false" internal="false" metaData="true" numTypes="1" numInsts="0"/>

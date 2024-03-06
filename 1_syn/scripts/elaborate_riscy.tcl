@@ -2,9 +2,9 @@
 #----------------------
 #------------------------
 #---------------------------
-set RTL_PATH            "/home/ICer/GP/PULP/cv32e40p/rtl"
-set DEFINES_PATH 	"/home/ICer/GP/PULP/cv32e40p/defines"
-set top		riscv_core
+set RTL_PATH            "/mnt/hgfs/cv32e40p/rtl"
+set DEFINES_PATH 	"/mnt/hgfs/cv32e40p/defines"
+set top riscv_core
 #Add the path of the libraries and RTL files to the search_path variable
 lappend search_path $DB_PATH $RTL_PATH
 

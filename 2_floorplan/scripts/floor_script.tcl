@@ -20,8 +20,8 @@ initialize_floorplan \
    # -boundary {{0 0} {700 700}} \
 #create_tap_cells -lib_cell [get_lib_cells ] -distance 30 -pattern stagger
 #PIN PLACMENT
-set_block_pin_constraints -allowed_layers {M4 M5 M6} -pin_spacing 3
-place_pins -ports [get_ports *]
+set_block_pin_constraints -allowed_layers {M4 M5 M6} -pin_spacing 3 -self
+place_pins -ports [get_ports *] -self
 
 
 create_tap_cells -lib_cell [get_lib_cell saed14rvt_ss0p6vm40c/SAEDRVT14_CAPTTAPP6] -distance 40 -pattern stagger

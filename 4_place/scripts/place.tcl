@@ -42,22 +42,32 @@ open_block -edit $DESIGN_NAME:${DESIGN_NAME}_powerplanned
 
 link
 remove_corners estimated_corner
-###############################################################################
-###############################################################################
-##################################PLACMENT BEGINS##############################
-set_app_options -name time.disable_recovery_removal_checks -value false
-set_app_options -name time.disable_case_analysis -value false
+set_scenario_status -hold false func_slow
+set_scenario_status -setup false  func_fast
+##############################################
+########### 4. Placement #####################
+##############################################
+puts "start_place"
+
 set_app_options -name place.coarse.continue_on_missing_scandef -value true
-set_app_options -name opt.common.user_instance_name_prefix -value place
 
-place_opt
+set_attribute -objects [get_lib_cells */*TAP*] -name dont_touch -value true
+#placement will add tie cells 
+#create_placement
+place_opt -to initial_drc
+report_qor > initial_drc.txt
 legalize_placement
-check_legality -verbos
+connect_pg_net -net "VDD" [get_pins -hierarchical "*/VDD"]
+connect_pg_net -net "VSS" [get_pins -hierarchical "*/VSS"]
 
+check_legality -verbose > rpt/check_legality.rpt
+report_utilization > rpt/report_utilization_after_place.rpt
+report_timing -nosplit -delay_type max > rpt/timing_max_place.rpt
+report_timing -nosplit -delay_type min > rpt/timing_min_place.rpt
+report_qor > rpt/report_qor_place.rpt
 
-save_block -as ${DESIGN_NAME}_placed
+puts "finish_place"
 
+save_block -as ${design}_placed
 
-report_qor > ../reports/qor.rpt
-report_utilization > ../reports/utilization.rpt
 

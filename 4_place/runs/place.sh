@@ -19,6 +19,5 @@ mkdir -p ./$new_run_folder/WORK
 # Change working directory to the new run folder
 cd $new_run_folder/WORK
 
-# Run dc_shell with the specified script and log to the new run folder
-icc2_shell -f ../../../scripts/place.tcl | tee ../log/place.log
+echo $new_run_folder
 

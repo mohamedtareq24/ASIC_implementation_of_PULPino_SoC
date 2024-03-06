@@ -1,7 +1,7 @@
 #### Variables
-set CONSTRAINTS   	"/home/ICer/GP/PULP/cv32e40p/1_syn/cons/riscv_core.tcl"
+set CONSTRAINTS   	"/mnt/hgfs/cv32e40p/1_syn/cons/riscv_core.tcl"
 set DB_PATH 		"/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm"
-set ELABORATION 	"/home/ICer/GP/PULP/cv32e40p/1_syn/scripts/elaborate_riscy.tcl"
+set ELABORATION 	"/mnt/hgfs/cv32e40p/1_syn/scripts/elaborate_riscy.tcl"
 
 #set TTLIB 	"$DB_PATH/saed14rvt_tt0p8v125c.db"
 set FFLIB 	"$DB_PATH/saed14rvt_ff0p88v25c.db"
@@ -19,11 +19,13 @@ puts "###########################################"
 set link_library 	 [list * $SSLIB $FFLIB]
 set target_library 	 [list $SSLIB $FFLIB]
 
+#################### Don't use Cells#######################################
+source /mnt/hgfs/cv32e40p/1_syn/scripts/dont_use_cells.tcl
+
 ######################## Elaboration #################################
-
-
-
 source $ELABORATION
+
+
 
 
 #################### Liniking All The Design Parts #########################
