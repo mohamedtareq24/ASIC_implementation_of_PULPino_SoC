@@ -34,6 +34,7 @@ set DLIB_PATH $dir/WORK/${DESIGN_NAME}
 sh cp -r $DLIB_PATH .
 
 set DLIB_PATH ./${DESIGN_NAME} 
+
 ############OPEN DLIB###############
 open_lib $DLIB_PATH
 
@@ -44,6 +45,9 @@ link
 ###############################################################################
 ###############################################################################
 ##################################CTS BEGINS###################################
+
+set_dont_touch_network -clear [get_clocks CLK_I]
+
 create_routing_rule ROUTE_RULES_1 \
   -widths {M3 0.2 M4 0.2 } \
   -spacings {M3 0.42 M4 0.63 }
@@ -52,7 +56,7 @@ set_clock_routing_rules -rules ROUTE_RULES_1 -min_routing_layer M2 -max_routing_
 set_clock_tree_options -target_latency 0.000 -target_skew 0.000 
 set cts_enable_drc_fixing_on_data true
 
-clock_opt
+clock_opt -to route_clock
 
 # clock_opt -from final_opto               #optimization
 
@@ -70,4 +74,8 @@ legalize_placement
 save_block -as ${DESIGN_NAME}_ctsed
 report_qor > ../reports/qor.rpt
 report_utilization > ../reports/utilization.rpt
+
+
+## SAEDRVT14_ISOFSDPQ_PECO_8
+## SAEDRVT14_DCAP_PV1ECO_12
 

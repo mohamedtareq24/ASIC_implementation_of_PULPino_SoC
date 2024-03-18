@@ -7,7 +7,7 @@
 puts "latest CTS run will be used for input data"
 
 set DESIGN_NAME riscv_core
-set base_path "/home/ICer/GP/PULP/cv32e40p/cts/runs/"
+set base_path "/mnt/hgfs/cv32e40p/5_cts/runs"
 set latest_run ""
 set latest_run_number 0
 
@@ -47,14 +47,17 @@ link
 ##################################ROUTING BEGINS###################################
 
 set MIN_ROUTING_LAYER            "M2"   ;# Min routing layer
-set MAX_ROUTING_LAYER            "M9"   ;# Max routing layer
+set MAX_ROUTING_LAYER            "M7"   ;# Max routing layer
 
 
 remove_ignored_layers -all
 set_ignored_layers \
     -min_routing_layer  $MIN_ROUTING_LAYER \
     -max_routing_layer  $MAX_ROUTING_LAYER
-    
+connect_pg_net -net "VDD" [get_pins -hierarchical "*/VDD"]
+connect_pg_net -net "VSS" [get_pins -hierarchical "*/VSS"]
+
+route_auto
 route_opt
 
 

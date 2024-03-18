@@ -76,6 +76,8 @@ puts "#####################MMMC#######################\
 	  #####################MMMC########################"
 source ../../../scripts/mcmm.tcl
 
+source /mnt/hgfs/cv32e40p/1_syn/scripts/dont_use_cells.tcl
+
 report_corners
 save_block -as ${DESIGN_NAME}_init
 
