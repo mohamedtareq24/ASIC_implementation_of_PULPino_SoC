@@ -83,6 +83,7 @@ compile_pg -strategies m6_s
 
 #### CREATE PG VIAS
 create_pg_vias -to_layers M6 -from_layers M1 -via_masters PG_VIA_3x1 -nets VDD
+create_pg_vias -to_layers M6 -from_layers M1 -via_masters PG_VIA_3x1 -nets VSS
 set_attribute -objects [get_vias -design riscv_core -filter upper_layer_name=="M2"] -name via_def -value [get_via_defs -library [current_lib] VIA12BAR1]
 
 ## Define Power Mesh 
