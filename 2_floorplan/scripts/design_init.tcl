@@ -1,10 +1,10 @@
 ####DESIGN INIT######
-set_host_options -max_cores 8
+set_host_options -max_cores 1
 
 set DESIGN_NAME           "riscv_core"
 set DESIGN_TOP			  "riscv_core"
 set DESIGN_REF_PATH 		/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm
-set DESIGN_REF_TECH_PATH 	/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/tfs/
+set DESIGN_REF_TECH_PATH 	/mnt/hgfs/ASIC_shared/LIBs/tech
 
 set DB_PATH 	"/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm"
 set FFLIB 		"$DB_PATH/saed14rvt_ff0p88v25c.db"
@@ -41,10 +41,10 @@ set SYN_PATH            $dir
 set GATE_NET_PATH       ${SYN_PATH}/netlists
 set SDC_PATH            ${SYN_PATH}/sdc
 
-set TECH_FILE             	/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/techfiles/saed14nm_1p9m_mw.tf
-set TLUPLUS_MAX_FILE        /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/techfiles/saed14nm_1p9m_Cmax.tluplus
-set TLUPLUS_MIN_FILE        /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/techfiles/saed14nm_1p9m_Cmin.tluplus		
-set MAP_FILE                /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/techfiles/SAED14nm_PDK_12232018/starrc/saed14nm_1p9m_layer.map
+set TECH_FILE                     "${DESIGN_REF_TECH_PATH}/milkyway/saed14nm_1p9m_mw.tf"  ;#  Milkyway technology file
+set MAP_FILE                      "${DESIGN_REF_TECH_PATH}/star_rc/saed14nm_tf_itf_tluplus.map"  ;#  Mapping file for TLUplus
+set TLUPLUS_MAX_FILE              "${DESIGN_REF_TECH_PATH}/star_rc/max/saed14nm_1p9m_Cmax.tluplus"  ;#  Max TLUplus file
+set TLUPLUS_MIN_FILE              "${DESIGN_REF_TECH_PATH}/star_rc/min/saed14nm_1p9m_Cmin.tluplus"  ;#  Min TLUplus file
 
 set NDM_POWER_NET                "VDD" ;#
 set NDM_POWER_PORT               "VDD" ;#
@@ -52,7 +52,8 @@ set NDM_GROUND_NET               "VSS" ;#
 set NDM_GROUND_PORT              "VSS" ;#
 
 
-set_app_var search_path "$DESIGN_REF_TECH_PATH $DESIGN_REF_PATH $DB_PATH $GATE_NET_PATH"
+set_app_var search_path  "${DESIGN_REF_PATH}/tech/milkyway/ $DESIGN_REF_PATH $DB_PATH $GATE_NET_PATH"
+#set_app_var link_library "$FFLIB $SSLIB"
 
 ##### library creation
 puts "############################### Library creation ######################################"
@@ -60,6 +61,7 @@ puts "############################### Library creation #########################
 create_lib  $DESIGN_NAME \
 -ref_libs {/mnt/hgfs/cv32e40p/CLIBs/saed14rvt_c.ndm /mnt/hgfs/cv32e40p/CLIBs/saed14rvt_c_physical_only.ndm} \
 -technology $TECH_FILE
+
 
 
 set_attribute [get_site_defs unit] is_default true

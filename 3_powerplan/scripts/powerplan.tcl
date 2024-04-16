@@ -49,7 +49,7 @@ connect_pg_net -net "VSS" [get_pins -hierarchical "*/VSS"]
 
 ## Master VIA Rules
 set_pg_via_master_rule PG_VIA_3x1 -cut_spacing 0.25 -via_array_dimension {3 1}
-
+set_app_options -name plan.pgroute.merge_shapes_for_via_creation -value false  
 ## Define Power Ring 
 ####################
 #create_pg_ring_pattern ring1 \
@@ -77,27 +77,27 @@ compile_pg -strategies rail_strat
 
 ## Define Power Mesh 
 ####################
-create_pg_mesh_pattern m6_mesh -layers {{{vertical_layer: M6} {width: 1 } {spacing: 4} {pitch: 10} {offset: 2}}}
-set_pg_strategy m6_s -core -extension {{direction: T B L R} {stop: core_boundary}} -pattern {{name: m6_mesh} {nets: VDD VSS}} 
-compile_pg -strategies m6_s
+#create_pg_mesh_pattern m6_mesh -layers {{{vertical_layer: M6} {width: 1} {spacing: 4} {pitch: 10} {offset: 2}}}
+#set_pg_strategy m6_s -core -extension {{direction: T B L R} {stop: core_boundary }} -pattern {{name: m6_mesh} {nets: VDD VSS}} 
+#compile_pg -strategies m6_s
+create_pg_mesh_pattern m7_mesh -layers {{{vertical_layer: M7} {width: 1} {spacing: 4} {pitch: 10} {offset: 2}}}
+set_pg_strategy m7_s -core -extension {{direction: T B L R} {stop: core_boundary}} -pattern {{name: m7_mesh} {nets: VDD VSS}} 
+compile_pg -strategies m7_s
 
 #### CREATE PG VIAS
-create_pg_vias -to_layers M6 -from_layers M1 -via_masters PG_VIA_3x1 -nets VDD
-create_pg_vias -to_layers M6 -from_layers M1 -via_masters PG_VIA_3x1 -nets VSS
+create_pg_vias -to_layers M7 -from_layers M1 -via_masters PG_VIA_3x1 -nets VDD
+create_pg_vias -to_layers M7 -from_layers M1 -via_masters PG_VIA_3x1 -nets VSS
 set_attribute -objects [get_vias -design riscv_core -filter upper_layer_name=="M2"] -name via_def -value [get_via_defs -library [current_lib] VIA12BAR1]
 
 ## Define Power Mesh 
 ####################
-create_pg_mesh_pattern m7_mesh -layers {{{horizontal_layer: M7} {width: 1} {spacing: 4} {pitch: 10} {offset: 2}}}
-set_pg_strategy m7_s -core -extension {{direction: T B L R} {stop: core_boundary}} -pattern {{name: m7_mesh} {nets: VDD VSS}} 
-compile_pg -strategies m7_s
 
 
-create_pg_mesh_pattern m8_mesh -layers {{{vertical_layer: M8} {width: 5} {spacing: 20} {pitch: 50} {offset: -8}}}
+create_pg_mesh_pattern m8_mesh -layers {{{horizontal_layer: M8} {width: 5} {spacing: 20} {pitch: 50} {offset: -8}}}
 set_pg_strategy m8_s -core -extension {{direction: T B L R} {stop: core_boundary }} -pattern {{name: m8_mesh} {nets: VDD VSS}} 
 compile_pg -strategies m8_s
 
-create_pg_mesh_pattern m9_mesh -layers {{{horizontal_layer: M9} {width: 5} {spacing: 20} {pitch: 50} {offset: -8}}}
+create_pg_mesh_pattern m9_mesh -layers {{{vertical_layer: M9} {width: 5} {spacing: 20} {pitch: 50} {offset: -8}}}
 set_pg_strategy m9_s -core -extension {{direction: T B L R} {stop: core_boundary}} -pattern {{name: m9_mesh} {nets: VDD VSS}} 
 compile_pg -strategies m9_s
 

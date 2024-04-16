@@ -1,8 +1,8 @@
 
-set search_path {/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/tfs/ /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm /mnt/hgfs/cv32e40p/1_syn/runs/run_7/netlists .}
-/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/tfs/ /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm /mnt/hgfs/cv32e40p/1_syn/runs/run_7/netlists .
-setenv RUN_RESULT /tmp/.tARL96621/_rrqmlhN5
-/tmp/.tARL96621/_rrqmlhN5
+set search_path {/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm/tech/milkyway/ /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm /mnt/hgfs/cv32e40p/1_syn/runs/run_6/netlists .}
+/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm/tech/milkyway/ /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm /mnt/hgfs/cv32e40p/1_syn/runs/run_6/netlists .
+setenv RUN_RESULT /tmp/.tARL7793/_rrPYuHuA
+/tmp/.tARL7793/_rrPYuHuA
 set_current_mismatch_config auto_fix
 1
 #suppress_messages
@@ -58,11 +58,9 @@ Workspace check succeeded!
 ... removing library 'saed14rvt_ss0p6vm40c'
 ... removing library 'saed14rvt_frame_only'
 ... lib workspace removed!
-
-Warning: EMS database "check_workspace.ems" already exists, over-writing it. (EMS-040)
 remove_workspace
-Maximum memory usage for this session: 531.04 MB
-CPU usage for this session:     10 seconds (  0.00 hours)
-Elapsed time for this session:     25 seconds (  0.01 hours)
+Maximum memory usage for this session: 546.00 MB
+CPU usage for this session:      3 seconds (  0.00 hours)
+Elapsed time for this session:     20 seconds (  0.01 hours)
 Thank you for using IC Compiler II Library Manager.
 

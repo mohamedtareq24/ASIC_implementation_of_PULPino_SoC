@@ -38,7 +38,7 @@ set DLIB_PATH ./${DESIGN_NAME}
 ############OPEN DLIB###############
 open_lib $DLIB_PATH
 
-#####################OPEN POWERPLANNED BLOCKED#####################
+#####################OPEN POWERPLANNED BLOCK#######################
 open_block -edit $DESIGN_NAME:${DESIGN_NAME}_powerplanned
 
 link
@@ -57,18 +57,19 @@ check_design -checks pre_placement_stage
 check_design -checks physical_constraints 
 ##############################Design Requiremnts ########################
 remove_ideal_network -all
+
 set_app_options -name opt.power.mode -value total
 
 set_app_options -name place.coarse.continue_on_missing_scandef -value true
 
 set_attribute -objects [get_lib_cells */*TAP*] -name dont_touch -value true
 
-set_placement_spacing_label -name x  -side both -lib_cells [get_lib_cells -of [get_cells *]]
+set_placement_spacing_label -name x  -side both -lib_cells [get_lib_cells]
 set_placement_spacing_rule -labels {x x} {0 1}
+
 report_placement_spacing_rules
 ##############################Qor Setup ################################### 
-set_app_options -name place.legalize.optimize_pin_access_using_cell_spacing -value true
-set_app_options -name place.legalize.stream_place -value true
+set_app_options -name place.legalize.optimize_pin_access_using_cell_spacing -value false
 
  #### Congestion
 #set_app_options -name place.opt.congestion_effort -value high

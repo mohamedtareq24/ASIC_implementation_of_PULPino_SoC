@@ -39,9 +39,10 @@ set DLIB_PATH ./${DESIGN_NAME}
 open_lib $DLIB_PATH
 
 #####################OPEN CTSed BLOCKED#####################
-open_block -edit $DESIGN_NAME:${DESIGN_NAME}_placed
+open_block -edit $DESIGN_NAME:${DESIGN_NAME}_ctsed
 
 link
+
 ###############################################################################
 ###############################################################################
 ##################################ROUTING BEGINS###################################
@@ -49,40 +50,36 @@ link
 ###################################  ROUTING  ###################################
 ####################################################################################
 ############################################################
+connect_pg_net -net "VDD" [get_pins -hierarchical "*/VDD"]
+connect_pg_net -net "VSS" [get_pins -hierarchical "*/VSS"]
+
+#remove_routing_rules -all
+
 remove_ignored_layers -all
-
-
-set MIN_ROUTING_LAYER            "M2"   ;# Min routing layer
-set MAX_ROUTING_LAYER            "M8"   ;# Max routing layer
-
-
 set_ignored_layers \
-    -min_routing_layer  $MIN_ROUTING_LAYER \
-    -max_routing_layer  $MAX_ROUTING_LAYER
+    -min_routing_layer  M1 \
+    -max_routing_layer  M8
+    
     
 
+check_routability -connect_standard_cells_within_pins true
+check_routability -connect_standard_cells_within_pins true > ../reports/routability.rpt
 
-check_routability
+##
+#set_lib_cell_purpose -include all  [get_lib_cells -of [get_cells *]]
 
-check_routability > /mnt/hgfs/Gp_CV32e40p/ASIC-Implementauion-of-CV32E40S-RISC-V-core-/6-Routing/check_routability.rpt
-
-set_lib_cell_purpose -include all  [get_lib_cells -of [get_cells *]]
-
-
-set_app_option -name route.common.global_min_layer_mode -value allow_pin_connection
-set_app_option -name route.common.global_max_layer_mode -value soft
-set_app_option -name time.si_enable_analysis -value true
-set_app_option -name time.enable_si_timing_windows -value true
-
+source ../../../scripts/app_options.tcl
 
 route_global
 route_track
+
 route_detail
-route_opt
+
+#route_opt
 
 
 
-save_block -as ${DESIGN_NAME}_routed
+save_block -as ${DESIGN_NAME}_routed_pre_detail
 report_qor > ../reports/qor.rpt
 check_lvs -max 5000 > ../reports/lvs.rpt
 report_utilization > ../reports/utilization.rpt

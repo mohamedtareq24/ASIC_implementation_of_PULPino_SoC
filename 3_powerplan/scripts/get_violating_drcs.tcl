@@ -1,5 +1,5 @@
 # Read error messages from file
-set file_path "drcs.txt"
+set file_path "badcells.txt"
 set error_messages [split [string trim [exec cat $file_path]] "\n\n"]
 
 # Regular expression to match the lines containing 'net' values

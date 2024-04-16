@@ -1,18 +1,18 @@
 
-set search_path {/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/tfs/ /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm /mnt/hgfs/cv32e40p/1_syn/runs/run_7/netlists .}
-/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/tfs/ /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm /mnt/hgfs/cv32e40p/1_syn/runs/run_7/netlists .
+set search_path {/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm/tech/milkyway/ /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm /mnt/hgfs/cv32e40p/1_syn/runs/run_6/netlists .}
+/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm/tech/milkyway/ /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm /mnt/hgfs/cv32e40p/1_syn/runs/run_6/netlists .
 set NDM_LIBS {}
 set FRAME_LIBS {/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm/saed14rvt_frame_only.ndm}
 /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/ndm/saed14rvt_frame_only.ndm
 set LEF_FILES {}
 set DB_FILES {/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm/saed14rvt_ff0p88v25c.db /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm/saed14rvt_ss0p6vm40c.db}
 /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm/saed14rvt_ff0p88v25c.db /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/db_nldm/saed14rvt_ss0p6vm40c.db
-set TECH_FILE "/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/techfiles/saed14nm_1p9m_mw.tf"
-/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/techfiles/saed14nm_1p9m_mw.tf
+set TECH_FILE "/mnt/hgfs/ASIC_shared/LIBs/tech/milkyway/saed14nm_1p9m_mw.tf"
+/mnt/hgfs/ASIC_shared/LIBs/tech/milkyway/saed14nm_1p9m_mw.tf
 set LIB_PATH CLIBs
 CLIBs
-setenv GROUP_LIBS_DUMP_FILE /tmp/.tARL96621/_lge8kSXm
-/tmp/.tARL96621/_lge8kSXm
+setenv GROUP_LIBS_DUMP_FILE /tmp/.tARL7793/_lg7sHzaG
+/tmp/.tARL7793/_lg7sHzaG
 set_app_options -name lib.workspace.group_libs_combine_physical_only -value false
 lib.workspace.group_libs_combine_physical_only false
 set_app_options -name lib.workspace.use_workspace_tech -value true
@@ -54,8 +54,8 @@ remove_workspace
 ... removing library 'saed14rvt_frame_only'
 ... lib workspace removed!
 exit
-Maximum memory usage for this session: 194.46 MB
-CPU usage for this session:      1 seconds (  0.00 hours)
-Elapsed time for this session:      9 seconds (  0.00 hours)
+Maximum memory usage for this session: 209.36 MB
+CPU usage for this session:      0 seconds (  0.00 hours)
+Elapsed time for this session:     14 seconds (  0.00 hours)
 Thank you for using IC Compiler II Library Manager.
 

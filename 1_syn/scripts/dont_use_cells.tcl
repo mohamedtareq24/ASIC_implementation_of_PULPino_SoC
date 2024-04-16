@@ -1,17 +1,213 @@
-set BAD_CELLS "saed14rvt_ff0p88v25c/SAEDRVT14_ADDF_V1_2 saed14rvt_ff0p88v25c/SAEDRVT14_OA2BB2_V1_2 saed14rvt_ff0p88v25c/SAEDRVT14_INV_2 saed14rvt_ff0p88v25c/SAEDRVT14_AO222_2 saed14rvt_ff0p88v25c/SAEDRVT14_AOI22_2 saed14rvt_ff0p88v25c/SAEDRVT14_AO221_2 saed14rvt_ff0p88v25c/SAEDRVT14_AO2BB2_2 saed14rvt_ff0p88v25c/SAEDRVT14_EN2_2 saed14rvt_ff0p88v25c/SAEDRVT14_OR4_2 saed14rvt_ff0p88v25c/SAEDRVT14_AN3_2 saed14rvt_ff0p88v25c/SAEDRVT14_ND2_CDC_2 saed14rvt_ff0p88v25c/SAEDRVT14_NR4_2 saed14rvt_ff0p88v25c/SAEDRVT14_OR2B_PMM_2 saed14rvt_ff0p88v25c/SAEDRVT14_OA21B_2 saed14rvt_ff0p88v25c/SAEDRVT14_OAI32_2 saed14rvt_ff0p88v25c/SAEDRVT14_AN2_2 saed14rvt_ff0p88v25c/SAEDRVT14_INV_PS_2 saed14rvt_ff0p88v25c/SAEDRVT14_INV_20 saed14rvt_ff0p88v25c/SAEDRVT14_INV_4 saed14rvt_ff0p88v25c/SAEDRVT14_NR2_2 saed14rvt_ff0p88v25c/SAEDRVT14_AOI22_3 saed14rvt_ff0p88v25c/SAEDRVT14_AN2B_PMM_2 saed14rvt_ff0p88v25c/SAEDRVT14_AN2B_PMM_2 saed14rvt_ff0p88v25c/SAEDRVT14_AOI21_2 saed14rvt_ff0p88v25c/SAEDRVT14_OAI22_2 saed14rvt_ff0p88v25c/SAEDRVT14_AO2BB2_V1_2 saed14rvt_ff0p88v25c/SAEDRVT14_AO21_2 saed14rvt_ff0p88v25c/SAEDRVT14_AO21_2 saed14rvt_ff0p88v25c/SAEDRVT14_OA221_2 saed14rvt_ff0p88v25c/SAEDRVT14_OA221_2 saed14rvt_ff0p88v25c/SAEDRVT14_OAI222_2 saed14rvt_ff0p88v25c/SAEDRVT14_OAI222_2 saed14rvt_ff0p88v25c/SAEDRVT14_NR2_MM_2 saed14rvt_ff0p88v25c/SAEDRVT14_OA21_2 saed14rvt_ff0p88v25c/SAEDRVT14_AO221_4 saed14rvt_ff0p88v25c/SAEDRVT14_AO221_4 saed14rvt_ff0p88v25c/SAEDRVT14_OA31_2 saed14rvt_ff0p88v25c/SAEDRVT14_OA31_2 saed14rvt_ff0p88v25c/SAEDRVT14_OA33_2 saed14rvt_ff0p88v25c/SAEDRVT14_OA33_2 saed14rvt_ff0p88v25c/SAEDRVT14_OA33_2 saed14rvt_ff0p88v25c/SAEDRVT14_AO21B_2 saed14rvt_ff0p88v25c/SAEDRVT14_OAI21_2 saed14rvt_ff0p88v25c/SAEDRVT14_OAI21_2 saed14rvt_ff0p88v25c/SAEDRVT14_OAI311_2 saed14rvt_ff0p88v25c/SAEDRVT14_AO33_2 saed14rvt_ff0p88v25c/SAEDRVT14_OAI33_2 saed14rvt_ff0p88v25c/SAEDRVT14_OAI33_2 saed14rvt_ff0p88v25c/SAEDRVT14_OAI221_2 saed14rvt_ff0p88v25c/SAEDRVT14_AOI221_2 saed14rvt_ff0p88v25c/SAEDRVT14_AO211_2 saed14rvt_ff0p88v25c/SAEDRVT14_AO211_2 saed14rvt_ff0p88v25c/SAEDRVT14_AO211_2 saed14rvt_ff0p88v25c/SAEDRVT14_AOI211_2 saed14rvt_ff0p88v25c/SAEDRVT14_AN2_MM_4 saed14rvt_ff0p88v25c/SAEDRVT14_NR2_MM_3 saed14rvt_ff0p88v25c/SAEDRVT14_AO21_4 saed14rvt_ff0p88v25c/SAEDRVT14_OR3_4 saed14rvt_ff0p88v25c/SAEDRVT14_AN2B_PMM_8 saed14rvt_ff0p88v25c/SAEDRVT14_AN2B_PMM_8 saed14rvt_ff0p88v25c/SAEDRVT14_AO2BB2_1 saed14rvt_ff0p88v25c/SAEDRVT14_OAI222_4 saed14rvt_ff0p88v25c/SAEDRVT14_OAI222_4 saed14rvt_ff0p88v25c/SAEDRVT14_OAI222_4 saed14rvt_ff0p88v25c/SAEDRVT14_AO2BB2_2 saed14rvt_ff0p88v25c/SAEDRVT14_ADDF_V2_1 saed14rvt_ff0p88v25c/SAEDRVT14_OAI222_1 saed14rvt_ff0p88v25c/SAEDRVT14_OAI222_1 saed14rvt_ff0p88v25c/SAEDRVT14_AOI22_4 saed14rvt_ff0p88v25c/SAEDRVT14_NR2_1P5 saed14rvt_ff0p88v25c/SAEDRVT14_NR2_1P5 saed14rvt_ff0p88v25c/SAEDRVT14_AN2_8 saed14rvt_ff0p88v25c/SAEDRVT14_AN2_8 saed14rvt_ff0p88v25c/SAEDRVT14_OA22_4 saed14rvt_ff0p88v25c/SAEDRVT14_EO2_V1_0P75 saed14rvt_ff0p88v25c/SAEDRVT14_OA21_4 saed14rvt_ff0p88v25c/SAEDRVT14_NR2_5 saed14rvt_ff0p88v25c/SAEDRVT14_AO2BB2_4 saed14rvt_ff0p88v25c/SAEDRVT14_AO21B_4 saed14rvt_ff0p88v25c/SAEDRVT14_AOI22_6 saed14rvt_ff0p88v25c/SAEDRVT14_AOI21_3 saed14rvt_ff0p88v25c/SAEDRVT14_OA31_4 saed14rvt_ff0p88v25c/SAEDRVT14_AO33_4 saed14rvt_ff0p88v25c/SAEDRVT14_AO33_4 saed14rvt_ff0p88v25c/SAEDRVT14_OA33_4 saed14rvt_ff0p88v25c/SAEDRVT14_OA33_4 saed14rvt_ff0p88v25c/SAEDRVT14_OA33_4 saed14rvt_ff0p88v25c/SAEDRVT14_OAI311_4 saed14rvt_ff0p88v25c/SAEDRVT14_OAI33_4 saed14rvt_ff0p88v25c/SAEDRVT14_OAI33_4 saed14rvt_ff0p88v25c/SAEDRVT14_NR3B_2 saed14rvt_ff0p88v25c/SAEDRVT14_OR2B_PSECO_2 saed14rvt_ff0p88v25c/SAEDRVT14_MUXI3_2 saed14rvt_ff0p88v25c/SAEDRVT14_MUXI3_2 saed14rvt_ff0p88v25c/SAEDRVT14_OA21_4 saed14rvt_ff0p88v25c/SAEDRVT14_AN2_MM_4 saed14rvt_ff0p88v25c/SAEDRVT14_AO21B_1 saed14rvt_ff0p88v25c/SAEDRVT14_AO21B_1 saed14rvt_ff0p88v25c/SAEDRVT14_OR3_4 saed14rvt_ff0p88v25c/SAEDRVT14_NR3B_4 saed14rvt_ff0p88v25c/SAEDRVT14_OA22_4 saed14rvt_ff0p88v25c/SAEDRVT14_NR2_5 saed14rvt_ff0p88v25c/SAEDRVT14_AO2BB2_V1_2 saed14rvt_ff0p88v25c/SAEDRVT14_AO21B_2 saed14rvt_ff0p88v25c/SAEDRVT14_OAI311_1 saed14rvt_ff0p88v25c/SAEDRVT14_OAI22_2 saed14rvt_ff0p88v25c/SAEDRVT14_OAI33_1 saed14rvt_ff0p88v25c/SAEDRVT14_OAI33_1 saed14rvt_ff0p88v25c/SAEDRVT14_AO33_2 saed14rvt_ff0p88v25c/SAEDRVT14_AOI311_1 saed14rvt_ff0p88v25c/SAEDRVT14_AOI22_2 saed14rvt_ff0p88v25c/SAEDRVT14_OA31_1P5 saed14rvt_ff0p88v25c/SAEDRVT14_OA31_1P5 saed14rvt_ff0p88v25c/SAEDRVT14_NR2_ECO_2 saed14rvt_ff0p88v25c/SAEDRVT14_NR3_ECO_1 saed14rvt_ff0p88v25c/SAEDRVT14_ADDH_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_NR2_MM_3 saed14rvt_ff0p88v25c/SAEDRVT14_NR2_3 saed14rvt_ff0p88v25c/SAEDRVT14_ADDH_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_NR2_MM_2 saed14rvt_ff0p88v25c/SAEDRVT14_MUXI2_U_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_AOI21_2 saed14rvt_ff0p88v25c/SAEDRVT14_OA33_U_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_OA33_U_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_OA33_U_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_OA33_U_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_NR3B_U_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_OA32_U_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_OA32_U_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_MUXI3_1 saed14rvt_ff0p88v25c/SAEDRVT14_OR2B_PMM_2 saed14rvt_ff0p88v25c/SAEDRVT14_ND2_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_AOI222_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_AO2BB2_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_AO2BB2_V1_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_AOI311_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_OAI22_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_NR2_1P5 saed14rvt_ff0p88v25c/SAEDRVT14_NR2_1P5 saed14rvt_ff0p88v25c/SAEDRVT14_OAI22_0P75 saed14rvt_ff0p88v25c/SAEDRVT14_OAI311_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_ND2_1 saed14rvt_ff0p88v25c/SAEDRVT14_NR2_2 saed14rvt_ff0p88v25c/SAEDRVT14_NR2_2 saed14rvt_ff0p88v25c/SAEDRVT14_EO2_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_EO2_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_MUXI3_0P5 saed14rvt_ff0p88v25c/SAEDRVT14_FDPSBQ_2 saed14rvt_ff0p88v25c/SAEDRVT14_AO2BB2_V1_2 saed14rvt_ff0p88v25c/SAEDRVT14_MUXI3_4 saed14rvt_ff0p88v25c/SAEDRVT14_BUF_S_4"
+############### ignore small sizes #################
+set_dont_use [get_lib_cells */*0P5*] 
+set_dont_use [get_lib_cells */*0P75*] 
+set_dont_use [get_lib_cells */*_1] 
+set_dont_use [get_lib_cells */*_1P5] 
+
+#set_dont_use [get_lib_cells */*_2] 
+
+set_dont_use [get_lib_cells */*ND2_2*]
+
+set_dont_use [get_lib_cells */*CAPTTAPP6*] 
 
 
-# Split the string into individual cell names
-set cells [split $BAD_CELLS " "]
 
-# Iterate over each cell, replace "saed14rvt_ff0p88v25c" with "*/", and set the dont_use flag
-foreach cell $cells {
-    set modified_cell [string map {"saed14rvt_ff0p88v25c/" "*/"} $cell]
-    set_dont_use [get_lib_cell $modified_cell]
-}
 
-set_dont_use  [get_lib_cells */*ECO*]
-set_dont_use  [get_lib_cells */*_0P*]
-set_dont_use  [get_lib_cells */*_1*]
+set_dont_use [get_lib_cells */*_OA22_4*]
+
+set_dont_use [get_lib_cells */*FDPRBQ_V2_4*]
+
+set_dont_use [get_lib_cells */*ND2_3*]
+
+set_dont_use [get_lib_cells */*AO21_4*]
+
+
+set_dont_use [get_lib_cells */*OAI21_3*]
+
+set_dont_use [get_lib_cells */*OA221_4*]
+
+
+set_dont_use [get_lib_cells */*EO3_4*]
+
+set_dont_use [get_lib_cells */*AO2BB2_4*]
+
+
+set_dont_use [get_lib_cells */*AOI311_4*]
+set_dont_use [get_lib_cells */*_OR2_MM_3*]
+set_dont_use [get_lib_cells */*ND2_MM_3*]
+set_dont_use [get_lib_cells */*BUF_S_3*]
+set_dont_use [get_lib_cells */*AOI31_4*]
+set_dont_use [get_lib_cells */*_OR2_MM_2*]
+#MT
+set_dont_use [get_lib_cells */*_AN2_2*] 
+set_dont_use [get_lib_cells */*_OAI32_2*] 
+set_dont_use [get_lib_cells */*_OA21B_2*] 
+set_dont_use [get_lib_cells */*_OR2B_PMM_2*] 
+set_dont_use [get_lib_cells */*_NR4_2*] 
+set_dont_use [get_lib_cells */*_ND2_CDC_2*] 
+set_dont_use [get_lib_cells */*_AN3_2*] 
+set_dont_use [get_lib_cells */*_OR4_2*] 
+set_dont_use [get_lib_cells */*_EN2_2*]
+set_dont_use [get_lib_cells */*_AO2BB2_2*] 
+set_dont_use [get_lib_cells */*_AO221_2*] 
+set_dont_use [get_lib_cells */*_AOI22_2*] 
+set_dont_use [get_lib_cells */*_AO222_2*] 
+set_dont_use [get_lib_cells */*_OA2BB2_V1_2*] 
+set_dont_use [get_lib_cells */*_ADDF_V1_2*] 
+
+
+############# removing all inverters to use the symmetric one only ##############
+set_dont_use [get_lib_cells */*_INV_PECO_*]
+set_dont_use [get_lib_cells */*INV_ECO_*] 
+set_dont_use [get_lib_cells */*_INV_PS_*]
+
+
+set_dont_use [get_lib_cells */*INV_2*] 
+set_dont_use [get_lib_cells */*INV_3*] 
+set_dont_use [get_lib_cells */*INV_4*] 
+set_dont_use [get_lib_cells */*INV_6*] 
+set_dont_use [get_lib_cells */*INV_8*] 
+set_dont_use [get_lib_cells */*INV_10*] 
+set_dont_use [get_lib_cells */*INV_12*] 
+set_dont_use [get_lib_cells */*INV_16*] 
+set_dont_use [get_lib_cells */*_INV_20*]
+
+
+############### no valid via regoin###############
+
+
+set_dont_use [get_lib_cells */*_OAI222_4*]
+
+set_dont_use [get_lib_cells */*_OAI222_4*]
+set_dont_use [get_lib_cells */*_OAI222_4*]
+set_dont_use [get_lib_cells */*_NR2_5*]
+set_dont_use [get_lib_cells */*_AO32_4*]
+set_dont_use [get_lib_cells */*_AO21B_4*]
+set_dont_use [get_lib_cells */*_AOI22_3*]
+set_dont_use [get_lib_cells */*_OA33_4*]
+set_dont_use [get_lib_cells */*_OA33_4*]
+set_dont_use [get_lib_cells */*_OA33_4*]
+set_dont_use [get_lib_cells */*_NR2_3*]
+set_dont_use [get_lib_cells */*_AO2BB2_V1_4*]
+set_dont_use [get_lib_cells */*_AO33_4*]
+set_dont_use [get_lib_cells */*_AO33_4*]
+set_dont_use [get_lib_cells */*_AOI22_4*]
+set_dont_use [get_lib_cells */*_OA21_4*]
+set_dont_use [get_lib_cells */*_ND3_3*]
+set_dont_use [get_lib_cells */*_ND3_3*]
+set_dont_use [get_lib_cells */*_AOI21_3*]
+
+set_dont_use [get_lib_cells */*_OAI311_4*]
+set_dont_use [get_lib_cells */*_AO221_4*]
+set_dont_use [get_lib_cells */*_AO221_4*]
+set_dont_use [get_lib_cells */*_OR3_4*]
+set_dont_use [get_lib_cells */*_MUX2_4*]
+set_dont_use [get_lib_cells */*_OA31_4*]
+set_dont_use [get_lib_cells */*_OA21_2*]
+set_dont_use [get_lib_cells */*_AO2BB2_V1_2*]
+set_dont_use [get_lib_cells */*_OA33_2*]
+set_dont_use [get_lib_cells */*_OA31_2*]
+set_dont_use [get_lib_cells */*_AO21_2*]
+set_dont_use [get_lib_cells */*_AO21B_2*]
+set_dont_use [get_lib_cells */*_NR2_2*]
+set_dont_use [get_lib_cells */*_OAI311_2*]
+set_dont_use [get_lib_cells */*_AO33_2*]
+set_dont_use [get_lib_cells */*_OAI222_2*]
+set_dont_use [get_lib_cells */*_OAI21_2*]
+set_dont_use [get_lib_cells */*_OAI33_2*]
+set_dont_use [get_lib_cells */*_NR3B_2*]
+set_dont_use [get_lib_cells */*_AOI211_2*]
+set_dont_use [get_lib_cells */*_AOI22_6*]
+set_dont_use [get_lib_cells */*_OAI22_2*]
+set_dont_use [get_lib_cells */*_NR2_MM_2*]
+set_dont_use [get_lib_cells */*_AN2B_PMM_2*]
+set_dont_use [get_lib_cells */*_OA221_2*]
+set_dont_use [get_lib_cells */*_AOI21_2*]
+#2
+set_dont_use [get_lib_cells */*OAI33_4*]
+set_dont_use [get_lib_cells */*AO211_2*]
+set_dont_use [get_lib_cells */*_OR2B_PSECO_2*]
+set_dont_use [get_lib_cells */*_MUXI3_2*]
+set_dont_use [get_lib_cells */*_MUXI3_2*]
+set_dont_use [get_lib_cells */*_OAI221_2*]
+set_dont_use [get_lib_cells */*_AOI221_2*]
+set_dont_use [get_lib_cells */*_MUX3_V1M_2*]
+set_dont_use [get_lib_cells */*_MUX3_V1M_2*]
+#3
+set_dont_use [get_lib_cells */*_MUXI3_4*]
+set_dont_use [get_lib_cells */*_ND3B_4*]
+set_dont_use [get_lib_cells */*_AN2_MM_4*]
+set_dont_use [get_lib_cells */*BUF_S_4*]
+set_dont_use [get_lib_cells */*_MUXI3_4*]
+##################### might be blockesd for routing###############
+set_dont_use [get_lib_cells */*_FSDPRBQ_V2_4*]
+set_dont_use [get_lib_cells */*_AO32_4*]
+set_dont_use [get_lib_cells */*_AO221_4*]
+set_dont_use [get_lib_cells */*_AOI21_3*]
+set_dont_use [get_lib_cells */*_AO32_4*]
+set_dont_use [get_lib_cells */*_OAI311_4*]
+set_dont_use [get_lib_cells */*_FDPSBQ_2*]
+set_dont_use [get_lib_cells */*_NR2_MM_*]
+
+set_dont_use [get_lib_cells */*_FDPSBQ_4*]
+
+
+
+############## missing supply pin ##############
+
+set_dont_use [get_lib_cells */*_ISOFSDPQ_PECO_8*]
+set_dont_use [get_lib_cells */*_DCAP_PV1ECO_12*]
+set_dont_use [get_lib_cells */*_ISOFSDPQ_PECO_8*]
+set_dont_use [get_lib_cells */*_DCAP_PV1ECO_12*]
+
+
+############### removing all ECO Cells ################
+set_dont_use [get_lib_cells */*_ECO_*] 
+
+############## remove all large sizes of inv ###########
+set_dont_use [get_lib_cells */*_INV_S_9*]
+
+set_dont_use [get_lib_cells */*_INV_S_10*]
+
+set_dont_use [get_lib_cells */*_INV_S_12*]
+
+
+set_dont_use [get_lib_cells */*_INV_S_16*]
+
+set_dont_use [get_lib_cells */*_INV_S_20*]
+
+
+
+# off grid violations from Zroute
 set_dont_use [get_lib_cells */*_FDPRBQ_V2*]
+set_dont_use [get_lib_cells */SAEDRVT14_FDPS_V3*]
+
+### Zroute blocked cells  on M2 
+set_dont_use [get_lib_cells */*SAEDRVT14_ADDH_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_AN2B_MM_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_AO32_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_AOI21_V1_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_AOI222_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_AOI311_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_AOI31_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_EN2_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_EN3_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_FDPS_V3_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_ND2_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_ND2_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_ND2_CDC_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_ND2_MM_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_ND2_MM_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_ND3_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_NR2_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_NR2_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_NR2_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_OA21_MM_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_OAI21_V1_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_OAI21_V1_*]
+set_dont_use [get_lib_cells */*SAEDRVT14_OA2BB2_2*]
+set_dont_use [get_lib_cells */*SAEDRVT14_AN4_4*]
+
+
+
 

@@ -1,0 +1,4 @@
+################ powerplan app options ####################
+
+####  command merges overlapping shapes for via connection. By default, the tool does not merge the overlapping shapes
+set_app_options -name plan.pgroute.merge_shapes_for_via_creation -value true  

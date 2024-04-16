@@ -1,2 +1,5 @@
-*/runs/run*
 2_floorplan/CLIBs/
+*/runs/*
+*~
+sigfault_vhvh/*
+CTS_HHVH/
