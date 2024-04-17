@@ -178,16 +178,22 @@ set_dont_use [get_lib_cells */*_INV_S_20*]
 
 
 
+set_dont_use [get_lib_cells */*SAEDRVT14_OA*]
+set_dont_use [get_lib_cells */*SAEDRVT14_AO*]
+
 # off grid violations from Zroute
 set_dont_use [get_lib_cells */*_FDPRBQ_V2*]
 set_dont_use [get_lib_cells */SAEDRVT14_FDPS_V3*]
+set_dont_use [get_lib_cells */SAEDRVT14_OA22_2]
+set_dont_use [get_lib_cells */SAEDRVT14_MUX2_2]
+
 
 ### Zroute blocked cells  on M2 
 set_dont_use [get_lib_cells */*SAEDRVT14_ADDH_*]
 set_dont_use [get_lib_cells */*SAEDRVT14_AN2B_MM_*]
 set_dont_use [get_lib_cells */*SAEDRVT14_AO32_*]
 set_dont_use [get_lib_cells */*SAEDRVT14_AOI21_V1_*]
-set_dont_use [get_lib_cells */*SAEDRVT14_AOI222_*]
+
 set_dont_use [get_lib_cells */*SAEDRVT14_AOI311_*]
 set_dont_use [get_lib_cells */*SAEDRVT14_AOI31_*]
 set_dont_use [get_lib_cells */*SAEDRVT14_EN2_*]
@@ -202,7 +208,7 @@ set_dont_use [get_lib_cells */*SAEDRVT14_ND3_*]
 set_dont_use [get_lib_cells */*SAEDRVT14_NR2_*]
 set_dont_use [get_lib_cells */*SAEDRVT14_NR2_*]
 set_dont_use [get_lib_cells */*SAEDRVT14_NR2_*]
-set_dont_use [get_lib_cells */*SAEDRVT14_OA21_MM_*]
+
 set_dont_use [get_lib_cells */*SAEDRVT14_OAI21_V1_*]
 set_dont_use [get_lib_cells */*SAEDRVT14_OAI21_V1_*]
 set_dont_use [get_lib_cells */*SAEDRVT14_OA2BB2_2*]

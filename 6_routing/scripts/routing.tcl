@@ -68,7 +68,7 @@ check_routability -connect_standard_cells_within_pins true > ../reports/routabil
 ##
 #set_lib_cell_purpose -include all  [get_lib_cells -of [get_cells *]]
 
-source ../../../scripts/app_options.tcl
+#source ../../../scripts/app_options.tcl
 
 route_global
 route_track
@@ -79,7 +79,7 @@ route_detail
 
 
 
-save_block -as ${DESIGN_NAME}_routed_pre_detail
+save_block -as ${DESIGN_NAME}_routed_cannot_converge
 report_qor > ../reports/qor.rpt
 check_lvs -max 5000 > ../reports/lvs.rpt
 report_utilization > ../reports/utilization.rpt

@@ -45,6 +45,18 @@ link
 ###############################################################################
 ###############################################################################
 ##################################CTS BEGINS###################################
+remove_tracks -all 
+
+create_track -layer M1 -coord 0.037 -space 0.074
+create_track -layer M2 -coord 0.037 -space 0.074
+create_track -layer M3 -coord 0.037 -space 0.074
+create_track -layer M4 -coord 0.037 -space 0.074
+create_track -layer M5 -coord 0.037 -space 0.148
+create_track -layer M6 -coord 0.037 -space 0.148
+create_track -layer M7 -coord 0.037 -space 0.148
+create_track -layer M8 -coord 0.037 -space 0.148
+create_track -layer M9 -coord 0.037 -space 0.148
+
 set_dont_touch_network -clear [get_clocks CLK_I]
 
 set_dont_use [get_lib_cells */*_INV_S_10*]
@@ -76,7 +88,7 @@ set_lib_cell_purpose -exclude cts */*_INV_S_20*
 #set_placement_spacing_rule  -labels {x x} {0 20}
 
 ## APP OPTIONS
-source ../../../scripts/app_options.tcl
+#source ../../../scripts/app_options.tcl
 #set_app_options -name route.common.connect_within_pins_by_layer_name  -value {{M1 off} {M2 off}}
 
 remove_ignored_layers -all
