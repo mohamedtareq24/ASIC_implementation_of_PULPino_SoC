@@ -44,14 +44,17 @@ link
 ###############################################################################
 ###############################################################################
 ##################################BEGIN CHIP FINISHING ########################
+connect_pg_net -automatic
+
 set pnr_std_fillers "SAEDRVT14_FILL*"
-set std_fillers "saed14rvt_ss0p6v125c/SAEDRVT14_DCAP_PV1ECO_15 saed14rvt_tt0p8v25c/SAEDRVT14_DCAP_PV1ECO_15 saed14rvt_ff0p88v25c/SAEDRVT14_DCAP_PV1ECO_15  saed14rvt_ff0p88v25c/SAEDRVT14_DCAP_PV1ECO_12 saed14rvt_ff0p88v25c/SAEDRVT14_DCAP_PV3_3   saed14rvt_ff0p88v25c/SAEDRVT14_DCAP_PV1ECO_6"
-#foreach filler $pnr_std_fillers { lappend std_fillers "*/${filler}" }
+set GDS_MAP_FILE          	  "/mnt/hgfs/ASIC_shared/LIBs/tech/milkyway/saed14nm_1p9m_gdsout_mw.map"
+set STD_CELL_GDS		  "/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/gds/saed14rvt.gds"
+set std_fillers ""
+foreach filler $pnr_std_fillers { lappend std_fillers "*/${filler}" }
 create_stdcell_filler -lib_cell $std_fillers
 
-connect_pg_net -net $NDM_POWER_NET [get_pins -hierarchical "*/VDD"]
-connect_pg_net -net $NDM_GROUND_NET [get_pins -hierarchical "*/VSS"]
 
+remove_stdcell_fillers_with_violation
 ############################################################
 
 write_verilog ../netlists/${DESIGN_NAME}.icc2.gate.v
@@ -68,16 +71,15 @@ save_block -as ${DESIGN_NAME}_finished
 change_names -rules verilog -verbose
 write_verilog \
 	-include {pg_netlist unconnected_ports} \
-	./output/${DESIGN}_pg.v
+	../output/${DESIGN}_finish.v
 
-write_gds -design ${DESIGN}_4_finished \
-	  -layer_map $GDS_MAP_FILE \
+write_gds  -layer_map $GDS_MAP_FILE \
 	  -keep_data_type \
 	  -fill include \
 	  -output_pin all \
-	  -merge_files "$STD_CELL_GDS" \
+	  -lib_cell_view frame \
 	  -long_names \
-	  ./output/${DESIGN}.gds
+	  ../output/${DESIGN_NAME}.gds
 
 write_parasitics -output  {./results/core.spf}
 

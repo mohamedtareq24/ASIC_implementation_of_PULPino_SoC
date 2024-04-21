@@ -80,18 +80,7 @@ place_opt -to initial_place
 report_qor > initial_place.txt
 #route_global -congestion_map_only true -effort_level low
 
-place_opt -from initial_drc -to initial_drc
-report_qor > initial_place.txt
-
-place_opt -from initial_opto -to initial_opto
-report_qor > init_opto.txt
-
-place_opt -from final_place -to final_place
-report_qor > final_place.txt
-
-
-place_opt -from final_opto -to final_opto
-report_qor > final_opto.txt
+place_opt
 
 legalize_placement
 

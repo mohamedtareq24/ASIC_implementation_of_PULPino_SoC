@@ -1,5 +1,5 @@
 ####DESIGN INIT######
-set_host_options -max_cores 1
+set_host_options -max_cores 8
 
 set DESIGN_NAME           "riscv_core"
 set DESIGN_TOP			  "riscv_core"

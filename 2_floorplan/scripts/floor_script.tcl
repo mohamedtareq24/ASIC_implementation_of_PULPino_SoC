@@ -24,15 +24,15 @@ initialize_floorplan \
 
 
 
-set MIN_ROUTING_LAYER            "M2"   ;# Min routing layer
+set MIN_ROUTING_LAYER            "M1"   ;# Min routing layer
 set MAX_ROUTING_LAYER            "M8"   ;# Max routing layer
 
 set_ignored_layers \
     -min_routing_layer  $MIN_ROUTING_LAYER \
     -max_routing_layer  $MAX_ROUTING_LAYER
 
-set_wire_track_pattern -site_def unit -layer M1  -mode uniform -mask_constraint {mask_two mask_one} \
--coord 0.037 -space 0.074 -direction vertical
+#set_wire_track_pattern -site_def unit -layer M1  -mode uniform -mask_constraint {mask_two mask_one} \
+#-coord 0.037 -space 0.074 -direction vertical
 
 
 set_block_pin_constraints -allowed_layers {M4 M5 M6} -pin_spacing  8 -self

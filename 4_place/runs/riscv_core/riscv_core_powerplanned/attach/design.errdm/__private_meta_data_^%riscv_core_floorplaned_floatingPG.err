@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<errorData typeCount="7" majorVersion="1" minorVersion="8" name="__private_meta_data_:riscv_core_floorplaned_floatingPG.err" designName="riscv_core_powerplanned" info="" checker="check_pg_connectivity" checkerVersion="" created="1709680895" createdDate="03:06:2024:01:21:35:EET" modified="1709685482" modifiedDate="03:06:2024:02:38:02:EET" interactive="false" internal="false" metaData="true" numTypes="7" numInsts="119557"/>

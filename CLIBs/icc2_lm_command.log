@@ -1,9 +1,40 @@
 #@ # 
 #@ # Running icc2_lm_shell Version O-2018.06-SP1 for linux64 -- Jul 17, 2018
-#@ # Date:   Thu Feb 29 01:46:12 2024
-#@ # Run by: ICer@IC_EDA
+#@ # Date:   Fri Apr 19 08:49:40 2024
+#@ # Run by: islam@berkeley
 #@ 
 
 gui_set_pref_value -category {SelectByNamePalette} -key {ObjectType} -value {Logical Cells}
-open_lib /mnt/hgfs/cv32e40p/CLIBs/saed14rvt_c.ndm
+create_workspace -flow edit /mnt/hgfs/cv32e40p/CLIBs/saed14rvt_c.ndm
+read_gds -merge_action Add -trace_option auto /mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/gds/saed14rvt.gds
+change_selection [get_libs {rvt}]
 change_selection [get_libs {saed14rvt_ff0p88v25c}]
+change_selection [get_libs {rvt}]
+change_selection [get_libs {saed14rvt_ff0p88v25c}]
+change_selection [get_libs {rvt}]
+set_app_var link_library rvt
+change_selection [get_libs {saed14rvt_ff0p88v25c}]
+change_selection [get_libs {rvt}]
+change_selection [get_workspaces {saed14rvt_ff0p88v25c}]
+change_selection [get_workspaces {saed14rvt_ff0p88v25c}]
+change_selection [get_workspaces {saed14rvt_ff0p88v25c}]
+change_selection [get_workspaces {saed14rvt_ff0p88v25c}]
+change_selection [get_workspaces {saed14rvt_ff0p88v25c}]
+link
+merge
+merge_stream
+change_selection [get_libs {rvt}]
+change_selection [get_libs {saed14rvt_ff0p88v25c}]
+change_selection [get_libs {rvt}]
+change_selection [get_libs {saed14rvt_ff0p88v25c}]
+change_selection [get_libs {rvt}]
+change_selection [get_libs {saed14rvt_ff0p88v25c}]
+gui_set_select_menu_adds_to_selection -value 1
+change_selection [get_libs {rvt}]
+merge_objects [get_selection]
+current_workspace; check_workspace
+gui_create_window -type MessageBrowserWindow
+open_ems_database check_workspace.ems
+change_selection [get_libs {rvt}]
+change_selection [get_libs {saed14rvt_ff0p88v25c}]
+change_selection [get_libs {rvt}]

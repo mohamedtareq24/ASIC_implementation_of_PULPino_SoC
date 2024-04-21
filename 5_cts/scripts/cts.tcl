@@ -45,17 +45,17 @@ link
 ###############################################################################
 ###############################################################################
 ##################################CTS BEGINS###################################
-remove_tracks -all 
+#remove_tracks -all 
 
-create_track -layer M1 -coord 0.037 -space 0.074
-create_track -layer M2 -coord 0.037 -space 0.074
-create_track -layer M3 -coord 0.037 -space 0.074
-create_track -layer M4 -coord 0.037 -space 0.074
-create_track -layer M5 -coord 0.037 -space 0.148
-create_track -layer M6 -coord 0.037 -space 0.148
-create_track -layer M7 -coord 0.037 -space 0.148
-create_track -layer M8 -coord 0.037 -space 0.148
-create_track -layer M9 -coord 0.037 -space 0.148
+#create_track -layer M1 -coord 0.037 -space 0.074
+#create_track -layer M2 -coord 0.037 -space 0.074
+#create_track -layer M3 -coord 0.037 -space 0.074
+#create_track -layer M4 -coord 0.037 -space 0.074
+#create_track -layer M5 -coord 0.037 -space 0.148
+#create_track -layer M6 -coord 0.037 -space 0.148
+#create_track -layer M7 -coord 0.037 -space 0.148
+#create_track -layer M8 -coord 0.037 -space 0.148
+#create_track -layer M9 -coord 0.037 -space 0.148
 
 set_dont_touch_network -clear [get_clocks CLK_I]
 
