@@ -1,0 +1,91 @@
+<html>
+<body>
+<pre>
+<u>1</u>:	SI analysis is not enabled, so delta delays are unavailable.
+<u>2</u>:	Warning: Scenario func_slow is not configured for hold analysis: skipping. (UIC-058)
+<u>3</u>:	****************************************
+<u>4</u>:	Report : timing
+<u>5</u>:	        -path_type full_clock_expanded
+<u>6</u>:	        -delay_type min
+<u>7</u>:	        -nworst 1
+<u>8</u>:	        -max_paths 1
+<u>9</u>:	        -report_by group
+<u>10</u>:	        -input_pins
+<u>11</u>:	        -nets
+<u>12</u>:	        -include_hierarchical_pins
+<u>13</u>:	        -transition_time
+<u>14</u>:	        -capacitance
+<u>15</u>:	        -crosstalk_delta
+<u>16</u>:	        -derate
+<u>17</u>:	        -attributes
+<u>18</u>:	        -physical
+<u>19</u>:	Design : riscv_core
+<u>20</u>:	Version: O-2018.06-SP1
+<u>21</u>:	Date   : Fri Apr 19 02:07:21 2024
+<u>22</u>:	****************************************
+<u>23</u>:	
+<u>24</u>:	<a name=P0>  <b>Startpoint:</b> <a href="cgi:change_selection [get_cells debug_unit_i/regfile_fp_sel_q_reg]">debug_unit_i/regfile_fp_sel_q_reg</a>  (rising edge-triggered flip-flop clocked by CLK_I)
+<u>25</u>:	  <b>Endpoint:</b> <a href="cgi:change_selection [get_cells debug_unit_i/regfile_fp_sel_q_reg]">debug_unit_i/regfile_fp_sel_q_reg</a>  (rising edge-triggered flip-flop clocked by CLK_I)
+<u>26</u>:	  Mode: func
+<u>27</u>:	  Corner: fast
+<u>28</u>:	  Scenario: func_fast
+<u>29</u>:	  Path Group: CLK_I
+<u>30</u>:	  Path Type: min
+<u>31</u>:	
+<u>32</u>:	
+<u>33</u>:	Attributes
+<u>34</u>:	    b - black-box (unknown)
+<u>35</u>:	    s - size_only
+<u>36</u>:	    d - dont_touch
+<u>37</u>:	    u - dont_use
+<u>38</u>:	    g - generic
+<u>39</u>:	    h - hierarchical
+<u>40</u>:	    i - ideal
+<u>41</u>:	    n - noncombinational
+<u>42</u>:	    E - extracted timing model
+<u>43</u>:	    Q - Quick timing model
+<u>44</u>:	
+<u>45</u>:	
+<u>46</u>:	<b>  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes</b>
+<u>47</u>:	  ------------------------------------------------------------------------------------------------------------------------------------------------------
+<u>48</u>:	  clock CLK_I (rise edge)                                                                        0.00      0.00
+<u>49</u>:	  source latency                                                                                 0.00      0.00
+<u>50</u>:	  <a href="cgi:change_selection [get_ports clk_i]">clk_i</a> (in)                                                         0.00      1.00              0.00      0.00 r    (272.37,0.13)
+<u>51</u>:	  <a href="cgi:change_selection [get_nets clk_i]">clk_i</a> (net)                                      70     75.37                                                                        d
+<u>52</u>:	  <a href="cgi:change_selection [get_pins debug_unit_i/clk]">debug_unit_i/clk</a> (riscv_debug_unit)                                0.00      1.00              0.00      0.00 r    (hierarchical)    h
+<u>53</u>:	  <a href="cgi:change_selection [get_nets debug_unit_i/clk]">debug_unit_i/clk</a> (net)                           70     75.37                                                                        d
+<u>54</u>:	  <a href="cgi:change_selection [get_pins debug_unit_i/regfile_fp_sel_q_reg/CK]">debug_unit_i/regfile_fp_sel_q_reg/CK</a> (SAEDRVT14_FDPRBQ_V2LP_2)     0.00      1.00              0.00      0.00 r    (30.96,130.29)    n
+<u>55</u>:	
+<u>56</u>:	  <a href="cgi:change_selection [get_pins debug_unit_i/regfile_fp_sel_q_reg/CK]">debug_unit_i/regfile_fp_sel_q_reg/CK</a> (SAEDRVT14_FDPRBQ_V2LP_2)     0.00      1.00              0.00      0.00 r    (30.96,130.29)    n
+<u>57</u>:	  <a href="cgi:change_selection [get_pins debug_unit_i/regfile_fp_sel_q_reg/Q]">debug_unit_i/regfile_fp_sel_q_reg/Q</a> (SAEDRVT14_FDPRBQ_V2LP_2)      0.00      1.00              0.02      0.02 f    (32.01,130.35)    n
+<u>58</u>:	  <a href="cgi:change_selection [get_nets debug_unit_i/_gOb192_regfile_raddr_o[5]]">debug_unit_i/_gOb192_regfile_raddr_o[5]</a> (net)     1      1.19
+<u>59</u>:	  <a href="cgi:change_selection [get_pins debug_unit_i/U370/A1]">debug_unit_i/U370/A1</a> (SAEDRVT14_ND2_CDC_2)                         0.00      1.00              0.00      0.02 f    (32.32,131.61)
+<u>60</u>:	  <a href="cgi:change_selection [get_pins debug_unit_i/U370/X]">debug_unit_i/U370/X</a> (SAEDRVT14_ND2_CDC_2)                          0.00      1.00              0.00      0.02 r    (32.30,131.51)
+<u>61</u>:	  <a href="cgi:change_selection [get_nets debug_unit_i/n127]">debug_unit_i/n127</a> (net)                           1      1.47
+<u>62</u>:	  <a href="cgi:change_selection [get_pins debug_unit_i/U369/A1]">debug_unit_i/U369/A1</a> (SAEDRVT14_ND2_CDC_2)                         0.00      1.00              0.00      0.02 r    (28.76,131.61)
+<u>63</u>:	  <a href="cgi:change_selection [get_pins debug_unit_i/U369/X]">debug_unit_i/U369/X</a> (SAEDRVT14_ND2_CDC_2)                          0.00      1.00              0.00      0.03 f    (28.75,131.51)
+<u>64</u>:	  <a href="cgi:change_selection [get_nets debug_unit_i/n507]">debug_unit_i/n507</a> (net)                           1      0.65
+<u>65</u>:	  <a href="cgi:change_selection [get_pins debug_unit_i/regfile_fp_sel_q_reg/D]">debug_unit_i/regfile_fp_sel_q_reg/D</a> (SAEDRVT14_FDPRBQ_V2LP_2)      0.00      1.00              0.00      0.03 f    (30.45,130.35)    n
+<u>66</u>:	  data arrival time                                                                                        0.03
+<u>67</u>:	
+<u>68</u>:	  clock CLK_I (rise edge)                                                                        0.00      0.00
+<u>69</u>:	  source latency                                                                                 0.00      0.00
+<u>70</u>:	  <a href="cgi:change_selection [get_ports clk_i]">clk_i</a> (in)                                                         0.00      1.00              0.00      0.00 r    (272.37,0.13)
+<u>71</u>:	  <a href="cgi:change_selection [get_nets clk_i]">clk_i</a> (net)                                      70     75.37                                                                        d
+<u>72</u>:	  <a href="cgi:change_selection [get_pins debug_unit_i/clk]">debug_unit_i/clk</a> (riscv_debug_unit)                                0.00      1.00              0.00      0.00 r    (hierarchical)    h
+<u>73</u>:	  <a href="cgi:change_selection [get_nets debug_unit_i/clk]">debug_unit_i/clk</a> (net)                           70     75.37                                                                        d
+<u>74</u>:	  <a href="cgi:change_selection [get_pins debug_unit_i/regfile_fp_sel_q_reg/CK]">debug_unit_i/regfile_fp_sel_q_reg/CK</a> (SAEDRVT14_FDPRBQ_V2LP_2)     0.00      1.00              0.00      0.00 r    (30.96,130.29)    n
+<u>75</u>:	
+<u>76</u>:	  library hold time                                                            1.00              0.00      0.00
+<u>77</u>:	  data required time                                                                                       0.00
+<u>78</u>:	  ------------------------------------------------------------------------------------------------------------------------------------------------------
+<u>79</u>:	  data required time                                                                                       0.00
+<u>80</u>:	  data arrival time                                                                                       -0.03
+<u>81</u>:	  ------------------------------------------------------------------------------------------------------------------------------------------------------
+<u>82</u>:	  slack (MET)                                                                                              0.02
+<u>83</u>:	
+<u>84</u>:	
+<u>85</u>:	1
+</pre>
+</body>
+</html>

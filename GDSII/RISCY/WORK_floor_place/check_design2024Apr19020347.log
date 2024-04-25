@@ -1,0 +1,18 @@
+****************************************
+Report : Data Mismatches
+Version: O-2018.06-SP1
+Date   : Fri Apr 19 02:03:47 2024
+****************************************
+No mismatches exist on the design.
+1
+1
+Information: There are no relative placement groups in the design. (NDMUI-173)
+1
+1
+****************************************
+Report : check_physical_constraints
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Fri Apr 19 02:03:47 2024
+****************************************
+1

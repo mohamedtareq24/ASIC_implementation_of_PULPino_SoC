@@ -1,0 +1,69 @@
+****************************************
+Report : qor
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Fri Apr 19 02:46:05 2024
+****************************************
+
+
+Scenario           'func_fast'
+Timing Path Group  'CLK_I'
+----------------------------------------
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_slow'
+Timing Path Group  'CLK_I'
+----------------------------------------
+Levels of Logic:                     73
+Critical Path Length:              4.54
+Critical Path Slack:               0.48
+Critical Path Clk Period:          5.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+----------------------------------------
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:             71
+Hierarchical Port Count:          10332
+Leaf Cell Count:                  34064
+Buf/Inv Cell Count:                1950
+Buf Cell Count:                     183
+Inv Cell Count:                    1767
+CT Buf/Inv Cell Count:                0
+Combinational Cell Count:         31861
+Sequential Cell Count:             2203
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:            13665.21
+Noncombinational Area:          2450.39
+Buf/Inv Area:                    475.30
+Total Buffer Area:                73.48
+Total Inverter Area:             401.82
+Macro/Black Box Area:              0.00
+Net Area:                             0
+Net XLength:                       0.00
+Net YLength:                       0.00
+----------------------------------------
+Cell Area (netlist):                          16115.60
+Cell Area (netlist and physical only):        17573.34
+Net Length:                        0.00
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:             36253
+Nets with Violations:                 0
+Max Trans Violations:                 0
+Max Cap Violations:                   0
+----------------------------------------
+
+1

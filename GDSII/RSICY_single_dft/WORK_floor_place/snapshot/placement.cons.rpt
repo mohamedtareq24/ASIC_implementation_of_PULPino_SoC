@@ -1,0 +1,58 @@
+Warning: duplicate option '-nosplit' overrides previous value. (CMD-018)
+****************************************
+Report : constraint
+        -all_violators
+        -max_transition
+        -max_capacitance
+        -max_delay
+        -min_delay
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Tue Apr 23 14:11:15 2024
+****************************************
+
+   late_timing
+   -----------
+
+Warning: Scenario func_fast is not configured for setup analysis: skipping. (UIC-058)
+Endpoint                         Path Delay     Path Required       CRP    Slack Group    Scenario
+----------------------------------------------------------------------------------------------------------
+No paths.
+
+   early_timing
+   -----------
+
+Warning: Scenario func_slow is not configured for hold analysis: skipping. (UIC-058)
+Endpoint                         Path Delay     Path Required       CRP    Slack Group    Scenario
+----------------------------------------------------------------------------------------------------------
+No paths.
+
+   Mode: func Corner: fast
+   Scenario: func_fast
+  ---------------------------------------------------------------------------
+   Number of max_transition violation(s): 0
+
+   Mode: func Corner: slow
+   Scenario: func_slow
+  ---------------------------------------------------------------------------
+   Number of max_transition violation(s): 0
+
+   Mode: func Corner: fast
+   Scenario: func_fast
+  ---------------------------------------------------------------------------
+   Number of max_capacitance violation(s): 0
+
+   Mode: func Corner: slow
+   Scenario: func_slow
+   max_capacitance                                                             
+                             Required        Actual                            
+   Net                      Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+   id_stage_i/n_2_net__28_     38.03          38.07          -0.04  (VIOLATED) 
+     PIN : id_stage_i/U125/X    38.03         38.07          -0.04  (VIOLATED) 
+
+  ---------------------------------------------------------------------------
+   Number of max_capacitance violation(s): 1
+
+   Total number of violation(s): 1
+1

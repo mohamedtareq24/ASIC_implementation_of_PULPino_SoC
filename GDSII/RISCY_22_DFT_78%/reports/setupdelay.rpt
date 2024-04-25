@@ -1,0 +1,3071 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 20
+        -report_by design
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Wed Apr 24 14:59:06 2024
+****************************************
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_17_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U41/X (SAEDRVT14_MUX2_2)        0.05      3.10 f
+  ex_stage_i_alu_i/U3352/X (SAEDRVT14_OR4_2)       0.06      3.16 f
+  U6299/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6301/X (SAEDRVT14_OR3_2)                        0.07      3.26 f
+  id_stage_i/U2025/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U2026/X (SAEDRVT14_OR3_2)             0.06      3.36 f
+  id_stage_i/U2277/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2278/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2286/X (SAEDRVT14_ND2_CDC_2)         0.07      3.52 f
+  id_stage_i/U2525/X (SAEDRVT14_ND2_CDC_2)         0.05      3.56 r
+  id_stage_i/U2527/X (SAEDRVT14_AN4_2)             0.05      3.62 r
+  id_stage_i/U2529/X (SAEDRVT14_ND2_CDC_2)         0.09      3.70 f
+  id_stage_i/U2532/X (SAEDRVT14_MUX2_2)            0.10      3.80 f
+  id_stage_i/mult_dot_op_b_ex_o_reg_17_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.80 f
+  data arrival time                                          3.80
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/mult_dot_op_b_ex_o_reg_17_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.04      4.96
+  data required time                                         4.96
+  ------------------------------------------------------------------------
+  data required time                                         4.96
+  data arrival time                                         -3.80
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.16
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_17_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U41/X (SAEDRVT14_MUX2_2)        0.05      3.10 f
+  ex_stage_i_alu_i/U3352/X (SAEDRVT14_OR4_2)       0.06      3.16 f
+  U6299/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6301/X (SAEDRVT14_OR3_2)                        0.07      3.26 f
+  id_stage_i/U2025/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U2026/X (SAEDRVT14_OR3_2)             0.06      3.36 f
+  id_stage_i/U2277/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2278/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2286/X (SAEDRVT14_ND2_CDC_2)         0.07      3.52 f
+  id_stage_i/U2525/X (SAEDRVT14_ND2_CDC_2)         0.05      3.56 r
+  id_stage_i/U2527/X (SAEDRVT14_AN4_2)             0.05      3.62 r
+  id_stage_i/U2529/X (SAEDRVT14_ND2_CDC_2)         0.09      3.70 f
+  id_stage_i/U2531/X (SAEDRVT14_MUX2_2)            0.09      3.80 f
+  id_stage_i/mult_operand_b_ex_o_reg_17_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.80 f
+  data arrival time                                          3.80
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/mult_operand_b_ex_o_reg_17_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.03      4.97
+  data required time                                         4.97
+  ------------------------------------------------------------------------
+  data required time                                         4.97
+  data arrival time                                         -3.80
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.17
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_17_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U41/X (SAEDRVT14_MUX2_2)        0.05      3.10 f
+  ex_stage_i_alu_i/U3352/X (SAEDRVT14_OR4_2)       0.06      3.16 f
+  U6299/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6301/X (SAEDRVT14_OR3_2)                        0.07      3.26 f
+  id_stage_i/U2025/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U2026/X (SAEDRVT14_OR3_2)             0.06      3.36 f
+  id_stage_i/U2277/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2278/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2286/X (SAEDRVT14_ND2_CDC_2)         0.07      3.52 f
+  id_stage_i/U2525/X (SAEDRVT14_ND2_CDC_2)         0.05      3.56 r
+  id_stage_i/U2527/X (SAEDRVT14_AN4_2)             0.05      3.62 r
+  id_stage_i/U2529/X (SAEDRVT14_ND2_CDC_2)         0.09      3.70 f
+  id_stage_i/U2530/X (SAEDRVT14_MUX2_2)            0.09      3.80 f
+  id_stage_i/alu_operand_b_ex_o_reg_17_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.80 f
+  data arrival time                                          3.80
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/alu_operand_b_ex_o_reg_17_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.03      4.97
+  data required time                                         4.97
+  ------------------------------------------------------------------------
+  data required time                                         4.97
+  data arrival time                                         -3.80
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.17
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_18_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U40/X (SAEDRVT14_MUX2_2)        0.05      3.10 f
+  ex_stage_i_alu_i/U3399/X (SAEDRVT14_OR4_2)       0.06      3.16 f
+  U6304/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6305/X (SAEDRVT14_OR3_2)                        0.07      3.27 f
+  id_stage_i/U2056/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U2057/X (SAEDRVT14_OR3_2)             0.06      3.37 f
+  id_stage_i/U2292/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2293/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2301/X (SAEDRVT14_ND2_CDC_2)         0.09      3.53 f
+  id_stage_i/U2488/X (SAEDRVT14_ND2_CDC_2)         0.05      3.58 r
+  id_stage_i/U2489/X (SAEDRVT14_AN4_2)             0.06      3.65 r
+  id_stage_i/U2490/X (SAEDRVT14_INV_2)             0.04      3.69 f
+  id_stage_i/U2491/X (SAEDRVT14_MUX2_2)            0.06      3.75 f
+  id_stage_i/alu_operand_b_ex_o_reg_18_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.75 f
+  data arrival time                                          3.75
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/alu_operand_b_ex_o_reg_18_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.04      4.96
+  data required time                                         4.96
+  ------------------------------------------------------------------------
+  data required time                                         4.96
+  data arrival time                                         -3.75
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.21
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_18_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U40/X (SAEDRVT14_MUX2_2)        0.05      3.10 f
+  ex_stage_i_alu_i/U3399/X (SAEDRVT14_OR4_2)       0.06      3.16 f
+  U6304/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6305/X (SAEDRVT14_OR3_2)                        0.07      3.27 f
+  id_stage_i/U2056/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U2057/X (SAEDRVT14_OR3_2)             0.06      3.37 f
+  id_stage_i/U2292/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2293/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2301/X (SAEDRVT14_ND2_CDC_2)         0.09      3.53 f
+  id_stage_i/U2488/X (SAEDRVT14_ND2_CDC_2)         0.05      3.58 r
+  id_stage_i/U2489/X (SAEDRVT14_AN4_2)             0.06      3.65 r
+  id_stage_i/U2490/X (SAEDRVT14_INV_2)             0.04      3.69 f
+  id_stage_i/U2516/X (SAEDRVT14_MUX2_2)            0.06      3.75 f
+  id_stage_i/mult_dot_op_b_ex_o_reg_18_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.75 f
+  data arrival time                                          3.75
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/mult_dot_op_b_ex_o_reg_18_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.04      4.96
+  data required time                                         4.96
+  ------------------------------------------------------------------------
+  data required time                                         4.96
+  data arrival time                                         -3.75
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.21
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_18_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U40/X (SAEDRVT14_MUX2_2)        0.05      3.10 f
+  ex_stage_i_alu_i/U3399/X (SAEDRVT14_OR4_2)       0.06      3.16 f
+  U6304/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6305/X (SAEDRVT14_OR3_2)                        0.07      3.27 f
+  id_stage_i/U2056/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U2057/X (SAEDRVT14_OR3_2)             0.06      3.37 f
+  id_stage_i/U2292/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2293/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2301/X (SAEDRVT14_ND2_CDC_2)         0.09      3.53 f
+  id_stage_i/U2488/X (SAEDRVT14_ND2_CDC_2)         0.05      3.58 r
+  id_stage_i/U2489/X (SAEDRVT14_AN4_2)             0.06      3.65 r
+  id_stage_i/U2490/X (SAEDRVT14_INV_2)             0.04      3.69 f
+  id_stage_i/U2492/X (SAEDRVT14_MUX2_2)            0.06      3.75 f
+  id_stage_i/mult_operand_b_ex_o_reg_18_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.75 f
+  data arrival time                                          3.75
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/mult_operand_b_ex_o_reg_18_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.03      4.97
+  data required time                                         4.97
+  ------------------------------------------------------------------------
+  data required time                                         4.97
+  data arrival time                                         -3.75
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.22
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_26_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U40/X (SAEDRVT14_MUX2_2)        0.05      3.10 f
+  ex_stage_i_alu_i/U3399/X (SAEDRVT14_OR4_2)       0.06      3.16 f
+  U6304/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6305/X (SAEDRVT14_OR3_2)                        0.07      3.27 f
+  id_stage_i/U2056/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U2057/X (SAEDRVT14_OR3_2)             0.06      3.37 f
+  id_stage_i/U2292/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2293/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2301/X (SAEDRVT14_ND2_CDC_2)         0.09      3.53 f
+  id_stage_i/U2425/X (SAEDRVT14_ND2_CDC_2)         0.06      3.59 r
+  id_stage_i/U2426/X (SAEDRVT14_ND2_CDC_2)         0.07      3.66 f
+  id_stage_i/U2427/X (SAEDRVT14_MUX2_2)            0.08      3.74 f
+  id_stage_i/alu_operand_b_ex_o_reg_26_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.74 f
+  data arrival time                                          3.74
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/alu_operand_b_ex_o_reg_26_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.03      4.97
+  data required time                                         4.97
+  ------------------------------------------------------------------------
+  data required time                                         4.97
+  data arrival time                                         -3.74
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.23
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_11_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U2229/X (SAEDRVT14_MUXI2_2)     0.06      3.10 r
+  ex_stage_i_alu_i/U2232/X (SAEDRVT14_AN4_2)       0.04      3.15 r
+  ex_stage_i_alu_i/U2233/X (SAEDRVT14_INV_2)       0.01      3.16 f
+  U6308/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6309/X (SAEDRVT14_OR3_2)                        0.07      3.27 f
+  id_stage_i/U1989/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U1990/X (SAEDRVT14_OR3_2)             0.06      3.37 f
+  id_stage_i/U2213/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2217/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2223/X (SAEDRVT14_ND2_CDC_2)         0.07      3.51 f
+  id_stage_i/U2431/X (SAEDRVT14_AN2_2)             0.06      3.57 f
+  id_stage_i/U2473/X (SAEDRVT14_ND2_CDC_2)         0.02      3.59 r
+  id_stage_i/U2479/X (SAEDRVT14_ND2_CDC_2)         0.07      3.66 f
+  id_stage_i/U2481/X (SAEDRVT14_MUX2_2)            0.08      3.74 f
+  id_stage_i/mult_operand_b_ex_o_reg_11_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.74 f
+  data arrival time                                          3.74
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/mult_operand_b_ex_o_reg_11_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.03      4.97
+  data required time                                         4.97
+  ------------------------------------------------------------------------
+  data required time                                         4.97
+  data arrival time                                         -3.74
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.23
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_11_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U2229/X (SAEDRVT14_MUXI2_2)     0.06      3.10 r
+  ex_stage_i_alu_i/U2232/X (SAEDRVT14_AN4_2)       0.04      3.15 r
+  ex_stage_i_alu_i/U2233/X (SAEDRVT14_INV_2)       0.01      3.16 f
+  U6308/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6309/X (SAEDRVT14_OR3_2)                        0.07      3.27 f
+  id_stage_i/U1989/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U1990/X (SAEDRVT14_OR3_2)             0.06      3.37 f
+  id_stage_i/U2213/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2217/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2223/X (SAEDRVT14_ND2_CDC_2)         0.07      3.51 f
+  id_stage_i/U2431/X (SAEDRVT14_AN2_2)             0.06      3.57 f
+  id_stage_i/U2473/X (SAEDRVT14_ND2_CDC_2)         0.02      3.59 r
+  id_stage_i/U2479/X (SAEDRVT14_ND2_CDC_2)         0.07      3.66 f
+  id_stage_i/U2482/X (SAEDRVT14_MUX2_2)            0.08      3.74 f
+  id_stage_i/mult_dot_op_b_ex_o_reg_11_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.74 f
+  data arrival time                                          3.74
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/mult_dot_op_b_ex_o_reg_11_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.03      4.97
+  data required time                                         4.97
+  ------------------------------------------------------------------------
+  data required time                                         4.97
+  data arrival time                                         -3.74
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.23
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_11_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U2229/X (SAEDRVT14_MUXI2_2)     0.06      3.10 r
+  ex_stage_i_alu_i/U2232/X (SAEDRVT14_AN4_2)       0.04      3.15 r
+  ex_stage_i_alu_i/U2233/X (SAEDRVT14_INV_2)       0.01      3.16 f
+  U6308/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6309/X (SAEDRVT14_OR3_2)                        0.07      3.27 f
+  id_stage_i/U1989/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U1990/X (SAEDRVT14_OR3_2)             0.06      3.37 f
+  id_stage_i/U2213/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2217/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2223/X (SAEDRVT14_ND2_CDC_2)         0.07      3.51 f
+  id_stage_i/U2431/X (SAEDRVT14_AN2_2)             0.06      3.57 f
+  id_stage_i/U2473/X (SAEDRVT14_ND2_CDC_2)         0.02      3.59 r
+  id_stage_i/U2479/X (SAEDRVT14_ND2_CDC_2)         0.07      3.66 f
+  id_stage_i/U2480/X (SAEDRVT14_MUX2_2)            0.07      3.74 f
+  id_stage_i/alu_operand_b_ex_o_reg_11_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.74 f
+  data arrival time                                          3.74
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/alu_operand_b_ex_o_reg_11_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.03      4.97
+  data required time                                         4.97
+  ------------------------------------------------------------------------
+  data required time                                         4.97
+  data arrival time                                         -3.74
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.23
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_26_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U40/X (SAEDRVT14_MUX2_2)        0.05      3.10 f
+  ex_stage_i_alu_i/U3399/X (SAEDRVT14_OR4_2)       0.06      3.16 f
+  U6304/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6305/X (SAEDRVT14_OR3_2)                        0.07      3.27 f
+  id_stage_i/U2056/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U2057/X (SAEDRVT14_OR3_2)             0.06      3.37 f
+  id_stage_i/U2292/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2293/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2301/X (SAEDRVT14_ND2_CDC_2)         0.09      3.53 f
+  id_stage_i/U2425/X (SAEDRVT14_ND2_CDC_2)         0.06      3.59 r
+  id_stage_i/U2426/X (SAEDRVT14_ND2_CDC_2)         0.07      3.66 f
+  id_stage_i/U2430/X (SAEDRVT14_MUX2_2)            0.08      3.74 f
+  id_stage_i/mult_dot_op_b_ex_o_reg_26_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.74 f
+  data arrival time                                          3.74
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/mult_dot_op_b_ex_o_reg_26_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.03      4.97
+  data required time                                         4.97
+  ------------------------------------------------------------------------
+  data required time                                         4.97
+  data arrival time                                         -3.74
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.23
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_26_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U40/X (SAEDRVT14_MUX2_2)        0.05      3.10 f
+  ex_stage_i_alu_i/U3399/X (SAEDRVT14_OR4_2)       0.06      3.16 f
+  U6304/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6305/X (SAEDRVT14_OR3_2)                        0.07      3.27 f
+  id_stage_i/U2056/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U2057/X (SAEDRVT14_OR3_2)             0.06      3.37 f
+  id_stage_i/U2292/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2293/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2301/X (SAEDRVT14_ND2_CDC_2)         0.09      3.53 f
+  id_stage_i/U2425/X (SAEDRVT14_ND2_CDC_2)         0.06      3.59 r
+  id_stage_i/U2426/X (SAEDRVT14_ND2_CDC_2)         0.07      3.66 f
+  id_stage_i/U2428/X (SAEDRVT14_MUX2_2)            0.08      3.74 f
+  id_stage_i/mult_operand_b_ex_o_reg_26_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.74 f
+  data arrival time                                          3.74
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/mult_operand_b_ex_o_reg_26_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.03      4.97
+  data required time                                         4.97
+  ------------------------------------------------------------------------
+  data required time                                         4.97
+  data arrival time                                         -3.74
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.23
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_27_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U2229/X (SAEDRVT14_MUXI2_2)     0.06      3.10 r
+  ex_stage_i_alu_i/U2232/X (SAEDRVT14_AN4_2)       0.04      3.15 r
+  ex_stage_i_alu_i/U2233/X (SAEDRVT14_INV_2)       0.01      3.16 f
+  U6308/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6309/X (SAEDRVT14_OR3_2)                        0.07      3.27 f
+  id_stage_i/U1989/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U1990/X (SAEDRVT14_OR3_2)             0.06      3.37 f
+  id_stage_i/U2213/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2217/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2223/X (SAEDRVT14_ND2_CDC_2)         0.07      3.51 f
+  id_stage_i/U2431/X (SAEDRVT14_AN2_2)             0.06      3.57 f
+  id_stage_i/U2473/X (SAEDRVT14_ND2_CDC_2)         0.02      3.59 r
+  id_stage_i/U2474/X (SAEDRVT14_ND2_CDC_2)         0.06      3.65 f
+  id_stage_i/U2475/X (SAEDRVT14_MUX2_2)            0.07      3.73 f
+  id_stage_i/alu_operand_b_ex_o_reg_27_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.73 f
+  data arrival time                                          3.73
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/alu_operand_b_ex_o_reg_27_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.04      4.96
+  data required time                                         4.96
+  ------------------------------------------------------------------------
+  data required time                                         4.96
+  data arrival time                                         -3.73
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.23
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_27_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U2229/X (SAEDRVT14_MUXI2_2)     0.06      3.10 r
+  ex_stage_i_alu_i/U2232/X (SAEDRVT14_AN4_2)       0.04      3.15 r
+  ex_stage_i_alu_i/U2233/X (SAEDRVT14_INV_2)       0.01      3.16 f
+  U6308/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6309/X (SAEDRVT14_OR3_2)                        0.07      3.27 f
+  id_stage_i/U1989/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U1990/X (SAEDRVT14_OR3_2)             0.06      3.37 f
+  id_stage_i/U2213/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2217/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2223/X (SAEDRVT14_ND2_CDC_2)         0.07      3.51 f
+  id_stage_i/U2431/X (SAEDRVT14_AN2_2)             0.06      3.57 f
+  id_stage_i/U2473/X (SAEDRVT14_ND2_CDC_2)         0.02      3.59 r
+  id_stage_i/U2474/X (SAEDRVT14_ND2_CDC_2)         0.06      3.65 f
+  id_stage_i/U2477/X (SAEDRVT14_MUX2_2)            0.07      3.73 f
+  id_stage_i/mult_dot_op_b_ex_o_reg_27_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.73 f
+  data arrival time                                          3.73
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/mult_dot_op_b_ex_o_reg_27_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.03      4.97
+  data required time                                         4.97
+  ------------------------------------------------------------------------
+  data required time                                         4.97
+  data arrival time                                         -3.73
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.24
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_27_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U2229/X (SAEDRVT14_MUXI2_2)     0.06      3.10 r
+  ex_stage_i_alu_i/U2232/X (SAEDRVT14_AN4_2)       0.04      3.15 r
+  ex_stage_i_alu_i/U2233/X (SAEDRVT14_INV_2)       0.01      3.16 f
+  U6308/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6309/X (SAEDRVT14_OR3_2)                        0.07      3.27 f
+  id_stage_i/U1989/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U1990/X (SAEDRVT14_OR3_2)             0.06      3.37 f
+  id_stage_i/U2213/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2217/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2223/X (SAEDRVT14_ND2_CDC_2)         0.07      3.51 f
+  id_stage_i/U2431/X (SAEDRVT14_AN2_2)             0.06      3.57 f
+  id_stage_i/U2473/X (SAEDRVT14_ND2_CDC_2)         0.02      3.59 r
+  id_stage_i/U2474/X (SAEDRVT14_ND2_CDC_2)         0.06      3.65 f
+  id_stage_i/U2476/X (SAEDRVT14_MUX2_2)            0.07      3.73 f
+  id_stage_i/mult_operand_b_ex_o_reg_27_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.73 f
+  data arrival time                                          3.73
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/mult_operand_b_ex_o_reg_27_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.03      4.97
+  data required time                                         4.97
+  ------------------------------------------------------------------------
+  data required time                                         4.97
+  data arrival time                                         -3.73
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.24
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_25_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U41/X (SAEDRVT14_MUX2_2)        0.05      3.10 f
+  ex_stage_i_alu_i/U3352/X (SAEDRVT14_OR4_2)       0.06      3.16 f
+  U6299/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6301/X (SAEDRVT14_OR3_2)                        0.07      3.26 f
+  id_stage_i/U2025/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U2026/X (SAEDRVT14_OR3_2)             0.06      3.36 f
+  id_stage_i/U2277/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2278/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2286/X (SAEDRVT14_ND2_CDC_2)         0.07      3.52 f
+  id_stage_i/U2443/X (SAEDRVT14_AN2_2)             0.06      3.58 f
+  id_stage_i/U2454/X (SAEDRVT14_OR4_2)             0.07      3.65 f
+  id_stage_i/U2456/X (SAEDRVT14_MUX2_2)            0.06      3.71 f
+  id_stage_i/mult_operand_b_ex_o_reg_25_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.71 f
+  data arrival time                                          3.71
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/mult_operand_b_ex_o_reg_25_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.03      4.97
+  data required time                                         4.97
+  ------------------------------------------------------------------------
+  data required time                                         4.97
+  data arrival time                                         -3.71
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.26
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_25_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U41/X (SAEDRVT14_MUX2_2)        0.05      3.10 f
+  ex_stage_i_alu_i/U3352/X (SAEDRVT14_OR4_2)       0.06      3.16 f
+  U6299/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6301/X (SAEDRVT14_OR3_2)                        0.07      3.26 f
+  id_stage_i/U2025/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U2026/X (SAEDRVT14_OR3_2)             0.06      3.36 f
+  id_stage_i/U2277/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2278/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2286/X (SAEDRVT14_ND2_CDC_2)         0.07      3.52 f
+  id_stage_i/U2443/X (SAEDRVT14_AN2_2)             0.06      3.58 f
+  id_stage_i/U2454/X (SAEDRVT14_OR4_2)             0.07      3.65 f
+  id_stage_i/U2455/X (SAEDRVT14_MUX2_2)            0.06      3.71 f
+  id_stage_i/alu_operand_b_ex_o_reg_25_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.71 f
+  data arrival time                                          3.71
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/alu_operand_b_ex_o_reg_25_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.03      4.97
+  data required time                                         4.97
+  ------------------------------------------------------------------------
+  data required time                                         4.97
+  data arrival time                                         -3.71
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.26
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_25_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U41/X (SAEDRVT14_MUX2_2)        0.05      3.10 f
+  ex_stage_i_alu_i/U3352/X (SAEDRVT14_OR4_2)       0.06      3.16 f
+  U6299/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6301/X (SAEDRVT14_OR3_2)                        0.07      3.26 f
+  id_stage_i/U2025/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U2026/X (SAEDRVT14_OR3_2)             0.06      3.36 f
+  id_stage_i/U2277/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2278/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2286/X (SAEDRVT14_ND2_CDC_2)         0.07      3.52 f
+  id_stage_i/U2443/X (SAEDRVT14_AN2_2)             0.06      3.58 f
+  id_stage_i/U2454/X (SAEDRVT14_OR4_2)             0.07      3.65 f
+  id_stage_i/U2457/X (SAEDRVT14_MUX2_2)            0.06      3.71 f
+  id_stage_i/mult_dot_op_b_ex_o_reg_25_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.71 f
+  data arrival time                                          3.71
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/mult_dot_op_b_ex_o_reg_25_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.03      4.97
+  data required time                                         4.97
+  ------------------------------------------------------------------------
+  data required time                                         4.97
+  data arrival time                                         -3.71
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.26
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_operand_b_ex_o_reg_19_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U2229/X (SAEDRVT14_MUXI2_2)     0.06      3.10 r
+  ex_stage_i_alu_i/U2232/X (SAEDRVT14_AN4_2)       0.04      3.15 r
+  ex_stage_i_alu_i/U2233/X (SAEDRVT14_INV_2)       0.01      3.16 f
+  U6308/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6309/X (SAEDRVT14_OR3_2)                        0.07      3.27 f
+  id_stage_i/U1989/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U1990/X (SAEDRVT14_OR3_2)             0.06      3.37 f
+  id_stage_i/U2213/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2217/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2223/X (SAEDRVT14_ND2_CDC_2)         0.07      3.51 f
+  id_stage_i/U2431/X (SAEDRVT14_AN2_2)             0.06      3.57 f
+  id_stage_i/U2439/X (SAEDRVT14_OR4_2)             0.07      3.65 f
+  id_stage_i/U2441/X (SAEDRVT14_MUX2_2)            0.06      3.71 f
+  id_stage_i/mult_operand_b_ex_o_reg_19_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.71 f
+  data arrival time                                          3.71
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/mult_operand_b_ex_o_reg_19_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.03      4.97
+  data required time                                         4.97
+  ------------------------------------------------------------------------
+  data required time                                         4.97
+  data arrival time                                         -3.71
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.26
+
+
+
+  Startpoint: id_stage_i/alu_operator_ex_o_reg_5_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/mult_dot_op_b_ex_o_reg_19_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock CLK_I (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  id_stage_i/alu_operator_ex_o_reg_5_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      0.00 r
+  id_stage_i/alu_operator_ex_o_reg_5_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.09      0.09 r
+  ex_stage_i_alu_i/U88/X (SAEDRVT14_INV_2)         0.04      0.12 f
+  ex_stage_i_alu_i/U664/X (SAEDRVT14_AN3_2)        0.08      0.21 f
+  ex_stage_i_alu_i/U734/X (SAEDRVT14_INV_2)        0.09      0.29 r
+  ex_stage_i_alu_i/U862/X (SAEDRVT14_INV_2)        0.07      0.37 f
+  ex_stage_i_alu_i/U863/X (SAEDRVT14_AN2_2)        0.07      0.44 f
+  ex_stage_i_alu_i/U1210/X (SAEDRVT14_INV_2)       0.07      0.51 r
+  ex_stage_i_alu_i/U3204/X (SAEDRVT14_EN2_2)       0.09      0.60 f
+  ex_stage_i_alu_i/intadd_30_U6/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.66 f
+  ex_stage_i_alu_i/intadd_30_U5/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.70 f
+  ex_stage_i_alu_i/intadd_30_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.73 f
+  ex_stage_i_alu_i/intadd_30_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      0.76 f
+  ex_stage_i_alu_i/intadd_30_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      0.80 f
+  ex_stage_i_alu_i/U1121/X (SAEDRVT14_OR2_MM_2)    0.03      0.83 f
+  ex_stage_i_alu_i/U2882/X (SAEDRVT14_ND2_CDC_2)   0.01      0.84 r
+  ex_stage_i_alu_i/U2883/X (SAEDRVT14_ND2_CDC_2)   0.01      0.85 f
+  ex_stage_i_alu_i/U32/X (SAEDRVT14_MUX2_2)        0.04      0.89 f
+  ex_stage_i_alu_i/intadd_29_U8/S (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      0.95 r
+  ex_stage_i_alu_i/U1311/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.02 r
+  ex_stage_i_alu_i/U1167/X (SAEDRVT14_ND2_CDC_2)   0.02      1.04 f
+  ex_stage_i_alu_i/U1169/X (SAEDRVT14_ND2_CDC_2)   0.01      1.05 r
+  ex_stage_i_alu_i/U1170/X (SAEDRVT14_AN2_2)       0.02      1.08 r
+  ex_stage_i_alu_i/U1337/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.07      1.14 r
+  ex_stage_i_alu_i/U1181/X (SAEDRVT14_ND2_CDC_2)   0.02      1.16 f
+  ex_stage_i_alu_i/U1183/X (SAEDRVT14_ND2_CDC_2)   0.01      1.17 r
+  ex_stage_i_alu_i/U1184/X (SAEDRVT14_ND2_CDC_2)   0.02      1.19 f
+  ex_stage_i_alu_i/U1053/X (SAEDRVT14_OR2_MM_2)    0.03      1.22 f
+  ex_stage_i_alu_i/U1194/X (SAEDRVT14_ND2_CDC_2)   0.01      1.23 r
+  ex_stage_i_alu_i/U1198/X (SAEDRVT14_ND2_CDC_2)   0.02      1.25 f
+  ex_stage_i_alu_i/U1200/X (SAEDRVT14_ND2_CDC_2)   0.01      1.26 r
+  ex_stage_i_alu_i/U1201/X (SAEDRVT14_ND2_CDC_2)   0.02      1.28 f
+  ex_stage_i_alu_i/U1202/X (SAEDRVT14_INV_2)       0.02      1.30 r
+  ex_stage_i_alu_i/U1204/X (SAEDRVT14_ND2_CDC_2)   0.01      1.31 f
+  ex_stage_i_alu_i/U1206/X (SAEDRVT14_ND2_CDC_2)   0.01      1.32 r
+  ex_stage_i_alu_i/U1207/X (SAEDRVT14_ND2_CDC_2)   0.02      1.34 f
+  ex_stage_i_alu_i/U1165/X (SAEDRVT14_OR2_MM_2)    0.03      1.37 f
+  ex_stage_i_alu_i/U1238/X (SAEDRVT14_ND2_CDC_2)   0.01      1.39 r
+  ex_stage_i_alu_i/U1260/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.45 r
+  ex_stage_i_alu_i/U1290/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.48 r
+  ex_stage_i_alu_i/U1267/X (SAEDRVT14_ND2_CDC_2)   0.02      1.50 f
+  ex_stage_i_alu_i/U1268/X (SAEDRVT14_ND2_CDC_2)   0.01      1.51 r
+  ex_stage_i_alu_i/U1269/X (SAEDRVT14_AN2_2)       0.03      1.54 r
+  ex_stage_i_alu_i/U2887/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.06      1.60 r
+  ex_stage_i_alu_i/intadd_32_U4/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.63 r
+  ex_stage_i_alu_i/intadd_32_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.67 r
+  ex_stage_i_alu_i/intadd_32_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.70 r
+  ex_stage_i_alu_i/U866/X (SAEDRVT14_INV_2)        0.01      1.71 f
+  ex_stage_i_alu_i/U867/CO (SAEDRVT14_ADDF_V2_2)   0.03      1.74 f
+  ex_stage_i_alu_i/U994/CO (SAEDRVT14_ADDF_V2_2)   0.07      1.81 f
+  ex_stage_i_alu_i/U1742/X (SAEDRVT14_OR2_MM_2)    0.03      1.84 f
+  ex_stage_i_alu_i/U911/X (SAEDRVT14_ND2_CDC_2)    0.01      1.84 r
+  ex_stage_i_alu_i/U912/X (SAEDRVT14_ND2_CDC_2)    0.01      1.86 f
+  ex_stage_i_alu_i/U2884/X (SAEDRVT14_INV_2)       0.01      1.87 r
+  ex_stage_i_alu_i/U2885/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.05      1.92 r
+  ex_stage_i_alu_i/intadd_36_U3/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.03      1.95 r
+  ex_stage_i_alu_i/intadd_36_U2/CO (SAEDRVT14_ADDF_V2_2)
+                                                   0.04      1.99 r
+  ex_stage_i_alu_i/U1647/X (SAEDRVT14_OR2_MM_2)    0.02      2.02 r
+  ex_stage_i_alu_i/U1034/X (SAEDRVT14_ND2_CDC_2)   0.01      2.03 f
+  ex_stage_i_alu_i/U1035/X (SAEDRVT14_ND2_CDC_2)   0.02      2.04 r
+  ex_stage_i_alu_i/U1054/X (SAEDRVT14_ND2_CDC_2)   0.02      2.06 f
+  ex_stage_i_alu_i/U1056/X (SAEDRVT14_ND2_CDC_2)   0.01      2.08 r
+  ex_stage_i_alu_i/U1057/X (SAEDRVT14_ND2_CDC_2)   0.01      2.09 f
+  ex_stage_i_alu_i/U1058/X (SAEDRVT14_EN2_2)       0.04      2.13 f
+  ex_stage_i_alu_i/U1059/X (SAEDRVT14_AN2_2)       0.02      2.15 f
+  ex_stage_i_alu_i/U1062/X (SAEDRVT14_OR3_2)       0.05      2.20 f
+  ex_stage_i_alu_i/U1068/X (SAEDRVT14_ND2_CDC_2)   0.06      2.26 r
+  ex_stage_i_alu_i/U1389/X (SAEDRVT14_INV_2)       0.06      2.31 f
+  ex_stage_i_alu_i/U1394/X (SAEDRVT14_INV_2)       0.06      2.37 r
+  ex_stage_i_alu_i/U1396/X (SAEDRVT14_ND2_CDC_2)   0.04      2.41 f
+  ex_stage_i_alu_i/U1397/X (SAEDRVT14_ND2_CDC_2)   0.02      2.43 r
+  ex_stage_i_alu_i/U1398/X (SAEDRVT14_INV_2)       0.01      2.44 f
+  ex_stage_i_alu_i/U35/X (SAEDRVT14_MUX2_2)        0.03      2.47 f
+  ex_stage_i_alu_i/U1400/X (SAEDRVT14_OR3_2)       0.04      2.52 f
+  ex_stage_i_alu_i/U1401/X (SAEDRVT14_INV_2)       0.01      2.53 r
+  ex_stage_i_alu_i/U43/X (SAEDRVT14_MUX2_2)        0.04      2.56 r
+  ex_stage_i_alu_i/U47/X (SAEDRVT14_MUX2_2)        0.04      2.60 r
+  ex_stage_i_alu_i/U1405/X (SAEDRVT14_ND2_CDC_2)   0.01      2.62 f
+  ex_stage_i_alu_i/U1421/X (SAEDRVT14_AN4_2)       0.03      2.65 f
+  ex_stage_i_alu_i/U1438/X (SAEDRVT14_ND2_CDC_2)   0.02      2.66 r
+  ex_stage_i_alu_i/U1490/X (SAEDRVT14_AN3_2)       0.06      2.72 r
+  ex_stage_i_alu_i/U1491/X (SAEDRVT14_MUXI2_2)     0.06      2.78 f
+  ex_stage_i_alu_i/U1736/X (SAEDRVT14_ND2_CDC_2)   0.02      2.80 r
+  ex_stage_i_alu_i/U1780/X (SAEDRVT14_AN4_2)       0.05      2.85 r
+  ex_stage_i_alu_i/U1781/X (SAEDRVT14_OR3_2)       0.03      2.88 r
+  ex_stage_i_alu_i/U1829/X (SAEDRVT14_AN4_2)       0.04      2.92 r
+  ex_stage_i_alu_i/U2111/X (SAEDRVT14_AN4_2)       0.03      2.95 r
+  ex_stage_i_alu_i/U2151/X (SAEDRVT14_OR3_2)       0.03      2.98 r
+  ex_stage_i_alu_i/U2152/X (SAEDRVT14_INV_2)       0.02      3.00 f
+  ex_stage_i_alu_i/U2228/X (SAEDRVT14_BUF_S_2)     0.05      3.05 f
+  ex_stage_i_alu_i/U2229/X (SAEDRVT14_MUXI2_2)     0.06      3.10 r
+  ex_stage_i_alu_i/U2232/X (SAEDRVT14_AN4_2)       0.04      3.15 r
+  ex_stage_i_alu_i/U2233/X (SAEDRVT14_INV_2)       0.01      3.16 f
+  U6308/X (SAEDRVT14_AN2_2)                        0.03      3.19 f
+  U6309/X (SAEDRVT14_OR3_2)                        0.07      3.27 f
+  id_stage_i/U1989/X (SAEDRVT14_AN2_2)             0.04      3.30 f
+  id_stage_i/U1990/X (SAEDRVT14_OR3_2)             0.06      3.37 f
+  id_stage_i/U2213/X (SAEDRVT14_ND2_CDC_2)         0.03      3.39 r
+  id_stage_i/U2217/X (SAEDRVT14_AN4_2)             0.05      3.44 r
+  id_stage_i/U2223/X (SAEDRVT14_ND2_CDC_2)         0.07      3.51 f
+  id_stage_i/U2431/X (SAEDRVT14_AN2_2)             0.06      3.57 f
+  id_stage_i/U2439/X (SAEDRVT14_OR4_2)             0.07      3.65 f
+  id_stage_i/U2442/X (SAEDRVT14_MUX2_2)            0.06      3.71 f
+  id_stage_i/mult_dot_op_b_ex_o_reg_19_/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      3.71 f
+  data arrival time                                          3.71
+
+  clock CLK_I (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  id_stage_i/mult_dot_op_b_ex_o_reg_19_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.00      5.00 r
+  library setup time                              -0.03      4.97
+  data required time                                         4.97
+  ------------------------------------------------------------------------
+  data required time                                         4.97
+  data arrival time                                         -3.71
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.26
+
+
+1

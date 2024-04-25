@@ -1,0 +1,250 @@
+<html>
+<body>
+<pre>
+<u>1</u>:	SI analysis is not enabled, so delta delays are unavailable.
+<u>2</u>:	****************************************
+<u>3</u>:	Report : timing
+<u>4</u>:	        -path_type full_clock_expanded
+<u>5</u>:	        -delay_type min
+<u>6</u>:	        -nworst 1
+<u>7</u>:	        -max_paths 1
+<u>8</u>:	        -report_by group
+<u>9</u>:	        -input_pins
+<u>10</u>:	        -nets
+<u>11</u>:	        -include_hierarchical_pins
+<u>12</u>:	        -transition_time
+<u>13</u>:	        -capacitance
+<u>14</u>:	        -crosstalk_delta
+<u>15</u>:	        -derate
+<u>16</u>:	        -attributes
+<u>17</u>:	        -physical
+<u>18</u>:	Design : riscv_core
+<u>19</u>:	Version: O-2018.06-SP1
+<u>20</u>:	Date   : Wed Apr 24 15:11:12 2024
+<u>21</u>:	****************************************
+<u>22</u>:	
+<u>23</u>:	<a name=P0>  <b>Startpoint:</b> <a href="cgi:change_selection [get_cells core_clock_gate_i_coverage_flop_reg]">core_clock_gate_i_coverage_flop_reg</a>  (rising edge-triggered flip-flop clocked by CLK_I)
+<u>24</u>:	  <b>Endpoint:</b> <a href="cgi:change_selection [get_cells id_stage_i/registers_i/mem_reg_1__25_]">id_stage_i/registers_i/mem_reg_1__25_</a>  (rising edge-triggered flip-flop clocked by CLK_I)
+<u>25</u>:	  Mode: func
+<u>26</u>:	  Corner: fast
+<u>27</u>:	  Scenario: func_fast
+<u>28</u>:	  Path Group: CLK_I
+<u>29</u>:	  Path Type: min
+<u>30</u>:	
+<u>31</u>:	
+<u>32</u>:	Attributes
+<u>33</u>:	    b - black-box (unknown)
+<u>34</u>:	    s - size_only
+<u>35</u>:	    d - dont_touch
+<u>36</u>:	    u - dont_use
+<u>37</u>:	    g - generic
+<u>38</u>:	    h - hierarchical
+<u>39</u>:	    i - ideal
+<u>40</u>:	    n - noncombinational
+<u>41</u>:	    E - extracted timing model
+<u>42</u>:	    Q - Quick timing model
+<u>43</u>:	
+<u>44</u>:	
+<u>45</u>:	<b>  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes</b>
+<u>46</u>:	  ------------------------------------------------------------------------------------------------------------------------------------------------------
+<u>47</u>:	  clock CLK_I (rise edge)                                                                        0.00      0.00
+<u>48</u>:	  source latency                                                                                 0.00      0.00
+<u>49</u>:	  <a href="cgi:change_selection [get_ports clk_i]">clk_i</a> (in)                                                         0.00      1.00              0.00      0.00 r    (145.38,0.13)
+<u>50</u>:	  <a href="cgi:change_selection [get_nets clk_i]">clk_i</a> (net)                                       1      1.75                                                                        d
+<u>51</u>:	  <a href="cgi:change_selection [get_pins U4005/D0]">U4005/D0</a> (SAEDRVT14_MUX2_2)                                        0.00      1.00              0.00      0.00 r    (137.29,4.80)     s, d
+<u>52</u>:	  <a href="cgi:change_selection [get_pins U4005/X]">U4005/X</a> (SAEDRVT14_MUX2_2)                                         0.00      1.00              0.00      0.00 r    (137.44,4.80)     s, d
+<u>53</u>:	  <a href="cgi:change_selection [get_nets clk_m]">clk_m</a> (net)                                      69     61.83                                                                        d
+<u>54</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i_coverage_flop_reg/CK]">core_clock_gate_i_coverage_flop_reg/CK</a> (SAEDRVT14_FSDPQ_V2LP_2)    0.00      1.00              0.00      0.00 r    (54.05,26.40)     s, n
+<u>55</u>:	
+<u>56</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i_coverage_flop_reg/CK]">core_clock_gate_i_coverage_flop_reg/CK</a> (SAEDRVT14_FSDPQ_V2LP_2)    0.00      1.00              0.00      0.00 r    (54.05,26.40)     s, n
+<u>57</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i_coverage_flop_reg/Q]">core_clock_gate_i_coverage_flop_reg/Q</a> (SAEDRVT14_FSDPQ_V2LP_2)     0.00      1.00              0.01      0.01 f    (54.12,26.41)     s, n
+<u>58</u>:	  <a href="cgi:change_selection [get_nets core_clock_gate_i_coverage_flop]">core_clock_gate_i_coverage_flop</a> (net)             1      0.50
+<u>59</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/dftopt210]">id_stage_i/dftopt210</a> (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1)
+<u>60</u>:	                                                                     0.00      1.00              0.00      0.01 f    (hierarchical)    h
+<u>61</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/dftopt210]">id_stage_i/dftopt210</a> (net)                               0.50
+<u>62</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/registers_i/dftopt210]">id_stage_i/registers_i/dftopt210</a> (riscv_register_file_ADDR_WIDTH6_FPU0_test_1)
+<u>63</u>:	                                                                     0.00      1.00              0.00      0.01 f    (hierarchical)    h
+<u>64</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/registers_i/dftopt210]">id_stage_i/registers_i/dftopt210</a> (net)                   0.50
+<u>65</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/registers_i/mem_reg_1__25_/SI]">id_stage_i/registers_i/mem_reg_1__25_/SI</a> (SAEDRVT14_FSDPRBQ_V2LP_2)
+<u>66</u>:	                                                                     0.00      1.00              0.00      0.01 f    (53.24,27.06)     s, n
+<u>67</u>:	  data arrival time                                                                                        0.01
+<u>68</u>:	
+<u>69</u>:	  clock CLK_I (rise edge)                                                                        0.00      0.00
+<u>70</u>:	  source latency                                                                                 0.00      0.00
+<u>71</u>:	  <a href="cgi:change_selection [get_ports clk_i]">clk_i</a> (in)                                                         0.00      1.00              0.00      0.00 r    (145.38,0.13)
+<u>72</u>:	  <a href="cgi:change_selection [get_nets clk_i]">clk_i</a> (net)                                       1      1.75                                                                        d
+<u>73</u>:	  <a href="cgi:change_selection [get_pins U4005/D0]">U4005/D0</a> (SAEDRVT14_MUX2_2)                                        0.00      1.00              0.00      0.00 r    (137.29,4.80)     s, d
+<u>74</u>:	  <a href="cgi:change_selection [get_pins U4005/X]">U4005/X</a> (SAEDRVT14_MUX2_2)                                         0.00      1.00              0.00      0.00 r    (137.44,4.80)     s, d
+<u>75</u>:	  <a href="cgi:change_selection [get_nets clk_m]">clk_m</a> (net)                                      69     61.83                                                                        d
+<u>76</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i___tmp100/CK]">core_clock_gate_i___tmp100/CK</a> (SAEDRVT14_CKGTPLT_V5_4)             0.00      1.00              0.00      0.00 r    (136.80,6.00)     n
+<u>77</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i___tmp100/Q]">core_clock_gate_i___tmp100/Q</a> (SAEDRVT14_CKGTPLT_V5_4)              0.00      1.00              0.00      0.00 r    (137.28,6.00)     n
+<u>78</u>:	  <a href="cgi:change_selection [get_nets clk_o]">clk_o</a> (net)                                       1      0.65                                                                        d
+<u>79</u>:	  <a href="cgi:change_selection [get_pins U4006/D0]">U4006/D0</a> (SAEDRVT14_MUX2_2)                                        0.00      1.00              0.00      0.00 r    (137.59,5.40)     s, d
+<u>80</u>:	  <a href="cgi:change_selection [get_pins U4006/X]">U4006/X</a> (SAEDRVT14_MUX2_2)                                         0.00      1.00              0.00      0.00 r    (137.74,5.40)     s, d
+<u>81</u>:	  <a href="cgi:change_selection [get_nets clk]">clk</a> (net)                                      2131    1000000.00                                                                    d
+<u>82</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/clk]">id_stage_i/clk</a> (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1)
+<u>83</u>:	                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+<u>84</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/clk]">id_stage_i/clk</a> (net)                           2131    1000000.00                                                                    d
+<u>85</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/registers_i/clk]">id_stage_i/registers_i/clk</a> (riscv_register_file_ADDR_WIDTH6_FPU0_test_1)
+<u>86</u>:	                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+<u>87</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/registers_i/clk]">id_stage_i/registers_i/clk</a> (net)               2131    1000000.00                                                                    d
+<u>88</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/registers_i/mem_reg_1__25_/CK]">id_stage_i/registers_i/mem_reg_1__25_/CK</a> (SAEDRVT14_FSDPRBQ_V2LP_2)
+<u>89</u>:	                                                                     0.00      1.00              0.00      0.00 r    (53.93,27.12)     s, n
+<u>90</u>:	
+<u>91</u>:	  library hold time                                                            1.00              0.00      0.00
+<u>92</u>:	  data required time                                                                                       0.00
+<u>93</u>:	  ------------------------------------------------------------------------------------------------------------------------------------------------------
+<u>94</u>:	  data required time                                                                                       0.00
+<u>95</u>:	  data arrival time                                                                                       -0.01
+<u>96</u>:	  ------------------------------------------------------------------------------------------------------------------------------------------------------
+<u>97</u>:	  slack (MET)                                                                                              0.01
+<u>98</u>:	
+<u>99</u>:	
+<u>100</u>:	
+<u>101</u>:	<a name=P1>  <b>Startpoint:</b> <a href="cgi:change_selection [get_cells core_clock_gate_i_coverage_flop_reg]">core_clock_gate_i_coverage_flop_reg</a>  (rising edge-triggered flip-flop clocked by SCAN_CLK)
+<u>102</u>:	  <b>Endpoint:</b> <a href="cgi:change_selection [get_cells id_stage_i/registers_i/mem_reg_1__25_]">id_stage_i/registers_i/mem_reg_1__25_</a>  (rising edge-triggered flip-flop clocked by SCAN_CLK)
+<u>103</u>:	  Mode: test
+<u>104</u>:	  Corner: fast
+<u>105</u>:	  Scenario: test_fast
+<u>106</u>:	  Path Group: SCAN_CLK
+<u>107</u>:	  Path Type: min
+<u>108</u>:	
+<u>109</u>:	
+<u>110</u>:	Attributes
+<u>111</u>:	    b - black-box (unknown)
+<u>112</u>:	    s - size_only
+<u>113</u>:	    d - dont_touch
+<u>114</u>:	    u - dont_use
+<u>115</u>:	    g - generic
+<u>116</u>:	    h - hierarchical
+<u>117</u>:	    i - ideal
+<u>118</u>:	    n - noncombinational
+<u>119</u>:	    E - extracted timing model
+<u>120</u>:	    Q - Quick timing model
+<u>121</u>:	
+<u>122</u>:	
+<u>123</u>:	<b>  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes</b>
+<u>124</u>:	  ------------------------------------------------------------------------------------------------------------------------------------------------------
+<u>125</u>:	  clock SCAN_CLK (rise edge)                                                                     0.00      0.00
+<u>126</u>:	  source latency                                                                                 0.00      0.00
+<u>127</u>:	  <a href="cgi:change_selection [get_ports scan_clk]">scan_clk</a> (in)                                                      0.00      1.00              0.00      0.00 r    (137.70,0.13)
+<u>128</u>:	  <a href="cgi:change_selection [get_nets scan_clk]">scan_clk</a> (net)                                    2      1.64                                                                        d
+<u>129</u>:	  <a href="cgi:change_selection [get_pins U4005/D1]">U4005/D1</a> (SAEDRVT14_MUX2_2)                                        0.00      1.00              0.00      0.00 r    (136.85,4.84)     s, d
+<u>130</u>:	  <a href="cgi:change_selection [get_pins U4005/X]">U4005/X</a> (SAEDRVT14_MUX2_2)                                         0.00      1.00              0.00      0.00 r    (137.44,4.80)     s, d
+<u>131</u>:	  <a href="cgi:change_selection [get_nets clk_m]">clk_m</a> (net)                                      69     61.83                                                                        d
+<u>132</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i_coverage_flop_reg/CK]">core_clock_gate_i_coverage_flop_reg/CK</a> (SAEDRVT14_FSDPQ_V2LP_2)    0.00      1.00              0.00      0.00 r    (54.05,26.40)     s, n
+<u>133</u>:	
+<u>134</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i_coverage_flop_reg/CK]">core_clock_gate_i_coverage_flop_reg/CK</a> (SAEDRVT14_FSDPQ_V2LP_2)    0.00      1.00              0.00      0.00 r    (54.05,26.40)     s, n
+<u>135</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i_coverage_flop_reg/Q]">core_clock_gate_i_coverage_flop_reg/Q</a> (SAEDRVT14_FSDPQ_V2LP_2)     0.00      1.00              0.01      0.01 f    (54.12,26.41)     s, n
+<u>136</u>:	  <a href="cgi:change_selection [get_nets core_clock_gate_i_coverage_flop]">core_clock_gate_i_coverage_flop</a> (net)             1      0.50
+<u>137</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/dftopt210]">id_stage_i/dftopt210</a> (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1)
+<u>138</u>:	                                                                     0.00      1.00              0.00      0.01 f    (hierarchical)    h
+<u>139</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/dftopt210]">id_stage_i/dftopt210</a> (net)                               0.50
+<u>140</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/registers_i/dftopt210]">id_stage_i/registers_i/dftopt210</a> (riscv_register_file_ADDR_WIDTH6_FPU0_test_1)
+<u>141</u>:	                                                                     0.00      1.00              0.00      0.01 f    (hierarchical)    h
+<u>142</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/registers_i/dftopt210]">id_stage_i/registers_i/dftopt210</a> (net)                   0.50
+<u>143</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/registers_i/mem_reg_1__25_/SI]">id_stage_i/registers_i/mem_reg_1__25_/SI</a> (SAEDRVT14_FSDPRBQ_V2LP_2)
+<u>144</u>:	                                                                     0.00      1.00              0.00      0.01 f    (53.24,27.06)     s, n
+<u>145</u>:	  data arrival time                                                                                        0.01
+<u>146</u>:	
+<u>147</u>:	  clock SCAN_CLK (rise edge)                                                                     0.00      0.00
+<u>148</u>:	  source latency                                                                                 0.00      0.00
+<u>149</u>:	  <a href="cgi:change_selection [get_ports scan_clk]">scan_clk</a> (in)                                                      0.00      1.00              0.00      0.00 r    (137.70,0.13)
+<u>150</u>:	  <a href="cgi:change_selection [get_nets scan_clk]">scan_clk</a> (net)                                    2      1.64                                                                        d
+<u>151</u>:	  <a href="cgi:change_selection [get_pins U4006/D1]">U4006/D1</a> (SAEDRVT14_MUX2_2)                                        0.00      1.00              0.00      0.00 r    (137.15,5.36)     s, d
+<u>152</u>:	  <a href="cgi:change_selection [get_pins U4006/X]">U4006/X</a> (SAEDRVT14_MUX2_2)                                         0.00      1.00              0.00      0.00 r    (137.74,5.40)     s, d
+<u>153</u>:	  <a href="cgi:change_selection [get_nets clk]">clk</a> (net)                                      2131    1000000.00                                                                    d
+<u>154</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/clk]">id_stage_i/clk</a> (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1)
+<u>155</u>:	                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+<u>156</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/clk]">id_stage_i/clk</a> (net)                           2131    1000000.00                                                                    d
+<u>157</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/registers_i/clk]">id_stage_i/registers_i/clk</a> (riscv_register_file_ADDR_WIDTH6_FPU0_test_1)
+<u>158</u>:	                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+<u>159</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/registers_i/clk]">id_stage_i/registers_i/clk</a> (net)               2131    1000000.00                                                                    d
+<u>160</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/registers_i/mem_reg_1__25_/CK]">id_stage_i/registers_i/mem_reg_1__25_/CK</a> (SAEDRVT14_FSDPRBQ_V2LP_2)
+<u>161</u>:	                                                                     0.00      1.00              0.00      0.00 r    (53.93,27.12)     s, n
+<u>162</u>:	
+<u>163</u>:	  library hold time                                                            1.00              0.00      0.00
+<u>164</u>:	  data required time                                                                                       0.00
+<u>165</u>:	  ------------------------------------------------------------------------------------------------------------------------------------------------------
+<u>166</u>:	  data required time                                                                                       0.00
+<u>167</u>:	  data arrival time                                                                                       -0.01
+<u>168</u>:	  ------------------------------------------------------------------------------------------------------------------------------------------------------
+<u>169</u>:	  slack (MET)                                                                                              0.01
+<u>170</u>:	
+<u>171</u>:	
+<u>172</u>:	
+<u>173</u>:	<a name=P2>  <b>Startpoint:</b> <a href="cgi:change_selection [get_cells core_clock_gate_i_coverage_flop_reg]">core_clock_gate_i_coverage_flop_reg</a>  (rising edge-triggered flip-flop clocked by SCAN_CLK)
+<u>174</u>:	  <b>Endpoint:</b> <a href="cgi:change_selection [get_cells id_stage_i/registers_i/mem_reg_1__25_]">id_stage_i/registers_i/mem_reg_1__25_</a>  (rising edge-triggered flip-flop clocked by SCAN_CLK)
+<u>175</u>:	  Mode: test
+<u>176</u>:	  Corner: slow
+<u>177</u>:	  Scenario: test_slow
+<u>178</u>:	  Path Group: SCAN_CLK
+<u>179</u>:	  Path Type: min
+<u>180</u>:	
+<u>181</u>:	
+<u>182</u>:	Attributes
+<u>183</u>:	    b - black-box (unknown)
+<u>184</u>:	    s - size_only
+<u>185</u>:	    d - dont_touch
+<u>186</u>:	    u - dont_use
+<u>187</u>:	    g - generic
+<u>188</u>:	    h - hierarchical
+<u>189</u>:	    i - ideal
+<u>190</u>:	    n - noncombinational
+<u>191</u>:	    E - extracted timing model
+<u>192</u>:	    Q - Quick timing model
+<u>193</u>:	
+<u>194</u>:	
+<u>195</u>:	<b>  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes</b>
+<u>196</u>:	  ------------------------------------------------------------------------------------------------------------------------------------------------------
+<u>197</u>:	  clock SCAN_CLK (rise edge)                                                                     0.00      0.00
+<u>198</u>:	  source latency                                                                                 0.00      0.00
+<u>199</u>:	  <a href="cgi:change_selection [get_ports scan_clk]">scan_clk</a> (in)                                                      0.00      1.00              0.00      0.00 r    (137.70,0.13)
+<u>200</u>:	  <a href="cgi:change_selection [get_nets scan_clk]">scan_clk</a> (net)                                    2      1.41                                                                        d
+<u>201</u>:	  <a href="cgi:change_selection [get_pins U4005/D1]">U4005/D1</a> (SAEDRVT14_MUX2_2)                                        0.00      1.00              0.00      0.00 r    (136.85,4.84)     s, d
+<u>202</u>:	  <a href="cgi:change_selection [get_pins U4005/X]">U4005/X</a> (SAEDRVT14_MUX2_2)                                         0.00      1.00              0.00      0.00 r    (137.44,4.80)     s, d
+<u>203</u>:	  <a href="cgi:change_selection [get_nets clk_m]">clk_m</a> (net)                                      69     62.78                                                                        d
+<u>204</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i_coverage_flop_reg/CK]">core_clock_gate_i_coverage_flop_reg/CK</a> (SAEDRVT14_FSDPQ_V2LP_2)    0.00      1.00              0.00      0.00 r    (54.05,26.40)     s, n
+<u>205</u>:	
+<u>206</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i_coverage_flop_reg/CK]">core_clock_gate_i_coverage_flop_reg/CK</a> (SAEDRVT14_FSDPQ_V2LP_2)    0.00      1.00              0.00      0.00 r    (54.05,26.40)     s, n
+<u>207</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i_coverage_flop_reg/Q]">core_clock_gate_i_coverage_flop_reg/Q</a> (SAEDRVT14_FSDPQ_V2LP_2)     0.01      1.00              0.04      0.04 f    (54.12,26.41)     s, n
+<u>208</u>:	  <a href="cgi:change_selection [get_nets core_clock_gate_i_coverage_flop]">core_clock_gate_i_coverage_flop</a> (net)             1      0.47
+<u>209</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/dftopt210]">id_stage_i/dftopt210</a> (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1)
+<u>210</u>:	                                                                     0.01      1.00              0.00      0.04 f    (hierarchical)    h
+<u>211</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/dftopt210]">id_stage_i/dftopt210</a> (net)                               0.47
+<u>212</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/registers_i/dftopt210]">id_stage_i/registers_i/dftopt210</a> (riscv_register_file_ADDR_WIDTH6_FPU0_test_1)
+<u>213</u>:	                                                                     0.01      1.00              0.00      0.04 f    (hierarchical)    h
+<u>214</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/registers_i/dftopt210]">id_stage_i/registers_i/dftopt210</a> (net)                   0.47
+<u>215</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/registers_i/mem_reg_1__25_/SI]">id_stage_i/registers_i/mem_reg_1__25_/SI</a> (SAEDRVT14_FSDPRBQ_V2LP_2)
+<u>216</u>:	                                                                     0.01      1.00              0.00      0.04 f    (53.24,27.06)     s, n
+<u>217</u>:	  data arrival time                                                                                        0.04
+<u>218</u>:	
+<u>219</u>:	  clock SCAN_CLK (rise edge)                                                                     0.00      0.00
+<u>220</u>:	  source latency                                                                                 0.00      0.00
+<u>221</u>:	  <a href="cgi:change_selection [get_ports scan_clk]">scan_clk</a> (in)                                                      0.00      1.00              0.00      0.00 r    (137.70,0.13)
+<u>222</u>:	  <a href="cgi:change_selection [get_nets scan_clk]">scan_clk</a> (net)                                    2      1.41                                                                        d
+<u>223</u>:	  <a href="cgi:change_selection [get_pins U4006/D1]">U4006/D1</a> (SAEDRVT14_MUX2_2)                                        0.00      1.00              0.00      0.00 r    (137.15,5.36)     s, d
+<u>224</u>:	  <a href="cgi:change_selection [get_pins U4006/X]">U4006/X</a> (SAEDRVT14_MUX2_2)                                         0.00      1.00              0.00      0.00 r    (137.74,5.40)     s, d
+<u>225</u>:	  <a href="cgi:change_selection [get_nets clk]">clk</a> (net)                                      2131    1000000.00                                                                    d
+<u>226</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/clk]">id_stage_i/clk</a> (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1)
+<u>227</u>:	                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+<u>228</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/clk]">id_stage_i/clk</a> (net)                           2131    1000000.00                                                                    d
+<u>229</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/registers_i/clk]">id_stage_i/registers_i/clk</a> (riscv_register_file_ADDR_WIDTH6_FPU0_test_1)
+<u>230</u>:	                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+<u>231</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/registers_i/clk]">id_stage_i/registers_i/clk</a> (net)               2131    1000000.00                                                                    d
+<u>232</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/registers_i/mem_reg_1__25_/CK]">id_stage_i/registers_i/mem_reg_1__25_/CK</a> (SAEDRVT14_FSDPRBQ_V2LP_2)
+<u>233</u>:	                                                                     0.00      1.00              0.00      0.00 r    (53.93,27.12)     s, n
+<u>234</u>:	
+<u>235</u>:	  library hold time                                                            1.00             -0.01     -0.01
+<u>236</u>:	  data required time                                                                                      -0.01
+<u>237</u>:	  ------------------------------------------------------------------------------------------------------------------------------------------------------
+<u>238</u>:	  data required time                                                                                      -0.01
+<u>239</u>:	  data arrival time                                                                                       -0.04
+<u>240</u>:	  ------------------------------------------------------------------------------------------------------------------------------------------------------
+<u>241</u>:	  slack (MET)                                                                                              0.05
+<u>242</u>:	
+<u>243</u>:	
+<u>244</u>:	1
+</pre>
+</body>
+</html>

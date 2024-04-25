@@ -45,19 +45,23 @@ link
 ###############################################################################
 ###############################################################################
 ##################################CTS BEGINS###################################
-#remove_tracks -all 
+remove_tracks -all 
 
-#create_track -layer M1 -coord 0.037 -space 0.074
-#create_track -layer M2 -coord 0.037 -space 0.074
-#create_track -layer M3 -coord 0.037 -space 0.074
-#create_track -layer M4 -coord 0.037 -space 0.074
-#create_track -layer M5 -coord 0.037 -space 0.148
-#create_track -layer M6 -coord 0.037 -space 0.148
-#create_track -layer M7 -coord 0.037 -space 0.148
-#create_track -layer M8 -coord 0.037 -space 0.148
-#create_track -layer M9 -coord 0.037 -space 0.148
+create_track -layer M1 
+create_track -layer M2 
+create_track -layer M3 
+create_track -layer M4 
+create_track -layer M5 
+create_track -layer M6 
+create_track -layer M7 
+create_track -layer M8 
+create_track -layer M9 
+create_track -layer MRDL
 
-set_dont_touch_network -clear [get_clocks CLK_I]
+
+set_dont_touch_network -clear [get_clocks *]
+current_mode test
+set_dont_touch_network -clear [get_clocks *]
 
 set_dont_use [get_lib_cells */*_INV_S_10*]
 
@@ -103,7 +107,7 @@ legalize_placement
 write_verilog ../netlists/${DESIGN_NAME}.cts.gate.v
 report_clock_timing  -type skew > ../reports/${DESIGN_NAME}.clock_skew.rpt
 
-set_propagated_clock [get_clocks CLK_I]
+#set_propagated_clock [get_clocks CLK_I]
 
 save_block -as ${DESIGN_NAME}_ctsed
 report_qor > ../reports/qor.rpt

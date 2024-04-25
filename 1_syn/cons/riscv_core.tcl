@@ -36,9 +36,17 @@ set top riscv_core
 create_clock -name CLK_I -period 5 -waveform {0 2.5} [get_ports clk_i]
 set_dont_touch_network [get_clocks CLK_I]
 
+#2. SCAN CLOCK
+set SCAN_CLK_NAME SCAN_CLK
+set SCAN_CLK_PER 100
+create_clock -name $SCAN_CLK_NAME -period $SCAN_CLK_PER -waveform "0 [expr $SCAN_CLK_PER/2]" [get_ports scan_clk]
+set_dont_touch_network [get_clocks $SCAN_CLK_NAME]
+set_clock_groups -asynchronous  -group [get_clocks CLK_I] \
+                                -group [get_clocks SCAN_CLK] 
+
 # 2. Generated Clock Definitions
-#create_generated_clock -master_clock "CLK_I" -source [get_ports clk_i] -name  CLK_GATED -divide_by 1 [get_ports core_clock_gate_i/clk_o]
-#set_dont_touch_network [get_clocks CLK_GATED]
+#create_generated_clock -master_clock "CLK_I" -source [get_ports clk_i] -name  CLK_M -divide_by 1 [get_nets clk_m]
+#set_dont_touch_network [get_clocks CLK_M]
 
 
 # 3. Clock Latencies

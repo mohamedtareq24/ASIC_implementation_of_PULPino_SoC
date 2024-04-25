@@ -3,6 +3,7 @@ set_dont_use [get_lib_cells */*0P5*]
 set_dont_use [get_lib_cells */*0P75*] 
 set_dont_use [get_lib_cells */*_1] 
 set_dont_use [get_lib_cells */*_1P5] 
+################ Too BIG Sizes #########
 set_dont_use [get_lib_cells */*_INV_S_16*]
 set_dont_use [get_lib_cells */*_INV_S_20*]
 
@@ -59,7 +60,15 @@ set_dont_use [get_lib_cells */*NR2_ECO_2]
 set_dont_use [get_lib_cells */*BUF_S_4]
 set_dont_use [get_lib_cells */*NR2_3]
 set_dont_use [get_lib_cells */*AO2BB2_V1_2]
+set_dont_use [get_lib_cells */*MUX2_4]
+set_dont_use [get_lib_cells */*MUX3_V1M_2]
+set_dont_use [get_lib_cells */*OR2B_PSECO_2]
+set_dont_use [get_lib_cells */*AN2_8]
+set_dont_use [get_lib_cells */*MUXI4_2]
+set_dont_use [get_lib_cells */*MUXI4_4]
+set_dont_use [get_lib_cells */*MUXI3_4]
+set_dont_use [get_lib_cells */*MUX2_MM_4]
 
 ##############OFF GRID #######################################
-#saed14rvt_ff0p88v25c/SAEDRVT14_ADDF_V1_2
+set_dont_use [get_lib_cells */*ADDF_V1_2]
 

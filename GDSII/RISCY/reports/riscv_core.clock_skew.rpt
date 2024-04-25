@@ -1,0 +1,39 @@
+Information: The stitching and editing of coupling caps is turned OFF for design 'riscv_core:riscv_core.design'. (TIM-125)
+Information: Design riscv_core has 36200 nets, 0 global routed, 64 detail routed. (NEX-024)
+Warning: Technology layer 'M4' setting 'pitch' is not valid (NEX-001)
+Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
+Warning: Parasitic Tech Library layer 'M1' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M2' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M3' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M1' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M2' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M3' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M8' parameter 'WMIN' = 0.030 does not match 0.060 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M8' parameter 'SMIN' = 0.060 does not match 0.040 of technology file (NEX-007)
+Information: The RC mode used is CTO for design 'riscv_core'. (NEX-022)
+Information: Design Average RC for design riscv_core  (NEX-011)
+Information: r = 2.216815 ohm/um, via_r = 1.170674 ohm/cut, c = 0.127740 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 2.578806 ohm/um, via_r = 0.735165 ohm/cut, c = 0.110996 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 36198, routed nets = 64, across physical hierarchy nets = 0, parasitics cached nets = 1225, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+****************************************
+Report : clock timing
+        -type skew
+        -nworst 1
+        -setup
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Fri Apr 19 02:46:00 2024
+****************************************
+
+  Mode: func
+  Clock: CLK_I
+
+  Clock Pin                                          Latency      Skew             Corner
+------------------------------------------------------------------------------------------
+  id_stage_i/registers_i/mem_reg_8__15_/CK              0.18              rp-+       slow
+  if_stage_i/prefetch_32_prefetch_buffer_i/instr_addr_q_reg_16_/CK
+                                                        0.15      0.02    rp-+       slow
+
+------------------------------------------------------------------------------------------
+1

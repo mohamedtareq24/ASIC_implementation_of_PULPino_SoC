@@ -1,0 +1,402 @@
+<html>
+<body>
+<pre>
+<u>1</u>:	SI analysis is not enabled, so delta delays are unavailable.
+<u>2</u>:	Warning: Scenario func_fast is not configured for setup analysis: skipping. (UIC-058)
+<u>3</u>:	****************************************
+<u>4</u>:	Report : timing
+<u>5</u>:	        -path_type full_clock_expanded
+<u>6</u>:	        -delay_type max
+<u>7</u>:	        -nworst 1
+<u>8</u>:	        -max_paths 1
+<u>9</u>:	        -report_by group
+<u>10</u>:	        -input_pins
+<u>11</u>:	        -nets
+<u>12</u>:	        -include_hierarchical_pins
+<u>13</u>:	        -transition_time
+<u>14</u>:	        -capacitance
+<u>15</u>:	        -crosstalk_delta
+<u>16</u>:	        -derate
+<u>17</u>:	        -attributes
+<u>18</u>:	        -physical
+<u>19</u>:	Design : riscv_core
+<u>20</u>:	Version: O-2018.06-SP1
+<u>21</u>:	Date   : Fri Apr 19 02:07:21 2024
+<u>22</u>:	****************************************
+<u>23</u>:	
+<u>24</u>:	<a name=P0>  <b>Startpoint:</b> <a href="cgi:change_selection [get_cells ex_stage_i/mult_i/mulh_CS_reg_1_]">ex_stage_i/mult_i/mulh_CS_reg_1_</a>  (rising edge-triggered flip-flop clocked by CLK_I)
+<u>25</u>:	  <b>Endpoint:</b> <a href="cgi:change_selection [get_cells id_stage_i/alu_operand_b_ex_o_reg_23_]">id_stage_i/alu_operand_b_ex_o_reg_23_</a>  (rising edge-triggered flip-flop clocked by CLK_I)
+<u>26</u>:	  Mode: func
+<u>27</u>:	  Corner: slow
+<u>28</u>:	  Scenario: func_slow
+<u>29</u>:	  Path Group: CLK_I
+<u>30</u>:	  Path Type: max
+<u>31</u>:	
+<u>32</u>:	
+<u>33</u>:	Attributes
+<u>34</u>:	    b - black-box (unknown)
+<u>35</u>:	    s - size_only
+<u>36</u>:	    d - dont_touch
+<u>37</u>:	    u - dont_use
+<u>38</u>:	    g - generic
+<u>39</u>:	    h - hierarchical
+<u>40</u>:	    i - ideal
+<u>41</u>:	    n - noncombinational
+<u>42</u>:	    E - extracted timing model
+<u>43</u>:	    Q - Quick timing model
+<u>44</u>:	
+<u>45</u>:	
+<u>46</u>:	<b>  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes</b>
+<u>47</u>:	  ------------------------------------------------------------------------------------------------------------------------------------------------------
+<u>48</u>:	  clock CLK_I (rise edge)                                                                        0.00      0.00
+<u>49</u>:	  source latency                                                                                 0.00      0.00
+<u>50</u>:	  <a href="cgi:change_selection [get_ports clk_i]">clk_i</a> (in)                                                         0.00      1.00              0.00      0.00 r    (272.37,0.13)
+<u>51</u>:	  <a href="cgi:change_selection [get_nets clk_i]">clk_i</a> (net)                                      70     76.14                                                                        d
+<u>52</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i/clk_i]">core_clock_gate_i/clk_i</a> (cluster_clock_gating)                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+<u>53</u>:	  <a href="cgi:change_selection [get_nets core_clock_gate_i/clk_i]">core_clock_gate_i/clk_i</a> (net)                    70     76.14                                                                        d
+<u>54</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i/u__tmp100/CK]">core_clock_gate_i/u__tmp100/CK</a> (SAEDRVT14_CKGTPLT_V5_4)            0.00      1.00              0.00      0.00 r    (234.59,34.35)    n
+<u>55</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i/u__tmp100/Q]">core_clock_gate_i/u__tmp100/Q</a> (SAEDRVT14_CKGTPLT_V5_4)             0.00      1.00              0.00      0.00 r    (234.12,34.35)    n
+<u>56</u>:	  <a href="cgi:change_selection [get_nets core_clock_gate_i/clk_o]">core_clock_gate_i/clk_o</a> (net)                  2133    1000000.00                                                                    d
+<u>57</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i/clk_o]">core_clock_gate_i/clk_o</a> (cluster_clock_gating)                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+<u>58</u>:	  <a href="cgi:change_selection [get_nets clk]">clk</a> (net)                                      2133    1000000.00                                                                    d
+<u>59</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/clk]">ex_stage_i/clk</a> (riscv_ex_stage_FPU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5)
+<u>60</u>:	                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+<u>61</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/clk]">ex_stage_i/clk</a> (net)                           2133    1000000.00                                                                    d
+<u>62</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/clk]">ex_stage_i/mult_i/clk</a> (riscv_mult_SHARED_DSP_MULT0)                0.00      1.00              0.00      0.00 r    (hierarchical)    h
+<u>63</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/clk]">ex_stage_i/mult_i/clk</a> (net)                    2133    1000000.00                                                                    d
+<u>64</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mulh_CS_reg_1_/CK]">ex_stage_i/mult_i/mulh_CS_reg_1_/CK</a> (SAEDRVT14_FDPRBQ_V2LP_2)      0.00      1.00              0.00      0.00 r    (137.10,193.41)   n
+<u>65</u>:	
+<u>66</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mulh_CS_reg_1_/CK]">ex_stage_i/mult_i/mulh_CS_reg_1_/CK</a> (SAEDRVT14_FDPRBQ_V2LP_2)      0.00      1.00              0.00      0.00 r    (137.10,193.41)   n
+<u>67</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mulh_CS_reg_1_/Q]">ex_stage_i/mult_i/mulh_CS_reg_1_/Q</a> (SAEDRVT14_FDPRBQ_V2LP_2)       0.02      1.00              0.08      0.08 r    (136.05,193.35)   n
+<u>68</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mulh_CS[1]]">ex_stage_i/mult_i/mulh_CS[1]</a> (net)                6      3.33
+<u>69</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U664/A3]">ex_stage_i/mult_i/U664/A3</a> (SAEDRVT14_AN3_2)                        0.02      1.00              0.00      0.08 r    (138.72,195.27)
+<u>70</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U664/X]">ex_stage_i/mult_i/U664/X</a> (SAEDRVT14_AN3_2)                         0.01      1.00              0.05      0.13 r    (139.14,195.09)
+<u>71</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/n276]">ex_stage_i/mult_i/n276</a> (net)                      4      2.72
+<u>72</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U908/A]">ex_stage_i/mult_i/U908/A</a> (SAEDRVT14_INV_2)                         0.01      1.00              0.00      0.13 r    (139.75,197.56)
+<u>73</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U908/X]">ex_stage_i/mult_i/U908/X</a> (SAEDRVT14_INV_2)                         0.01      1.00              0.02      0.15 f    (139.68,197.56)
+<u>74</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/n405]">ex_stage_i/mult_i/n405</a> (net)                      3      3.37
+<u>75</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U127/A1]">ex_stage_i/mult_i/U127/A1</a> (SAEDRVT14_AN2_MM_2)                     0.01      1.00              0.00      0.15 f    (139.82,198.15)
+<u>76</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U127/X]">ex_stage_i/mult_i/U127/X</a> (SAEDRVT14_AN2_MM_2)                      0.01      1.00              0.03      0.18 f    (140.10,198.15)
+<u>77</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/n278]">ex_stage_i/mult_i/n278</a> (net)                      3      3.45
+<u>78</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U501/A1]">ex_stage_i/mult_i/U501/A1</a> (SAEDRVT14_ND2_4)                        0.01      1.00              0.00      0.18 f    (140.26,196.29)
+<u>79</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U501/X]">ex_stage_i/mult_i/U501/X</a> (SAEDRVT14_ND2_4)                         0.05      1.00              0.05      0.23 r    (140.26,196.23)
+<u>80</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/multicycle_o]">ex_stage_i/mult_i/multicycle_o</a> (net)              6     20.52
+<u>81</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U431/A1]">ex_stage_i/mult_i/U431/A1</a> (SAEDRVT14_OR3_2)                        0.05      1.00              0.00      0.23 r    (142.49,192.73)
+<u>82</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U431/X]">ex_stage_i/mult_i/U431/X</a> (SAEDRVT14_OR3_2)                         0.01      1.00              0.06      0.28 r    (142.64,192.76)
+<u>83</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/n283]">ex_stage_i/mult_i/n283</a> (net)                      2      1.73
+<u>84</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U907/A]">ex_stage_i/mult_i/U907/A</a> (SAEDRVT14_INV_2)                         0.01      1.00              0.00      0.28 r    (142.86,193.96)
+<u>85</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U907/X]">ex_stage_i/mult_i/U907/X</a> (SAEDRVT14_INV_2)                         0.01      1.00              0.01      0.29 f    (142.93,193.96)
+<u>86</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/n404]">ex_stage_i/mult_i/n404</a> (net)                      2      1.20
+<u>87</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U430/A2]">ex_stage_i/mult_i/U430/A2</a> (SAEDRVT14_OR3_2)                        0.01      1.00              0.00      0.29 f    (142.34,195.77)
+<u>88</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U430/X]">ex_stage_i/mult_i/U430/X</a> (SAEDRVT14_OR3_2)                         0.02      1.00              0.05      0.34 f    (142.56,195.74)
+<u>89</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/n64]">ex_stage_i/mult_i/n64</a> (net)                       5      3.79
+<u>90</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U906/A]">ex_stage_i/mult_i/U906/A</a> (SAEDRVT14_INV_2)                         0.02      1.00              0.00      0.34 f    (142.34,199.34)
+<u>91</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U906/X]">ex_stage_i/mult_i/U906/X</a> (SAEDRVT14_INV_2)                         0.02      1.00              0.03      0.37 r    (142.41,199.34)
+<u>92</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/n403]">ex_stage_i/mult_i/n403</a> (net)                      9      6.23
+<u>93</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U663/A2]">ex_stage_i/mult_i/U663/A2</a> (SAEDRVT14_ND2_CDC_2)                    0.02      1.00              0.00      0.37 r    (138.47,196.29)
+<u>94</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U663/X]">ex_stage_i/mult_i/U663/X</a> (SAEDRVT14_ND2_CDC_2)                     0.01      1.00              0.02      0.39 f    (138.64,196.31)
+<u>95</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/n136]">ex_stage_i/mult_i/n136</a> (net)                      1      0.39
+<u>96</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U662/A1]">ex_stage_i/mult_i/U662/A1</a> (SAEDRVT14_AN2_MM_2)                     0.01      1.00              0.00      0.39 f    (139.16,196.95)
+<u>97</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U662/X]">ex_stage_i/mult_i/U662/X</a> (SAEDRVT14_AN2_MM_2)                      0.02      1.00              0.03      0.42 f    (138.89,196.95)
+<u>98</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/n100]">ex_stage_i/mult_i/n100</a> (net)                      2      3.99
+<u>99</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U511/A1]">ex_stage_i/mult_i/U511/A1</a> (SAEDRVT14_ND2_4)                        0.02      1.00              0.00      0.42 f    (138.50,203.49)
+<u>100</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U511/X]">ex_stage_i/mult_i/U511/X</a> (SAEDRVT14_ND2_4)                         0.04      1.00              0.04      0.46 r    (138.50,203.43)
+<u>101</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/n67]">ex_stage_i/mult_i/n67</a> (net)                      17     17.90
+<u>102</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/HFSINV_2156_275/A]">ex_stage_i/mult_i/HFSINV_2156_275/A</a> (SAEDRVT14_INV_S_2)            0.04      1.00              0.00      0.46 r    (110.82,217.96)
+<u>103</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/HFSINV_2156_275/X]">ex_stage_i/mult_i/HFSINV_2156_275/X</a> (SAEDRVT14_INV_S_2)            0.05      1.00              0.06      0.53 f    (110.74,217.96)
+<u>104</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/HFSNET_230]">ex_stage_i/mult_i/HFSNET_230</a> (net)               16     13.41
+<u>105</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U649/A2]">ex_stage_i/mult_i/U649/A2</a> (SAEDRVT14_ND2_CDC_2)                    0.05      1.00              0.00      0.53 f    (106.03,215.01)
+<u>106</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U649/X]">ex_stage_i/mult_i/U649/X</a> (SAEDRVT14_ND2_CDC_2)                     0.02      1.00              0.04      0.57 r    (105.86,214.99)
+<u>107</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/n87]">ex_stage_i/mult_i/n87</a> (net)                       1      2.46
+<u>108</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U647/A2]">ex_stage_i/mult_i/U647/A2</a> (SAEDRVT14_ND2_2)                        0.02      1.00              0.00      0.57 r    (115.78,213.68)
+<u>109</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U647/X]">ex_stage_i/mult_i/U647/X</a> (SAEDRVT14_ND2_2)                         0.10      1.00              0.09      0.66 f    (115.92,213.87)
+<u>110</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/short_op_b[15]]">ex_stage_i/mult_i/short_op_b[15]</a> (net)           18     20.58
+<u>111</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U666/A2]">ex_stage_i/mult_i/U666/A2</a> (SAEDRVT14_AN3_2)                        0.10      1.00              0.00      0.66 f    (139.38,211.29)
+<u>112</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U666/X]">ex_stage_i/mult_i/U666/X</a> (SAEDRVT14_AN3_2)                         0.02      1.00              0.10      0.77 f    (139.66,211.41)
+<u>113</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/short_op_b[16]]">ex_stage_i/mult_i/short_op_b[16]</a> (net)            3      4.77
+<u>114</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/B[16]]">ex_stage_i/mult_i/mult_113/B[16]</a> (riscv_mult_SHARED_DSP_MULT0_DW02_mult_7)
+<u>115</u>:	                                                                     0.02      1.00              0.00      0.77 f    (hierarchical)    h
+<u>116</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/B[16]]">ex_stage_i/mult_i/mult_113/B[16]</a> (net)                   4.77
+<u>117</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/U19/A]">ex_stage_i/mult_i/mult_113/U19/A</a> (SAEDRVT14_INV_2)                 0.02      1.00              0.00      0.77 f    (145.89,225.74)
+<u>118</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/U19/X]">ex_stage_i/mult_i/mult_113/U19/X</a> (SAEDRVT14_INV_2)                 0.09      1.00              0.08      0.84 r    (145.97,225.74)
+<u>119</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/n71]">ex_stage_i/mult_i/mult_113/n71</a> (net)             17     25.14
+<u>120</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/U3/A1]">ex_stage_i/mult_i/mult_113/U3/A1</a> (SAEDRVT14_OR2_MM_2)              0.09      1.00              0.00      0.85 r    (138.42,249.75)
+<u>121</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/U3/X]">ex_stage_i/mult_i/mult_113/U3/X</a> (SAEDRVT14_OR2_MM_2)               0.01      1.00              0.08      0.92 r    (138.64,249.74)
+<u>122</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/n3]">ex_stage_i/mult_i/mult_113/n3</a> (net)               2      1.63
+<u>123</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/U135/A1]">ex_stage_i/mult_i/mult_113/U135/A1</a> (SAEDRVT14_EN2_2)               0.01      1.00              0.00      0.92 r    (139.60,249.15)
+<u>124</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/U135/X]">ex_stage_i/mult_i/mult_113/U135/X</a> (SAEDRVT14_EN2_2)                0.01      1.00              0.03      0.95 r    (139.97,249.15)
+<u>125</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/SUMB_1__15_]">ex_stage_i/mult_i/mult_113/SUMB_1__15_</a> (net)      1      0.76
+<u>126</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_2_14/CI]">ex_stage_i/mult_i/mult_113/S2_2_14/CI</a> (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      0.95 r    (139.62,247.89)
+<u>127</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_2_14/S]">ex_stage_i/mult_i/mult_113/S2_2_14/S</a> (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.10      1.05 f    (140.27,247.95)
+<u>128</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/SUMB_2__14_]">ex_stage_i/mult_i/mult_113/SUMB_2__14_</a> (net)      1      0.79
+<u>129</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_3_13/CI]">ex_stage_i/mult_i/mult_113/S2_3_13/CI</a> (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      1.05 f    (140.35,246.21)
+<u>130</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_3_13/S]">ex_stage_i/mult_i/mult_113/S2_3_13/S</a> (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.09      1.14 r    (141.01,246.15)
+<u>131</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/SUMB_3__13_]">ex_stage_i/mult_i/mult_113/SUMB_3__13_</a> (net)      1      0.73
+<u>132</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_4_12/CI]">ex_stage_i/mult_i/mult_113/S2_4_12/CI</a> (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      1.14 r    (141.17,245.01)
+<u>133</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_4_12/S]">ex_stage_i/mult_i/mult_113/S2_4_12/S</a> (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.10      1.24 f    (141.82,244.95)
+<u>134</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/SUMB_4__12_]">ex_stage_i/mult_i/mult_113/SUMB_4__12_</a> (net)      1      0.79
+<u>135</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_5_11/CI]">ex_stage_i/mult_i/mult_113/S2_5_11/CI</a> (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      1.24 f    (142.95,244.29)
+<u>136</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_5_11/S]">ex_stage_i/mult_i/mult_113/S2_5_11/S</a> (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.09      1.33 r    (143.60,244.35)
+<u>137</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/SUMB_5__11_]">ex_stage_i/mult_i/mult_113/SUMB_5__11_</a> (net)      1      1.14
+<u>138</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_6_10/CI]">ex_stage_i/mult_i/mult_113/S2_6_10/CI</a> (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      1.33 r    (141.76,241.41)
+<u>139</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_6_10/S]">ex_stage_i/mult_i/mult_113/S2_6_10/S</a> (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.10      1.43 f    (142.41,241.35)
+<u>140</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/SUMB_6__10_]">ex_stage_i/mult_i/mult_113/SUMB_6__10_</a> (net)      1      0.75
+<u>141</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_7_9/CI]">ex_stage_i/mult_i/mult_113/S2_7_9/CI</a> (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.00      1.43 f    (142.72,240.21)
+<u>142</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_7_9/S]">ex_stage_i/mult_i/mult_113/S2_7_9/S</a> (SAEDRVT14_ADDF_V1_2)          0.01      1.00              0.09      1.52 r    (143.38,240.15)
+<u>143</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/SUMB_7__9_]">ex_stage_i/mult_i/mult_113/SUMB_7__9_</a> (net)       1      0.75
+<u>144</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_8_8/CI]">ex_stage_i/mult_i/mult_113/S2_8_8/CI</a> (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.00      1.52 r    (143.09,239.01)
+<u>145</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_8_8/S]">ex_stage_i/mult_i/mult_113/S2_8_8/S</a> (SAEDRVT14_ADDF_V1_2)          0.01      1.00              0.10      1.62 f    (143.75,238.95)
+<u>146</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/SUMB_8__8_]">ex_stage_i/mult_i/mult_113/SUMB_8__8_</a> (net)       1      0.82
+<u>147</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_9_7/CI]">ex_stage_i/mult_i/mult_113/S2_9_7/CI</a> (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.00      1.62 f    (143.68,237.09)
+<u>148</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_9_7/S]">ex_stage_i/mult_i/mult_113/S2_9_7/S</a> (SAEDRVT14_ADDF_V1_2)          0.01      1.00              0.09      1.71 r    (144.34,237.15)
+<u>149</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/SUMB_9__7_]">ex_stage_i/mult_i/mult_113/SUMB_9__7_</a> (net)       1      1.04
+<u>150</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_10_6/CI]">ex_stage_i/mult_i/mult_113/S2_10_6/CI</a> (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      1.71 r    (143.17,234.69)
+<u>151</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_10_6/S]">ex_stage_i/mult_i/mult_113/S2_10_6/S</a> (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.10      1.81 f    (143.82,234.75)
+<u>152</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/SUMB_10__6_]">ex_stage_i/mult_i/mult_113/SUMB_10__6_</a> (net)      1      0.92
+<u>153</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_11_5/CI]">ex_stage_i/mult_i/mult_113/S2_11_5/CI</a> (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      1.81 f    (142.87,233.01)
+<u>154</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_11_5/S]">ex_stage_i/mult_i/mult_113/S2_11_5/S</a> (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.09      1.90 r    (143.52,232.95)
+<u>155</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/SUMB_11__5_]">ex_stage_i/mult_i/mult_113/SUMB_11__5_</a> (net)      1      1.08
+<u>156</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_12_4/CI]">ex_stage_i/mult_i/mult_113/S2_12_4/CI</a> (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      1.90 r    (142.13,230.61)
+<u>157</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_12_4/S]">ex_stage_i/mult_i/mult_113/S2_12_4/S</a> (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.10      2.00 f    (142.79,230.55)
+<u>158</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/SUMB_12__4_]">ex_stage_i/mult_i/mult_113/SUMB_12__4_</a> (net)      1      1.21
+<u>159</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_13_3/CI]">ex_stage_i/mult_i/mult_113/S2_13_3/CI</a> (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      2.00 f    (139.99,228.69)
+<u>160</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_13_3/S]">ex_stage_i/mult_i/mult_113/S2_13_3/S</a> (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.09      2.10 r    (140.64,228.75)
+<u>161</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/SUMB_13__3_]">ex_stage_i/mult_i/mult_113/SUMB_13__3_</a> (net)      1      0.97
+<u>162</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_14_2/CI]">ex_stage_i/mult_i/mult_113/S2_14_2/CI</a> (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      2.10 r    (139.54,227.01)
+<u>163</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_14_2/S]">ex_stage_i/mult_i/mult_113/S2_14_2/S</a> (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.10      2.20 f    (140.20,226.95)
+<u>164</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/SUMB_14__2_]">ex_stage_i/mult_i/mult_113/SUMB_14__2_</a> (net)      1      1.08
+<u>165</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_15_1/CI]">ex_stage_i/mult_i/mult_113/S2_15_1/CI</a> (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      2.20 f    (138.51,225.09)
+<u>166</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S2_15_1/S]">ex_stage_i/mult_i/mult_113/S2_15_1/S</a> (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.09      2.29 r    (139.16,225.15)
+<u>167</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/SUMB_15__1_]">ex_stage_i/mult_i/mult_113/SUMB_15__1_</a> (net)      1      1.14
+<u>168</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S4_0/CI]">ex_stage_i/mult_i/mult_113/S4_0/CI</a> (SAEDRVT14_ADDF_V1_2)           0.01      1.00              0.00      2.29 r    (137.99,222.21)
+<u>169</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S4_0/S]">ex_stage_i/mult_i/mult_113/S4_0/S</a> (SAEDRVT14_ADDF_V1_2)            0.01      1.00              0.10      2.39 f    (138.64,222.15)
+<u>170</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/SUMB_16__0_]">ex_stage_i/mult_i/mult_113/SUMB_16__0_</a> (net)      1      0.89
+<u>171</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S14_16_0/CI]">ex_stage_i/mult_i/mult_113/S14_16_0/CI</a> (SAEDRVT14_ADDF_V1_2)       0.01      1.00              0.00      2.39 f    (139.15,220.29)
+<u>172</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/S14_16_0/S]">ex_stage_i/mult_i/mult_113/S14_16_0/S</a> (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.10      2.48 r    (138.49,220.35)
+<u>173</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/A1_14_]">ex_stage_i/mult_i/mult_113/A1_14_</a> (net)           1      1.33
+<u>174</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/FS_1/A[14]]">ex_stage_i/mult_i/mult_113/FS_1/A[14]</a> (riscv_mult_SHARED_DSP_MULT0_DW01_add_17)
+<u>175</u>:	                                                                     0.01      1.00              0.00      2.48 r    (hierarchical)    h
+<u>176</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/FS_1/SUM[14]]">ex_stage_i/mult_i/mult_113/FS_1/SUM[14]</a> (net)            1.33
+<u>177</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/FS_1/SUM[14]]">ex_stage_i/mult_i/mult_113/FS_1/SUM[14]</a> (riscv_mult_SHARED_DSP_MULT0_DW01_add_17)
+<u>178</u>:	                                                                     0.01      1.00              0.00      2.48 r    (hierarchical)    h
+<u>179</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/mult_113/PRODUCT[16]]">ex_stage_i/mult_i/mult_113/PRODUCT[16]</a> (net)             1.33
+<u>180</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/mult_113/PRODUCT[16]]">ex_stage_i/mult_i/mult_113/PRODUCT[16]</a> (riscv_mult_SHARED_DSP_MULT0_DW02_mult_7)
+<u>181</u>:	                                                                     0.01      1.00              0.00      2.48 r    (hierarchical)    h
+<u>182</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/short_mul_16_]">ex_stage_i/mult_i/short_mul_16_</a> (net)                    1.33
+<u>183</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/B[16]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/B[16]</a> (riscv_mult_SHARED_DSP_MULT0_DW01_add_15)
+<u>184</u>:	                                                                     0.01      1.00              0.00      2.48 r    (hierarchical)    h
+<u>185</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/B[16]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/B[16]</a> (net)
+<u>186</u>:	                                                           1.33
+<u>187</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_16/B]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_16/B</a> (SAEDRVT14_ADDF_V1_2)
+<u>188</u>:	                                                                     0.01      1.00              0.00      2.48 r    (136.88,220.35)
+<u>189</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_16/CO]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_16/CO</a> (SAEDRVT14_ADDF_V1_2)
+<u>190</u>:	                                                                     0.01      1.00              0.05      2.53 r    (135.76,220.35)
+<u>191</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[17]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[17]</a> (net)
+<u>192</u>:	                                                    1      0.88
+<u>193</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_17/CI]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_17/CI</a> (SAEDRVT14_ADDF_V1_2)
+<u>194</u>:	                                                                     0.01      1.00              0.00      2.53 r    (135.32,218.61)
+<u>195</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_17/CO]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_17/CO</a> (SAEDRVT14_ADDF_V1_2)
+<u>196</u>:	                                                                     0.01      1.00              0.04      2.57 r    (136.12,218.55)
+<u>197</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[18]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[18]</a> (net)
+<u>198</u>:	                                                    1      0.71
+<u>199</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_18/CI]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_18/CI</a> (SAEDRVT14_ADDF_V1_2)
+<u>200</u>:	                                                                     0.01      1.00              0.00      2.57 r    (135.91,217.89)
+<u>201</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_18/CO]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_18/CO</a> (SAEDRVT14_ADDF_V1_2)
+<u>202</u>:	                                                                     0.01      1.00              0.04      2.62 r    (136.72,217.95)
+<u>203</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[19]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[19]</a> (net)
+<u>204</u>:	                                                    1      0.85
+<u>205</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_19/CI]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_19/CI</a> (SAEDRVT14_ADDF_V1_2)
+<u>206</u>:	                                                                     0.01      1.00              0.00      2.62 r    (138.43,217.89)
+<u>207</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_19/CO]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_19/CO</a> (SAEDRVT14_ADDF_V1_2)
+<u>208</u>:	                                                                     0.01      1.00              0.04      2.66 r    (139.23,217.95)
+<u>209</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[20]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[20]</a> (net)
+<u>210</u>:	                                                    1      0.76
+<u>211</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_20/CI]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_20/CI</a> (SAEDRVT14_ADDF_V1_2)
+<u>212</u>:	                                                                     0.01      1.00              0.00      2.66 r    (139.24,216.69)
+<u>213</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_20/CO]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_20/CO</a> (SAEDRVT14_ADDF_V1_2)
+<u>214</u>:	                                                                     0.01      1.00              0.04      2.70 r    (140.05,216.75)
+<u>215</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[21]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[21]</a> (net)
+<u>216</u>:	                                                    1      0.94
+<u>217</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_21/CI]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_21/CI</a> (SAEDRVT14_ADDF_V1_2)
+<u>218</u>:	                                                                     0.01      1.00              0.00      2.70 r    (141.76,217.41)
+<u>219</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_21/CO]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_21/CO</a> (SAEDRVT14_ADDF_V1_2)
+<u>220</u>:	                                                                     0.01      1.00              0.04      2.74 r    (142.56,217.35)
+<u>221</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[22]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[22]</a> (net)
+<u>222</u>:	                                                    1      1.04
+<u>223</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_22/CI]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_22/CI</a> (SAEDRVT14_ADDF_V1_2)
+<u>224</u>:	                                                                     0.01      1.00              0.00      2.74 r    (145.24,217.89)
+<u>225</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_22/CO]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_22/CO</a> (SAEDRVT14_ADDF_V1_2)
+<u>226</u>:	                                                                     0.01      1.00              0.04      2.79 r    (146.04,217.95)
+<u>227</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[23]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[23]</a> (net)
+<u>228</u>:	                                                    1      0.74
+<u>229</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_23/CI]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_23/CI</a> (SAEDRVT14_ADDF_V1_2)
+<u>230</u>:	                                                                     0.01      1.00              0.00      2.79 r    (146.62,217.41)
+<u>231</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_23/CO]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_23/CO</a> (SAEDRVT14_ADDF_V1_2)
+<u>232</u>:	                                                                     0.01      1.00              0.04      2.83 r    (145.82,217.35)
+<u>233</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[24]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[24]</a> (net)
+<u>234</u>:	                                                    1      0.95
+<u>235</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_24/CI]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_24/CI</a> (SAEDRVT14_ADDF_V1_2)
+<u>236</u>:	                                                                     0.01      1.00              0.00      2.83 r    (147.31,216.21)
+<u>237</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_24/CO]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_24/CO</a> (SAEDRVT14_ADDF_V1_2)
+<u>238</u>:	                                                                     0.01      1.00              0.04      2.87 r    (148.11,216.15)
+<u>239</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[25]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[25]</a> (net)
+<u>240</u>:	                                                    1      0.78
+<u>241</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_25/CI]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_25/CI</a> (SAEDRVT14_ADDF_V1_2)
+<u>242</u>:	                                                                     0.01      1.00              0.00      2.87 r    (148.40,215.01)
+<u>243</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_25/CO]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_25/CO</a> (SAEDRVT14_ADDF_V1_2)
+<u>244</u>:	                                                                     0.01      1.00              0.04      2.92 r    (147.60,214.95)
+<u>245</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[26]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[26]</a> (net)
+<u>246</u>:	                                                    1      1.08
+<u>247</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_26/CI]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_26/CI</a> (SAEDRVT14_ADDF_V1_2)
+<u>248</u>:	                                                                     0.01      1.00              0.00      2.92 r    (149.51,213.09)
+<u>249</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_26/CO]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_26/CO</a> (SAEDRVT14_ADDF_V1_2)
+<u>250</u>:	                                                                     0.01      1.00              0.04      2.96 r    (148.71,213.15)
+<u>251</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[27]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[27]</a> (net)
+<u>252</u>:	                                                    1      0.83
+<u>253</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_27/CI]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_27/CI</a> (SAEDRVT14_ADDF_V1_2)
+<u>254</u>:	                                                                     0.01      1.00              0.00      2.96 r    (149.29,211.89)
+<u>255</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_27/CO]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_27/CO</a> (SAEDRVT14_ADDF_V1_2)
+<u>256</u>:	                                                                     0.01      1.00              0.04      3.00 r    (148.48,211.95)
+<u>257</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[28]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[28]</a> (net)
+<u>258</u>:	                                                    1      1.01
+<u>259</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_28/CI]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_28/CI</a> (SAEDRVT14_ADDF_V1_2)
+<u>260</u>:	                                                                     0.01      1.00              0.00      3.00 r    (148.84,209.01)
+<u>261</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_28/CO]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_28/CO</a> (SAEDRVT14_ADDF_V1_2)
+<u>262</u>:	                                                                     0.01      1.00              0.04      3.05 r    (148.04,208.95)
+<u>263</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[29]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[29]</a> (net)
+<u>264</u>:	                                                    1      0.68
+<u>265</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_29/CI]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_29/CI</a> (SAEDRVT14_ADDF_V1_2)
+<u>266</u>:	                                                                     0.01      1.00              0.00      3.05 r    (148.03,208.29)
+<u>267</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_29/CO]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_29/CO</a> (SAEDRVT14_ADDF_V1_2)
+<u>268</u>:	                                                                     0.01      1.00              0.04      3.09 r    (147.23,208.35)
+<u>269</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[30]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[30]</a> (net)
+<u>270</u>:	                                                    1      0.86
+<u>271</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_30/CI]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_30/CI</a> (SAEDRVT14_ADDF_V1_2)
+<u>272</u>:	                                                                     0.01      1.00              0.00      3.09 r    (147.43,206.61)
+<u>273</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_30/CO]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_30/CO</a> (SAEDRVT14_ADDF_V1_2)
+<u>274</u>:	                                                                     0.01      1.00              0.04      3.13 r    (146.63,206.55)
+<u>275</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[31]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[31]</a> (net)
+<u>276</u>:	                                                    1      0.79
+<u>277</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_31/CI]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_31/CI</a> (SAEDRVT14_ADDF_V1_2)
+<u>278</u>:	                                                                     0.01      1.00              0.00      3.13 r    (146.92,205.41)
+<u>279</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_31/CO]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_31/CO</a> (SAEDRVT14_ADDF_V1_2)
+<u>280</u>:	                                                                     0.01      1.00              0.04      3.17 r    (146.12,205.35)
+<u>281</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[32]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[32]</a> (net)
+<u>282</u>:	                                                    1      0.70
+<u>283</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_32/CI]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_32/CI</a> (SAEDRVT14_ADDF_V1_2)
+<u>284</u>:	                                                                     0.01      1.00              0.00      3.17 r    (146.25,204.69)
+<u>285</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_32/CO]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_32/CO</a> (SAEDRVT14_ADDF_V1_2)
+<u>286</u>:	                                                                     0.01      1.00              0.04      3.21 r    (145.45,204.75)
+<u>287</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[33]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[33]</a> (net)
+<u>288</u>:	                                                    1      0.84
+<u>289</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_33/CI]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_33/CI</a> (SAEDRVT14_ADDF_V1_2)
+<u>290</u>:	                                                                     0.01      1.00              0.00      3.21 r    (145.96,203.49)
+<u>291</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_33/S]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_33/S</a> (SAEDRVT14_ADDF_V1_2)
+<u>292</u>:	                                                                     0.01      1.00              0.10      3.31 f    (145.30,203.55)
+<u>293</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/SUM[33]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/SUM[33]</a> (net)
+<u>294</u>:	                                                    1      0.66
+<u>295</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/SUM[33]]">ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/SUM[33]</a> (riscv_mult_SHARED_DSP_MULT0_DW01_add_15)
+<u>296</u>:	                                                                     0.01      1.00              0.00      3.31 f    (hierarchical)    h
+<u>297</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/short_mac[33]]">ex_stage_i/mult_i/short_mac[33]</a> (net)                    0.66
+<u>298</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U514/A3]">ex_stage_i/mult_i/U514/A3</a> (SAEDRVT14_AN3_2)                        0.01      1.00              0.00      3.31 f    (143.67,204.03)
+<u>299</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U514/X]">ex_stage_i/mult_i/U514/X</a> (SAEDRVT14_AN3_2)                         0.01      1.00              0.02      3.33 f    (143.25,204.21)
+<u>300</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/n290]">ex_stage_i/mult_i/n290</a> (net)                      1      0.47
+<u>301</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U513/A1]">ex_stage_i/mult_i/U513/A1</a> (SAEDRVT14_OR2_MM_2)                     0.01      1.00              0.00      3.33 f    (142.56,204.75)
+<u>302</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U513/X]">ex_stage_i/mult_i/U513/X</a> (SAEDRVT14_OR2_MM_2)                      0.02      1.00              0.04      3.37 f    (142.34,204.76)
+<u>303</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/N55]">ex_stage_i/mult_i/N55</a> (net)                       6      4.67
+<u>304</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U543/A1]">ex_stage_i/mult_i/U543/A1</a> (SAEDRVT14_AN2_MM_2)                     0.02      1.00              0.00      3.37 f    (140.34,204.15)
+<u>305</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U543/X]">ex_stage_i/mult_i/U543/X</a> (SAEDRVT14_AN2_MM_2)                      0.00      1.00              0.03      3.40 f    (140.07,204.15)
+<u>306</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/n525]">ex_stage_i/mult_i/n525</a> (net)                      1      0.41
+<u>307</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U935/A3]">ex_stage_i/mult_i/U935/A3</a> (SAEDRVT14_OR3_2)                        0.00      1.00              0.00      3.40 f    (139.97,204.71)
+<u>308</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U935/X]">ex_stage_i/mult_i/U935/X</a> (SAEDRVT14_OR3_2)                         0.01      1.00              0.05      3.44 f    (139.60,204.76)
+<u>309</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/n661]">ex_stage_i/mult_i/n661</a> (net)                      4      2.87
+<u>310</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U281/A2]">ex_stage_i/mult_i/U281/A2</a> (SAEDRVT14_AN2_MM_2)                     0.01      1.00              0.00      3.44 f    (138.71,206.51)
+<u>311</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U281/X]">ex_stage_i/mult_i/U281/X</a> (SAEDRVT14_AN2_MM_2)                      0.01      1.00              0.03      3.47 f    (138.37,206.55)
+<u>312</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/n662]">ex_stage_i/mult_i/n662</a> (net)                      1      0.71
+<u>313</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U963/A4]">ex_stage_i/mult_i/U963/A4</a> (SAEDRVT14_OR4_2)                        0.01      1.00              0.00      3.47 f    (136.87,205.91)
+<u>314</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U963/X]">ex_stage_i/mult_i/U963/X</a> (SAEDRVT14_OR4_2)                         0.02      1.00              0.06      3.53 f    (136.42,205.96)
+<u>315</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/n760]">ex_stage_i/mult_i/n760</a> (net)                      2      3.08
+<u>316</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U532/A2]">ex_stage_i/mult_i/U532/A2</a> (SAEDRVT14_AN2_MM_2)                     0.02      1.00              0.00      3.53 f    (127.69,206.51)
+<u>317</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U532/X]">ex_stage_i/mult_i/U532/X</a> (SAEDRVT14_AN2_MM_2)                      0.01      1.00              0.03      3.56 f    (127.35,206.55)
+<u>318</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/n768]">ex_stage_i/mult_i/n768</a> (net)                      1      0.76
+<u>319</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U975/A2]">ex_stage_i/mult_i/U975/A2</a> (SAEDRVT14_OR4_2)                        0.01      1.00              0.00      3.56 f    (127.32,208.99)
+<u>320</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U975/X]">ex_stage_i/mult_i/U975/X</a> (SAEDRVT14_OR4_2)                         0.02      1.00              0.05      3.61 f    (127.02,208.94)
+<u>321</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/short_result[7]]">ex_stage_i/mult_i/short_result[7]</a> (net)           1      3.48
+<u>322</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U323/A1]">ex_stage_i/mult_i/U323/A1</a> (SAEDRVT14_AN2_MM_2)                     0.02      1.00              0.00      3.61 f    (112.22,203.55)
+<u>323</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U323/X]">ex_stage_i/mult_i/U323/X</a> (SAEDRVT14_AN2_MM_2)                      0.02      1.00              0.04      3.65 f    (111.95,203.55)
+<u>324</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/n151]">ex_stage_i/mult_i/n151</a> (net)                      1      3.83
+<u>325</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U362/A1]">ex_stage_i/mult_i/U362/A1</a> (SAEDRVT14_OR4_2)                        0.02      1.00              0.00      3.65 f    (94.02,200.55)
+<u>326</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/U362/X]">ex_stage_i/mult_i/U362/X</a> (SAEDRVT14_OR4_2)                         0.04      1.00              0.07      3.72 f    (94.17,200.54)
+<u>327</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_i/result_o[7]]">ex_stage_i/mult_i/result_o[7]</a> (net)               1     10.67
+<u>328</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/mult_i/result_o[7]]">ex_stage_i/mult_i/result_o[7]</a> (riscv_mult_SHARED_DSP_MULT0)        0.04      1.00              0.00      3.72 f    (hierarchical)    h
+<u>329</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/mult_result[7]]">ex_stage_i/mult_result[7]</a> (net)                         10.67
+<u>330</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/U169/A1]">ex_stage_i/U169/A1</a> (SAEDRVT14_AN2_MM_2)                            0.04      1.00              0.00      3.72 f    (116.00,154.95)
+<u>331</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/U169/X]">ex_stage_i/U169/X</a> (SAEDRVT14_AN2_MM_2)                             0.02      1.00              0.05      3.78 f    (116.27,154.95)
+<u>332</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/n12]">ex_stage_i/n12</a> (net)                              1      3.93
+<u>333</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/U129/A1]">ex_stage_i/U129/A1</a> (SAEDRVT14_OR3_2)                               0.02      1.00              0.00      3.78 f    (129.98,144.17)
+<u>334</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/U129/X]">ex_stage_i/U129/X</a> (SAEDRVT14_OR3_2)                                0.02      1.00              0.05      3.83 f    (130.13,144.14)
+<u>335</u>:	  <a href="cgi:change_selection [get_nets ex_stage_i/regfile_alu_wdata_fw_o[7]]">ex_stage_i/regfile_alu_wdata_fw_o[7]</a> (net)        4      5.27
+<u>336</u>:	  <a href="cgi:change_selection [get_pins ex_stage_i/regfile_alu_wdata_fw_o[7]]">ex_stage_i/regfile_alu_wdata_fw_o[7]</a> (riscv_ex_stage_FPU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5)
+<u>337</u>:	                                                                     0.02      1.00              0.00      3.83 f    (hierarchical)    h
+<u>338</u>:	  <a href="cgi:change_selection [get_nets regfile_alu_wdata_fw[7]]">regfile_alu_wdata_fw[7]</a> (net)                            5.27
+<u>339</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/regfile_alu_wdata_fw_i[7]]">id_stage_i/regfile_alu_wdata_fw_i[7]</a> (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5)
+<u>340</u>:	                                                                     0.02      1.00              0.00      3.83 f    (hierarchical)    h
+<u>341</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/regfile_alu_wdata_fw_i[7]]">id_stage_i/regfile_alu_wdata_fw_i[7]</a> (net)               5.27
+<u>342</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/U1133/A2]">id_stage_i/U1133/A2</a> (SAEDRVT14_AN2_MM_2)                           0.02      1.00              0.00      3.83 f    (131.98,126.11)
+<u>343</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/U1133/X]">id_stage_i/U1133/X</a> (SAEDRVT14_AN2_MM_2)                            0.01      1.00              0.03      3.86 f    (132.32,126.15)
+<u>344</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/n1903]">id_stage_i/n1903</a> (net)                            1      0.58
+<u>345</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/U2928/A3]">id_stage_i/U2928/A3</a> (SAEDRVT14_OR3_2)                              0.01      1.00              0.00      3.86 f    (131.76,124.99)
+<u>346</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/U2928/X]">id_stage_i/U2928/X</a> (SAEDRVT14_OR3_2)                               0.04      1.00              0.07      3.93 f    (131.39,124.94)
+<u>347</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/operand_a_fw_id[7]]">id_stage_i/operand_a_fw_id[7]</a> (net)               3     10.26
+<u>348</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/U3512/A1]">id_stage_i/U3512/A1</a> (SAEDRVT14_AN2_MM_2)                           0.04      1.00              0.00      3.93 f    (118.51,133.35)
+<u>349</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/U3512/X]">id_stage_i/U3512/X</a> (SAEDRVT14_AN2_MM_2)                            0.01      1.00              0.04      3.97 f    (118.78,133.35)
+<u>350</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/n2806]">id_stage_i/n2806</a> (net)                            1      0.63
+<u>351</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/U3513/A4]">id_stage_i/U3513/A4</a> (SAEDRVT14_OR4_2)                              0.01      1.00              0.00      3.97 f    (119.11,134.59)
+<u>352</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/U3513/X]">id_stage_i/U3513/X</a> (SAEDRVT14_OR4_2)                               0.05      1.00              0.09      4.05 f    (118.66,134.54)
+<u>353</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/operand_b[7]]">id_stage_i/operand_b[7]</a> (net)                     6     12.88
+<u>354</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/U824/A1]">id_stage_i/U824/A1</a> (SAEDRVT14_ND2_CDC_2)                           0.05      1.00              0.00      4.05 f    (118.53,149.61)
+<u>355</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/U824/X]">id_stage_i/U824/X</a> (SAEDRVT14_ND2_CDC_2)                            0.02      1.00              0.03      4.09 r    (118.51,149.51)
+<u>356</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/n1318]">id_stage_i/n1318</a> (net)                            1      0.93
+<u>357</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/U822/A1]">id_stage_i/U822/A1</a> (SAEDRVT14_ND2_CDC_2)                           0.02      1.00              0.00      4.09 r    (119.17,150.09)
+<u>358</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/U822/X]">id_stage_i/U822/X</a> (SAEDRVT14_ND2_CDC_2)                            0.08      1.00              0.08      4.17 f    (119.18,150.19)
+<u>359</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/n1192]">id_stage_i/n1192</a> (net)                            3     11.91
+<u>360</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/U1874/A1]">id_stage_i/U1874/A1</a> (SAEDRVT14_ND2_CDC_2)                          0.08      1.00              0.00      4.17 f    (120.50,191.61)
+<u>361</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/U1874/X]">id_stage_i/U1874/X</a> (SAEDRVT14_ND2_CDC_2)                           0.03      1.00              0.06      4.23 r    (120.51,191.51)
+<u>362</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/n11901]">id_stage_i/n11901</a> (net)                           1      2.89
+<u>363</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/U1872/A1]">id_stage_i/U1872/A1</a> (SAEDRVT14_ND2_CDC_2)                          0.03      1.00              0.00      4.23 r    (133.97,192.09)
+<u>364</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/U1872/X]">id_stage_i/U1872/X</a> (SAEDRVT14_ND2_CDC_2)                           0.01      1.00              0.03      4.25 f    (133.98,192.19)
+<u>365</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/n2432]">id_stage_i/n2432</a> (net)                            1      0.63
+<u>366</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/alu_operand_b_ex_o_reg_23_/D]">id_stage_i/alu_operand_b_ex_o_reg_23_/D</a> (SAEDRVT14_FDPRBQ_V2LP_2)
+<u>367</u>:	                                                                     0.01      1.00              0.00      4.25 f    (135.97,191.55)   n
+<u>368</u>:	  data arrival time                                                                                        4.25
+<u>369</u>:	
+<u>370</u>:	  clock CLK_I (rise edge)                                                                        5.00      5.00
+<u>371</u>:	  source latency                                                                                 0.00      5.00
+<u>372</u>:	  <a href="cgi:change_selection [get_ports clk_i]">clk_i</a> (in)                                                         0.00      1.00              0.00      5.00 r    (272.37,0.13)
+<u>373</u>:	  <a href="cgi:change_selection [get_nets clk_i]">clk_i</a> (net)                                      70     76.14                                                                        d
+<u>374</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i/clk_i]">core_clock_gate_i/clk_i</a> (cluster_clock_gating)                     0.00      1.00              0.00      5.00 r    (hierarchical)    h
+<u>375</u>:	  <a href="cgi:change_selection [get_nets core_clock_gate_i/clk_i]">core_clock_gate_i/clk_i</a> (net)                    70     76.14                                                                        d
+<u>376</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i/u__tmp100/CK]">core_clock_gate_i/u__tmp100/CK</a> (SAEDRVT14_CKGTPLT_V5_4)            0.00      1.00              0.00      5.00 r    (234.59,34.35)    n
+<u>377</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i/u__tmp100/Q]">core_clock_gate_i/u__tmp100/Q</a> (SAEDRVT14_CKGTPLT_V5_4)             0.00      1.00              0.00      5.00 r    (234.12,34.35)    n
+<u>378</u>:	  <a href="cgi:change_selection [get_nets core_clock_gate_i/clk_o]">core_clock_gate_i/clk_o</a> (net)                  2133    1000000.00                                                                    d
+<u>379</u>:	  <a href="cgi:change_selection [get_pins core_clock_gate_i/clk_o]">core_clock_gate_i/clk_o</a> (cluster_clock_gating)                     0.00      1.00              0.00      5.00 r    (hierarchical)    h
+<u>380</u>:	  <a href="cgi:change_selection [get_nets clk]">clk</a> (net)                                      2133    1000000.00                                                                    d
+<u>381</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/clk]">id_stage_i/clk</a> (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5)
+<u>382</u>:	                                                                     0.00      1.00              0.00      5.00 r    (hierarchical)    h
+<u>383</u>:	  <a href="cgi:change_selection [get_nets id_stage_i/clk]">id_stage_i/clk</a> (net)                           2133    1000000.00                                                                    d
+<u>384</u>:	  <a href="cgi:change_selection [get_pins id_stage_i/alu_operand_b_ex_o_reg_23_/CK]">id_stage_i/alu_operand_b_ex_o_reg_23_/CK</a> (SAEDRVT14_FDPRBQ_V2LP_2)
+<u>385</u>:	                                                                     0.00      1.00              0.00      5.00 r    (136.49,191.49)   n
+<u>386</u>:	
+<u>387</u>:	  library setup time                                                           1.00             -0.02      4.98
+<u>388</u>:	  data required time                                                                                       4.98
+<u>389</u>:	  ------------------------------------------------------------------------------------------------------------------------------------------------------
+<u>390</u>:	  data required time                                                                                       4.98
+<u>391</u>:	  data arrival time                                                                                       -4.25
+<u>392</u>:	  ------------------------------------------------------------------------------------------------------------------------------------------------------
+<u>393</u>:	  slack (MET)                                                                                              0.72
+<u>394</u>:	
+<u>395</u>:	
+<u>396</u>:	1
+</pre>
+</body>
+</html>

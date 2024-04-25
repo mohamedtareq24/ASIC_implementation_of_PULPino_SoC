@@ -1,0 +1,43 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 1
+        -report_by design
+        -nosplit
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Wed Apr 24 15:11:11 2024
+****************************************
+
+  Startpoint: core_clock_gate_i_coverage_flop_reg (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/registers_i/mem_reg_1__25_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                                  Incr      Path  
+  ----------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                0.00      0.00
+  clock network delay (ideal)                                            0.00      0.00
+
+  core_clock_gate_i_coverage_flop_reg/CK (SAEDRVT14_FSDPQ_V2LP_2)        0.00      0.00 r
+  core_clock_gate_i_coverage_flop_reg/Q (SAEDRVT14_FSDPQ_V2LP_2)         0.01      0.01 f
+  id_stage_i/registers_i/mem_reg_1__25_/SI (SAEDRVT14_FSDPRBQ_V2LP_2)    0.00      0.01 f
+  data arrival time                                                                0.01
+
+  clock CLK_I (rise edge)                                                0.00      0.00
+  clock network delay (ideal)                                            0.00      0.00
+  id_stage_i/registers_i/mem_reg_1__25_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)    0.00      0.00 r
+  library hold time                                                      0.00      0.00
+  data required time                                                               0.00
+  ----------------------------------------------------------------------------------------------
+  data required time                                                               0.00
+  data arrival time                                                               -0.01
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                      0.01
+
+
+1

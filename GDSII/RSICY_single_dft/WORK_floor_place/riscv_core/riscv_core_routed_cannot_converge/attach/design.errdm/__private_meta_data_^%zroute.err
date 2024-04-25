@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<errorData typeCount="3" majorVersion="1" minorVersion="8" name="__private_meta_data_:zroute.err" designName="riscv_core_routed_cannot_converge" info="" checker="" checkerVersion="" created="1713907215" createdDate="04:23:2024:14:20:15:PDT" modified="1713908385" modifiedDate="04:23:2024:14:39:45:PDT" interactive="false" internal="false" metaData="true" numTypes="3" numInsts="4"/>

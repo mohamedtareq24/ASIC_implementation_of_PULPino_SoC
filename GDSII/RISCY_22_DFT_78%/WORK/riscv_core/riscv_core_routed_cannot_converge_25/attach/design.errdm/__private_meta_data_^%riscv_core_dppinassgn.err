@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<errorData typeCount="0" majorVersion="1" minorVersion="8" name="__private_meta_data_:riscv_core_dppinassgn.err" designName="riscv_core_routed_cannot_converge" info="" checker="Pin Placement Check" checkerVersion="" created="1713995914" createdDate="04:24:2024:14:58:34:PDT" modified="1714001583" modifiedDate="04:24:2024:16:33:03:PDT" interactive="false" internal="false" metaData="true" numTypes="0" numInsts="0"/>

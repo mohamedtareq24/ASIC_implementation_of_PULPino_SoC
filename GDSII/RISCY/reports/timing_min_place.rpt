@@ -1,0 +1,46 @@
+Warning: Scenario func_slow is not configured for hold analysis: skipping. (UIC-058)
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 1
+        -report_by design
+        -nosplit
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Fri Apr 19 02:07:20 2024
+****************************************
+
+  Startpoint: debug_unit_i/regfile_fp_sel_q_reg (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: debug_unit_i/regfile_fp_sel_q_reg (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: CLK_I
+  Path Type: min
+
+  Point                                                             Incr      Path  
+  -----------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                           0.00      0.00
+  clock network delay (ideal)                                       0.00      0.00
+
+  debug_unit_i/regfile_fp_sel_q_reg/CK (SAEDRVT14_FDPRBQ_V2LP_2)    0.00      0.00 r
+  debug_unit_i/regfile_fp_sel_q_reg/Q (SAEDRVT14_FDPRBQ_V2LP_2)     0.02      0.02 f
+  debug_unit_i/U370/X (SAEDRVT14_ND2_CDC_2)                         0.00      0.02 r
+  debug_unit_i/U369/X (SAEDRVT14_ND2_CDC_2)                         0.00      0.03 f
+  debug_unit_i/regfile_fp_sel_q_reg/D (SAEDRVT14_FDPRBQ_V2LP_2)     0.00      0.03 f
+  data arrival time                                                           0.03
+
+  clock CLK_I (rise edge)                                           0.00      0.00
+  clock network delay (ideal)                                       0.00      0.00
+  debug_unit_i/regfile_fp_sel_q_reg/CK (SAEDRVT14_FDPRBQ_V2LP_2)    0.00      0.00 r
+  library hold time                                                 0.00      0.00
+  data required time                                                          0.00
+  -----------------------------------------------------------------------------------------
+  data required time                                                          0.00
+  data arrival time                                                          -0.03
+  -----------------------------------------------------------------------------------------
+  slack (MET)                                                                 0.02
+
+
+1

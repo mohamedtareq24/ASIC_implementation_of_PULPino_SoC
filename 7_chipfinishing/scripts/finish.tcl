@@ -44,6 +44,7 @@ link
 ###############################################################################
 ###############################################################################
 ##################################BEGIN CHIP FINISHING ########################
+remove_placement_spacing_rules -all
 connect_pg_net -automatic
 
 set pnr_std_fillers "SAEDRVT14_FILL*"
@@ -53,19 +54,17 @@ set std_fillers ""
 foreach filler $pnr_std_fillers { lappend std_fillers "*/${filler}" }
 create_stdcell_filler -lib_cell $std_fillers
 
-
+connect_pg_net -automatic
 remove_stdcell_fillers_with_violation
+
 ############################################################
+write_verilog ../netlists/riscv_core.icc2.gate.v
 
-write_verilog ../netlists/${DESIGN_NAME}.icc2.gate.v
-
-report_qor > ../report/qor.rpt
+report_qor > ../reports/qor.rpt
 
 report_utilization > ../reports/utilization.rpt
 ############################################################
-
-
-save_block -as ${DESIGN_NAME}_finished
+save_block -as ${DESIGN_NAME}_finished_all_clean
 
 
 change_names -rules verilog -verbose

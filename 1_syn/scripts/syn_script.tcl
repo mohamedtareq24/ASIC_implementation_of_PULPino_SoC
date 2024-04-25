@@ -19,14 +19,15 @@ puts "###########################################"
 set link_library 	 [list * $SSLIB $FFLIB]
 set target_library 	 [list $SSLIB $FFLIB]
 
-#################### Don't use Cells#######################################
+######################### Directives ####################################
+set  enable_keep_signal true
+set  hdlin_keep_signal_name user 
+
+########################## Don't use Cells#######################################
 source /mnt/hgfs/cv32e40p/1_syn/scripts/dont_use_cells.tcl
 
 ######################## Elaboration #################################
 source $ELABORATION
-
-
-
 
 #################### Liniking All The Design Parts #########################
 puts "###############################################"
@@ -52,10 +53,12 @@ check_timing
 puts "###############################################"
 puts "########## Mapping & Optimization #############"
 puts "###############################################"
-compile
+compile_ultra -scan
 
+############################ DFT ############################################
+source /mnt/hgfs/cv32e40p/1_syn/scripts/dft_script.tcl
 ############################# Formality Setup File ##########################
-                                                   
+
 set_svf $top.svf 
 
 #############################################################################
@@ -75,14 +78,16 @@ report_timing
 define_name_rules  no_case -case_insensitive
 change_names -rule no_case -hierarchy
 change_names -rule sverilog -hierarchy
+
 set verilogout_no_tri	 true
 set verilogout_equation  false
 
 
 write_file -format verilog -hierarchy -output ../netlists/$top.ddc
 write_file -format verilog -hierarchy -output ../netlists/$top.v
+write_scan_def -output ../icc2/${top}.scandef
 write_sdf  ../sdf/$top.sdf
-write_icc2_files -output ../icc2_files/
+#write_icc2_files -output ../icc2_files/
 
 
 ####################### reporting ##########################################
@@ -92,17 +97,6 @@ report_power -hierarchy > ../reports/power.rpt
 report_timing -delay_type max -max_paths 20 > ../reports/setup.rpt
 report_clock -attributes > ../reports/clocks.rpt
 #report_constraint -all_violators -nosplit > ../reports/constraints.rpt
-
-
-############################################################################
-# DFT Preparation Section
-############################################################################
-
-#set flops_per_chain 100
-
-#set num_flops [sizeof_collection [all_registers -edge_triggered]]
-
-#set num_chains [expr $num_flops / $flops_per_chain + 1 ]
 
 ################# starting graphical user interface #######################
 

@@ -1,0 +1,396 @@
+SI analysis is not enabled, so delta delays are unavailable.
+Warning: Scenario func_fast is not configured for setup analysis: skipping. (UIC-058)
+****************************************
+Report : timing
+        -path_type full_clock_expanded
+        -delay_type max
+        -nworst 1
+        -max_paths 1
+        -report_by group
+        -input_pins
+        -nets
+        -include_hierarchical_pins
+        -transition_time
+        -capacitance
+        -crosstalk_delta
+        -derate
+        -attributes
+        -physical
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Fri Apr 19 02:07:21 2024
+****************************************
+
+  Startpoint: ex_stage_i/mult_i/mulh_CS_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/alu_operand_b_ex_o_reg_23_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: CLK_I
+  Path Type: max
+
+
+Attributes
+    b - black-box (unknown)
+    s - size_only
+    d - dont_touch
+    u - dont_use
+    g - generic
+    h - hierarchical
+    i - ideal
+    n - noncombinational
+    E - extracted timing model
+    Q - Quick timing model
+
+
+  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                        0.00      0.00
+  source latency                                                                                 0.00      0.00
+  clk_i (in)                                                         0.00      1.00              0.00      0.00 r    (272.37,0.13)
+  clk_i (net)                                      70     76.14                                                                        d
+  core_clock_gate_i/clk_i (cluster_clock_gating)                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_clock_gate_i/clk_i (net)                    70     76.14                                                                        d
+  core_clock_gate_i/u__tmp100/CK (SAEDRVT14_CKGTPLT_V5_4)            0.00      1.00              0.00      0.00 r    (234.59,34.35)    n
+  core_clock_gate_i/u__tmp100/Q (SAEDRVT14_CKGTPLT_V5_4)             0.00      1.00              0.00      0.00 r    (234.12,34.35)    n
+  core_clock_gate_i/clk_o (net)                  2133    1000000.00                                                                    d
+  core_clock_gate_i/clk_o (cluster_clock_gating)                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  clk (net)                                      2133    1000000.00                                                                    d
+  ex_stage_i/clk (riscv_ex_stage_FPU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  ex_stage_i/clk (net)                           2133    1000000.00                                                                    d
+  ex_stage_i/mult_i/clk (riscv_mult_SHARED_DSP_MULT0)                0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  ex_stage_i/mult_i/clk (net)                    2133    1000000.00                                                                    d
+  ex_stage_i/mult_i/mulh_CS_reg_1_/CK (SAEDRVT14_FDPRBQ_V2LP_2)      0.00      1.00              0.00      0.00 r    (137.10,193.41)   n
+
+  ex_stage_i/mult_i/mulh_CS_reg_1_/CK (SAEDRVT14_FDPRBQ_V2LP_2)      0.00      1.00              0.00      0.00 r    (137.10,193.41)   n
+  ex_stage_i/mult_i/mulh_CS_reg_1_/Q (SAEDRVT14_FDPRBQ_V2LP_2)       0.02      1.00              0.08      0.08 r    (136.05,193.35)   n
+  ex_stage_i/mult_i/mulh_CS[1] (net)                6      3.33
+  ex_stage_i/mult_i/U664/A3 (SAEDRVT14_AN3_2)                        0.02      1.00              0.00      0.08 r    (138.72,195.27)
+  ex_stage_i/mult_i/U664/X (SAEDRVT14_AN3_2)                         0.01      1.00              0.05      0.13 r    (139.14,195.09)
+  ex_stage_i/mult_i/n276 (net)                      4      2.72
+  ex_stage_i/mult_i/U908/A (SAEDRVT14_INV_2)                         0.01      1.00              0.00      0.13 r    (139.75,197.56)
+  ex_stage_i/mult_i/U908/X (SAEDRVT14_INV_2)                         0.01      1.00              0.02      0.15 f    (139.68,197.56)
+  ex_stage_i/mult_i/n405 (net)                      3      3.37
+  ex_stage_i/mult_i/U127/A1 (SAEDRVT14_AN2_MM_2)                     0.01      1.00              0.00      0.15 f    (139.82,198.15)
+  ex_stage_i/mult_i/U127/X (SAEDRVT14_AN2_MM_2)                      0.01      1.00              0.03      0.18 f    (140.10,198.15)
+  ex_stage_i/mult_i/n278 (net)                      3      3.45
+  ex_stage_i/mult_i/U501/A1 (SAEDRVT14_ND2_4)                        0.01      1.00              0.00      0.18 f    (140.26,196.29)
+  ex_stage_i/mult_i/U501/X (SAEDRVT14_ND2_4)                         0.05      1.00              0.05      0.23 r    (140.26,196.23)
+  ex_stage_i/mult_i/multicycle_o (net)              6     20.52
+  ex_stage_i/mult_i/U431/A1 (SAEDRVT14_OR3_2)                        0.05      1.00              0.00      0.23 r    (142.49,192.73)
+  ex_stage_i/mult_i/U431/X (SAEDRVT14_OR3_2)                         0.01      1.00              0.06      0.28 r    (142.64,192.76)
+  ex_stage_i/mult_i/n283 (net)                      2      1.73
+  ex_stage_i/mult_i/U907/A (SAEDRVT14_INV_2)                         0.01      1.00              0.00      0.28 r    (142.86,193.96)
+  ex_stage_i/mult_i/U907/X (SAEDRVT14_INV_2)                         0.01      1.00              0.01      0.29 f    (142.93,193.96)
+  ex_stage_i/mult_i/n404 (net)                      2      1.20
+  ex_stage_i/mult_i/U430/A2 (SAEDRVT14_OR3_2)                        0.01      1.00              0.00      0.29 f    (142.34,195.77)
+  ex_stage_i/mult_i/U430/X (SAEDRVT14_OR3_2)                         0.02      1.00              0.05      0.34 f    (142.56,195.74)
+  ex_stage_i/mult_i/n64 (net)                       5      3.79
+  ex_stage_i/mult_i/U906/A (SAEDRVT14_INV_2)                         0.02      1.00              0.00      0.34 f    (142.34,199.34)
+  ex_stage_i/mult_i/U906/X (SAEDRVT14_INV_2)                         0.02      1.00              0.03      0.37 r    (142.41,199.34)
+  ex_stage_i/mult_i/n403 (net)                      9      6.23
+  ex_stage_i/mult_i/U663/A2 (SAEDRVT14_ND2_CDC_2)                    0.02      1.00              0.00      0.37 r    (138.47,196.29)
+  ex_stage_i/mult_i/U663/X (SAEDRVT14_ND2_CDC_2)                     0.01      1.00              0.02      0.39 f    (138.64,196.31)
+  ex_stage_i/mult_i/n136 (net)                      1      0.39
+  ex_stage_i/mult_i/U662/A1 (SAEDRVT14_AN2_MM_2)                     0.01      1.00              0.00      0.39 f    (139.16,196.95)
+  ex_stage_i/mult_i/U662/X (SAEDRVT14_AN2_MM_2)                      0.02      1.00              0.03      0.42 f    (138.89,196.95)
+  ex_stage_i/mult_i/n100 (net)                      2      3.99
+  ex_stage_i/mult_i/U511/A1 (SAEDRVT14_ND2_4)                        0.02      1.00              0.00      0.42 f    (138.50,203.49)
+  ex_stage_i/mult_i/U511/X (SAEDRVT14_ND2_4)                         0.04      1.00              0.04      0.46 r    (138.50,203.43)
+  ex_stage_i/mult_i/n67 (net)                      17     17.90
+  ex_stage_i/mult_i/HFSINV_2156_275/A (SAEDRVT14_INV_S_2)            0.04      1.00              0.00      0.46 r    (110.82,217.96)
+  ex_stage_i/mult_i/HFSINV_2156_275/X (SAEDRVT14_INV_S_2)            0.05      1.00              0.06      0.53 f    (110.74,217.96)
+  ex_stage_i/mult_i/HFSNET_230 (net)               16     13.41
+  ex_stage_i/mult_i/U649/A2 (SAEDRVT14_ND2_CDC_2)                    0.05      1.00              0.00      0.53 f    (106.03,215.01)
+  ex_stage_i/mult_i/U649/X (SAEDRVT14_ND2_CDC_2)                     0.02      1.00              0.04      0.57 r    (105.86,214.99)
+  ex_stage_i/mult_i/n87 (net)                       1      2.46
+  ex_stage_i/mult_i/U647/A2 (SAEDRVT14_ND2_2)                        0.02      1.00              0.00      0.57 r    (115.78,213.68)
+  ex_stage_i/mult_i/U647/X (SAEDRVT14_ND2_2)                         0.10      1.00              0.09      0.66 f    (115.92,213.87)
+  ex_stage_i/mult_i/short_op_b[15] (net)           18     20.58
+  ex_stage_i/mult_i/U666/A2 (SAEDRVT14_AN3_2)                        0.10      1.00              0.00      0.66 f    (139.38,211.29)
+  ex_stage_i/mult_i/U666/X (SAEDRVT14_AN3_2)                         0.02      1.00              0.10      0.77 f    (139.66,211.41)
+  ex_stage_i/mult_i/short_op_b[16] (net)            3      4.77
+  ex_stage_i/mult_i/mult_113/B[16] (riscv_mult_SHARED_DSP_MULT0_DW02_mult_7)
+                                                                     0.02      1.00              0.00      0.77 f    (hierarchical)    h
+  ex_stage_i/mult_i/mult_113/B[16] (net)                   4.77
+  ex_stage_i/mult_i/mult_113/U19/A (SAEDRVT14_INV_2)                 0.02      1.00              0.00      0.77 f    (145.89,225.74)
+  ex_stage_i/mult_i/mult_113/U19/X (SAEDRVT14_INV_2)                 0.09      1.00              0.08      0.84 r    (145.97,225.74)
+  ex_stage_i/mult_i/mult_113/n71 (net)             17     25.14
+  ex_stage_i/mult_i/mult_113/U3/A1 (SAEDRVT14_OR2_MM_2)              0.09      1.00              0.00      0.85 r    (138.42,249.75)
+  ex_stage_i/mult_i/mult_113/U3/X (SAEDRVT14_OR2_MM_2)               0.01      1.00              0.08      0.92 r    (138.64,249.74)
+  ex_stage_i/mult_i/mult_113/n3 (net)               2      1.63
+  ex_stage_i/mult_i/mult_113/U135/A1 (SAEDRVT14_EN2_2)               0.01      1.00              0.00      0.92 r    (139.60,249.15)
+  ex_stage_i/mult_i/mult_113/U135/X (SAEDRVT14_EN2_2)                0.01      1.00              0.03      0.95 r    (139.97,249.15)
+  ex_stage_i/mult_i/mult_113/SUMB_1__15_ (net)      1      0.76
+  ex_stage_i/mult_i/mult_113/S2_2_14/CI (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      0.95 r    (139.62,247.89)
+  ex_stage_i/mult_i/mult_113/S2_2_14/S (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.10      1.05 f    (140.27,247.95)
+  ex_stage_i/mult_i/mult_113/SUMB_2__14_ (net)      1      0.79
+  ex_stage_i/mult_i/mult_113/S2_3_13/CI (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      1.05 f    (140.35,246.21)
+  ex_stage_i/mult_i/mult_113/S2_3_13/S (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.09      1.14 r    (141.01,246.15)
+  ex_stage_i/mult_i/mult_113/SUMB_3__13_ (net)      1      0.73
+  ex_stage_i/mult_i/mult_113/S2_4_12/CI (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      1.14 r    (141.17,245.01)
+  ex_stage_i/mult_i/mult_113/S2_4_12/S (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.10      1.24 f    (141.82,244.95)
+  ex_stage_i/mult_i/mult_113/SUMB_4__12_ (net)      1      0.79
+  ex_stage_i/mult_i/mult_113/S2_5_11/CI (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      1.24 f    (142.95,244.29)
+  ex_stage_i/mult_i/mult_113/S2_5_11/S (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.09      1.33 r    (143.60,244.35)
+  ex_stage_i/mult_i/mult_113/SUMB_5__11_ (net)      1      1.14
+  ex_stage_i/mult_i/mult_113/S2_6_10/CI (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      1.33 r    (141.76,241.41)
+  ex_stage_i/mult_i/mult_113/S2_6_10/S (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.10      1.43 f    (142.41,241.35)
+  ex_stage_i/mult_i/mult_113/SUMB_6__10_ (net)      1      0.75
+  ex_stage_i/mult_i/mult_113/S2_7_9/CI (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.00      1.43 f    (142.72,240.21)
+  ex_stage_i/mult_i/mult_113/S2_7_9/S (SAEDRVT14_ADDF_V1_2)          0.01      1.00              0.09      1.52 r    (143.38,240.15)
+  ex_stage_i/mult_i/mult_113/SUMB_7__9_ (net)       1      0.75
+  ex_stage_i/mult_i/mult_113/S2_8_8/CI (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.00      1.52 r    (143.09,239.01)
+  ex_stage_i/mult_i/mult_113/S2_8_8/S (SAEDRVT14_ADDF_V1_2)          0.01      1.00              0.10      1.62 f    (143.75,238.95)
+  ex_stage_i/mult_i/mult_113/SUMB_8__8_ (net)       1      0.82
+  ex_stage_i/mult_i/mult_113/S2_9_7/CI (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.00      1.62 f    (143.68,237.09)
+  ex_stage_i/mult_i/mult_113/S2_9_7/S (SAEDRVT14_ADDF_V1_2)          0.01      1.00              0.09      1.71 r    (144.34,237.15)
+  ex_stage_i/mult_i/mult_113/SUMB_9__7_ (net)       1      1.04
+  ex_stage_i/mult_i/mult_113/S2_10_6/CI (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      1.71 r    (143.17,234.69)
+  ex_stage_i/mult_i/mult_113/S2_10_6/S (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.10      1.81 f    (143.82,234.75)
+  ex_stage_i/mult_i/mult_113/SUMB_10__6_ (net)      1      0.92
+  ex_stage_i/mult_i/mult_113/S2_11_5/CI (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      1.81 f    (142.87,233.01)
+  ex_stage_i/mult_i/mult_113/S2_11_5/S (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.09      1.90 r    (143.52,232.95)
+  ex_stage_i/mult_i/mult_113/SUMB_11__5_ (net)      1      1.08
+  ex_stage_i/mult_i/mult_113/S2_12_4/CI (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      1.90 r    (142.13,230.61)
+  ex_stage_i/mult_i/mult_113/S2_12_4/S (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.10      2.00 f    (142.79,230.55)
+  ex_stage_i/mult_i/mult_113/SUMB_12__4_ (net)      1      1.21
+  ex_stage_i/mult_i/mult_113/S2_13_3/CI (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      2.00 f    (139.99,228.69)
+  ex_stage_i/mult_i/mult_113/S2_13_3/S (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.09      2.10 r    (140.64,228.75)
+  ex_stage_i/mult_i/mult_113/SUMB_13__3_ (net)      1      0.97
+  ex_stage_i/mult_i/mult_113/S2_14_2/CI (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      2.10 r    (139.54,227.01)
+  ex_stage_i/mult_i/mult_113/S2_14_2/S (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.10      2.20 f    (140.20,226.95)
+  ex_stage_i/mult_i/mult_113/SUMB_14__2_ (net)      1      1.08
+  ex_stage_i/mult_i/mult_113/S2_15_1/CI (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.00      2.20 f    (138.51,225.09)
+  ex_stage_i/mult_i/mult_113/S2_15_1/S (SAEDRVT14_ADDF_V1_2)         0.01      1.00              0.09      2.29 r    (139.16,225.15)
+  ex_stage_i/mult_i/mult_113/SUMB_15__1_ (net)      1      1.14
+  ex_stage_i/mult_i/mult_113/S4_0/CI (SAEDRVT14_ADDF_V1_2)           0.01      1.00              0.00      2.29 r    (137.99,222.21)
+  ex_stage_i/mult_i/mult_113/S4_0/S (SAEDRVT14_ADDF_V1_2)            0.01      1.00              0.10      2.39 f    (138.64,222.15)
+  ex_stage_i/mult_i/mult_113/SUMB_16__0_ (net)      1      0.89
+  ex_stage_i/mult_i/mult_113/S14_16_0/CI (SAEDRVT14_ADDF_V1_2)       0.01      1.00              0.00      2.39 f    (139.15,220.29)
+  ex_stage_i/mult_i/mult_113/S14_16_0/S (SAEDRVT14_ADDF_V1_2)        0.01      1.00              0.10      2.48 r    (138.49,220.35)
+  ex_stage_i/mult_i/mult_113/A1_14_ (net)           1      1.33
+  ex_stage_i/mult_i/mult_113/FS_1/A[14] (riscv_mult_SHARED_DSP_MULT0_DW01_add_17)
+                                                                     0.01      1.00              0.00      2.48 r    (hierarchical)    h
+  ex_stage_i/mult_i/mult_113/FS_1/SUM[14] (net)            1.33
+  ex_stage_i/mult_i/mult_113/FS_1/SUM[14] (riscv_mult_SHARED_DSP_MULT0_DW01_add_17)
+                                                                     0.01      1.00              0.00      2.48 r    (hierarchical)    h
+  ex_stage_i/mult_i/mult_113/PRODUCT[16] (net)             1.33
+  ex_stage_i/mult_i/mult_113/PRODUCT[16] (riscv_mult_SHARED_DSP_MULT0_DW02_mult_7)
+                                                                     0.01      1.00              0.00      2.48 r    (hierarchical)    h
+  ex_stage_i/mult_i/short_mul_16_ (net)                    1.33
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/B[16] (riscv_mult_SHARED_DSP_MULT0_DW01_add_15)
+                                                                     0.01      1.00              0.00      2.48 r    (hierarchical)    h
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/B[16] (net)
+                                                           1.33
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_16/B (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.00      2.48 r    (136.88,220.35)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_16/CO (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.05      2.53 r    (135.76,220.35)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[17] (net)
+                                                    1      0.88
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_17/CI (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.00      2.53 r    (135.32,218.61)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_17/CO (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.04      2.57 r    (136.12,218.55)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[18] (net)
+                                                    1      0.71
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_18/CI (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.00      2.57 r    (135.91,217.89)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_18/CO (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.04      2.62 r    (136.72,217.95)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[19] (net)
+                                                    1      0.85
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_19/CI (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.00      2.62 r    (138.43,217.89)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_19/CO (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.04      2.66 r    (139.23,217.95)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[20] (net)
+                                                    1      0.76
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_20/CI (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.00      2.66 r    (139.24,216.69)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_20/CO (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.04      2.70 r    (140.05,216.75)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[21] (net)
+                                                    1      0.94
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_21/CI (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.00      2.70 r    (141.76,217.41)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_21/CO (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.04      2.74 r    (142.56,217.35)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[22] (net)
+                                                    1      1.04
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_22/CI (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.00      2.74 r    (145.24,217.89)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_22/CO (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.04      2.79 r    (146.04,217.95)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[23] (net)
+                                                    1      0.74
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_23/CI (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.00      2.79 r    (146.62,217.41)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_23/CO (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.04      2.83 r    (145.82,217.35)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[24] (net)
+                                                    1      0.95
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_24/CI (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.00      2.83 r    (147.31,216.21)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_24/CO (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.04      2.87 r    (148.11,216.15)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[25] (net)
+                                                    1      0.78
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_25/CI (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.00      2.87 r    (148.40,215.01)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_25/CO (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.04      2.92 r    (147.60,214.95)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[26] (net)
+                                                    1      1.08
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_26/CI (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.00      2.92 r    (149.51,213.09)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_26/CO (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.04      2.96 r    (148.71,213.15)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[27] (net)
+                                                    1      0.83
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_27/CI (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.00      2.96 r    (149.29,211.89)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_27/CO (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.04      3.00 r    (148.48,211.95)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[28] (net)
+                                                    1      1.01
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_28/CI (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.00      3.00 r    (148.84,209.01)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_28/CO (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.04      3.05 r    (148.04,208.95)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[29] (net)
+                                                    1      0.68
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_29/CI (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.00      3.05 r    (148.03,208.29)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_29/CO (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.04      3.09 r    (147.23,208.35)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[30] (net)
+                                                    1      0.86
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_30/CI (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.00      3.09 r    (147.43,206.61)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_30/CO (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.04      3.13 r    (146.63,206.55)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[31] (net)
+                                                    1      0.79
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_31/CI (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.00      3.13 r    (146.92,205.41)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_31/CO (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.04      3.17 r    (146.12,205.35)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[32] (net)
+                                                    1      0.70
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_32/CI (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.00      3.17 r    (146.25,204.69)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_32/CO (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.04      3.21 r    (145.45,204.75)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/carry[33] (net)
+                                                    1      0.84
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_33/CI (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.00      3.21 r    (145.96,203.49)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/U1_33/S (SAEDRVT14_ADDF_V1_2)
+                                                                     0.01      1.00              0.10      3.31 f    (145.30,203.55)
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/SUM[33] (net)
+                                                    1      0.66
+  ex_stage_i/mult_i/add_0_root_add_0_root_add_114_2/SUM[33] (riscv_mult_SHARED_DSP_MULT0_DW01_add_15)
+                                                                     0.01      1.00              0.00      3.31 f    (hierarchical)    h
+  ex_stage_i/mult_i/short_mac[33] (net)                    0.66
+  ex_stage_i/mult_i/U514/A3 (SAEDRVT14_AN3_2)                        0.01      1.00              0.00      3.31 f    (143.67,204.03)
+  ex_stage_i/mult_i/U514/X (SAEDRVT14_AN3_2)                         0.01      1.00              0.02      3.33 f    (143.25,204.21)
+  ex_stage_i/mult_i/n290 (net)                      1      0.47
+  ex_stage_i/mult_i/U513/A1 (SAEDRVT14_OR2_MM_2)                     0.01      1.00              0.00      3.33 f    (142.56,204.75)
+  ex_stage_i/mult_i/U513/X (SAEDRVT14_OR2_MM_2)                      0.02      1.00              0.04      3.37 f    (142.34,204.76)
+  ex_stage_i/mult_i/N55 (net)                       6      4.67
+  ex_stage_i/mult_i/U543/A1 (SAEDRVT14_AN2_MM_2)                     0.02      1.00              0.00      3.37 f    (140.34,204.15)
+  ex_stage_i/mult_i/U543/X (SAEDRVT14_AN2_MM_2)                      0.00      1.00              0.03      3.40 f    (140.07,204.15)
+  ex_stage_i/mult_i/n525 (net)                      1      0.41
+  ex_stage_i/mult_i/U935/A3 (SAEDRVT14_OR3_2)                        0.00      1.00              0.00      3.40 f    (139.97,204.71)
+  ex_stage_i/mult_i/U935/X (SAEDRVT14_OR3_2)                         0.01      1.00              0.05      3.44 f    (139.60,204.76)
+  ex_stage_i/mult_i/n661 (net)                      4      2.87
+  ex_stage_i/mult_i/U281/A2 (SAEDRVT14_AN2_MM_2)                     0.01      1.00              0.00      3.44 f    (138.71,206.51)
+  ex_stage_i/mult_i/U281/X (SAEDRVT14_AN2_MM_2)                      0.01      1.00              0.03      3.47 f    (138.37,206.55)
+  ex_stage_i/mult_i/n662 (net)                      1      0.71
+  ex_stage_i/mult_i/U963/A4 (SAEDRVT14_OR4_2)                        0.01      1.00              0.00      3.47 f    (136.87,205.91)
+  ex_stage_i/mult_i/U963/X (SAEDRVT14_OR4_2)                         0.02      1.00              0.06      3.53 f    (136.42,205.96)
+  ex_stage_i/mult_i/n760 (net)                      2      3.08
+  ex_stage_i/mult_i/U532/A2 (SAEDRVT14_AN2_MM_2)                     0.02      1.00              0.00      3.53 f    (127.69,206.51)
+  ex_stage_i/mult_i/U532/X (SAEDRVT14_AN2_MM_2)                      0.01      1.00              0.03      3.56 f    (127.35,206.55)
+  ex_stage_i/mult_i/n768 (net)                      1      0.76
+  ex_stage_i/mult_i/U975/A2 (SAEDRVT14_OR4_2)                        0.01      1.00              0.00      3.56 f    (127.32,208.99)
+  ex_stage_i/mult_i/U975/X (SAEDRVT14_OR4_2)                         0.02      1.00              0.05      3.61 f    (127.02,208.94)
+  ex_stage_i/mult_i/short_result[7] (net)           1      3.48
+  ex_stage_i/mult_i/U323/A1 (SAEDRVT14_AN2_MM_2)                     0.02      1.00              0.00      3.61 f    (112.22,203.55)
+  ex_stage_i/mult_i/U323/X (SAEDRVT14_AN2_MM_2)                      0.02      1.00              0.04      3.65 f    (111.95,203.55)
+  ex_stage_i/mult_i/n151 (net)                      1      3.83
+  ex_stage_i/mult_i/U362/A1 (SAEDRVT14_OR4_2)                        0.02      1.00              0.00      3.65 f    (94.02,200.55)
+  ex_stage_i/mult_i/U362/X (SAEDRVT14_OR4_2)                         0.04      1.00              0.07      3.72 f    (94.17,200.54)
+  ex_stage_i/mult_i/result_o[7] (net)               1     10.67
+  ex_stage_i/mult_i/result_o[7] (riscv_mult_SHARED_DSP_MULT0)        0.04      1.00              0.00      3.72 f    (hierarchical)    h
+  ex_stage_i/mult_result[7] (net)                         10.67
+  ex_stage_i/U169/A1 (SAEDRVT14_AN2_MM_2)                            0.04      1.00              0.00      3.72 f    (116.00,154.95)
+  ex_stage_i/U169/X (SAEDRVT14_AN2_MM_2)                             0.02      1.00              0.05      3.78 f    (116.27,154.95)
+  ex_stage_i/n12 (net)                              1      3.93
+  ex_stage_i/U129/A1 (SAEDRVT14_OR3_2)                               0.02      1.00              0.00      3.78 f    (129.98,144.17)
+  ex_stage_i/U129/X (SAEDRVT14_OR3_2)                                0.02      1.00              0.05      3.83 f    (130.13,144.14)
+  ex_stage_i/regfile_alu_wdata_fw_o[7] (net)        4      5.27
+  ex_stage_i/regfile_alu_wdata_fw_o[7] (riscv_ex_stage_FPU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5)
+                                                                     0.02      1.00              0.00      3.83 f    (hierarchical)    h
+  regfile_alu_wdata_fw[7] (net)                            5.27
+  id_stage_i/regfile_alu_wdata_fw_i[7] (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5)
+                                                                     0.02      1.00              0.00      3.83 f    (hierarchical)    h
+  id_stage_i/regfile_alu_wdata_fw_i[7] (net)               5.27
+  id_stage_i/U1133/A2 (SAEDRVT14_AN2_MM_2)                           0.02      1.00              0.00      3.83 f    (131.98,126.11)
+  id_stage_i/U1133/X (SAEDRVT14_AN2_MM_2)                            0.01      1.00              0.03      3.86 f    (132.32,126.15)
+  id_stage_i/n1903 (net)                            1      0.58
+  id_stage_i/U2928/A3 (SAEDRVT14_OR3_2)                              0.01      1.00              0.00      3.86 f    (131.76,124.99)
+  id_stage_i/U2928/X (SAEDRVT14_OR3_2)                               0.04      1.00              0.07      3.93 f    (131.39,124.94)
+  id_stage_i/operand_a_fw_id[7] (net)               3     10.26
+  id_stage_i/U3512/A1 (SAEDRVT14_AN2_MM_2)                           0.04      1.00              0.00      3.93 f    (118.51,133.35)
+  id_stage_i/U3512/X (SAEDRVT14_AN2_MM_2)                            0.01      1.00              0.04      3.97 f    (118.78,133.35)
+  id_stage_i/n2806 (net)                            1      0.63
+  id_stage_i/U3513/A4 (SAEDRVT14_OR4_2)                              0.01      1.00              0.00      3.97 f    (119.11,134.59)
+  id_stage_i/U3513/X (SAEDRVT14_OR4_2)                               0.05      1.00              0.09      4.05 f    (118.66,134.54)
+  id_stage_i/operand_b[7] (net)                     6     12.88
+  id_stage_i/U824/A1 (SAEDRVT14_ND2_CDC_2)                           0.05      1.00              0.00      4.05 f    (118.53,149.61)
+  id_stage_i/U824/X (SAEDRVT14_ND2_CDC_2)                            0.02      1.00              0.03      4.09 r    (118.51,149.51)
+  id_stage_i/n1318 (net)                            1      0.93
+  id_stage_i/U822/A1 (SAEDRVT14_ND2_CDC_2)                           0.02      1.00              0.00      4.09 r    (119.17,150.09)
+  id_stage_i/U822/X (SAEDRVT14_ND2_CDC_2)                            0.08      1.00              0.08      4.17 f    (119.18,150.19)
+  id_stage_i/n1192 (net)                            3     11.91
+  id_stage_i/U1874/A1 (SAEDRVT14_ND2_CDC_2)                          0.08      1.00              0.00      4.17 f    (120.50,191.61)
+  id_stage_i/U1874/X (SAEDRVT14_ND2_CDC_2)                           0.03      1.00              0.06      4.23 r    (120.51,191.51)
+  id_stage_i/n11901 (net)                           1      2.89
+  id_stage_i/U1872/A1 (SAEDRVT14_ND2_CDC_2)                          0.03      1.00              0.00      4.23 r    (133.97,192.09)
+  id_stage_i/U1872/X (SAEDRVT14_ND2_CDC_2)                           0.01      1.00              0.03      4.25 f    (133.98,192.19)
+  id_stage_i/n2432 (net)                            1      0.63
+  id_stage_i/alu_operand_b_ex_o_reg_23_/D (SAEDRVT14_FDPRBQ_V2LP_2)
+                                                                     0.01      1.00              0.00      4.25 f    (135.97,191.55)   n
+  data arrival time                                                                                        4.25
+
+  clock CLK_I (rise edge)                                                                        5.00      5.00
+  source latency                                                                                 0.00      5.00
+  clk_i (in)                                                         0.00      1.00              0.00      5.00 r    (272.37,0.13)
+  clk_i (net)                                      70     76.14                                                                        d
+  core_clock_gate_i/clk_i (cluster_clock_gating)                     0.00      1.00              0.00      5.00 r    (hierarchical)    h
+  core_clock_gate_i/clk_i (net)                    70     76.14                                                                        d
+  core_clock_gate_i/u__tmp100/CK (SAEDRVT14_CKGTPLT_V5_4)            0.00      1.00              0.00      5.00 r    (234.59,34.35)    n
+  core_clock_gate_i/u__tmp100/Q (SAEDRVT14_CKGTPLT_V5_4)             0.00      1.00              0.00      5.00 r    (234.12,34.35)    n
+  core_clock_gate_i/clk_o (net)                  2133    1000000.00                                                                    d
+  core_clock_gate_i/clk_o (cluster_clock_gating)                     0.00      1.00              0.00      5.00 r    (hierarchical)    h
+  clk (net)                                      2133    1000000.00                                                                    d
+  id_stage_i/clk (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5)
+                                                                     0.00      1.00              0.00      5.00 r    (hierarchical)    h
+  id_stage_i/clk (net)                           2133    1000000.00                                                                    d
+  id_stage_i/alu_operand_b_ex_o_reg_23_/CK (SAEDRVT14_FDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      5.00 r    (136.49,191.49)   n
+
+  library setup time                                                           1.00             -0.02      4.98
+  data required time                                                                                       4.98
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       4.98
+  data arrival time                                                                                       -4.25
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              0.72
+
+
+1

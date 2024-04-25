@@ -1,0 +1,47 @@
+#@ # 
+#@ # Running icc2_shell Version O-2018.06-SP1 for linux64 -- Jul 17, 2018
+#@ # Date:   Wed Apr 24 21:18:42 2024
+#@ # Run by: islam@berkeley
+#@ 
+
+gui_set_pref_value -category {SelectByNamePalette} -key {ObjectType} -value {Logical Cells}
+open_lib /mnt/hgfs/cv32e40p/2_floorplan/runs/run_5/WORK/riscv_core -edit
+open_block /mnt/hgfs/cv32e40p/2_floorplan/runs/run_5/WORK/riscv_core:riscv_core_finished.design
+gui_set_pref_value -category {showRelativeLocationConstraints} -key {macroOffsetX} -value {0.001}
+gui_set_pref_value -category {showRelativeLocationConstraints} -key {macroOffsetY} -value {0.001}
+link_block
+win_set_filter -visible -class cell -filter {hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -visible -class placement_blockage -filter {wiring} -layer {0-72}
+win_set_filter -expand_cell_types {soft_macro  }
+win_set_select_class -visible {cell port bound routing_blockage shaping_blockage pg_region pin_blockage block_shielding topology_node topology_edge core_area die_area edit_group shape via terminal fill_cell placement_blockage }
+win_set_filter -class cell -filter {cell_array hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -class placement_blockage -filter {wiring} -layer {0-72}
+win_set_select_class {cell port bound routing_blockage shaping_blockage pg_region pin_blockage topology_node topology_edge edit_group shape via placement_blockage }
+check_lvs
+check_routes
+connect_pg_net -automatic
+remove_stdcell_fillers_with_violation
+connect_pg_net -automatic
+check_lvs
+check_routes
+route_opt
+check_lvs -max_errors 0
+check_pg_drc
+route_opt
+check_lvs -max_errors 0
+route_detail -incremental true
+check_lvs -max_errors 0
+gui_show_error_data
+gui_set_error_browser_option -show_mode all
+gui_set_error_browser_option -view_mode zoom
+gui_set_error_browser_option -zoom_factor 1.000000
+gui_set_error_browser_option -grouping type
+gui_error_browser -show
+gui_error_browser -hide
+remove_fill_cells -all
+remove_fill_cells -fill_cells
+remove_fill_cells -all
+close_blocks -force -purge riscv_core_finished
+close_blocks -force -purge riscv_core_finished
+open_block /mnt/hgfs/cv32e40p/2_floorplan/runs/run_5/WORK/riscv_core:riscv_core_boundary.design
+link_block

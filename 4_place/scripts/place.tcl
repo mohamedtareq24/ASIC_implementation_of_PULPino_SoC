@@ -7,6 +7,7 @@
 set design riscv_core
 puts "latest powerplanning run will be used for input data"
 
+
 set base_path "/mnt/hgfs/cv32e40p/3_powerplan/runs"
 set latest_run ""
 set latest_run_number 0
@@ -48,6 +49,26 @@ link
 puts "start_place"
 
 
+set syn_path  "/mnt/hgfs/cv32e40p/1_syn/runs"
+set directories [glob -type d "${syn_path}/*"]
+
+# Iterate through each directory
+foreach syn_dir $directories {
+    # Extract the run number from the directory name
+    set run_number [file tail $syn_dir]
+
+    # If the directory name matches the pattern "run_<number>", extract the number
+    if {[regexp {run_(\d+)} $run_number - match run_number]} {
+        # Check if the current run number is greater than the latest run number
+        if {$run_number > $latest_run_number} {
+            set latest_run_number $run_number
+        }
+    }
+}
+set SCANDEF_FILE $syn_dir/icc2/${DESIGN_NAME}.scandef
+
+
+
 ###############################Pre place checks##########################
 remove_corners estimated_corner
 set_scenario_status func_slow -hold false 
@@ -60,12 +81,13 @@ remove_ideal_network -all
 
 set_app_options -name opt.power.mode -value total
 
-set_app_options -name place.coarse.continue_on_missing_scandef -value true
+read_def $SCANDEF_FILE
+set_app_options -name place.coarse.continue_on_missing_scandef -value false
 
 set_attribute -objects [get_lib_cells */*TAP*] -name dont_touch -value true
 
 set_placement_spacing_label -name x  -side both -lib_cells [get_lib_cells]
-set_placement_spacing_rule -labels {x x} {0 1}
+#set_placement_spacing_rule -labels {x x} {0 1}
 
 report_placement_spacing_rules
 ##############################Qor Setup ################################### 

@@ -21,8 +21,9 @@ read_parasitic_tech \
 set_parasitic_parameters -corner slow -early_spec tlup_max -late_spec tlup_max
 
 set_parasitic_parameters -corner fast -early_spec tlup_min -late_spec tlup_min
-create_mode func
 
+create_mode func
+######################### FUNC MODE #############################
 ### FUNC_FAST
 current_corner fast
 source $fast_corner
@@ -34,9 +35,23 @@ source /mnt/hgfs/cv32e40p/2_floorplan/cons/func_mode.tcl
 current_corner slow
 puts "current_corner slow"
 source $slow_corner
-
-
 create_scenario -mode func -corner slow -name func_slow
-source /mnt/hgfs/cv32e40p/2_floorplan/cons/func_mode.tcl
+
+####################### TEST MODE ##########################
+create_mode test
+### TEST_FAST
+current_corner fast
+source $fast_corner
+create_scenario -mode test -corner fast -name test_fast
+source /mnt/hgfs/cv32e40p/2_floorplan/cons/test_mode.tcl
+
+### TEST_SLOW
+current_corner slow
+puts "current_corner slow"
+source $slow_corner
+create_scenario -mode test -corner slow -name test_slow
+
+
+current_scenario func_slow
 
 

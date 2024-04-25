@@ -1,0 +1,62 @@
+****************************************
+Report : design
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Fri Apr 19 02:07:27 2024
+****************************************
+
+Total number of std cells in library : 881
+Total number of dont_use lib cells   : 515
+Total number of dont_touch lib cells : 18
+Total number of buffers              : 59
+Total number of inverters            : 51
+Total number of flip-flops           : 171
+Total number of latches              : 45
+Total number of ICGs                 : 30
+
+Cell Instance Type  Count         Area
+--------------------------------------
+TOTAL LEAF CELLS    36760    16640.276
+Standard cells      34024    15182.536
+Hard macro cells        0        0.000
+Soft macro cells        0        0.000
+Always on cells         0        0.000
+Physical only        2736     1457.741
+Fixed cells          2736     1457.741
+Moveable cells      34024    15182.536
+Sequential           2203     2450.480
+Buffer/inverter      1908      475.568
+ICG cells               1        1.021
+
+Logic Hierarchies                    : 71
+Design Masters count                 : 71
+Total Flat nets count                : 36213
+Total FloatingNets count             : 53
+Total no of Ports                    : 484
+Number of Master Clocks in design    : 1
+Number of Generated Clocks in design : 0
+Number of Path Groups in design      : 7 (1 of them Non Default)
+Number of Scan Chains in design      : 0
+List of Modes                        : func
+List of Corners                      : slow, fast
+List of Scenarios                    : func_fast, func_slow
+
+Core Area                            : 63252.240
+Chip Area                            : 75075.990
+Total Site Row Area                  : 63252.240
+Number of Blockages                  : 0
+Total area of Blockages              : 0.000
+Number of Power Domains              : 1
+Number of Voltage Areas              : 1
+Number of Group Bounds               : 0
+Number of Exclusive MoveBounds       : 0
+Number of Hard or Soft MoveBounds    : 0
+Number of Multibit Registers         : 0
+Number of Multibit LS/ISO Cells      : 0
+Number of Top Level RP Groups        : 0
+Number of Tech Layers                : 63 (53 of them have unknown routing dir.)
+
+Total wire length                    : 0.00 micron
+Total number of wires                : 0
+Total number of contacts             : 69726
+1

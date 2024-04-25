@@ -1,0 +1,8 @@
+../output/riscv_core.spf.tlup_max_-40.spef for scenarios: 
+	 scenario: func_slow, corner type: late/early
+	 scenario: test_slow, corner type: late/early
+
+../output/riscv_core.spf.tlup_min_25.spef for scenarios: 
+	 scenario: func_fast, corner type: late/early
+	 scenario: test_fast, corner type: late/early
+

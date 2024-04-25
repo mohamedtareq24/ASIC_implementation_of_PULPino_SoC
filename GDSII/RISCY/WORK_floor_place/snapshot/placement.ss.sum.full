@@ -1,0 +1,60 @@
+***********************************************
+Report          : create_qor_snapshot (placement)
+Design          : riscv_core
+Version         : O-2018.06-SP1
+Date            : Fri Apr 19 02:07:28 2024
+Time unit       : 1.00ns
+Resistance unit : 1.00MOhm
+Capacitance unit: 1.00fF
+Voltage unit    : 1.00V
+Current unit    : 1.00uA
+Power unit      : 1.00pW
+Location        : /mnt/hgfs/cv32e40p/2_floorplan/runs/run_3/WORK_floor_place/snapshot
+***********************************************
+No. of scenario = 2
+s1 = func_fast
+s2 = func_slow
+------------------------------------------------------------------------
+WNS of each timing group:                       s1        s2 
+------------------------------------------------------------------------
+CLK_I                                            -      0.72 
+------------------------------------------------------------------------
+Setup WNS:                                       -      0.72        0.72 
+Setup TNS:                                       0      0.00        0.00
+Number of setup violations:                      0         0           0 
+Hold WNS:                                     0.02         -        0.02 
+Hold TNS:                                     0.00      0.00        0.00 
+Number of hold violations:                       0         0           0 
+Number of max trans violations:                  0         0           0 
+Number of max cap violations:                    0         2           0 
+Number of min pulse width violations:            0         0           0 
+------------------------------------------------------------------------
+Area:                                                          16640.276
+Cell count:                                                        34024
+Buf/inv cell count:                                                 1908
+Std cell utilization:                                               0.24
+CPU(s):                                                              419
+Mem(Mb):                                                             821
+Host name:                                                      berkeley
+------------------------------------------------------------------------
+Histogram:             s1   s2 
+------------------------------------------------------------------------
+Max violations:         0    0 
+   above ~ -0.7  ---    0    0 
+    -0.6 ~ -0.7  ---    0    0 
+    -0.5 ~ -0.6  ---    0    0 
+    -0.4 ~ -0.5  ---    0    0 
+    -0.3 ~ -0.4  ---    0    0 
+    -0.2 ~ -0.3  ---    0    0 
+    -0.1 ~ -0.2  ---    0    0 
+       0 ~ -0.1  ---    0    0 
+------------------------------------------------------------------------
+Min violations:         0    0 
+  -0.06 ~ above  ---    0    0 
+  -0.05 ~ -0.06  ---    0    0 
+  -0.04 ~ -0.05  ---    0    0 
+  -0.03 ~ -0.04  ---    0    0 
+  -0.02 ~ -0.03  ---    0    0 
+  -0.01 ~ -0.02  ---    0    0 
+      0 ~ -0.01  ---    0    0 
+------------------------------------------------------------------------

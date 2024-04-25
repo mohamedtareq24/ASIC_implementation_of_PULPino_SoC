@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<errorData typeCount="1" majorVersion="1" minorVersion="8" name="__private_meta_data_:riscv_core_lvs.err" designName="riscv_core_routed_cannot_converge" info="" checker="check_lvs" checkerVersion="" created="1714001297" createdDate="04:24:2024:16:28:17:PDT" modified="1714001584" modifiedDate="04:24:2024:16:33:04:PDT" interactive="false" internal="false" metaData="true" numTypes="1" numInsts="94"/>

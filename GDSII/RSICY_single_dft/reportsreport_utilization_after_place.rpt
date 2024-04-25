@@ -1,0 +1,24 @@
+****************************************
+Report : report_utilization
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Tue Apr 23 14:11:14 2024
+****************************************
+Utilization Ratio:			0.2499
+Utilization options:
+ - Area calculation based on:		site_row of block riscv_core
+ - Categories of objects excluded:	hard_macros macro_keepouts soft_macros io_cells hard_blockages 
+Total Area:				55329.8592
+Total Capacity Area:			55329.8592
+Total Area of cells:			13825.2276
+Area of excluded objects:
+ - hard_macros         :		0.0000
+ - macro_keepouts      :		0.0000
+ - soft_macros         :		0.0000
+ - io_cells            :		0.0000
+ - hard_blockages      :		0.0000
+
+Utilization of site-rows with:
+ - Site 'unit':				0.2499
+
+0.2499

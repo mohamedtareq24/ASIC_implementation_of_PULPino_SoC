@@ -1,0 +1,1308 @@
+
+Loading user preference file /home/islam/.synopsys_icc2_gui/preferences.tcl
+Warning: Technology used to create frame-view and current technology have inconsistency: Min spacings are different for layer 'M1'. (FRAM-054)
+Warning: Technology 'saed14rvt_1p9m.tf' used for frame-view creation in library 'saed14rvt_ff0p88v25c', is inconsistent with the current technology 'saed14nm_1p9m_mw.tf' of library "riscv_core'. (NDM-102)
+Warning: Technology used to create frame-view and current technology have inconsistency: Min spacings are different for layer 'M1'. (FRAM-054)
+Warning: Technology 'saed14rvt_1p9m.tf' used for frame-view creation in library 'saed14rvt_c_physical_only', is inconsistent with the current technology 'saed14nm_1p9m_mw.tf' of library "riscv_core'. (NDM-102)
+icc2_shell> open_block /mnt/hgfs/cv32e40p/2_floorplan/runs/run_3/WORK_floor_place/riscv_core:riscv_core_finished.design
+Information: User units loaded from library 'saed14rvt_ff0p88v25c' (LNK-040)
+Opening block 'riscv_core:riscv_core_finished.design' in edit mode
+Information: loading PG routing via master rules, patterns, strategies and strategy via rules.
+Begin building search trees for block riscv_core:riscv_core_finished.design
+Done building search trees for block riscv_core:riscv_core_finished.design (time 1s)
+icc2_shell> link_block
+Using libraries: riscv_core saed14rvt_ff0p88v25c saed14rvt_c_physical_only
+Warning: In library riscv_core, no block views exist for block riscv_core. (LNK-064)
+Visiting block riscv_core:riscv_core_finished.design
+Design 'riscv_core' was successfully linked.
+1
+icc2_shell> report_area
+Error: Command 'report_area' is disabled. (CMD-080)
+icc2_shell> report_power
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+************************************************************
+Information: Corner fast: no PVT mismatches. (PVT-032)
+Information: Corner slow: no PVT mismatches. (PVT-032)
+****************************************
+Report : power
+        -significant_digits 2
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Sun Apr 21 04:12:49 2024
+****************************************
+Information: Doing activity propagation for mode 'func' and corner 'slow' with effort level 'medium'. (POW-024)
+Information: Timer-derived activity data is cached on scenario func_slow (POW-052)
+Scenario func_slow, iteration 1: expecting at least 5
+Scenario func_slow, iteration 2: expecting at least 6
+Scenario func_slow, iteration 3: expecting at least 6
+Scenario func_slow, iteration 4: expecting at least 6
+Scenario func_slow, iteration 5: expecting at least 6
+Scenario func_slow, iteration 6: expecting at least 6
+Information: The stitching and editing of coupling caps is turned OFF for design 'riscv_core:riscv_core_finished.design'. (TIM-125)
+Information: Design riscv_core_finished has 36200 nets, 0 global routed, 36198 detail routed. (NEX-024)
+Warning: Technology layer 'M4' setting 'pitch' is not valid (NEX-001)
+Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
+Warning: Parasitic Tech Library layer 'M1' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M2' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M3' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M1' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M2' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M3' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M8' parameter 'WMIN' = 0.030 does not match 0.060 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M8' parameter 'SMIN' = 0.060 does not match 0.040 of technology file (NEX-007)
+Information: The RC mode used is DR for design 'riscv_core'. (NEX-022)
+---extraction options---
+Corner: slow
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Corner: fast
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Global options:
+ reference_direction       : use_from_tluplus
+ real_metalfill_extraction : none
+ virtual_shield_extraction : true
+---app options---
+ host.max_cores                   : 1
+ extract.connect_open           : true
+ extract.incremental_extraction : true
+ extract.enable_coupling_cap    : false
+Extracting design: riscv_core_finished 
+Information: coupling capacitance is lumped to ground. (NEX-030)
+Information: 36198 nets are successfully extracted. (NEX-028)
+Information: Advanced receiver model has not been enabled for detailed routed design. (TIM-204)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 36198, routed nets = 36198, across physical hierarchy nets = 0, parasitics cached nets = 36198, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+Mode: func
+Corner: slow
+Scenario: func_slow
+Voltage: 0.60
+Temperature: -40.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1fF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1pW
+Leakage Power Unit   : 1pW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell core_busy_q_reg for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.053310 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell core_clock_gate_i/u__tmp100 for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.005474 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell if_stage_i/instr_rdata_id_o_reg_1_ for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.049896 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell if_stage_i/instr_rdata_id_o_reg_2_ for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.047531 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell if_stage_i/instr_rdata_id_o_reg_3_ for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.047531 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell if_stage_i/instr_rdata_id_o_reg_4_ for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.047531 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell if_stage_i/instr_rdata_id_o_reg_5_ for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.047531 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell if_stage_i/instr_rdata_id_o_reg_6_ for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.047531 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell if_stage_i/instr_rdata_id_o_reg_7_ for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.050030 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell if_stage_i/instr_rdata_id_o_reg_8_ for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.050011 (POW-046)
+Note - message 'POW-046' limit (10) exceeded. Remainder will be suppressed.
+
+  Cell Internal Power    = 2.04e+08 pW ( 59.6%)
+  Net Switching Power    = 1.39e+08 pW ( 40.4%)
+Total Dynamic Power      = 3.43e+08 pW (100.0%)
+
+Cell Leakage Power       = 1.11e+05 pW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)      
+memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)      
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)      
+clock_network             2.00e+08               1.12e+08               1.38e+02               3.13e+08    ( 91.2%)      
+register                  9.12e+05               1.80e+06               1.84e+04               2.73e+06    (  0.8%)      
+sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)      
+combinational             2.94e+06               2.45e+07               9.20e+04               2.76e+07    (  8.0%)      
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     2.04e+08 pW            1.39e+08 pW            1.11e+05 pW            3.43e+08 pW
+1
+icc2_shell> source /mnt/hgfs/cv32e40p/analysis/virtual_pads.tcl
+Removing all virtual pads
+Primary Net : VDD    Secondary Net:
+Primary Net : VSS    Secondary Net:
+Loading cell instances...
+Number of Standard Cells: 34064
+Number of Macro Cells: 0
+Number of IO Pad Cells: 0
+Loading P/G wires and vias...
+Percentage of routing tracks used by P/G nets 
+=============================================
+       layer |    Shape |  Spacing |    Total
+=============================================
+          PO |   0.000% |   0.000% |   0.000% 
+          M1 |  16.102% |  15.346% |  31.448% 
+          M2 |   0.664% |   0.006% |   0.670% 
+          M3 |   0.810% |   0.993% |   1.802% 
+          M4 |   1.035% |   2.547% |   3.582% 
+          M5 |   0.789% |   2.027% |   2.816% 
+          M6 |   1.379% |   1.385% |   2.764% 
+          M7 |  21.918% |  10.648% |  32.567% 
+          M8 |  23.093% |   6.900% |  29.993% 
+          M9 |  19.838% |   1.621% |  21.459% 
+        MRDL |   0.000% |   0.000% |   0.000% 
+Number of VDD Wires: 245
+Number of VDD Vias: 34848
+Number of VSS Wires: 245
+Number of VSS Vias: 34878
+Loading RC extraction...
+Warning: Technology layer 'M4' setting 'pitch' is not valid (NEX-001)
+Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
+Warning: Parasitic Tech Library layer 'M1' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M2' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M3' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Power Supply Voltage : 0.880V
+PNA: begin analyzing net VDD...
+PNA: calculating cell instance power...
+Total Power Consumption of Net VDD : 0.050mW
+PNA: connecting instances...
+Total std cells port current : 0.057 mA
+Total hard macro port current : 0.000 mA
+Connect 0 terminals as P/G pads for net: VDD
+PNA: loading power taps...
+Use virtual power tap at (38.100 5.000) on layer M9.
+Use virtual power tap at (38.100 270.000) on layer M9.
+Use virtual power tap at (5.000 38.100) on layer M9.
+Use virtual power tap at (270.000 38.100) on layer M9.
+Use virtual power tap at (71.200 5.000) on layer M9.
+Use virtual power tap at (71.200 270.000) on layer M9.
+Use virtual power tap at (5.000 71.200) on layer M9.
+Use virtual power tap at (270.000 71.200) on layer M9.
+Use virtual power tap at (104.400 5.000) on layer M9.
+Use virtual power tap at (104.400 270.000) on layer M9.
+Use virtual power tap at (5.000 104.400) on layer M9.
+Use virtual power tap at (270.000 104.400) on layer M9.
+Use virtual power tap at (137.500 5.000) on layer M9.
+Use virtual power tap at (137.500 270.000) on layer M9.
+Use virtual power tap at (5.000 137.500) on layer M9.
+Use virtual power tap at (270.000 137.500) on layer M9.
+Use virtual power tap at (170.600 5.000) on layer M9.
+Use virtual power tap at (170.600 270.000) on layer M9.
+Use virtual power tap at (5.000 170.600) on layer M9.
+Use virtual power tap at (270.000 170.600) on layer M9.
+Use virtual power tap at (203.800 5.000) on layer M9.
+Use virtual power tap at (203.800 270.000) on layer M9.
+Use virtual power tap at (5.000 203.800) on layer M9.
+Use virtual power tap at (270.000 203.800) on layer M9.
+Use virtual power tap at (236.900 5.000) on layer M9.
+Use virtual power tap at (236.900 270.000) on layer M9.
+Use virtual power tap at (5.000 236.900) on layer M9.
+Use virtual power tap at (270.000 236.900) on layer M9.
+PNA: constructing virtual grid...
+Total virtual grid current : 0.000 mA
+Total current: 0.057 mA
+PNA: extracting wires...
+PNA: retrieving RC values...
+PNA: simulating power network...
+Total assigned port current : 0.057 mA
+Total assigned virtual grid current : 0.000 mA
+Network information of net: VDD 
+Number of extracted resistors: 85428 
+Number of all nodes: 77890 
+Number of pad nodes: 28 
+Number of current sink nodes: 33731 
+Number of internal nodes: 77862 
+Pad (38.100 5.000) on Layer M9 Supplies 0.002 mA Current
+Pad (270.000 71.200) on Layer M9 Supplies 0.003 mA Current
+Pad (5.000 104.400) on Layer M9 Supplies 0.002 mA Current
+Pad (71.200 270.000) on Layer M9 Supplies 0.003 mA Current
+Pad (104.400 270.000) on Layer M9 Supplies 0.003 mA Current
+Pad (137.500 270.000) on Layer M9 Supplies 0.003 mA Current
+Pad (170.600 270.000) on Layer M9 Supplies 0.002 mA Current
+Pad (38.100 270.000) on Layer M9 Supplies 0.002 mA Current
+Pad (236.900 270.000) on Layer M9 Supplies 0.002 mA Current
+Pad (203.800 270.000) on Layer M9 Supplies 0.002 mA Current
+Pad (5.000 38.100) on Layer M9 Supplies 0.001 mA Current
+Pad (5.000 71.200) on Layer M9 Supplies 0.001 mA Current
+Pad (270.000 38.100) on Layer M9 Supplies 0.002 mA Current
+Pad (5.000 236.900) on Layer M9 Supplies 0.001 mA Current
+Pad (5.000 203.800) on Layer M9 Supplies 0.002 mA Current
+Pad (5.000 170.600) on Layer M9 Supplies 0.002 mA Current
+Pad (5.000 137.500) on Layer M9 Supplies 0.002 mA Current
+Pad (270.000 104.400) on Layer M9 Supplies 0.003 mA Current
+Pad (270.000 137.500) on Layer M9 Supplies 0.003 mA Current
+Pad (270.000 170.600) on Layer M9 Supplies 0.003 mA Current
+Pad (270.000 203.800) on Layer M9 Supplies 0.003 mA Current
+Pad (270.000 236.900) on Layer M9 Supplies 0.002 mA Current
+Pad (236.900 5.000) on Layer M9 Supplies 0.001 mA Current
+Pad (203.800 5.000) on Layer M9 Supplies 0.002 mA Current
+Pad (170.600 5.000) on Layer M9 Supplies 0.002 mA Current
+Pad (137.500 5.000) on Layer M9 Supplies 0.002 mA Current
+Pad (104.400 5.000) on Layer M9 Supplies 0.002 mA Current
+Pad (71.200 5.000) on Layer M9 Supplies 0.002 mA Current
+Maximum IR Drop for Net VDD: 0.006 mV at (116.700 119.250) on layer M1
+Power Supply Voltage : 0.880V
+PNA: begin analyzing net VSS...
+PNA: calculating cell instance power...
+Total Power Consumption of Net VSS : 0.050mW
+PNA: connecting instances...
+Total std cells port current : 0.057 mA
+Total hard macro port current : 0.000 mA
+Connect 0 terminals as P/G pads for net: VSS
+PNA: loading power taps...
+Use virtual power tap at (38.100 5.000) on layer M9.
+Use virtual power tap at (38.100 270.000) on layer M9.
+Use virtual power tap at (5.000 38.100) on layer M9.
+Use virtual power tap at (270.000 38.100) on layer M9.
+Use virtual power tap at (71.200 5.000) on layer M9.
+Use virtual power tap at (71.200 270.000) on layer M9.
+Use virtual power tap at (5.000 71.200) on layer M9.
+Use virtual power tap at (270.000 71.200) on layer M9.
+Use virtual power tap at (104.400 5.000) on layer M9.
+Use virtual power tap at (104.400 270.000) on layer M9.
+Use virtual power tap at (5.000 104.400) on layer M9.
+Use virtual power tap at (270.000 104.400) on layer M9.
+Use virtual power tap at (137.500 5.000) on layer M9.
+Use virtual power tap at (137.500 270.000) on layer M9.
+Use virtual power tap at (5.000 137.500) on layer M9.
+Use virtual power tap at (270.000 137.500) on layer M9.
+Use virtual power tap at (170.600 5.000) on layer M9.
+Use virtual power tap at (170.600 270.000) on layer M9.
+Use virtual power tap at (5.000 170.600) on layer M9.
+Use virtual power tap at (270.000 170.600) on layer M9.
+Use virtual power tap at (203.800 5.000) on layer M9.
+Use virtual power tap at (203.800 270.000) on layer M9.
+Use virtual power tap at (5.000 203.800) on layer M9.
+Use virtual power tap at (270.000 203.800) on layer M9.
+Use virtual power tap at (236.900 5.000) on layer M9.
+Use virtual power tap at (236.900 270.000) on layer M9.
+Use virtual power tap at (5.000 236.900) on layer M9.
+Use virtual power tap at (270.000 236.900) on layer M9.
+PNA: constructing virtual grid...
+Total virtual grid current : 0.000 mA
+Total current: 0.057 mA
+PNA: extracting wires...
+PNA: retrieving RC values...
+PNA: simulating power network...
+Total assigned port current : 0.057 mA
+Total assigned virtual grid current : 0.000 mA
+Network information of net: VSS 
+Number of extracted resistors: 85510 
+Number of all nodes: 77952 
+Number of pad nodes: 28 
+Number of current sink nodes: 33714 
+Number of internal nodes: 77924 
+Pad (38.100 5.000) on Layer M9 Supplies 0.003 mA Current
+Pad (236.900 270.000) on Layer M9 Supplies 0.002 mA Current
+Pad (203.800 270.000) on Layer M9 Supplies 0.002 mA Current
+Pad (170.600 270.000) on Layer M9 Supplies 0.002 mA Current
+Pad (137.500 270.000) on Layer M9 Supplies 0.003 mA Current
+Pad (38.100 270.000) on Layer M9 Supplies 0.002 mA Current
+Pad (71.200 270.000) on Layer M9 Supplies 0.002 mA Current
+Pad (104.400 270.000) on Layer M9 Supplies 0.003 mA Current
+Pad (5.000 38.100) on Layer M9 Supplies 0.001 mA Current
+Pad (5.000 71.200) on Layer M9 Supplies 0.001 mA Current
+Pad (5.000 104.400) on Layer M9 Supplies 0.001 mA Current
+Pad (5.000 137.500) on Layer M9 Supplies 0.001 mA Current
+Pad (5.000 170.600) on Layer M9 Supplies 0.001 mA Current
+Pad (5.000 203.800) on Layer M9 Supplies 0.001 mA Current
+Pad (5.000 236.900) on Layer M9 Supplies 0.001 mA Current
+Pad (270.000 236.900) on Layer M9 Supplies 0.001 mA Current
+Pad (270.000 203.800) on Layer M9 Supplies 0.001 mA Current
+Pad (270.000 170.600) on Layer M9 Supplies 0.002 mA Current
+Pad (270.000 137.500) on Layer M9 Supplies 0.002 mA Current
+Pad (270.000 104.400) on Layer M9 Supplies 0.002 mA Current
+Pad (270.000 71.200) on Layer M9 Supplies 0.001 mA Current
+Pad (270.000 38.100) on Layer M9 Supplies 0.001 mA Current
+Pad (236.900 5.000) on Layer M9 Supplies 0.003 mA Current
+Pad (203.800 5.000) on Layer M9 Supplies 0.003 mA Current
+Pad (170.600 5.000) on Layer M9 Supplies 0.003 mA Current
+Pad (137.500 5.000) on Layer M9 Supplies 0.003 mA Current
+Pad (104.400 5.000) on Layer M9 Supplies 0.003 mA Current
+Pad (71.200 5.000) on Layer M9 Supplies 0.003 mA Current
+Maximum IR Drop for Net VSS: 0.008 mV at (113.777 157.050) on layer M1
+icc2_shell> close_blocks -force -purge riscv_core_finished
+Closing block 'riscv_core:riscv_core_finished.design'
+Information: The net parasitics of block riscv_core are cleared. (TIM-123)
+icc2_shell> open_block /mnt/hgfs/cv32e40p/2_floorplan/runs/run_3/WORK_floor_place/riscv_core:riscv_core_powerplanned.design
+Opening block 'riscv_core:riscv_core_powerplanned.design' in edit mode
+Information: loading PG routing via master rules, patterns, strategies and strategy via rules.
+Begin building search trees for block riscv_core:riscv_core_powerplanned.design
+Done building search trees for block riscv_core:riscv_core_powerplanned.design (time 0s)
+icc2_shell> link_block
+Using libraries: riscv_core saed14rvt_ff0p88v25c saed14rvt_c_physical_only
+Warning: In library riscv_core, no block views exist for block riscv_core. (LNK-064)
+Visiting block riscv_core:riscv_core_powerplanned.design
+Information: Clearing abstracted power annotation ... 
+Design 'riscv_core' was successfully linked.
+1
+icc2_shell> gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal1} -quiet]
+1
+icc2_shell> gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal1} -quiet]
+1
+icc2_shell> gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal1} -quiet]
+1
+icc2_shell> gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal7} -quiet]
+1
+icc2_shell> gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal7} -quiet]
+1
+icc2_shell> report_utilization
+****************************************
+Report : report_utilization
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Sun Apr 21 04:20:55 2024
+****************************************
+Utilization Ratio:                      0.2502
+Utilization options:
+ - Area calculation based on:           site_row of block riscv_core_powerplanned
+ - Categories of objects excluded:      hard_macros macro_keepouts soft_macros io_cells hard_blockages 
+Total Area:                             63252.2400
+Total Capacity Area:                    63252.2400
+Total Area of cells:                    15827.5788
+Area of excluded objects:
+ - hard_macros         :                0.0000
+ - macro_keepouts      :                0.0000
+ - soft_macros         :                0.0000
+ - io_cells            :                0.0000
+ - hard_blockages      :                0.0000
+
+Utilization of site-rows with:
+ - Site 'unit':                         0.2502
+
+0.2502
+icc2_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -start RulerTool
+icc2_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -add_point {10.646 262.588} -scale 0.3327
+icc2_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -reset
+icc2_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -add_point {0.000 276.229} -scale 0.3327
+icc2_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -reset
+icc2_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -reset
+icc2_shell> close_blocks -force -purge
+Closing block 'riscv_core:riscv_core_powerplanned.design'
+icc2_shell> open_block /mnt/hgfs/cv32e40p/2_floorplan/runs/run_3/WORK_floor_place/riscv_core:riscv_core_finished.design
+Opening block 'riscv_core:riscv_core_finished.design' in edit mode
+Information: loading PG routing via master rules, patterns, strategies and strategy via rules.
+Begin building search trees for block riscv_core:riscv_core_finished.design
+Done building search trees for block riscv_core:riscv_core_finished.design (time 7s)
+icc2_shell> link_block
+Using libraries: riscv_core saed14rvt_ff0p88v25c saed14rvt_c_physical_only
+Warning: In library riscv_core, no block views exist for block riscv_core. (LNK-064)
+Visiting block riscv_core:riscv_core_finished.design
+Design 'riscv_core' was successfully linked.
+1
+icc2_shell> report_pg_net
+Error: unknown command 'report_pg_net' (CMD-005)
+icc2_shell> report_pg_drc
+Error: unknown command 'report_pg_drc' (CMD-005)
+icc2_shell> check_pg_drc
+Command check_pg_drc started  at Sun Apr 21 04:33:43 2024
+Command check_pg_drc finished at Sun Apr 21 04:34:02 2024
+CPU usage for check_pg_drc: 19.61 seconds ( 0.01 hours)
+Elapsed time for check_pg_drc: 19.64 seconds ( 0.01 hours)
+No errors found.
+icc2_shell> check_lvs
+Information: Using 1 threads for LVS
+[Check Short] Stage 1   Elapsed =    0:00:00, CPU =    0:00:00
+[Check Short] Stage 1-2 Elapsed =    0:00:01, CPU =    0:00:01
+[Check Short] Stage 2   Elapsed =    0:00:02, CPU =    0:00:02
+[Check Short] Stage 2-2 Elapsed =    0:00:07, CPU =    0:00:07
+[Check Short] Stage 3   Elapsed =    0:00:07, CPU =    0:00:07
+[Check Short] End       Elapsed =    0:00:07, CPU =    0:00:07
+[Check Net] Init        Elapsed =    0:00:07, CPU =    0:00:07
+[Check Net] 10%         Elapsed =    0:00:11, CPU =    0:00:11
+[Check Net] 20%         Elapsed =    0:00:11, CPU =    0:00:11
+[Check Net] 30%         Elapsed =    0:00:12, CPU =    0:00:12
+[Check Net] 40%         Elapsed =    0:00:12, CPU =    0:00:12
+[Check Net] 50%         Elapsed =    0:00:12, CPU =    0:00:12
+[Check Net] 60%         Elapsed =    0:00:12, CPU =    0:00:12
+[Check Net] 70%         Elapsed =    0:00:12, CPU =    0:00:12
+[Check Net] 80%         Elapsed =    0:00:12, CPU =    0:00:12
+[Check Net] 90%         Elapsed =    0:00:13, CPU =    0:00:13
+Warning: Net boot_addr_i[7] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net boot_addr_i[6] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net boot_addr_i[5] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net boot_addr_i[4] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net boot_addr_i[3] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net boot_addr_i[2] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net boot_addr_i[1] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net boot_addr_i[0] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net data_err_i has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_gnt_i has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_valid_i has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[31] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[30] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[29] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[28] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[27] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[26] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[25] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[24] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[23] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[22] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[21] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[20] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[19] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[18] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[17] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[16] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[15] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[14] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[13] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[12] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[11] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[10] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[9] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[8] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[7] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[6] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[5] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[4] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[3] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[2] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[1] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[0] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_flags_i[4] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_flags_i[3] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_flags_i[2] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_flags_i[1] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_flags_i[0] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net irq_sec_i has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net debug_addr_i[1] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net debug_addr_i[0] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net ext_perf_counters_i[1] has less than 2 valid port. Skip open checking for this net. (RT-204)
+[Check Net] All nets are submitted.
+Warning: Net ext_perf_counters_i[2] has less than 2 valid port. Skip open checking for this net. (RT-204)
+[Check Net] 100%        Elapsed =    0:00:13, CPU =    0:00:13
+Information: Detected open violation for Net VDD. BBox: (0.0085 0.0000)(274.2650 273.9000). (RT-585)
+Information: Detected open violation for Net VSS. BBox: (0.0000 0.0000)(274.1000 273.9000). (RT-585)
+
+===============================================================
+    Maximum number of violations is set to 20
+    Abort checking when more than 20 violations are found
+    All violations might not be found.
+===============================================================
+Total number of input nets is 36253.
+Total number of short violations is 0.
+Total number of open nets is 2.
+Open nets are VDD VSS 
+Total number of floating route violations is 0.
+
+Elapsed =    0:00:13, CPU =    0:00:13
+1
+icc2_shell> check_lvs -treat_terminal_as_voltage_source
+Error: value not specified for option '-treat_terminal_as_voltage_source' (CMD-008)
+icc2_shell> check_lvs -treat_terminal_as_voltage_source true
+Information: Using 1 threads for LVS
+[Check Short] Stage 1   Elapsed =    0:00:00, CPU =    0:00:00
+[Check Short] Stage 1-2 Elapsed =    0:00:00, CPU =    0:00:00
+[Check Short] Stage 2   Elapsed =    0:00:00, CPU =    0:00:00
+[Check Short] Stage 2-2 Elapsed =    0:00:05, CPU =    0:00:05
+[Check Short] Stage 3   Elapsed =    0:00:05, CPU =    0:00:05
+[Check Short] End       Elapsed =    0:00:05, CPU =    0:00:05
+[Check Net] Init        Elapsed =    0:00:05, CPU =    0:00:05
+[Check Net] 10%         Elapsed =    0:00:09, CPU =    0:00:09
+[Check Net] 20%         Elapsed =    0:00:09, CPU =    0:00:09
+[Check Net] 30%         Elapsed =    0:00:09, CPU =    0:00:09
+[Check Net] 40%         Elapsed =    0:00:10, CPU =    0:00:10
+[Check Net] 50%         Elapsed =    0:00:10, CPU =    0:00:10
+[Check Net] 60%         Elapsed =    0:00:10, CPU =    0:00:10
+[Check Net] 70%         Elapsed =    0:00:10, CPU =    0:00:10
+[Check Net] 80%         Elapsed =    0:00:10, CPU =    0:00:10
+[Check Net] 90%         Elapsed =    0:00:10, CPU =    0:00:10
+Warning: Net boot_addr_i[7] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net boot_addr_i[6] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net boot_addr_i[5] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net boot_addr_i[4] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net boot_addr_i[3] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net boot_addr_i[2] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net boot_addr_i[1] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net boot_addr_i[0] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net data_err_i has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_gnt_i has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_valid_i has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[31] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[30] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[29] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[28] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[27] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[26] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[25] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[24] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[23] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[22] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[21] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[20] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[19] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[18] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[17] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[16] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[15] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[14] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[13] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[12] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[11] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[10] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[9] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[8] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[7] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[6] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[5] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[4] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[3] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[2] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[1] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_result_i[0] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_flags_i[4] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_flags_i[3] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_flags_i[2] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_flags_i[1] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net apu_master_flags_i[0] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net irq_sec_i has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net debug_addr_i[1] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net debug_addr_i[0] has less than 2 valid port. Skip open checking for this net. (RT-204)
+Warning: Net ext_perf_counters_i[1] has less than 2 valid port. Skip open checking for this net. (RT-204)
+[Check Net] All nets are submitted.
+Warning: Net ext_perf_counters_i[2] has less than 2 valid port. Skip open checking for this net. (RT-204)
+[Check Net] 100%        Elapsed =    0:00:11, CPU =    0:00:11
+
+===============================================================
+    Maximum number of violations is set to 20
+    Abort checking when more than 20 violations are found
+    All violations might not be found.
+===============================================================
+Total number of input nets is 36253.
+Total number of short violations is 0.
+Total number of open nets is 0.
+Total number of floating route violations is 0.
+
+Elapsed =    0:00:11, CPU =    0:00:11
+1
+icc2_shell> man check_lvs
+2.  Synopsys Commands                                        Command Reference
+                                   check_lvs
+
+NAME
+       check_lvs
+              Checks for inconsistencies in the physical layout of the current
+              design.
+
+SYNTAX
+       status check_lvs
+              [-nets collection_of_nets]
+              [-checks {short open floating_routes all}]
+              [-max_errors maximum_number_of_errors]
+              [-check_child_cells true | false]
+              [-exclude_child_cell_types exclude_types
+              [-check_zero_spacing_blockages true | false]
+              [-check_top_level_blockages true | false]
+              [-open_reporting { bounding_box | detailed }]
+              [-report_floating_pins true | false]
+              [-treat_terminal_as_voltage_source true | false]
+
+   Data Types
+       collection_of_nets         collection
+       maximum_number_of_errors   integer
+       exclude_types              list
+
+ARGUMENTS
+       -nets collection_of_nets
+              Specifies the nets to check. By default, all nets are checked.
+
+       -checks {short open floating_routes all}
+              Specifies the types of errors to check as follows:
+
+              o short: check for shorts between nets.
+              o open: check for open nets.
+              o floating_routes: check if any floating routes exist.
+              o all: check all error types above
+
+              By default, all error types are checked.
+
+       -max_errors maximum_number_of_errors
+              Specifies the maximum number of errors for each type  of  viola-
+              tions  specified  with the -checks option. Set the value to 0 to
+              specify an unlimited error count. The default is 20.
+
+       -check_child_cells true | false
+              Specifies whether to check shorts between child cells  and  top-
+              level  shapes.  If  true, all shapes in child cells are checked.
+              The default is false.
+
+       -exclude_child_cell_types {exclude_types}
+              Specifies cell types to  ignore  when  checking  shorts  between
+              child cell and top-level shapes. Specify one or more of the fol-
+              lowing cell types: abstract, analog, black_box,  corner,  cover,
+              diode,  end_cap,  fill, filler, flip_chip_driver, flip_chip_pad,
+              lib_cell, macro, module,  pad,  pad_spacer,  physical_only,  and
+              well_tap.
+
+              You must specify the -check_child_cells option with this option.
+
+       -check_zero_spacing_blockages true | false
+              Specifies whether to check shorts on zero spacing blockages. The
+              default is false.
+
+       -check_top_level_blockages true | false
+              Specifies  whether  to  check shorts on top-level blockages. The
+              default is true.
+
+       -open_reporting { bounding_box | detailed }
+              Specifies how open violations are shown in the error browser.
+
+              o bounding_box: Report bounding box of open net
+              o detailed: Report the detailed  open  locations  in  the  error
+                browser; it might require longer runtime to find detailed open
+                locations
+
+              When the number of connected components of an open net  is  more
+              than  100 and the -open_reporting option is set to detailed, 100
+              approximated open locations will be  reported.  The  default  is
+              bounding_box.
+
+       -report_floating_pins true | false
+              Specifies  whether to report floating pins when checking open or
+              floating_routes violations. The default is false.
+
+       -treat_terminal_as_voltage_source true | false
+              When set to true, the check_lvs command assumes that all  termi-
+              nals of pg nets are voltage sources.  The default is false.
+
+DESCRIPTION
+       The  check_lvs command detects physical layout versus schematic errors.
+       Violations discovered by the checker are available as an error set  for
+       browsing with the GUI error browser.
+
+       The  command can use multiple CPU cores to generate the report based on
+       the set_host_options -max_cores command setting. If this value  is  not
+       set, the command runs on a single core.
+
+       The command generates an error file named "block_name"_lvs.err. To view
+       the errors on GUI, load the error file by using the Error Browser.
+
+   Multicorner-Multimode Support
+       This command has no dependency on scenario-specific information.
+
+EXAMPLES
+       The following example reports shorts, opens, and floating route  viola-
+       tions for all nets in the design.
+
+         prompt> check_lvs
+
+       The following example reports only short violations for all nets in the
+       design.
+
+         prompt> check_lvs -checks short
+
+       The following example reports short, and open violations  for  net  N1,
+       N2, and N3.
+
+         prompt> check_lvs -nets {N1 N2 N3} -checks {short open}
+
+       The  following example reports short violations without checking shapes
+       in child cell.
+
+         prompt> check_lvs -checks short -check_child_cells false
+
+       The following example  reports  open  violations  in  detail  on  error
+       browser.
+
+         prompt> check_lvs -checks open -open_reporting detailed
+
+SEE ALSO
+       check_routes(2)
+       set_host_options(2)
+
+                          Version O-2018.06-SP1
+            Copyright (c) 2018 Synopsys, Inc. All rights reserved.
+icc2_shell> man connect_net
+2.  Synopsys Commands                                        Command Reference
+                                  connect_net
+
+NAME
+       connect_net
+              Connects  a  net  or  scalar  nets  of net_bus to port, pins and
+              scalar ports of port_bus.
+
+SYNTAX
+       int connect_net
+              [-design design]
+              -net net
+              -port_name port_name
+              net
+              terms
+
+   Data Types
+       design     string
+       net        list
+       port_name  string
+       terms      list
+
+ARGUMENTS
+       -design design
+              Specifies the design in which to connect the nets. If no  design
+              is specified, the nets are connected in the current design.
+
+       -net net
+              Specifies  the  net  or  net_bus to connect. It can be a name or
+              collection.  The net can be a scalar (single-bit) net or net_bus
+              and  must  exist in the current design. If net_bus is specified,
+              then terms must contain the same width port_bus or length of the
+              scalar  port  array  list  should  be  same  as bus width of the
+              net_bus.
+
+       net    Specifies the net or net_bus to connect. It can  be  a  name  or
+              collection.  The net can be a scalar (single-bit) net or net_bus
+              and must exist in the current design. If net_bus  is  specified,
+              then terms must contain the same width port_bus or length of the
+              scalar port array list should  be  same  as  bus  width  of  the
+              net_bus.  This positional argument is provided for compatibility
+              with other tools.
+
+       -port_name port_name
+              Specifies the base name to use as the name of new ports that are
+              created on subdesigns to make the connection.
+
+       terms  Specifies a list of ports, port_bus and pins to which the net is
+              to be connected. The ports and pins must exist  in  the  current
+              design.   If a specified port, scalar port of port_bus or pin is
+              already connected, the command issues an error message.
+
+DESCRIPTION
+       This command connects a net or scalar net of the net_bus to the  speci-
+       fied  ports, port_bus and pins, possibly across several levels of hier-
+       archy. port_bus connections across hierarchies is not supported. A  net
+       can  be  connected to many ports and pins, however you cannot connect a
+       port or pin to more than one net.  Ports and nets are created as needed
+       to cross hierarchy.
+
+       If  a  port or pin cannot be connected, the port or pin is skipped. The
+       remaining ports and pins in the terms are connected.
+
+       The number of connected ports and pins are returned.
+
+       To disconnect objects on a net, use  the  disconnect_net  command.   To
+       display ports and pins on a net, use the all_connected command.
+
+EXAMPLES
+       The  following  example  connects  a net named NET0.  The all_connected
+       command returns the objects connected to NET0.
+
+         prompt> connect_net -net NET0 [get_ports { A1 A2 } ]
+         prompt> connect_net -net NET0 [get_pins U1/A]
+         prompt> all_connected NET0
+         {"A1", "A2", "U1/A"}
+
+       The following example connects a net_bus named N[7:0] to port_bus named
+       P[7:0]  so  that  N[7] is connected to P[7],  N[6] is connected to P[6]
+       ..,N[0] to P[0].
+
+         prompt> connect_net -net N P
+         8
+         # The nets can be explicitly mentioned as follows
+         prompt> connect_net -net [get_net_buses N] [get_port_buses P]
+         8
+         prompt> all_connected N[1]
+         {"P[1]"}
+
+SEE ALSO
+       all_connected(2)
+       disconnect_net(2)
+
+                          Version O-2018.06-SP1
+            Copyright (c) 2018 Synopsys, Inc. All rights reserved.
+icc2_shell> connect_net -net VDD [get_ports -of_objects [get_selection]]
+Warning: Collection '_sel1427 (*)' has inappropriate type (port). (SEL-002)
+Error: Nothing matched for of_objects (SEL-005)
+Error: Nothing matched for terms (SEL-005)
+Error: bad value specified for term_list
+        Use error_info for more info. (CMD-013)
+icc2_shell> check_pg_drc
+Command check_pg_drc started  at Sun Apr 21 04:55:47 2024
+Command check_pg_drc finished at Sun Apr 21 04:56:21 2024
+CPU usage for check_pg_drc: 33.92 seconds ( 0.01 hours)
+Elapsed time for check_pg_drc: 33.92 seconds ( 0.01 hours)
+No errors found.
+icc2_shell> connect_net -net VDD [get_ports [get_selection]]
+Warning: No objects from '_sel1553' were of the correct class. (SEL-010)
+Warning: No port objects matched '_sel1553' (SEL-004)
+Error: Nothing matched for collection (SEL-005)
+Error: Nothing matched for terms (SEL-005)
+Error: bad value specified for term_list
+        Use error_info for more info. (CMD-013)
+icc2_shell> get_selection
+{VDD_3}
+icc2_shell> man SEL-005
+N.  Messages                                                 Command Reference
+                                   messages
+
+NAME
+       SEL-005 (error) Nothing matched for %s
+
+DESCRIPTION
+       The pattern(s) which you specified did not match any objects.
+
+WHAT NEXT
+       Check the values which you entered.
+
+                          Version O-2018.06-SP1
+            Copyright (c) 2018 Synopsys, Inc. All rights reserved.
+icc2_shell> man SEL-004
+N.  Messages                                                 Command Reference
+                                   messages
+
+NAME
+       SEL-004 (warning) No %s objects matched '%s'
+
+DESCRIPTION
+       The  pattern which you specified did not match any objects of the class
+       acceptable for this command.
+
+WHAT NEXT
+       Check the pattern to see if it is what you expected.
+
+                          Version O-2018.06-SP1
+            Copyright (c) 2018 Synopsys, Inc. All rights reserved.
+icc2_shell> connect_net -net VDD [get_ports -of_objects [get_selection]]
+Error: Term 'VDD' is already connected to net 'VDD'. (DES-140)
+Error: 0
+        Use error_info for more info. (CMD-013)
+icc2_shell> connect_net -net VDD [get_ports -of_objects [get_selection]]
+Error: Term 'VDD' is already connected to net 'VDD'. (DES-140)
+Error: 0
+        Use error_info for more info. (CMD-013)
+icc2_shell> get_ports  VDD
+{VDD}
+icc2_shell> get_terminals
+{clk_i rst_ni clock_en_i test_en_i {boot_addr_i[31]} {boot_addr_i[30]} {boot_addr_i[29]} {boot_addr_i[28]} {boot_addr_i[27]} {boot_addr_i[26]} {boot_addr_i[25]} {boot_addr_i[24]} {boot_addr_i[23]} {boot_addr_i[22]} {boot_addr_i[21]} {boot_addr_i[20]} {boot_addr_i[19]} {boot_addr_i[18]} {boot_addr_i[17]} {boot_addr_i[16]} {boot_addr_i[15]} {boot_addr_i[14]} {boot_addr_i[13]} {boot_addr_i[12]} {boot_addr_i[11]} {boot_addr_i[10]} {boot_addr_i[9]} {boot_addr_i[8]} {boot_addr_i[7]} {boot_addr_i[6]} {boot_addr_i[5]} {boot_addr_i[4]} {boot_addr_i[3]} {boot_addr_i[2]} {boot_addr_i[1]} {boot_addr_i[0]} {core_id_i[3]} {core_id_i[2]} {core_id_i[1]} {core_id_i[0]} {cluster_id_i[5]} {cluster_id_i[4]} {cluster_id_i[3]} {cluster_id_i[2]} {cluster_id_i[1]} {cluster_id_i[0]} instr_req_o instr_gnt_i instr_rvalid_i {instr_addr_o[31]} {instr_addr_o[30]} {instr_addr_o[29]} {instr_addr_o[28]} {instr_addr_o[27]} {instr_addr_o[26]} {instr_addr_o[25]} {instr_addr_o[24]} {instr_addr_o[23]} {instr_addr_o[22]} {instr_addr_o[21]} {instr_addr_o[20]} {instr_addr_o[19]} {instr_addr_o[18]} {instr_addr_o[17]} {instr_addr_o[16]} {instr_addr_o[15]} {instr_addr_o[14]} {instr_addr_o[13]} {instr_addr_o[12]} {instr_addr_o[11]} {instr_addr_o[10]} {instr_addr_o[9]} {instr_addr_o[8]} {instr_addr_o[7]} {instr_addr_o[6]} {instr_addr_o[5]} {instr_addr_o[4]} {instr_addr_o[3]} {instr_addr_o[2]} {instr_addr_o[1]} {instr_addr_o[0]} {instr_rdata_i[31]} {instr_rdata_i[30]} {instr_rdata_i[29]} {instr_rdata_i[28]} {instr_rdata_i[27]} {instr_rdata_i[26]} {instr_rdata_i[25]} {instr_rdata_i[24]} {instr_rdata_i[23]} {instr_rdata_i[22]} {instr_rdata_i[21]} {instr_rdata_i[20]} {instr_rdata_i[19]} {instr_rdata_i[18]} {instr_rdata_i[17]} {instr_rdata_i[16]} {instr_rdata_i[15]} {instr_rdata_i[14]} {instr_rdata_i[13]} ...}
+icc2_shell> .
+Error: wrong # args: should be ". option ?arg ...?"
+        Use error_info for more info. (CMD-013)
+icc2_shell> get_terminals VDD
+{VDD}
+icc2_shell> get_terminals VDD*
+{VDD_3 VDD_2 VDD_1 VDD}
+icc2_shell> get_terminals VDD*
+{VDD_3 VDD_2 VDD_1 VDD}
+icc2_shell> get_terminals VSS*
+{VSS_4 VSS_3 VSS_2 VSS_1 VSS}
+icc2_shell> connect_net -net VDD [get_ports VDD*]
+Error: Term 'VDD' is already connected to net 'VDD'. (DES-140)
+Error: 0
+        Use error_info for more info. (CMD-013)
+icc2_shell> connect_net -net VDD [get_terminals  VDD*]
+Warning: Collection '_sel1922 (VDD*)' has inappropriate type (terminal). (SEL-002)
+Error: Nothing matched for terms (SEL-005)
+Error: bad value specified for term_list
+        Use error_info for more info. (CMD-013)
+icc2_shell> connect_net -net VDD [get_terminals  VDD]
+Warning: Collection '_sel1923 (VDD)' has inappropriate type (terminal). (SEL-002)
+Error: Nothing matched for terms (SEL-005)
+Error: bad value specified for term_list
+        Use error_info for more info. (CMD-013)
+icc2_shell> connect_net -net VDD [get_port  VDD]
+Error: Term 'VDD' is already connected to net 'VDD'. (DES-140)
+Error: 0
+        Use error_info for more info. (CMD-013)
+icc2_shell> man create_shape
+2.  Synopsys Commands                                        Command Reference
+                                 create_shape
+
+NAME
+       create_shape
+              Creates a shape object in the current design.
+
+SYNTAX
+       collection create_shape
+              -shape_type rect | polygon | path | text
+              -layer layer
+              [-shape_use use]
+              [-net net | -port port]
+              [-boundary { { {llx lly} {urx ury} } |
+                          { {x y} {x y} {x y} {x y} ... } } |
+                          geometric_objects]
+              [-path {{x y} {x y}} ...]
+              [-width width]
+              [-start_endcap endcap_type]
+              [-end_endcap endcap_type]
+              [-start_extension extension]
+              [-end_extension extension]
+              [-origin point]
+              [-height height]
+              [-orientation orientation]
+              [-justification justification]
+              [-text text_string]
+              [-fill_cell fill_cell]
+
+   Data Types
+       layer              collection
+       use                string
+       llx                float
+       lly                float
+       urx                float
+       ury                float
+       x                  float
+       y                  float
+       geometric_objects  collection
+       width              float
+       endcap             string
+       extension          float
+       height             float
+       orientation        string
+       justification      string
+       text_string        string
+       net                collection
+       port               collection
+       fill_cell          collection
+
+ARGUMENTS
+       -shape_type rect | polygon | path | text
+              Specifies the type of shape to create.
+
+              This is a required option.
+
+       -layer layer
+              Specifies the layer on which to create the shape. You must spec-
+              ify a single layer using either the layer name from the technol-
+              ogy file or a collection containing exactly one layer.
+
+              This is a required option.
+
+       -shape_use use
+              Specifies the usage of the shape.
+
+              Valid values are
+o area_fill
+  A fill shape that does not require optical proximity correction (OPC).  Fill
+  shapes are created inside the top level fill_cell for the design,  unless  a
+  fill_cell is specified using -fill_cell option.
+o core_wire
+  A shape that connects the endpoints of a follow-pin to its target.
+o detail_route (the default)
+  A shape used for detail routed signal nets.
+o follow_pin
+  A shape that connects a standard cell to a power structure.
+o global_route
+  A shape used for global routed signal nets.
+o lib_cell_pin_connect
+  A shape that connects to a pin of a standard cell.
+o macro_pin_connect
+  A shape that connects to a pin of an I/O pad cell or macro cell.
+o opc
+  A fill shape that requires optical proximity correction (OPC).
+o pg_augmentation
+  A shape added post route to the power and ground structures.
+o ring
+  A shape that belongs to a power ring.
+o shield_route
+  A shape used for shielding route shapes.
+o stripe
+  A shape that belongs to a power strap.
+o user_route
+  A shape used for user-entered route shapes.
+o zero_skew
+  A shape used for zero-skew route shapes.
+
+This  option  is  valid only for rectangle, polygon, and path shapes; the tool
+issues an error if you use it for text shapes.
+
+       -net net
+              Specifies the net that owns this shape. If the net is  power  or
+              ground,  the  shape  rule_type attribute is automatically set to
+              "none". Otherwise it is set to "default".
+
+              This option is valid  only  for  rectangle,  polygon,  and  path
+              shapes;  the tool issues an error if you use it for text shapes.
+
+              The -net and -port options are mutually exclusive; you can spec-
+              ify neither option (for unassigned shapes) or one of them.
+
+       -port port
+              Specifies the port that owns this shape.
+
+              When you assign a shape to a port, the tool creates a new termi-
+              nal named TM_n, where n is a unique integer in  the  block.  The
+              new  terminal  is owned by the port, owns the shape, and has the
+              default access direction (all).
+
+              This option is valid  only  for  rectangle,  polygon,  and  path
+              shapes;  the tool issues an error if you use it for text shapes.
+
+              The -net and -port options are mutually exclusive; you can spec-
+              ify neither option (for unassigned shapes) or one of them.
+
+       -boundary list_of_points
+              Specifies  the  boundary  of  a  rectangle or polygon shape. The
+              boundary may be a rectangle or a polygon. A rectangle is  speci-
+              fied  by  its lower-left and upper-right coordinates (i.e., {llx
+              lly} {urx ury}). A polygon is specified by its points (i.e.,  {x
+              y} {x y} {x y} {x y}... ).
+
+              Polygons may also be specified as the combined area of a hetero-
+              geneous collection of objects with physical  geometry,  such  as
+              poly_rects,   geo_masks,  shapes,  layers,  and  other  physical
+              objects. In the case of poly_rects, geo_masks, shapes, or  other
+              physical  objects,  the resulting area will include the areas of
+              each object. In the case of  layers,  the  resulting  area  will
+              include the area of every shape in the layer.
+
+              When specifying the boundary polygon as a collection of physical
+              objects, the resulting area must resolve to a single,  connected
+              polygon.  It is an error to specify a collection of objects with
+              a combined area that resolves to multiple polygons.
+
+              This option is required for rectangle and polygon shapes. It  is
+              an error to use this option with other shape types.
+
+       -path {{x y} {x y} ...}
+              Specifies  the centerline points of a path shape. You must spec-
+              ify at least two points.
+
+              This option is required for path shapes. If you use this  option
+              with other shape types, the tool issues an error.
+
+       -width width
+              Specifies the width of a path shape. The value must be non-nega-
+              tive.
+
+              This option is required for path shapes. If you use this  option
+              with other shape types, the tool issues an error.
+
+       -start_endcap endcap_type
+              Specifies the type of the start endcap of a path shape.
+
+              The valid values are
+              o flush (the default)
+                Creates an endcap with square ends and no extension.
+
+              o full_width
+                Creates  an  endcap  with  square ends that is extended by the
+                path width.
+
+              o half_width
+                Creates an endcap with square ends that is  extended  by  half
+                the path width.
+
+              o octagon
+                Creates an endcap with octagonal ends and no extension.
+
+              o variable
+                Creates  an  endcap  with  square ends that is extended by the
+                value specified in the -start_extension option. When you spec-
+                ify this setting, the -start_extension option is required.
+
+              This  option  is  valid only for path shapes; the tool issues an
+              error if you use it for other shape types.
+
+       -end_endcap endcap
+              Specifies the type of the end endcap of a path shape.
+
+              The valid values are
+              o flush (the default)
+                Creates an endcap with square ends and no extension.
+
+              o full_width
+                Creates an endcap with square ends that  is  extended  by  the
+                path width.
+
+              o half_width
+                Creates  an  endcap  with square ends that is extended by half
+                the path width.
+
+              o octagon
+                Creates an endcap with octagonal ends and no extension.
+
+              o variable
+                Creates an endcap with square ends that  is  extended  by  the
+                value specified in the -start_extension option. When you spec-
+                ify this setting, the -start_extension option is required.
+
+              This option is valid only for path shapes; the  tool  issues  an
+              error if you use it for other shape types.
+
+       -start_extension extension
+              Specifies the start extension of a path shape with variable end-
+              caps.  The value must be non-negative.
+
+              This option is required when you use the -start_endcap  variable
+              option.  If you use this option with other shape types, the tool
+              issues an error.
+
+       -end_extension extension
+              Specifies the end extension of a path shape with  variable  end-
+              caps.  The value must be non-negative.
+
+              This  option  is  required when you use the -end_endcap variable
+              option. If you use this option with other shape types, the  tool
+              issues an error.
+
+       -origin {x y}
+              Specifies the placement location of the text shape's origin. The
+              origin is determined by the text's justification,  as  specified
+              with the -justification option.
+
+              This  option is required for text shapes. If you use this option
+              with other shape types, the tool issues an error.
+
+       -height height
+              Specifies the height of a text shape. The value must be non-neg-
+              ative.
+
+              This  option is required for text shapes. If you use this option
+              with other shape types, the tool issues an error.
+
+       -orientation orientation
+              Specifies the orientation of a text shape.
+
+              Valid values are
+                o MX (mirror around the X-axis)
+                o MXR90 (mirror around the X-axis and rotate 90 degrees)
+                o MY (mirror around the Y-axis)
+                o MYR90 (mirror around the Y-axis and rotate 90 degrees)
+                o R0 (no rotation, which is the default)
+                o R90 (rotate 90 degrees)
+                o R180 (rotate 180 degrees)
+                o R270 (rotate 270 degrees)
+
+              This option is valid only for text shapes; the  tool  issues  an
+              error if you use it for other shape types.
+
+       -justification justification]
+              Specifies  the  justification of a text shape. Text is justified
+              with respect to the untransformed bounding box (the bounding box
+              before applying the orientation rotation).
+
+              Valid values are
+                o C (center)
+                o CB (center-bottom)
+                o CT (center-top)
+                o LB (left-bottom, which is the default)
+                o LC (left-center)
+                o LT (left-top)
+                o RB (right-bottom)
+                o RC (right-center)
+                o RT (right-top)
+
+              This  option  is  valid only for text shapes; the tool issues an
+              error if you use it for other shape types.
+
+       -text text_string
+              Specifies the text string to display in a text shape.
+
+              This option is required for text shapes. If you use this  option
+              with other shape types, the tool issues an error.
+
+       -fill_cell fill_cell
+              Specifies  the  fill_cell to create the shape in. The shapes are
+              created as fill shapes even if -shape_use is  not  specified  as
+              area_fill
+
+DESCRIPTION
+       This  command creates a new rectangle, polygon, path, or text shape and
+       returns a collection that contains the new shape.
+
+       For rectangle (-shape_type  rect)  and  polygon  (-shape_type  polygon)
+       shapes,  you  must specify the layer (-layer) and boundary (-boundary).
+       You can also specify the use (-shape_use) and ownership (-net or -port)
+       for the shape.
+
+       For  path  (-shape_type  path)  shapes,  you  must  specify  the  layer
+       (-layer), path (-path), and width (-width). You can  also  specify  the
+       use (-shape_use),  ownership (-net or -port), start endcap (-start_end-
+       cap), and end endcap (-end_endcap) for the shape. If  you  specify  the
+       -start_endcap  variable option, you must also specify the -start_exten-
+       sion option.  If you specify the -end_endcap variable option, you  must
+       also specify the -end_extension option.
+
+       For  text  (-shape_type  text)  shapes,  you  must  specify  the  layer
+       (-layer), origin (-origin), height (-height), and text string  (-text).
+       You  can  also specify the orientation (-orientation) and justification
+       (-justification) for the shape.
+
+EXAMPLES
+       The following example creates a rectangle shape on the port named  Clk.
+
+         prompt> create_shape -shape_type rect -layer METAL \
+            -boundary {{0 0} {1000 1000}} -port Clk
+
+       The  following  example  creates a polygon shape that is not associated
+       with any net or port.
+
+         prompt> create_shape -shape_type polygon -layer METAL \
+            -boundary {{0 0} {0 1000} {500 1000} {500 0}}
+
+       The following example creates a path shape on the net named Clk.
+
+         prompt> create_shape -shape_type path -layer METAL \
+            -path {{0 0} {0 1000}} -width 50 -net Clk
+
+       The following example creates a text shape  that  contains  the  string
+       "hello world".
+
+         prompt> create_shape -shape_type text -layer METAL \
+            -origin {100 100} -height 100 -orientation R0 -justification LB \
+            -text "hello world"
+
+SEE ALSO
+       get_shapes(2)
+       remove_shapes(2)
+
+                          Version O-2018.06-SP1
+            Copyright (c) 2018 Synopsys, Inc. All rights reserved.
+icc2_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -start MoveTool
+icc2_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -add_point {125.900 273.839} -scale 0.0203
+icc2_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -add_point {111.754 273.657} -scale 0.0405
+icc2_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -reset
+icc2_shell> create_shape -path {103.0150 273.6500} {100.7500 11.2500}
+Error: extra positional option '100.7500 11.2500' (CMD-012)
+Error: Required argument '-shape_type' was not found (CMD-007)
+Error: Required argument '-layer' was not found (CMD-007)
+icc2_shell> create_shape -path {103.0150 273.6500} {100.7500 11.2500} -layer M9
+Error: extra positional option '100.7500 11.2500' (CMD-012)
+Error: Required argument '-shape_type' was not found (CMD-007)
+icc2_shell> create_shape -path {103.0150 273.6500} {100.7500 11.2500} -layer M9 -shape rect
+Error: extra positional option '100.7500 11.2500' (CMD-012)
+Error: ambiguous option '-shape' (CMD-011)
+Error: extra positional option 'rect' (CMD-012)
+Error: Required argument '-shape_type' was not found (CMD-007)
+icc2_shell> create_shape -path {103.0150 273.6500} {100.7500 11.2500} -layer M9 -shape_type rect
+Error: extra positional option '100.7500 11.2500' (CMD-012)
+icc2_shell> create_shape -path {103.0150 273.6500} {100.7500 11.2500} -layer M9 -shape_type rect
+Error: extra positional option '100.7500 11.2500' (CMD-012)
+icc2_shell> create_shape -path {103.0150 273.6500} {100.7500 11.2500} -layer M9 -shape_type rect
+Error: extra positional option '100.7500 11.2500' (CMD-012)
+icc2_shell> create_shape -layer M9 -shape_type rect
+Error: Cannot specify -shape_type rect without -boundary. (CMD-003)
+icc2_shell> gui_show_man_page create_shape
+icc2_shell> create_shape -path {103.0150 273.6500} {100.7500 11.2500} -layer M9 -shape_type path
+Error: extra positional option '100.7500 11.2500' (CMD-012)
+icc2_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -start CreateRouteTool
+icc2_shell> gui_set_mouse_tool_option -tool CreateRouteTool -option {HorizontalWidth} -value {0.034}
+icc2_shell> gui_set_mouse_tool_option -tool CreateRouteTool -option {HorizontalPitch} -value {0.06}
+icc2_shell> gui_set_mouse_tool_option -tool CreateRouteTool -option {VerticalWidth} -value {0.034}
+icc2_shell> gui_set_mouse_tool_option -tool CreateRouteTool -option {VerticalPitch} -value {0.074}
+icc2_shell> gui_set_mouse_tool_option -tool CreateRouteTool -option {BundleOrNetNames} -value {VDD}
+icc2_shell> gui_set_mouse_tool_option -tool CreateRouteTool -option {VerticalLayer} -value {M9}
+icc2_shell> gui_set_mouse_tool_option -tool CreateRouteTool -option {VerticalWidth} -value {0.06}
+icc2_shell> gui_set_mouse_tool_option -tool CreateRouteTool -option {VerticalPitch} -value {0.12}
+icc2_shell> 
+icc2_shell> gui_set_mouse_tool_option -tool CreateRouteTool -option {HorizontalLayer} -value {M8}
+icc2_shell> gui_set_mouse_tool_option -tool CreateRouteTool -option {HorizontalWidth} -value {0.06}
+icc2_shell> gui_set_mouse_tool_option -tool CreateRouteTool -option {HorizontalPitch} -value {0.12}
+icc2_shell> 
+icc2_shell> set_edit_setting -auto_display_hidden {false}
+icc2_shell> gui_set_mouse_tool_option -tool CreateRouteTool -option {PinConnectionLayer} -value {M9}
+icc2_shell> gui_set_mouse_tool_option -tool CreateRouteTool -option {ConnectToPinByLayer} -value {true}
+icc2_shell> gui_set_mouse_tool_option -tool CreateRouteTool -option {ConnectToPinByLayer} -value {false}
+icc2_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -add_point {111.781 273.787} -scale 0.0103

@@ -1,0 +1,85 @@
+SI analysis is not enabled, so delta delays are unavailable.
+Warning: Scenario func_slow is not configured for hold analysis: skipping. (UIC-058)
+****************************************
+Report : timing
+        -path_type full_clock_expanded
+        -delay_type min
+        -nworst 1
+        -max_paths 1
+        -report_by group
+        -input_pins
+        -nets
+        -include_hierarchical_pins
+        -transition_time
+        -capacitance
+        -crosstalk_delta
+        -derate
+        -attributes
+        -physical
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Fri Apr 19 02:07:21 2024
+****************************************
+
+  Startpoint: debug_unit_i/regfile_fp_sel_q_reg (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: debug_unit_i/regfile_fp_sel_q_reg (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: CLK_I
+  Path Type: min
+
+
+Attributes
+    b - black-box (unknown)
+    s - size_only
+    d - dont_touch
+    u - dont_use
+    g - generic
+    h - hierarchical
+    i - ideal
+    n - noncombinational
+    E - extracted timing model
+    Q - Quick timing model
+
+
+  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                        0.00      0.00
+  source latency                                                                                 0.00      0.00
+  clk_i (in)                                                         0.00      1.00              0.00      0.00 r    (272.37,0.13)
+  clk_i (net)                                      70     75.37                                                                        d
+  debug_unit_i/clk (riscv_debug_unit)                                0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  debug_unit_i/clk (net)                           70     75.37                                                                        d
+  debug_unit_i/regfile_fp_sel_q_reg/CK (SAEDRVT14_FDPRBQ_V2LP_2)     0.00      1.00              0.00      0.00 r    (30.96,130.29)    n
+
+  debug_unit_i/regfile_fp_sel_q_reg/CK (SAEDRVT14_FDPRBQ_V2LP_2)     0.00      1.00              0.00      0.00 r    (30.96,130.29)    n
+  debug_unit_i/regfile_fp_sel_q_reg/Q (SAEDRVT14_FDPRBQ_V2LP_2)      0.00      1.00              0.02      0.02 f    (32.01,130.35)    n
+  debug_unit_i/_gOb192_regfile_raddr_o[5] (net)     1      1.19
+  debug_unit_i/U370/A1 (SAEDRVT14_ND2_CDC_2)                         0.00      1.00              0.00      0.02 f    (32.32,131.61)
+  debug_unit_i/U370/X (SAEDRVT14_ND2_CDC_2)                          0.00      1.00              0.00      0.02 r    (32.30,131.51)
+  debug_unit_i/n127 (net)                           1      1.47
+  debug_unit_i/U369/A1 (SAEDRVT14_ND2_CDC_2)                         0.00      1.00              0.00      0.02 r    (28.76,131.61)
+  debug_unit_i/U369/X (SAEDRVT14_ND2_CDC_2)                          0.00      1.00              0.00      0.03 f    (28.75,131.51)
+  debug_unit_i/n507 (net)                           1      0.65
+  debug_unit_i/regfile_fp_sel_q_reg/D (SAEDRVT14_FDPRBQ_V2LP_2)      0.00      1.00              0.00      0.03 f    (30.45,130.35)    n
+  data arrival time                                                                                        0.03
+
+  clock CLK_I (rise edge)                                                                        0.00      0.00
+  source latency                                                                                 0.00      0.00
+  clk_i (in)                                                         0.00      1.00              0.00      0.00 r    (272.37,0.13)
+  clk_i (net)                                      70     75.37                                                                        d
+  debug_unit_i/clk (riscv_debug_unit)                                0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  debug_unit_i/clk (net)                           70     75.37                                                                        d
+  debug_unit_i/regfile_fp_sel_q_reg/CK (SAEDRVT14_FDPRBQ_V2LP_2)     0.00      1.00              0.00      0.00 r    (30.96,130.29)    n
+
+  library hold time                                                            1.00              0.00      0.00
+  data required time                                                                                       0.00
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       0.00
+  data arrival time                                                                                       -0.03
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              0.02
+
+
+1

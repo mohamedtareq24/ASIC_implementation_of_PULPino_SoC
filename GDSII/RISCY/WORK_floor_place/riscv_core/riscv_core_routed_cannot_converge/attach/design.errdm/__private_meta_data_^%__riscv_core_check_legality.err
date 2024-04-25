@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<errorData typeCount="0" majorVersion="1" minorVersion="8" name="__private_meta_data_:__riscv_core_check_legality.err" designName="riscv_core_routed_cannot_converge" info="" checker="Check Legality" checkerVersion="" created="1713517639" createdDate="04:19:2024:02:07:19:PDT" modified="1713525432" modifiedDate="04:19:2024:04:17:12:PDT" interactive="false" internal="false" metaData="true" numTypes="0" numInsts="0"/>

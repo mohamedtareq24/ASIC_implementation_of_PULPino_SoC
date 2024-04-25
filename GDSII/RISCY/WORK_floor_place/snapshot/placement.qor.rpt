@@ -1,0 +1,94 @@
+****************************************
+Report : qor
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Fri Apr 19 02:07:21 2024
+****************************************
+
+
+Scenario           'func_fast'
+Timing Path Group  'CLK_I'
+----------------------------------------
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_slow'
+Timing Path Group  'CLK_I'
+----------------------------------------
+Levels of Logic:                     72
+Critical Path Length:              4.25
+Critical Path Slack:               0.72
+Critical Path Clk Period:          5.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+----------------------------------------
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:             71
+Hierarchical Port Count:          10059
+Leaf Cell Count:                  34024
+Buf/Inv Cell Count:                1908
+Buf Cell Count:                     213
+Inv Cell Count:                    1695
+CT Buf/Inv Cell Count:                0
+Combinational Cell Count:         31821
+Sequential Cell Count:             2203
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:            12732.06
+Noncombinational Area:          2450.48
+Buf/Inv Area:                    475.57
+Total Buffer Area:                83.83
+Total Inverter Area:             391.74
+Macro/Black Box Area:              0.00
+Net Area:                             0
+Net XLength:                       0.00
+Net YLength:                       0.00
+----------------------------------------
+Cell Area (netlist):                          15182.54
+Cell Area (netlist and physical only):        16640.28
+Net Length:                        0.00
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:             36213
+Nets with Violations:                 0
+Max Trans Violations:                 0
+Max Cap Violations:                   0
+----------------------------------------
+
+1
+****************************************
+Report : qor
+        -summary
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Fri Apr 19 02:07:21 2024
+****************************************
+
+Timing
+---------------------------------------------------------------------------
+Context                                 WNS            TNS            NVE
+---------------------------------------------------------------------------
+func_slow          (Setup)             0.72           0.00              0
+Design             (Setup)             0.72           0.00              0
+
+func_fast          (Hold)              0.02           0.00              0
+Design             (Hold)              0.02           0.00              0
+---------------------------------------------------------------------------
+
+Miscellaneous
+---------------------------------------------------------------------------
+Cell Area (netlist):                          15182.54
+Cell Area (netlist and physical only):        16640.28
+Nets with DRC Violations:        0
+1

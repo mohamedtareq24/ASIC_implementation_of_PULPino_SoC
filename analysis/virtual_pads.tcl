@@ -1,8 +1,8 @@
-set chip_top_left 5.0
-set chip_bottom_right 270.0
+set chip_top_left 0.0
+set chip_bottom_right 145.0
 set num_pads_per_side 7
 
-set PWR_BUDGET  0.05
+set PWR_BUDGET  0.02
 set VOLTAGE     0.88
 # Define the number of VDD and VSS pads on each side
 

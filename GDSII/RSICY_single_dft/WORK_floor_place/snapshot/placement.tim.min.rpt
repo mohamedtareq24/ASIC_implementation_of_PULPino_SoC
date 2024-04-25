@@ -1,0 +1,105 @@
+SI analysis is not enabled, so delta delays are unavailable.
+Warning: Scenario func_slow is not configured for hold analysis: skipping. (UIC-058)
+****************************************
+Report : timing
+        -path_type full_clock_expanded
+        -delay_type min
+        -nworst 1
+        -max_paths 1
+        -report_by group
+        -input_pins
+        -nets
+        -include_hierarchical_pins
+        -transition_time
+        -capacitance
+        -crosstalk_delta
+        -derate
+        -attributes
+        -physical
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Tue Apr 23 14:11:15 2024
+****************************************
+
+  Startpoint: id_stage_i/int_controller_i_exc_ctrl_cs_reg_1_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/int_controller_i_irq_id_q_reg_0_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: CLK_I
+  Path Type: min
+
+
+Attributes
+    b - black-box (unknown)
+    s - size_only
+    d - dont_touch
+    u - dont_use
+    g - generic
+    h - hierarchical
+    i - ideal
+    n - noncombinational
+    E - extracted timing model
+    Q - Quick timing model
+
+
+  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                        0.00      0.00
+  source latency                                                                                 0.00      0.00
+  clk_i (in)                                                         0.00      1.00              0.00      0.00 r    (256.17,0.13)
+  clk_i (net)                                       1     28.52                                                                        d
+  U4040/D0 (SAEDRVT14_MUX2_2)                                        0.00      1.00              0.00      0.00 r    (106.38,74.55)    s, d
+  U4040/X (SAEDRVT14_MUX2_2)                                         0.00      1.00              0.00      0.00 r    (106.53,74.55)    s, d
+  clk_m (net)                                      68     47.56                                                                        d
+  core_clock_gate_i___tmp100/CK (SAEDRVT14_CKGTPLT_V5_4)             0.00      1.00              0.00      0.00 r    (96.78,84.15)     n
+  core_clock_gate_i___tmp100/Q (SAEDRVT14_CKGTPLT_V5_4)              0.00      1.00              0.00      0.00 r    (97.26,84.15)     n
+  clk_o (net)                                       1      0.66                                                                        d
+  U4041/D0 (SAEDRVT14_MUX2_2)                                        0.00      1.00              0.00      0.00 r    (97.13,83.55)     s, d
+  U4041/X (SAEDRVT14_MUX2_2)                                         0.00      1.00              0.00      0.00 r    (96.98,83.55)     s, d
+  clk (net)                                      2131    1000000.00                                                                    d
+  id_stage_i/clk (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  id_stage_i/clk (net)                           2131    1000000.00                                                                    d
+  id_stage_i/int_controller_i_exc_ctrl_cs_reg_1_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      0.00 r    (47.66,158.67)    n
+
+  id_stage_i/int_controller_i_exc_ctrl_cs_reg_1_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      0.00 r    (47.66,158.67)    n
+  id_stage_i/int_controller_i_exc_ctrl_cs_reg_1_/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.02      0.02 f    (48.66,158.54)    n
+  id_stage_i/int_controller_i_exc_ctrl_cs[1] (net)
+                                                    2      1.49
+  id_stage_i/int_controller_i_irq_id_q_reg_0_/SI (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      0.02 f    (47.90,159.81)    n
+  data arrival time                                                                                        0.02
+
+  clock CLK_I (rise edge)                                                                        0.00      0.00
+  source latency                                                                                 0.00      0.00
+  clk_i (in)                                                         0.00      1.00              0.00      0.00 r    (256.17,0.13)
+  clk_i (net)                                       1     28.52                                                                        d
+  U4040/D0 (SAEDRVT14_MUX2_2)                                        0.00      1.00              0.00      0.00 r    (106.38,74.55)    s, d
+  U4040/X (SAEDRVT14_MUX2_2)                                         0.00      1.00              0.00      0.00 r    (106.53,74.55)    s, d
+  clk_m (net)                                      68     47.56                                                                        d
+  core_clock_gate_i___tmp100/CK (SAEDRVT14_CKGTPLT_V5_4)             0.00      1.00              0.00      0.00 r    (96.78,84.15)     n
+  core_clock_gate_i___tmp100/Q (SAEDRVT14_CKGTPLT_V5_4)              0.00      1.00              0.00      0.00 r    (97.26,84.15)     n
+  clk_o (net)                                       1      0.66                                                                        d
+  U4041/D0 (SAEDRVT14_MUX2_2)                                        0.00      1.00              0.00      0.00 r    (97.13,83.55)     s, d
+  U4041/X (SAEDRVT14_MUX2_2)                                         0.00      1.00              0.00      0.00 r    (96.98,83.55)     s, d
+  clk (net)                                      2131    1000000.00                                                                    d
+  id_stage_i/clk (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  id_stage_i/clk (net)                           2131    1000000.00                                                                    d
+  id_stage_i/int_controller_i_irq_id_q_reg_0_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      0.00 r    (47.21,159.87)    n
+
+  library hold time                                                            1.00             -0.00     -0.00
+  data required time                                                                                      -0.00
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                      -0.00
+  data arrival time                                                                                       -0.02
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              0.02
+
+
+1

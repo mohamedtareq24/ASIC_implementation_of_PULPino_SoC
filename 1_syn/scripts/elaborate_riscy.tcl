@@ -2,7 +2,7 @@
 #----------------------
 #------------------------
 #---------------------------
-set RTL_PATH            "/mnt/hgfs/cv32e40p/rtl"
+set RTL_PATH            "/mnt/hgfs/cv32e40p/rtl/DFT_RTL"
 set DEFINES_PATH 	"/mnt/hgfs/cv32e40p/defines"
 set top riscv_core
 #Add the path of the libraries and RTL files to the search_path variable

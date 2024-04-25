@@ -1,0 +1,244 @@
+SI analysis is not enabled, so delta delays are unavailable.
+****************************************
+Report : timing
+        -path_type full_clock_expanded
+        -delay_type min
+        -nworst 1
+        -max_paths 1
+        -report_by group
+        -input_pins
+        -nets
+        -include_hierarchical_pins
+        -transition_time
+        -capacitance
+        -crosstalk_delta
+        -derate
+        -attributes
+        -physical
+Design : riscv_core
+Version: O-2018.06-SP1
+Date   : Wed Apr 24 15:11:12 2024
+****************************************
+
+  Startpoint: core_clock_gate_i_coverage_flop_reg (rising edge-triggered flip-flop clocked by CLK_I)
+  Endpoint: id_stage_i/registers_i/mem_reg_1__25_ (rising edge-triggered flip-flop clocked by CLK_I)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: CLK_I
+  Path Type: min
+
+
+Attributes
+    b - black-box (unknown)
+    s - size_only
+    d - dont_touch
+    u - dont_use
+    g - generic
+    h - hierarchical
+    i - ideal
+    n - noncombinational
+    E - extracted timing model
+    Q - Quick timing model
+
+
+  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  clock CLK_I (rise edge)                                                                        0.00      0.00
+  source latency                                                                                 0.00      0.00
+  clk_i (in)                                                         0.00      1.00              0.00      0.00 r    (145.38,0.13)
+  clk_i (net)                                       1      1.75                                                                        d
+  U4005/D0 (SAEDRVT14_MUX2_2)                                        0.00      1.00              0.00      0.00 r    (137.29,4.80)     s, d
+  U4005/X (SAEDRVT14_MUX2_2)                                         0.00      1.00              0.00      0.00 r    (137.44,4.80)     s, d
+  clk_m (net)                                      69     61.83                                                                        d
+  core_clock_gate_i_coverage_flop_reg/CK (SAEDRVT14_FSDPQ_V2LP_2)    0.00      1.00              0.00      0.00 r    (54.05,26.40)     s, n
+
+  core_clock_gate_i_coverage_flop_reg/CK (SAEDRVT14_FSDPQ_V2LP_2)    0.00      1.00              0.00      0.00 r    (54.05,26.40)     s, n
+  core_clock_gate_i_coverage_flop_reg/Q (SAEDRVT14_FSDPQ_V2LP_2)     0.00      1.00              0.01      0.01 f    (54.12,26.41)     s, n
+  core_clock_gate_i_coverage_flop (net)             1      0.50
+  id_stage_i/dftopt210 (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1)
+                                                                     0.00      1.00              0.00      0.01 f    (hierarchical)    h
+  id_stage_i/dftopt210 (net)                               0.50
+  id_stage_i/registers_i/dftopt210 (riscv_register_file_ADDR_WIDTH6_FPU0_test_1)
+                                                                     0.00      1.00              0.00      0.01 f    (hierarchical)    h
+  id_stage_i/registers_i/dftopt210 (net)                   0.50
+  id_stage_i/registers_i/mem_reg_1__25_/SI (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      0.01 f    (53.24,27.06)     s, n
+  data arrival time                                                                                        0.01
+
+  clock CLK_I (rise edge)                                                                        0.00      0.00
+  source latency                                                                                 0.00      0.00
+  clk_i (in)                                                         0.00      1.00              0.00      0.00 r    (145.38,0.13)
+  clk_i (net)                                       1      1.75                                                                        d
+  U4005/D0 (SAEDRVT14_MUX2_2)                                        0.00      1.00              0.00      0.00 r    (137.29,4.80)     s, d
+  U4005/X (SAEDRVT14_MUX2_2)                                         0.00      1.00              0.00      0.00 r    (137.44,4.80)     s, d
+  clk_m (net)                                      69     61.83                                                                        d
+  core_clock_gate_i___tmp100/CK (SAEDRVT14_CKGTPLT_V5_4)             0.00      1.00              0.00      0.00 r    (136.80,6.00)     n
+  core_clock_gate_i___tmp100/Q (SAEDRVT14_CKGTPLT_V5_4)              0.00      1.00              0.00      0.00 r    (137.28,6.00)     n
+  clk_o (net)                                       1      0.65                                                                        d
+  U4006/D0 (SAEDRVT14_MUX2_2)                                        0.00      1.00              0.00      0.00 r    (137.59,5.40)     s, d
+  U4006/X (SAEDRVT14_MUX2_2)                                         0.00      1.00              0.00      0.00 r    (137.74,5.40)     s, d
+  clk (net)                                      2131    1000000.00                                                                    d
+  id_stage_i/clk (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  id_stage_i/clk (net)                           2131    1000000.00                                                                    d
+  id_stage_i/registers_i/clk (riscv_register_file_ADDR_WIDTH6_FPU0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  id_stage_i/registers_i/clk (net)               2131    1000000.00                                                                    d
+  id_stage_i/registers_i/mem_reg_1__25_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      0.00 r    (53.93,27.12)     s, n
+
+  library hold time                                                            1.00              0.00      0.00
+  data required time                                                                                       0.00
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       0.00
+  data arrival time                                                                                       -0.01
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              0.01
+
+
+
+  Startpoint: core_clock_gate_i_coverage_flop_reg (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: id_stage_i/registers_i/mem_reg_1__25_ (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Mode: test
+  Corner: fast
+  Scenario: test_fast
+  Path Group: SCAN_CLK
+  Path Type: min
+
+
+Attributes
+    b - black-box (unknown)
+    s - size_only
+    d - dont_touch
+    u - dont_use
+    g - generic
+    h - hierarchical
+    i - ideal
+    n - noncombinational
+    E - extracted timing model
+    Q - Quick timing model
+
+
+  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                                                                     0.00      0.00
+  source latency                                                                                 0.00      0.00
+  scan_clk (in)                                                      0.00      1.00              0.00      0.00 r    (137.70,0.13)
+  scan_clk (net)                                    2      1.64                                                                        d
+  U4005/D1 (SAEDRVT14_MUX2_2)                                        0.00      1.00              0.00      0.00 r    (136.85,4.84)     s, d
+  U4005/X (SAEDRVT14_MUX2_2)                                         0.00      1.00              0.00      0.00 r    (137.44,4.80)     s, d
+  clk_m (net)                                      69     61.83                                                                        d
+  core_clock_gate_i_coverage_flop_reg/CK (SAEDRVT14_FSDPQ_V2LP_2)    0.00      1.00              0.00      0.00 r    (54.05,26.40)     s, n
+
+  core_clock_gate_i_coverage_flop_reg/CK (SAEDRVT14_FSDPQ_V2LP_2)    0.00      1.00              0.00      0.00 r    (54.05,26.40)     s, n
+  core_clock_gate_i_coverage_flop_reg/Q (SAEDRVT14_FSDPQ_V2LP_2)     0.00      1.00              0.01      0.01 f    (54.12,26.41)     s, n
+  core_clock_gate_i_coverage_flop (net)             1      0.50
+  id_stage_i/dftopt210 (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1)
+                                                                     0.00      1.00              0.00      0.01 f    (hierarchical)    h
+  id_stage_i/dftopt210 (net)                               0.50
+  id_stage_i/registers_i/dftopt210 (riscv_register_file_ADDR_WIDTH6_FPU0_test_1)
+                                                                     0.00      1.00              0.00      0.01 f    (hierarchical)    h
+  id_stage_i/registers_i/dftopt210 (net)                   0.50
+  id_stage_i/registers_i/mem_reg_1__25_/SI (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      0.01 f    (53.24,27.06)     s, n
+  data arrival time                                                                                        0.01
+
+  clock SCAN_CLK (rise edge)                                                                     0.00      0.00
+  source latency                                                                                 0.00      0.00
+  scan_clk (in)                                                      0.00      1.00              0.00      0.00 r    (137.70,0.13)
+  scan_clk (net)                                    2      1.64                                                                        d
+  U4006/D1 (SAEDRVT14_MUX2_2)                                        0.00      1.00              0.00      0.00 r    (137.15,5.36)     s, d
+  U4006/X (SAEDRVT14_MUX2_2)                                         0.00      1.00              0.00      0.00 r    (137.74,5.40)     s, d
+  clk (net)                                      2131    1000000.00                                                                    d
+  id_stage_i/clk (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  id_stage_i/clk (net)                           2131    1000000.00                                                                    d
+  id_stage_i/registers_i/clk (riscv_register_file_ADDR_WIDTH6_FPU0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  id_stage_i/registers_i/clk (net)               2131    1000000.00                                                                    d
+  id_stage_i/registers_i/mem_reg_1__25_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      0.00 r    (53.93,27.12)     s, n
+
+  library hold time                                                            1.00              0.00      0.00
+  data required time                                                                                       0.00
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       0.00
+  data arrival time                                                                                       -0.01
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              0.01
+
+
+
+  Startpoint: core_clock_gate_i_coverage_flop_reg (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: id_stage_i/registers_i/mem_reg_1__25_ (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Mode: test
+  Corner: slow
+  Scenario: test_slow
+  Path Group: SCAN_CLK
+  Path Type: min
+
+
+Attributes
+    b - black-box (unknown)
+    s - size_only
+    d - dont_touch
+    u - dont_use
+    g - generic
+    h - hierarchical
+    i - ideal
+    n - noncombinational
+    E - extracted timing model
+    Q - Quick timing model
+
+
+  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                                                                     0.00      0.00
+  source latency                                                                                 0.00      0.00
+  scan_clk (in)                                                      0.00      1.00              0.00      0.00 r    (137.70,0.13)
+  scan_clk (net)                                    2      1.41                                                                        d
+  U4005/D1 (SAEDRVT14_MUX2_2)                                        0.00      1.00              0.00      0.00 r    (136.85,4.84)     s, d
+  U4005/X (SAEDRVT14_MUX2_2)                                         0.00      1.00              0.00      0.00 r    (137.44,4.80)     s, d
+  clk_m (net)                                      69     62.78                                                                        d
+  core_clock_gate_i_coverage_flop_reg/CK (SAEDRVT14_FSDPQ_V2LP_2)    0.00      1.00              0.00      0.00 r    (54.05,26.40)     s, n
+
+  core_clock_gate_i_coverage_flop_reg/CK (SAEDRVT14_FSDPQ_V2LP_2)    0.00      1.00              0.00      0.00 r    (54.05,26.40)     s, n
+  core_clock_gate_i_coverage_flop_reg/Q (SAEDRVT14_FSDPQ_V2LP_2)     0.01      1.00              0.04      0.04 f    (54.12,26.41)     s, n
+  core_clock_gate_i_coverage_flop (net)             1      0.47
+  id_stage_i/dftopt210 (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1)
+                                                                     0.01      1.00              0.00      0.04 f    (hierarchical)    h
+  id_stage_i/dftopt210 (net)                               0.47
+  id_stage_i/registers_i/dftopt210 (riscv_register_file_ADDR_WIDTH6_FPU0_test_1)
+                                                                     0.01      1.00              0.00      0.04 f    (hierarchical)    h
+  id_stage_i/registers_i/dftopt210 (net)                   0.47
+  id_stage_i/registers_i/mem_reg_1__25_/SI (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.01      1.00              0.00      0.04 f    (53.24,27.06)     s, n
+  data arrival time                                                                                        0.04
+
+  clock SCAN_CLK (rise edge)                                                                     0.00      0.00
+  source latency                                                                                 0.00      0.00
+  scan_clk (in)                                                      0.00      1.00              0.00      0.00 r    (137.70,0.13)
+  scan_clk (net)                                    2      1.41                                                                        d
+  U4006/D1 (SAEDRVT14_MUX2_2)                                        0.00      1.00              0.00      0.00 r    (137.15,5.36)     s, d
+  U4006/X (SAEDRVT14_MUX2_2)                                         0.00      1.00              0.00      0.00 r    (137.74,5.40)     s, d
+  clk (net)                                      2131    1000000.00                                                                    d
+  id_stage_i/clk (riscv_id_stage_N_HWLP2_PULP_SECURE0_FPU0_APU0_SHARED_FP0_SHARED_DSP_MULT0_SHARED_INT_DIV0_SHARED_FP_DIVSQRT0_WAPUTYPE0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  id_stage_i/clk (net)                           2131    1000000.00                                                                    d
+  id_stage_i/registers_i/clk (riscv_register_file_ADDR_WIDTH6_FPU0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  id_stage_i/registers_i/clk (net)               2131    1000000.00                                                                    d
+  id_stage_i/registers_i/mem_reg_1__25_/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      0.00 r    (53.93,27.12)     s, n
+
+  library hold time                                                            1.00             -0.01     -0.01
+  data required time                                                                                      -0.01
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                      -0.01
+  data arrival time                                                                                       -0.04
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              0.05
+
+
+1

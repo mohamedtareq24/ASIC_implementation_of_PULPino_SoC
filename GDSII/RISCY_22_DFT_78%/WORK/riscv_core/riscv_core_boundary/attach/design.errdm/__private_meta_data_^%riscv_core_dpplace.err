@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<errorData typeCount="0" majorVersion="1" minorVersion="8" name="__private_meta_data_:riscv_core_dpplace.err" designName="riscv_core_boundary" info="" checker="Placement Report" checkerVersion="" created="1713995940" createdDate="04:24:2024:14:59:00:PDT" modified="1714004967" modifiedDate="04:24:2024:17:29:27:PDT" interactive="false" internal="false" metaData="true" numTypes="0" numInsts="0"/>

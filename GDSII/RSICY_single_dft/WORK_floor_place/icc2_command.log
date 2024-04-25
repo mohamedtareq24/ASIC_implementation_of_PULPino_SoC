@@ -1,0 +1,1105 @@
+#@ # 
+#@ # Running icc2_shell Version O-2018.06-SP1 for linux64 -- Jul 17, 2018
+#@ # Date:   Tue Apr 23 14:08:36 2024
+#@ # Run by: islam@berkeley
+#@ 
+
+source -echo -verbose ../../../scripts/floor_place.tcl
+gui_start
+gui_set_pref_value -category {SelectByNamePalette} -key {ObjectType} -value {Logical Cells}
+win_set_filter -visible -class cell -filter {hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -visible -class placement_blockage -filter {wiring} -layer {0-72}
+win_set_filter -expand_cell_types {soft_macro  }
+win_set_select_class -visible {cell port bound routing_blockage shaping_blockage pg_region pin_blockage block_shielding topology_node topology_edge core_area die_area edit_group shape via terminal fill_cell placement_blockage }
+win_set_filter -class cell -filter {cell_array hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -class placement_blockage -filter {wiring} -layer {0-72}
+win_set_select_class {cell port bound routing_blockage shaping_blockage pg_region pin_blockage topology_node topology_edge edit_group shape via placement_blockage }
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {147.433 126.854}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {147.449 126.859}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {143.475 120.352}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {143.458 120.365}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {143.460 120.359}
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showWiringGrid -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showPin -value true
+win_set_filter -visible -class trackdef -filter {non_preferred} -layer {}
+win_set_select_class -visible {cell pin port bound routing_blockage shaping_blockage pg_region pin_blockage block_shielding topology_node topology_edge core_area die_area edit_group shape via terminal fill_cell trackdef placement_blockage }
+win_set_select_class {cell pin port bound routing_blockage shaping_blockage pg_region pin_blockage topology_node topology_edge edit_group shape via placement_blockage }
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {140.937 122.578}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {140.939 122.577}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {140.939 122.576}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {140.940 122.576}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {140.940 122.576}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {140.889 122.297}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {140.888 122.298}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {140.890 122.298}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {140.893 122.295}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {136.775 123.523}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {136.778 123.519}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {136.820 123.653}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {136.819 123.654}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {136.819 123.653}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {136.879 123.754}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {136.879 123.755}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {137.130 123.782}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {137.130 123.782}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {137.130 123.782}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {137.130 123.782}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {137.130 123.782}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {137.130 123.782}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {137.139 123.710}
+remove_routes
+remove_tracks -all
+create_track -layer M1
+create_track -layer M2
+create_track -layer M3
+create_track -layer M4
+create_track -layer M5
+create_track -layer M6
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal7} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal8} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal9} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal6} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal5} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal4} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal3} -quiet]
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+win_set_filter -visible -class pin -filter {} -layer {9 12 15 18 21 24 27}
+win_set_filter -visible -class routing_blockage -layer {9 12 15 18 21 24 27}
+win_set_filter -visible -class shape -filter {} -layer {9 12 15 18 21 24 27}
+win_set_filter -visible -class via -filter {} -layer {9 12 15 18 21 24 27}
+win_set_filter -visible -class terminal -filter {}  -layer {9 12 15 18 21 24 27}
+win_set_filter -visible -class trackdef -filter {non_preferred} -layer {9 12 15 18 21 24 27}
+win_set_filter -class pin -filter {} -layer {9 12 15 18 21 24 27}
+win_set_filter -class routing_blockage -layer {9 12 15 18 21 24 27}
+win_set_filter -class shape -filter {} -layer {9 12 15 18 21 24 27}
+win_set_filter -class via -filter {} -layer {9 12 15 18 21 24 27}
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+create_track -layer M7
+create_track -layer M8
+create_track -layer M9
+create_track -layer MRDL
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {136.550 122.703}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {136.550 122.704}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {136.549 122.705}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {136.544 122.751}
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal9} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal9} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal9} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal9} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal8} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal8} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal8} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal7} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal7} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal7} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal6} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal6} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal6} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal5} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal5} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal5} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal5} -quiet]
+win_set_filter -visible -class pin -filter {} -layer {9 12 15 27}
+win_set_filter -visible -class routing_blockage -layer {9 12 15 27}
+win_set_filter -visible -class shape -filter {} -layer {9 12 15 27}
+win_set_filter -visible -class via -filter {} -layer {9 12 15 27}
+win_set_filter -visible -class terminal -filter {}  -layer {9 12 15 27}
+win_set_filter -visible -class trackdef -filter {non_preferred} -layer {9 12 15 27}
+win_set_filter -class pin -filter {} -layer {9 12 15 27}
+win_set_filter -class routing_blockage -layer {9 12 15 27}
+win_set_filter -class shape -filter {} -layer {9 12 15 27}
+win_set_filter -class via -filter {} -layer {9 12 15 27}
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M3 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M4 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M5 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M9 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_NWELL -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_LVTIMP -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_PO -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M1 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M1DMY -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA1 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M2 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M2DMY -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA2 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M3 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M3DMY -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA3 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M4 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M4DMY -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA4 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M5 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M5DMY -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA5 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M6 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M6DMY -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA6 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M7 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M7DMY -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA7 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M8 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M8DMY -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA8 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M9 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M9DMY -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIARDL -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_MRDL -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_DIFF -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_BJTDMY -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_CPO -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_CTM1 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_DIFF_15 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_DIFF_25 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_DIOD -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_DNW -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_ESD -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_FIN -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_HOTNWL -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_HVTIMP -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_IP -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_LOGO -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M1PIN -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M2PIN -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M3PIN -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M4PIN -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M5PIN -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M6PIN -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M7PIN -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M8PIN -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M9PIN -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_MRPIN -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_NIMP -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_PAD -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_PIMP -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RM1 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RM2 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RM3 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RM4 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RM5 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RM6 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RM7 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RM8 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RM9 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RMARK -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RNW -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_SBLK -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA0 -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_prBoundary -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_UNASSIGNED -value false
+win_set_filter -visible -class pin -filter {} -layer {0-72}
+win_set_filter -visible -class routing_blockage -layer {0-72}
+win_set_filter -visible -class shape -filter {} -layer {0-72}
+win_set_filter -visible -class via -filter {} -layer {0-72}
+win_set_filter -visible -class terminal -filter {}  -layer {0-72}
+win_set_filter -visible -class trackdef -filter {non_preferred} -layer {0-72}
+win_set_filter -class pin -filter {} -layer {0-72}
+win_set_filter -class routing_blockage -layer {0-72}
+win_set_filter -class shape -filter {} -layer {0-72}
+win_set_filter -class via -filter {} -layer {0-72}
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal1} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal2} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal3} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal4} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal5} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal6} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal7} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal8} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal9} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal9} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal8} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal7} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal6} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal5} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal4} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal3} -quiet]
+win_set_filter -visible -class pin -filter {} -layer {0-2 4-5 7-72}
+win_set_filter -visible -class routing_blockage -layer {0-2 4-5 7-72}
+win_set_filter -visible -class shape -filter {} -layer {0-2 4-5 7-72}
+win_set_filter -visible -class via -filter {} -layer {0-2 4-5 7-72}
+win_set_filter -visible -class terminal -filter {}  -layer {0-2 4-5 7-72}
+win_set_filter -visible -class trackdef -filter {non_preferred} -layer {0-2 4-5 7-72}
+win_set_filter -class pin -filter {} -layer {0-2 4-5 7-72}
+win_set_filter -class routing_blockage -layer {0-2 4-5 7-72}
+win_set_filter -class shape -filter {} -layer {0-2 4-5 7-72}
+win_set_filter -class via -filter {} -layer {0-2 4-5 7-72}
+set_dont_touch_network -clear [get_clocks CLK_I]
+set_dont_use [get_lib_cells */*_INV_S_10*]
+set_dont_use [get_lib_cells */*_INV_S_12*]
+set_dont_use [get_lib_cells */*_INV_S_16*]
+set_dont_use [get_lib_cells */*_INV_S_20*]
+set_dont_use [get_lib_cells */*_BUF*]
+############################################################
+create_routing_rule CTS_routing_rule -widths {M3 0.3 M4 0.25} -spacings {M3 0.42 M4 0.63}
+#########################  include buffers to cts  ########################
+set_lib_cell_purpose -exclude cts [get_lib_cells]
+set_lib_cell_purpose -include cts */*_INV_S_2*
+set_lib_cell_purpose -include cts */*_INV_S_3*
+set_lib_cell_purpose -include cts */*_INV_S_4*
+set_lib_cell_purpose -include cts */*_INV_S_6*
+set_lib_cell_purpose -include cts */*_INV_S_8*
+check_design -checks pre_clock_tree_stage
+suppress_message -force CMD-013
+suppress_message -force CMD-013; report_design_mismatch -check_design >> /mnt/hgfs/cv32e40p/2_floorplan/runs/run_4/WORK_floor_place/check_design2024Apr23141846.log
+suppress_message -force CMD-013; check_scan_chain >> /mnt/hgfs/cv32e40p/2_floorplan/runs/run_4/WORK_floor_place/check_design2024Apr23141846.log
+suppress_message -force CMD-013; check_mv_design >> /mnt/hgfs/cv32e40p/2_floorplan/runs/run_4/WORK_floor_place/check_design2024Apr23141846.log
+suppress_message -force CMD-013; check_legality >> /mnt/hgfs/cv32e40p/2_floorplan/runs/run_4/WORK_floor_place/check_design2024Apr23141846.log
+suppress_message -force CMD-013; design_extraction_check >> /mnt/hgfs/cv32e40p/2_floorplan/runs/run_4/WORK_floor_place/check_design2024Apr23141846.log
+suppress_message -force CMD-013; check_timing >> /mnt/hgfs/cv32e40p/2_floorplan/runs/run_4/WORK_floor_place/check_design2024Apr23141846.log
+suppress_message -force CMD-013; check_clock_trees >> /mnt/hgfs/cv32e40p/2_floorplan/runs/run_4/WORK_floor_place/check_design2024Apr23141846.log
+suppress_message -force CMD-013; check_hier_design -stage pre_clock_tree >> /mnt/hgfs/cv32e40p/2_floorplan/runs/run_4/WORK_floor_place/check_design2024Apr23141846.log
+unsuppress_message CMD-013
+set_lib_cell_purpose -exclude cts */*_INV_S_20*
+#set_placement_spacing_label -name x  -side both -lib_cells [get_lib_cells */*_INV_S_*]
+#set_placement_spacing_label -name x  -side both -lib_cells [get_lib_cells */*_FDPRB*]
+#set_placement_spacing_label -name x  -side both -lib_cells [get_lib_cells */*_FP*]
+#set_placement_spacing_rule  -labels {x x} {0 20}
+## APP OPTIONS
+#source ../../../scripts/app_options.tcl
+#set_app_options -name route.common.connect_within_pins_by_layer_name  -value {{M1 off} {M2 off}}
+remove_ignored_layers -all
+set_ignored_layers -min_routing_layer  M1 -max_routing_layer  M6
+set_clock_routing_rules -default_rule -min_routing_layer M1  -max_routing_layer M6
+set_clock_tree_options -target_latency 0.00 -target_skew 0.00
+set cts_enable_drc_fixing_on_data true
+clock_opt
+synthesize_clock_trees
+set env(aps_optimize_clock_as_data_nets) 1
+set env(aps_optimize_clock_as_data_nets) 1
+redirect $::sh_dev_null { set_app_options -name opt.internal.current_block_utilization -value [report_utilization] }
+
+set_app_options -as_user_default -list {route.global.global_route_topology_style 1}
+route_group -all_clock_nets -reuse_existing_global_route true
+set_app_options -as_user_default -list {route.global.global_route_topology_style 0}
+
+redirect $::sh_dev_null { set_app_options -name opt.internal.current_block_utilization -value [report_utilization] }
+
+redirect $::sh_dev_null { set_app_options -name opt.internal.current_block_utilization -value [report_utilization] }
+
+
+
+set_app_options -as_user_default -list {route.global.debug_compact_coef 4}
+set_app_options -as_user_default -list {route.global.debug_compact_coef 1}
+
+
+set_app_options -as_user_default -list {route.global.debug_compact_coef 4}
+set_app_options -as_user_default -list {route.global.debug_compact_coef 1}
+
+
+
+set_app_options -as_user_default -list {route.global.debug_compact_coef 4}
+set_app_options -as_user_default -list {route.global.debug_compact_coef 1}
+route_group -all_clock_nets
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {136.592 122.661}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {136.592 122.660}
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_NWELL -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_LVTIMP -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_PO -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M1DMY -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA1 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M2DMY -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA2 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M3 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M3DMY -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA3 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M4 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M4DMY -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA4 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M5 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M5DMY -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA5 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M6 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M6DMY -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA6 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M7 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M7DMY -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA7 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M8 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M8DMY -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA8 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M9 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M9DMY -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIARDL -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_MRDL -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_DIFF -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_BJTDMY -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_CPO -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_CTM1 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_DIFF_15 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_DIFF_25 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_DIOD -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_DNW -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_ESD -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_FIN -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_HOTNWL -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_HVTIMP -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_IP -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_LOGO -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M1PIN -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M2PIN -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M3PIN -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M4PIN -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M5PIN -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M6PIN -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M7PIN -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M8PIN -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_M9PIN -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_MRPIN -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_NIMP -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_PAD -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_PIMP -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RM1 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RM2 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RM3 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RM4 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RM5 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RM6 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RM7 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RM8 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RM9 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RMARK -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_RNW -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_SBLK -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_VIA0 -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_prBoundary -value true
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showLayer_UNASSIGNED -value true
+win_set_filter -visible -class pin -filter {} -layer {}
+win_set_filter -visible -class routing_blockage -layer {}
+win_set_filter -visible -class shape -filter {} -layer {}
+win_set_filter -visible -class via -filter {} -layer {}
+win_set_filter -visible -class terminal -filter {}  -layer {}
+win_set_filter -visible -class trackdef -filter {non_preferred} -layer {}
+win_set_filter -class pin -filter {} -layer {}
+win_set_filter -class routing_blockage -layer {}
+win_set_filter -class shape -filter {} -layer {}
+win_set_filter -class via -filter {} -layer {}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {137.890 123.734}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {137.894 123.732}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {137.903 123.730}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {131.612 120.402}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {131.641 120.415}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {131.618 120.340}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {131.610 120.351}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {131.601 120.364}
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal1} -quiet]
+win_set_filter -visible -class pin -filter {} -layer {3}
+win_set_filter -visible -class routing_blockage -layer {3}
+win_set_filter -visible -class shape -filter {} -layer {3}
+win_set_filter -visible -class via -filter {} -layer {3}
+win_set_filter -visible -class terminal -filter {}  -layer {3}
+win_set_filter -visible -class trackdef -filter {non_preferred} -layer {3}
+win_set_filter -class pin -filter {} -layer {3}
+win_set_filter -class routing_blockage -layer {3}
+win_set_filter -class shape -filter {} -layer {3}
+win_set_filter -class via -filter {} -layer {3}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {132.677 125.798}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {132.704 125.772}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {136.895 215.794}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {114.855 116.460}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {114.857 116.474}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {114.860 116.488}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {115.618 116.678}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {115.617 116.676}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {115.616 116.674}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {115.316 116.599}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {115.317 116.599}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {115.317 116.599}
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal1} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal1} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal1} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal1} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal1} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal1} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal1} -quiet]
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {115.317 116.599}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {115.317 116.599}
+win_set_filter -visible -class pin -filter {} -layer {}
+win_set_filter -visible -class routing_blockage -layer {}
+win_set_filter -visible -class shape -filter {} -layer {}
+win_set_filter -visible -class via -filter {} -layer {}
+win_set_filter -visible -class terminal -filter {}  -layer {}
+win_set_filter -visible -class trackdef -filter {non_preferred} -layer {}
+win_set_filter -class pin -filter {} -layer {}
+win_set_filter -class routing_blockage -layer {}
+win_set_filter -class shape -filter {} -layer {}
+win_set_filter -class via -filter {} -layer {}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {115.318 116.599}
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal3} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal3} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal3} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal3} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal3} -quiet]
+win_set_filter -visible -class pin -filter {} -layer {9}
+win_set_filter -visible -class routing_blockage -layer {9}
+win_set_filter -visible -class shape -filter {} -layer {9}
+win_set_filter -visible -class via -filter {} -layer {9}
+win_set_filter -visible -class terminal -filter {}  -layer {9}
+win_set_filter -visible -class trackdef -filter {non_preferred} -layer {9}
+win_set_filter -class pin -filter {} -layer {9}
+win_set_filter -class routing_blockage -layer {9}
+win_set_filter -class shape -filter {} -layer {9}
+win_set_filter -class via -filter {} -layer {9}
+legalize_placement
+write_verilog ../netlists/${DESIGN_NAME}.cts.gate.v
+report_clock_timing  -type skew > ../reports/${DESIGN_NAME}.clock_skew.rpt
+set_propagated_clock [get_clocks CLK_I]
+save_block -as ${DESIGN_NAME}_ctsed
+report_qor > ../reports/qor.rpt
+report_clock_qor -type area > ../reports/clock_area.rpt
+report_utilization > ../reports/utilization.rpt
+win_select_objects -slct_targets global -at {115.418 116.647} -radius 0.0006
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {115.418 116.647}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {115.419 116.645}
+connect_pg_net -net "VDD" [get_pins -hierarchical "*/VDD"]
+connect_pg_net -net "VSS" [get_pins -hierarchical "*/VSS"]
+#remove_routing_rules -all
+remove_ignored_layers -all
+set_ignored_layers     -min_routing_layer  M1     -max_routing_layer  M8
+check_routability -connect_standard_cells_within_pins true
+check_routability -connect_standard_cells_within_pins true > ../reports/routability.rpt
+route_global
+route_track
+route_detail
+gui_show_error_data
+gui_set_error_browser_option -show_mode all
+gui_set_error_browser_option -view_mode zoom
+gui_set_error_browser_option -zoom_factor 1.000000
+gui_set_error_browser_option -grouping type
+gui_error_browser -show
+gui_open_error_data -name {zroute.err}
+gui_open_error_data -name {zroute.err}
+gui_set_current_errors -data_name {zroute.err} -group {Off-grid}
+gui_set_selected_errors -replace [gui_get_errors -data_name {zroute.err} -id {3}] -force
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {175.748 177.100}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {175.748 177.100}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {175.748 177.099}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {175.747 177.099}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {175.746 177.099}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {175.747 177.101}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {175.748 177.102}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {175.748 177.102}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {175.748 177.102}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {175.748 177.102}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {175.748 177.102}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {175.748 177.102}
+win_select_objects -slct_targets global -at {175.715 176.924} -radius 0.0006
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+save_block -as ${DESIGN_NAME}_routed_cannot_converge
+gui_show_error_data
+gui_error_browser -show
+gui_set_selected_errors -replace [gui_get_errors -data_name {zroute.err} -id {6}] -force
+gui_set_selected_errors -replace [gui_get_errors -data_name {zroute.err} -id {3 5 6 7 8}] -force
+change_selection -add [get_nets ex_stage_i_alu_i/intadd_29_SUM_7_]
+change_selection -add [get_nets ex_stage_i_mult_i/DP_OP_114J5_123_9529_n349]
+change_selection -add [get_nets ex_stage_i_mult_i/DP_OP_114J5_123_9529_n318]
+change_selection -add [get_nets ex_stage_i_mult_i/DP_OP_114J5_123_9529_n3457]
+change_selection -add [get_nets ex_stage_i_mult_i/intadd_4_SUM_1_]
+remove_objects  [get_shapes -of_objects [get_selection]]
+route_eco
+save_block -as ${DESIGN_NAME}_routed_cannot_converge
+route_opt
+win_set_filter -visible -class pin -filter {} -layer {}
+win_set_filter -visible -class routing_blockage -layer {}
+win_set_filter -visible -class shape -filter {} -layer {}
+win_set_filter -visible -class via -filter {} -layer {}
+win_set_filter -visible -class terminal -filter {}  -layer {}
+win_set_filter -visible -class trackdef -filter {non_preferred} -layer {}
+win_set_filter -class pin -filter {} -layer {}
+win_set_filter -class routing_blockage -layer {}
+win_set_filter -class shape -filter {} -layer {}
+win_set_filter -class via -filter {} -layer {}
+gui_show_error_data
+gui_error_browser -show
+gui_set_selected_errors -replace [gui_get_errors -data_name {zroute.err} -id {0 1}] -force
+change_selection -add [get_nets id_stage_i/registers_i/n8649]
+change_selection -add [get_nets {regfile_alu_wdata_fw[26]}]
+gui_set_selected_errors -replace [gui_get_errors -data_name {zroute.err} -id {1}] -force
+win_select_objects -slct_targets global -at {118.035 156.504} -radius 0.0002
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal10} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal9} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal8} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal7} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal6} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal5} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal5} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal4} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal4} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal3} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal3} -quiet]
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {118.058 156.506}
+win_set_filter -visible -class pin -filter {} -layer {18 21 24 27 30}
+win_set_filter -visible -class routing_blockage -layer {18 21 24 27 30}
+win_set_filter -visible -class shape -filter {} -layer {18 21 24 27 30}
+win_set_filter -visible -class via -filter {} -layer {18 21 24 27 30}
+win_set_filter -visible -class terminal -filter {}  -layer {18 21 24 27 30}
+win_set_filter -visible -class trackdef -filter {non_preferred} -layer {18 21 24 27 30}
+win_set_filter -class pin -filter {} -layer {18 21 24 27 30}
+win_set_filter -class routing_blockage -layer {18 21 24 27 30}
+win_set_filter -class shape -filter {} -layer {18 21 24 27 30}
+win_set_filter -class via -filter {} -layer {18 21 24 27 30}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {118.057 156.506}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {118.163 156.559}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {118.164 156.560}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {118.164 156.560}
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {118.161 157.745}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {118.227 156.791}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {118.226 156.790}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {118.226 156.790}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {118.226 156.790}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {118.226 156.790}
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -start MoveTool
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -add_point {118.096 156.944} -scale 0.0017
+gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -add_point {118.262 157.998} -scale 0.0017
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+legalize_placement -post_route
+check_legality
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {118.632 157.904}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {118.632 157.904}
+gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -add_point {118.124 157.878} -scale 0.0017
+gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -add_point {118.124 157.878} -scale 0.0017
+gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -reset
+win_select_objects -slct_targets global -at {118.143 157.789} -radius 0.0017
+route_eco -nets [get_nets -of_objects [get_selection]]
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {118.921 157.507}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {118.921 157.507}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {118.921 157.507}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {118.921 157.507}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {118.921 157.507}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {118.921 157.507}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {118.921 157.507}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {118.921 157.507}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {118.681 157.758}
+gui_set_current_errors -data_name {zroute.err} -group {Less than minimum area}
+gui_set_selected_errors -replace [gui_get_errors -data_name {zroute.err} -id {0}] -force
+win_select_objects -slct_targets global -at {133.408 141.632} -radius 0.0002
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {133.408 141.632}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {133.407 141.632}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {133.407 141.631}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {133.407 141.631}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {133.405 141.630}
+gui_set_current_errors -data_name {zroute.err}
+gui_set_selected_errors -replace [gui_get_errors -data_name {zroute.err} -id {0}] -force
+gui_set_current_errors -data_name {zroute.err} -group {Less than minimum area}
+gui_set_selected_errors -replace [gui_get_errors -data_name {zroute.err} -id {0}] -force
+win_select_objects -slct_targets global -at {133.426 141.614} -radius 0.0002
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {133.426 141.614}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {133.426 141.613}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {133.426 141.614}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {133.426 141.613}
+gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -start MoveTool
+gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -reset
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {133.586 141.616}
+win_select_objects -slct_targets global -at {133.561 141.627} -radius 0.0017
+win_select_objects -slct_targets global -at {133.519 141.517} -radius 0.0017 -slct_targets_operation add
+win_select_objects -slct_targets global -at {133.649 141.134} -radius 0.0017 -slct_targets_operation add
+win_select_objects -slct_targets global -at {133.865 141.081} -radius 0.0017 -slct_targets_operation add
+remove_objects  [get_shapes -of_objects [get_selection]]
+remove_objects  [get_selection]
+gui_set_selected_errors -replace [gui_get_errors -data_name {zroute.err} -id {0}] -force
+route_eco
+gui_clear_selected_errors
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {134.218 140.858}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {134.219 140.858}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {134.216 140.860}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {134.153 140.513}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {134.153 140.515}
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+win_select_objects -slct_targets global -at {133.882 139.378} -radius 0.0034
+win_select_objects -slct_targets global -at {133.672 141.141} -radius 0.0034 -slct_targets_operation add
+change_selection 
+win_select_objects -slct_targets global -at {133.858 141.006} -radius 0.0034
+win_select_objects -slct_targets global -at {133.599 141.151} -radius 0.0034 -slct_targets_operation add
+win_select_objects -slct_targets global -at {133.530 141.262} -radius 0.0034 -slct_targets_operation add
+win_select_objects -slct_targets global -at {133.492 141.620} -radius 0.0034 -slct_targets_operation add
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+win_select_objects -slct_targets global -at {133.758 125.001} -radius 0.0034 -slct_targets_operation add
+win_select_objects -slct_targets global -at {133.689 124.956} -radius 0.0034 -slct_targets_operation add
+remove_objects  [get_selection]
+gui_set_selected_errors -replace [gui_get_errors -data_name {zroute.err} -id {0}] -force
+route_eco
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_set_current_errors -data_name {zroute.err} -group {Less than minimum area} -sub_group {M3 (23)}
+gui_set_selected_errors -replace [gui_get_errors -data_name {zroute.err} -id {0}] -force
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {133.420 141.435}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {133.421 141.435}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {133.360 141.383}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {133.362 141.383}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {133.362 141.385}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {133.364 141.383}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {133.365 141.385}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {133.365 141.386}
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {134.421 141.682}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {134.422 141.683}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {134.423 141.682}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {134.422 141.682}
+win_select_objects -slct_targets global -at {133.538 141.598} -radius 0.0035
+route_opt
+change_selection 
+gui_set_current_errors -data_name {zroute.err} -group {Less than minimum area}
+gui_set_selected_errors -replace [gui_get_errors -data_name {zroute.err} -id {0}] -force
+gui_set_current_errors -data_name {zroute.err} -group {Less than minimum area} -sub_group {M3 (23)}
+gui_set_selected_errors -replace [gui_get_errors -data_name {zroute.err} -id {0}] -force
+win_select_objects -slct_targets global -at {133.270 141.610} -radius 0.0002
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {133.321 141.558}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {133.322 141.558}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {133.321 141.558}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {133.410 141.714}
+gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -start MoveTool
+gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -drag {{135.241 141.806} {137.230 142.506}} -scale 0.0035
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {135.507 142.485}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {135.506 142.485}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {135.506 142.485}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {135.506 142.485}
+gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -reset
+win_select_objects -slct_targets global -at {135.230 142.163} -radius 0.0009
+route_eco -nets [get_nets -of_objects [get_selection]]
+check_lvs
+route_opt
+check_lvs
+change_selection 
+gui_show_error_data
+gui_error_browser -show
+gui_open_error_data -name {riscv_core_lvs.err}
+gui_open_error_data -name {riscv_core_lvs.err}
+gui_set_current_errors -data_name {riscv_core_lvs.err} -group {Floating Route}
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {0}] -force
+gui_set_current_errors
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {0}] -force
+gui_set_current_errors -data_name {riscv_core_lvs.err} -group {Floating Route}
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {0}] -force
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {1}] -force
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {0}] -force
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {1}] -force
+win_select_objects -slct_targets global -at {96.495 235.994} -radius 0.0002
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {96.529 235.978}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {96.529 235.977}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {96.529 235.978}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {96.528 235.977}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {96.497 235.911}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {96.497 235.912}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {96.497 235.912}
+win_select_objects -slct_targets global -at {96.358 235.928} -radius 0.002
+change_selection 
+win_select_objects -slct_targets global -at {97.479 236.014} -radius 0.002
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showPin -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showPin -value true
+win_select_objects -slct_targets global -at {96.442 235.953} -radius 0.002
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+change_selection 
+win_select_objects -slct_targets global -at {95.010 236.570} -radius 0.002
+check_legality
+change_selection 
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {96.727 236.617}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {96.726 236.616}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {96.729 236.619}
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {97.310 235.932}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {97.307 235.931}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {97.309 235.932}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {97.309 235.933}
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {0 1 2 3 4 5 6 7 8}] -force
+change_selection -add [get_nets ex_stage_i_mult_i/DP_OP_114J5_123_9529_n318]
+change_selection -add [get_nets ex_stage_i_mult_i/intadd_4_SUM_1_]
+change_selection -add [get_nets ex_stage_i_mult_i/intadd_4_SUM_1_]
+change_selection -add [get_nets ex_stage_i_mult_i/intadd_4_SUM_1_]
+change_selection -add [get_nets ex_stage_i_mult_i/DP_OP_114J5_123_9529_n349]
+change_selection -add [get_nets ex_stage_i_mult_i/DP_OP_114J5_123_9529_n349]
+change_selection -add [get_nets ex_stage_i_mult_i/DP_OP_114J5_123_9529_n349]
+change_selection -add [get_nets ex_stage_i_mult_i/DP_OP_114J5_123_9529_n318]
+change_selection -add [get_nets ex_stage_i_mult_i/DP_OP_114J5_123_9529_n318]
+remove_objects  [get_selection]
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {4 1 6 3 0 8 5 2 7}] -force
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {6}] -force
+win_select_objects -slct_targets global -at {36.622 212.544} -radius 0.0002
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {36.668 212.524}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {36.669 212.523}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {36.769 212.482}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {36.768 212.483}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {36.769 212.484}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {36.773 212.484}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {36.771 212.483}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {36.770 212.484}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {36.770 212.484}
+win_select_objects -slct_targets global -at {36.737 212.493} -radius 0.0019 -slct_targets_operation add
+win_select_objects -slct_targets global -at {36.947 212.432} -radius 0.0019 -slct_targets_operation add
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+remove_objects  [get_selection]
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {6}] -force
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {1}] -force
+win_select_objects -slct_targets global -at {96.599 235.864} -radius 0.0002
+win_select_objects -slct_targets global -at {96.608 235.914} -radius 0.0002
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {7}] -force
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {0 1 2 3 4 5 6 7 8}] -force
+remove_objects  [get_selection]
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {4 1 6 3 0 8 5 2 7}] -force
+remove_objects  [get_selection]
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {5}] -force
+win_select_objects -slct_targets global -at {36.654 210.659} -radius 0.0002
+win_select_objects -slct_targets global -at {36.740 210.668} -radius 0.0002
+remove_objects  [get_selection]
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {5}] -force
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {0 1 2 3 4 5 6 7 8}] -force
+remove_objects  [get_selection]
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {0}] -force
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {1}] -force
+win_select_objects -slct_targets global -at {96.464 235.935} -radius 0.0002
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {2}] -force
+win_select_objects -slct_targets global -at {96.472 236.396} -radius 0.0002
+win_select_objects -slct_targets global -at {96.594 236.408} -radius 0.0002
+win_select_objects -slct_targets global -at {96.606 236.386} -radius 0.0002
+win_select_objects -slct_targets global -at {96.557 236.425} -radius 0.0002
+remove_objects  [get_selection]
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {2}] -force
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {3}] -force
+win_select_objects -slct_targets global -at {96.063 236.385} -radius 0.0002
+win_select_objects -slct_targets global -at {96.150 236.388} -radius 0.0002
+remove_objects  [get_selection]
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {3}] -force
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {4}] -force
+win_select_objects -slct_targets global -at {36.873 210.654} -radius 0.0002
+win_select_objects -slct_targets global -at {36.964 210.666} -radius 0.0002
+remove_objects  [get_selection]
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {4}] -force
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {5}] -force
+win_select_objects -slct_targets global -at {36.641 210.667} -radius 0.0002
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {6}] -force
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {7}] -force
+win_select_objects -slct_targets global -at {41.198 211.928} -radius 0.0002
+win_select_objects -slct_targets global -at {41.329 211.905} -radius 0.0002
+remove_objects  [get_selection]
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {7}] -force
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {8}] -force
+win_select_objects -slct_targets global -at {41.325 212.392} -radius 0.0002
+remove_objects  [get_selection]
+gui_set_selected_errors -replace [gui_get_errors -data_name {riscv_core_lvs.err} -id {8}] -force
+check_routes
+check_routability -check_standard_cell_blocked_ports
+check_routability -check_standard_cell_blocked_ports true
+check_lvs
+check_pg_drc
+check_pg_connectivity
+dft_drc
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {41.286 212.494}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {41.287 212.494}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {41.286 212.494}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {41.287 212.492}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {41.285 212.491}
+gui_zoom -window [gui_get_current_window -view] -full
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {139.447 120.403}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {139.378 120.340}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {139.364 120.352}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {139.352 120.364}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {139.338 120.376}
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {91.884 120.340}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {91.884 120.495}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {91.884 120.495}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {91.884 121.116}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {91.884 121.116}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {91.884 121.116}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {91.884 121.116}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {91.884 121.116}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {91.884 121.116}
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal1} -quiet]
+win_set_filter -visible -class pin -filter {} -layer {3 18 21 24 27 30}
+win_set_filter -visible -class routing_blockage -layer {3 18 21 24 27 30}
+win_set_filter -visible -class shape -filter {} -layer {3 18 21 24 27 30}
+win_set_filter -visible -class via -filter {} -layer {3 18 21 24 27 30}
+win_set_filter -visible -class terminal -filter {}  -layer {3 18 21 24 27 30}
+win_set_filter -visible -class trackdef -filter {non_preferred} -layer {3 18 21 24 27 30}
+win_set_filter -class pin -filter {} -layer {3 18 21 24 27 30}
+win_set_filter -class routing_blockage -layer {3 18 21 24 27 30}
+win_set_filter -class shape -filter {} -layer {3 18 21 24 27 30}
+win_set_filter -class via -filter {} -layer {3 18 21 24 27 30}
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal1} -quiet]
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal1} -quiet]
+man RT-204
+man RT-204
+gui_show_error_data
+gui_error_browser -show
+gui_open_error_data -name {riscv_core_dppinassgn.err}
+gui_open_error_data -name {__riscv_core_check_legality.err}
+gui_open_error_data -name {DRC_report_by_check_pg_drc}
+gui_open_error_data -name {riscv_core_dpplace.err}
+gui_open_error_data -name {riscv_core_missingVia.err}
+gui_open_error_data -name {riscv_core_floatingPG.err}
+save_block -as ${DESIGN_NAME}_routed
+report_qor > ../reports/qor.rpt
+check_lvs -max 5000 > ../reports/lvs.rpt
+report_utilization > ../reports/utilization.rpt
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {145.276 140.672}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {145.276 140.672}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {145.259 140.671}
+connect_pg_net -automatic
+set pnr_std_fillers "SAEDRVT14_FILL*"
+set GDS_MAP_FILE            "/mnt/hgfs/ASIC_shared/LIBs/tech/milkyway/saed14nm_1p9m_gdsout_mw.map"
+set STD_CELL_GDS  "/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/gds/saed14rvt.gds"
+set std_fillers ""
+foreach filler $pnr_std_fillers { lappend std_fillers "*/${filler}" }
+create_stdcell_filler -lib_cell $std_fillers
+remove_stdcell_fillers_with_violation
+remove_placement_spacing_rules -all
+remove_placement_spacing_rules -all
+connect_pg_net -automatic
+set pnr_std_fillers "SAEDRVT14_FILL*"
+set GDS_MAP_FILE            "/mnt/hgfs/ASIC_shared/LIBs/tech/milkyway/saed14nm_1p9m_gdsout_mw.map"
+set STD_CELL_GDS   "/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/gds/saed14rvt.gds"
+set std_fillers ""
+foreach filler $pnr_std_fillers { lappend std_fillers "*/${filler}" }
+create_stdcell_filler -lib_cell $std_fillers
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {156.325 151.714}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {156.319 151.706}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {156.316 151.706}
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {174.618 163.340}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {174.617 163.340}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {174.617 163.340}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {174.617 163.340}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {174.617 163.340}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {174.618 163.340}
+remove_stdcell_fillers_with_violation
+gui_clear_selected_errors
+check_lvs
+connect_pg_net -automatic
+check_lvs
+check_pg_drc
+check_pg_connectivity
+check_pg_missing_vias
+check_routes
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {174.865 163.186}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {174.865 163.186}
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {174.329 163.166}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {174.328 163.166}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {174.328 163.166}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {174.332 163.171}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {174.340 163.162}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {174.342 163.146}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {174.306 163.169}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {173.990 127.479}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {173.953 127.487}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {173.957 127.494}
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {165.152 130.908}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {165.155 130.909}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {165.156 130.908}
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_set_layout_layer_visibility -toggle [get_layers -filter {mask_name == metal1} -quiet]
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showContact -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showRoute -value false
+gui_set_setting -window [gui_get_current_window -types Layout -mru] -setting showWiringGrid -value false
+win_set_filter -visible -class pin -filter {} -layer {18 21 24 27 30}
+win_set_filter -visible -class routing_blockage -layer {18 21 24 27 30}
+win_set_filter -visible -class terminal -filter {}  -layer {18 21 24 27 30}
+win_set_select_class -visible {cell pin port bound routing_blockage shaping_blockage pg_region pin_blockage block_shielding topology_node topology_edge core_area die_area edit_group terminal fill_cell placement_blockage }
+win_set_filter -class pin -filter {} -layer {18 21 24 27 30}
+win_set_filter -class routing_blockage -layer {18 21 24 27 30}
+win_set_select_class {cell pin port bound routing_blockage shaping_blockage pg_region pin_blockage topology_node topology_edge edit_group placement_blockage }
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {163.152 131.075}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {163.151 131.076}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {163.149 131.077}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {163.145 131.077}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {163.155 131.063}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {163.166 131.068}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {163.125 131.049}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {162.970 131.049}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {162.970 131.049}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {162.941 131.055}
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -hrel -.2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+remove_placement_spacing_rules -all
+set pnr_std_fillers "SAEDRVT14_FILL*"
+set GDS_MAP_FILE            "/mnt/hgfs/ASIC_shared/LIBs/tech/milkyway/saed14nm_1p9m_gdsout_mw.map"
+set STD_CELL_GDS   "/mnt/hgfs/ASIC_shared/LIBs/stdcell_rvt/gds/saed14rvt.gds"
+set std_fillers ""
+foreach filler $pnr_std_fillers { lappend std_fillers "*/${filler}" }
+create_stdcell_filler -lib_cell $std_fillers
+gui_scroll -window [gui_get_current_window -view] -vrel -.2
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {147.449 114.597}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {147.430 114.613}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {139.777 116.335}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {139.783 116.329}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {139.786 116.328}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {139.788 116.326}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {139.786 116.329}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {139.778 116.339}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {139.784 116.333}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {139.807 116.350}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {139.844 116.304}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {139.999 116.149}
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {148.380 187.545}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {148.380 187.545}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {148.380 187.545}
+connect_pg_net -automatic
+check_lvs
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {153.347 151.537}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {153.347 151.537}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {146.965 141.756}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {146.946 141.756}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {146.947 141.753}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {146.950 141.750}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {146.958 141.743}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {146.960 141.740}
+check_pg_drc
+check_pg_connectivity
+remove_stdcell_fillers_with_violation
+check_routes
+check_lvs
+write_verilog ../netlists/${DESIGN_NAME}.icc2.gate.v
+report_qor > ../report/qor.rpt
+report_utilization > ../reports/utilization.rpt
+############################################################
+save_block -as ${DESIGN_NAME}_finished
+change_names -rules verilog -verbose
+write_verilog -include {pg_netlist unconnected_ports} ../output/${DESIGN}_finish.v
+write_gds  -layer_map $GDS_MAP_FILE   -keep_data_type   -fill include   -output_pin all   -lib_cell_view frame   -long_names   ../output/${DESIGN_NAME}.gds
+write_parasitics -output  {./results/core.spf}
+write_verilog ../netlists/riscv_core.icc2.gate.v
+report_qor > ../report/qor.rpt
+report_utilization > ../reports/utilization.rptwrite_verilog ../netlists/riscv_core.icc2.gate.v
+report_qor > ../report/qor.rpt
+write_verilog ../netlists/riscv_core.icc2.gate.v
+write_verilog ../netlists/riscv_core.icc2.gate.v
+report_utilization > ../reports/utilization.rptwrite_verilog ../netlists/riscv_core.icc2.gate.v
+report_utilization > ../reports/utilization.rptwrite_verilog
+report_qor > ../report/qor.rpt
+report_qor > ../reports/qor.rpt
+change_names -rules verilog -verbose
+write_verilog -include {pg_netlist unconnected_ports} ../output/${DESIGN}_finish.v
+write_verilog -include {pg_netlist unconnected_ports} ../output/riscv_core_finish.v
+write_verilog -include {pg_netlist unconnected_ports} ../outputs/riscv_core_finish.v
+write_gds  -layer_map $GDS_MAP_FILE   -keep_data_type   -fill include   -output_pin all   -lib_cell_view frame   -long_names   ../output/${DESIGN_NAME}.gds
+write_gds  -layer_map $GDS_MAP_FILE   -keep_data_type   -fill include   -output_pin all   -lib_cell_view frame   -long_names   ../output/${DESIGN_NAME}.gds
+report_qor
+write_parasitics -output  {../output/core.spf}
+close_block
+close_lib
+gui_clear_selected_errors
+exit
